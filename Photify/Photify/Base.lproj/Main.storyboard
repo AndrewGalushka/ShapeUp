@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9rounded" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Photify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-op-GHX">
+                                <rect key="frame" x="533" y="364" width="300" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiD-UA-hSH">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.40739924634027558" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="iiD-UA-hSH" firstAttribute="leading" secondItem="zzc-op-GHX" secondAttribute="leading" id="6ec-bZ-M0O"/>
+                                    <constraint firstAttribute="width" constant="300" id="VKx-ZK-oDr"/>
+                                    <constraint firstAttribute="bottom" secondItem="iiD-UA-hSH" secondAttribute="bottom" id="ewW-am-5zS"/>
+                                    <constraint firstAttribute="height" constant="300" id="fhZ-yh-aSp"/>
+                                    <constraint firstItem="iiD-UA-hSH" firstAttribute="top" secondItem="zzc-op-GHX" secondAttribute="top" id="k67-Oi-Dzf"/>
+                                    <constraint firstAttribute="trailing" secondItem="iiD-UA-hSH" secondAttribute="trailing" id="tue-CK-cpQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zzc-op-GHX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Uw5-Qc-ZR3"/>
+                            <constraint firstItem="zzc-op-GHX" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="yTh-qq-KFd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
