@@ -13,6 +13,17 @@
 		8D6BAE3022D332E900FF383C /* Photify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2E22D332E900FF383C /* Photify.xcdatamodeld */; };
 		8D6BAE3222D332EA00FF383C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D6BAE3122D332EA00FF383C /* Assets.xcassets */; };
 		8D6BAE3522D332EA00FF383C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D6BAE3322D332EA00FF383C /* LaunchScreen.storyboard */; };
+		8D6BAE4022D3456C00FF383C /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE3F22D3456C00FF383C /* Shape.swift */; };
+		8D6BAE4222D345BC00FF383C /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE4122D345BC00FF383C /* ShapeView.swift */; };
+		8D6BAE4522D3476500FF383C /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE4422D3476500FF383C /* Rectangle.swift */; };
+		8D6BAE4922D357BE00FF383C /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE4822D357BE00FF383C /* Circle.swift */; };
+		8D6BAE4B22D3590500FF383C /* Hexagon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE4A22D3590500FF383C /* Hexagon.swift */; };
+		8D6BAE4D22D35B5400FF383C /* Ellipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE4C22D35B5400FF383C /* Ellipse.swift */; };
+		8D6BAE5022D35D6700FF383C /* ShapeViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE4F22D35D6700FF383C /* ShapeViewStyle.swift */; };
+		8D6BAE5322D35EFF00FF383C /* GeometryNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5222D35EFF00FF383C /* GeometryNamespace.swift */; };
+		8D6BAE5522D35F1F00FF383C /* CircleGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5422D35F1F00FF383C /* CircleGeometry.swift */; };
+		8D6BAE5722D35FC400FF383C /* RectangleGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5622D35FC400FF383C /* RectangleGeometry.swift */; };
+		8D6BAE5922D3703400FF383C /* AngleGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5822D3703400FF383C /* AngleGeometry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +35,17 @@
 		8D6BAE3122D332EA00FF383C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D6BAE3422D332EA00FF383C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D6BAE3622D332EA00FF383C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D6BAE3F22D3456C00FF383C /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		8D6BAE4122D345BC00FF383C /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
+		8D6BAE4422D3476500FF383C /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		8D6BAE4822D357BE00FF383C /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		8D6BAE4A22D3590500FF383C /* Hexagon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexagon.swift; sourceTree = "<group>"; };
+		8D6BAE4C22D35B5400FF383C /* Ellipse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ellipse.swift; sourceTree = "<group>"; };
+		8D6BAE4F22D35D6700FF383C /* ShapeViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViewStyle.swift; sourceTree = "<group>"; };
+		8D6BAE5222D35EFF00FF383C /* GeometryNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryNamespace.swift; sourceTree = "<group>"; };
+		8D6BAE5422D35F1F00FF383C /* CircleGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGeometry.swift; sourceTree = "<group>"; };
+		8D6BAE5622D35FC400FF383C /* RectangleGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleGeometry.swift; sourceTree = "<group>"; };
+		8D6BAE5822D3703400FF383C /* AngleGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleGeometry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				8D6BAE3C22D340D100FF383C /* Main */,
+				8D6BAE3E22D3455500FF383C /* Core */,
 				8D6BAE3D22D340E100FF383C /* Resources */,
 				8D6BAE2922D332E900FF383C /* ViewController.swift */,
 			);
@@ -81,6 +104,48 @@
 				8D6BAE2E22D332E900FF383C /* Photify.xcdatamodeld */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		8D6BAE3E22D3455500FF383C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8D6BAE5122D35EE500FF383C /* Geometry */,
+				8D6BAE4322D3474E00FF383C /* Shapes */,
+				8D6BAE4E22D35D5600FF383C /* ShapeView */,
+				8D6BAE3F22D3456C00FF383C /* Shape.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8D6BAE4322D3474E00FF383C /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				8D6BAE4422D3476500FF383C /* Rectangle.swift */,
+				8D6BAE4822D357BE00FF383C /* Circle.swift */,
+				8D6BAE4C22D35B5400FF383C /* Ellipse.swift */,
+				8D6BAE4A22D3590500FF383C /* Hexagon.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		8D6BAE4E22D35D5600FF383C /* ShapeView */ = {
+			isa = PBXGroup;
+			children = (
+				8D6BAE4122D345BC00FF383C /* ShapeView.swift */,
+				8D6BAE4F22D35D6700FF383C /* ShapeViewStyle.swift */,
+			);
+			path = ShapeView;
+			sourceTree = "<group>";
+		};
+		8D6BAE5122D35EE500FF383C /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				8D6BAE5222D35EFF00FF383C /* GeometryNamespace.swift */,
+				8D6BAE5422D35F1F00FF383C /* CircleGeometry.swift */,
+				8D6BAE5622D35FC400FF383C /* RectangleGeometry.swift */,
+				8D6BAE5822D3703400FF383C /* AngleGeometry.swift */,
+			);
+			path = Geometry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +219,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D6BAE4222D345BC00FF383C /* ShapeView.swift in Sources */,
+				8D6BAE5922D3703400FF383C /* AngleGeometry.swift in Sources */,
+				8D6BAE5522D35F1F00FF383C /* CircleGeometry.swift in Sources */,
+				8D6BAE4922D357BE00FF383C /* Circle.swift in Sources */,
+				8D6BAE5722D35FC400FF383C /* RectangleGeometry.swift in Sources */,
+				8D6BAE4B22D3590500FF383C /* Hexagon.swift in Sources */,
 				8D6BAE3022D332E900FF383C /* Photify.xcdatamodeld in Sources */,
 				8D6BAE2A22D332E900FF383C /* ViewController.swift in Sources */,
+				8D6BAE5322D35EFF00FF383C /* GeometryNamespace.swift in Sources */,
+				8D6BAE4522D3476500FF383C /* Rectangle.swift in Sources */,
+				8D6BAE4D22D35B5400FF383C /* Ellipse.swift in Sources */,
 				8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */,
+				8D6BAE5022D35D6700FF383C /* ShapeViewStyle.swift in Sources */,
+				8D6BAE4022D3456C00FF383C /* Shape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDDE2DY87F;
 				INFOPLIST_FILE = Photify/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +400,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDDE2DY87F;
 				INFOPLIST_FILE = Photify/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
