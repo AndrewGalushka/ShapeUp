@@ -81,9 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				8D6BAE3C22D340D100FF383C /* Main */,
-				8D6BAE3E22D3455500FF383C /* Core */,
+				8D6BAE3E22D3455500FF383C /* Views */,
 				8D6BAE3D22D340E100FF383C /* Resources */,
-				8D6BAE2922D332E900FF383C /* ShapesContextViewController.swift */,
+				8D6BAE6022D39BCC00FF383C /* Screens */,
 			);
 			path = Photify;
 			sourceTree = "<group>";
@@ -108,20 +108,20 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		8D6BAE3E22D3455500FF383C /* Core */ = {
+		8D6BAE3E22D3455500FF383C /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				8D6BAE5122D35EE500FF383C /* Geometry */,
 				8D6BAE4322D3474E00FF383C /* Shapes */,
 				8D6BAE4E22D35D5600FF383C /* ShapeView */,
-				8D6BAE3F22D3456C00FF383C /* Shape.swift */,
 			);
-			path = Core;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8D6BAE4322D3474E00FF383C /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
+				8D6BAE3F22D3456C00FF383C /* Shape.swift */,
 				8D6BAE4422D3476500FF383C /* Rectangle.swift */,
 				8D6BAE4822D357BE00FF383C /* Circle.swift */,
 				8D6BAE4C22D35B5400FF383C /* Ellipse.swift */,
@@ -149,6 +149,14 @@
 				8D6BAE5822D3703400FF383C /* AngleGeometry.swift */,
 			);
 			path = Geometry;
+			sourceTree = "<group>";
+		};
+		8D6BAE6022D39BCC00FF383C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8D6BAE2922D332E900FF383C /* ShapesContextViewController.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
