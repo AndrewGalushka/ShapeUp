@@ -56,15 +56,31 @@
 		8D6BAE2622D332E900FF383C /* Photify */ = {
 			isa = PBXGroup;
 			children = (
-				8D6BAE2722D332E900FF383C /* AppDelegate.swift */,
+				8D6BAE3C22D340D100FF383C /* Main */,
+				8D6BAE3D22D340E100FF383C /* Resources */,
 				8D6BAE2922D332E900FF383C /* ViewController.swift */,
+			);
+			path = Photify;
+			sourceTree = "<group>";
+		};
+		8D6BAE3C22D340D100FF383C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8D6BAE2722D332E900FF383C /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8D6BAE3D22D340E100FF383C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				8D6BAE2B22D332E900FF383C /* Main.storyboard */,
 				8D6BAE3122D332EA00FF383C /* Assets.xcassets */,
 				8D6BAE3322D332EA00FF383C /* LaunchScreen.storyboard */,
 				8D6BAE3622D332EA00FF383C /* Info.plist */,
 				8D6BAE2E22D332E900FF383C /* Photify.xcdatamodeld */,
 			);
-			path = Photify;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +304,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDDE2DY87F;
-				INFOPLIST_FILE = Photify/Info.plist;
+				INFOPLIST_FILE = Photify/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDDE2DY87F;
-				INFOPLIST_FILE = Photify/Info.plist;
+				INFOPLIST_FILE = Photify/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
