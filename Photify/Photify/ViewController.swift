@@ -35,6 +35,9 @@ class ViewController: UIViewController {
         let ellipse = ShapeView(shape: Ellipse())
         ellipse.frame = CGRect(x: 100, y: 600, width: 300, height: 100)
         self.view.addSubview(ellipse)
+        
+        let triangle = ShapeView(shape: Triangle(), frame: CGRect(x: 300, y: 100, width: 100, height: 100))
+        self.view.addSubview(triangle)
     }
 }
 
