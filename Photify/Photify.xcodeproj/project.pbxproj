@@ -24,6 +24,7 @@
 		8D6BAE5522D35F1F00FF383C /* CircleGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5422D35F1F00FF383C /* CircleGeometry.swift */; };
 		8D6BAE5722D35FC400FF383C /* RectangleGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5622D35FC400FF383C /* RectangleGeometry.swift */; };
 		8D6BAE5922D3703400FF383C /* AngleGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5822D3703400FF383C /* AngleGeometry.swift */; };
+		8D6BAE5B22D37FC000FF383C /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5A22D37FC000FF383C /* Triangle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		8D6BAE5422D35F1F00FF383C /* CircleGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGeometry.swift; sourceTree = "<group>"; };
 		8D6BAE5622D35FC400FF383C /* RectangleGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleGeometry.swift; sourceTree = "<group>"; };
 		8D6BAE5822D3703400FF383C /* AngleGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleGeometry.swift; sourceTree = "<group>"; };
+		8D6BAE5A22D37FC000FF383C /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				8D6BAE4822D357BE00FF383C /* Circle.swift */,
 				8D6BAE4C22D35B5400FF383C /* Ellipse.swift */,
 				8D6BAE4A22D3590500FF383C /* Hexagon.swift */,
+				8D6BAE5A22D37FC000FF383C /* Triangle.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				8D6BAE4522D3476500FF383C /* Rectangle.swift in Sources */,
 				8D6BAE4D22D35B5400FF383C /* Ellipse.swift in Sources */,
 				8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */,
+				8D6BAE5B22D37FC000FF383C /* Triangle.swift in Sources */,
 				8D6BAE5022D35D6700FF383C /* ShapeViewStyle.swift in Sources */,
 				8D6BAE4022D3456C00FF383C /* Shape.swift in Sources */,
 			);
