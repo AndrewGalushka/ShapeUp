@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2722D332E900FF383C /* AppDelegate.swift */; };
-		8D6BAE2A22D332E900FF383C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2922D332E900FF383C /* ViewController.swift */; };
+		8D6BAE2A22D332E900FF383C /* ShapesContextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2922D332E900FF383C /* ShapesContextViewController.swift */; };
 		8D6BAE2D22D332E900FF383C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2B22D332E900FF383C /* Main.storyboard */; };
 		8D6BAE3022D332E900FF383C /* Photify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2E22D332E900FF383C /* Photify.xcdatamodeld */; };
 		8D6BAE3222D332EA00FF383C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D6BAE3122D332EA00FF383C /* Assets.xcassets */; };
@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		8D6BAE2422D332E900FF383C /* Photify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6BAE2722D332E900FF383C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D6BAE2922D332E900FF383C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8D6BAE2922D332E900FF383C /* ShapesContextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesContextViewController.swift; sourceTree = "<group>"; };
 		8D6BAE2C22D332E900FF383C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D6BAE2F22D332E900FF383C /* Photify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photify.xcdatamodel; sourceTree = "<group>"; };
 		8D6BAE3122D332EA00FF383C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 				8D6BAE3C22D340D100FF383C /* Main */,
 				8D6BAE3E22D3455500FF383C /* Core */,
 				8D6BAE3D22D340E100FF383C /* Resources */,
-				8D6BAE2922D332E900FF383C /* ViewController.swift */,
+				8D6BAE2922D332E900FF383C /* ShapesContextViewController.swift */,
 			);
 			path = Photify;
 			sourceTree = "<group>";
@@ -229,7 +229,7 @@
 				8D6BAE5722D35FC400FF383C /* RectangleGeometry.swift in Sources */,
 				8D6BAE4B22D3590500FF383C /* Hexagon.swift in Sources */,
 				8D6BAE3022D332E900FF383C /* Photify.xcdatamodeld in Sources */,
-				8D6BAE2A22D332E900FF383C /* ViewController.swift in Sources */,
+				8D6BAE2A22D332E900FF383C /* ShapesContextViewController.swift in Sources */,
 				8D6BAE5322D35EFF00FF383C /* GeometryNamespace.swift in Sources */,
 				8D6BAE4522D3476500FF383C /* Rectangle.swift in Sources */,
 				8D6BAE4D22D35B5400FF383C /* Ellipse.swift in Sources */,
