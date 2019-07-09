@@ -20,9 +20,18 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YaR-lw-SsC">
                                 <rect key="frame" x="0.0" y="946" width="1366" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wHY-7Q-hbc">
+                                        <rect key="frame" x="0.0" y="0.0" width="1366" height="50"/>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0jV-ip-EfP"/>
+                                    <constraint firstItem="wHY-7Q-hbc" firstAttribute="top" secondItem="YaR-lw-SsC" secondAttribute="top" id="3Pl-vj-cG9"/>
+                                    <constraint firstAttribute="trailing" secondItem="wHY-7Q-hbc" secondAttribute="trailing" id="JT9-fM-X31"/>
+                                    <constraint firstAttribute="bottom" secondItem="wHY-7Q-hbc" secondAttribute="bottom" id="b2h-0m-L5X"/>
+                                    <constraint firstItem="wHY-7Q-hbc" firstAttribute="leading" secondItem="YaR-lw-SsC" secondAttribute="leading" id="jhe-wf-TKJ"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jng-Yb-2vq">
