@@ -10,7 +10,6 @@
 		8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2722D332E900FF383C /* AppDelegate.swift */; };
 		8D6BAE2A22D332E900FF383C /* ShapesContextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2922D332E900FF383C /* ShapesContextViewController.swift */; };
 		8D6BAE2D22D332E900FF383C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2B22D332E900FF383C /* Main.storyboard */; };
-		8D6BAE3022D332E900FF383C /* Photify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2E22D332E900FF383C /* Photify.xcdatamodeld */; };
 		8D6BAE3222D332EA00FF383C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D6BAE3122D332EA00FF383C /* Assets.xcassets */; };
 		8D6BAE3522D332EA00FF383C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D6BAE3322D332EA00FF383C /* LaunchScreen.storyboard */; };
 		8D6BAE4022D3456C00FF383C /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE3F22D3456C00FF383C /* Shape.swift */; };
@@ -19,13 +18,18 @@
 		8D6BAE4922D357BE00FF383C /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE4822D357BE00FF383C /* Circle.swift */; };
 		8D6BAE4B22D3590500FF383C /* Hexagon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE4A22D3590500FF383C /* Hexagon.swift */; };
 		8D6BAE4D22D35B5400FF383C /* Ellipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE4C22D35B5400FF383C /* Ellipse.swift */; };
-		8D6BAE5022D35D6700FF383C /* ShapeViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE4F22D35D6700FF383C /* ShapeViewStyle.swift */; };
 		8D6BAE5322D35EFF00FF383C /* GeometryNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5222D35EFF00FF383C /* GeometryNamespace.swift */; };
 		8D6BAE5522D35F1F00FF383C /* CircleGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5422D35F1F00FF383C /* CircleGeometry.swift */; };
 		8D6BAE5722D35FC400FF383C /* RectangleGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5622D35FC400FF383C /* RectangleGeometry.swift */; };
 		8D6BAE5922D3703400FF383C /* AngleGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5822D3703400FF383C /* AngleGeometry.swift */; };
 		8D6BAE5B22D37FC000FF383C /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5A22D37FC000FF383C /* Triangle.swift */; };
 		8DD103A722D47CC70052B13B /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103A622D47CC70052B13B /* Star.swift */; };
+		8DD103AA22D494FB0052B13B /* ShapeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103A922D494FB0052B13B /* ShapeViewModel.swift */; };
+		8DD103B622D4BCE70052B13B /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103B522D4BCE70052B13B /* DataBaseManager.swift */; };
+		8DD103B922D4C7520052B13B /* ManagedObjectModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103B722D4C7520052B13B /* ManagedObjectModel.xcdatamodeld */; };
+		8DD103BC22D4C8D10052B13B /* Coordintor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103BB22D4C8D10052B13B /* Coordintor.swift */; };
+		8DD103BE22D4C8F30052B13B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103BD22D4C8F30052B13B /* AppCoordinator.swift */; };
+		8DD103C122D4C9A80052B13B /* AppAssemblerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103C022D4C9A80052B13B /* AppAssemblerType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +37,6 @@
 		8D6BAE2722D332E900FF383C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D6BAE2922D332E900FF383C /* ShapesContextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesContextViewController.swift; sourceTree = "<group>"; };
 		8D6BAE2C22D332E900FF383C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8D6BAE2F22D332E900FF383C /* Photify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photify.xcdatamodel; sourceTree = "<group>"; };
 		8D6BAE3122D332EA00FF383C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D6BAE3422D332EA00FF383C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D6BAE3622D332EA00FF383C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,13 +46,18 @@
 		8D6BAE4822D357BE00FF383C /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		8D6BAE4A22D3590500FF383C /* Hexagon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexagon.swift; sourceTree = "<group>"; };
 		8D6BAE4C22D35B5400FF383C /* Ellipse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ellipse.swift; sourceTree = "<group>"; };
-		8D6BAE4F22D35D6700FF383C /* ShapeViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViewStyle.swift; sourceTree = "<group>"; };
 		8D6BAE5222D35EFF00FF383C /* GeometryNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryNamespace.swift; sourceTree = "<group>"; };
 		8D6BAE5422D35F1F00FF383C /* CircleGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGeometry.swift; sourceTree = "<group>"; };
 		8D6BAE5622D35FC400FF383C /* RectangleGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleGeometry.swift; sourceTree = "<group>"; };
 		8D6BAE5822D3703400FF383C /* AngleGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleGeometry.swift; sourceTree = "<group>"; };
 		8D6BAE5A22D37FC000FF383C /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		8DD103A622D47CC70052B13B /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		8DD103A922D494FB0052B13B /* ShapeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViewModel.swift; sourceTree = "<group>"; };
+		8DD103B522D4BCE70052B13B /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
+		8DD103B822D4C7520052B13B /* ManagedObjectModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ManagedObjectModel.xcdatamodel; sourceTree = "<group>"; };
+		8DD103BB22D4C8D10052B13B /* Coordintor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordintor.swift; sourceTree = "<group>"; };
+		8DD103BD22D4C8F30052B13B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		8DD103C022D4C9A80052B13B /* AppAssemblerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssemblerType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +92,10 @@
 			children = (
 				8D6BAE3C22D340D100FF383C /* Main */,
 				8D6BAE3E22D3455500FF383C /* Views */,
+				8DD103A822D494E10052B13B /* Models */,
 				8D6BAE3D22D340E100FF383C /* Resources */,
 				8D6BAE6022D39BCC00FF383C /* Screens */,
+				8DD103B322D4BCBE0052B13B /* Logic */,
 			);
 			path = Photify;
 			sourceTree = "<group>";
@@ -93,6 +103,7 @@
 		8D6BAE3C22D340D100FF383C /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				8DD103BA22D4C8B90052B13B /* Coordinator */,
 				8D6BAE2722D332E900FF383C /* AppDelegate.swift */,
 			);
 			path = Main;
@@ -105,7 +116,6 @@
 				8D6BAE3122D332EA00FF383C /* Assets.xcassets */,
 				8D6BAE3322D332EA00FF383C /* LaunchScreen.storyboard */,
 				8D6BAE3622D332EA00FF383C /* Info.plist */,
-				8D6BAE2E22D332E900FF383C /* Photify.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -138,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				8D6BAE4122D345BC00FF383C /* ShapeView.swift */,
-				8D6BAE4F22D35D6700FF383C /* ShapeViewStyle.swift */,
 			);
 			path = ShapeView;
 			sourceTree = "<group>";
@@ -160,6 +169,49 @@
 				8D6BAE2922D332E900FF383C /* ShapesContextViewController.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		8DD103A822D494E10052B13B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8DD103A922D494FB0052B13B /* ShapeViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8DD103B322D4BCBE0052B13B /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				8DD103B422D4BCCB0052B13B /* DataBase */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		8DD103B422D4BCCB0052B13B /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				8DD103B522D4BCE70052B13B /* DataBaseManager.swift */,
+				8DD103B722D4C7520052B13B /* ManagedObjectModel.xcdatamodeld */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		8DD103BA22D4C8B90052B13B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8DD103BF22D4C9660052B13B /* AppAssembler */,
+				8DD103BB22D4C8D10052B13B /* Coordintor.swift */,
+				8DD103BD22D4C8F30052B13B /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8DD103BF22D4C9660052B13B /* AppAssembler */ = {
+			isa = PBXGroup;
+			children = (
+				8DD103C022D4C9A80052B13B /* AppAssemblerType.swift */,
+			);
+			path = AppAssembler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,15 +291,19 @@
 				8D6BAE4922D357BE00FF383C /* Circle.swift in Sources */,
 				8D6BAE5722D35FC400FF383C /* RectangleGeometry.swift in Sources */,
 				8D6BAE4B22D3590500FF383C /* Hexagon.swift in Sources */,
-				8D6BAE3022D332E900FF383C /* Photify.xcdatamodeld in Sources */,
 				8D6BAE2A22D332E900FF383C /* ShapesContextViewController.swift in Sources */,
 				8D6BAE5322D35EFF00FF383C /* GeometryNamespace.swift in Sources */,
+				8DD103B922D4C7520052B13B /* ManagedObjectModel.xcdatamodeld in Sources */,
 				8D6BAE4522D3476500FF383C /* Rectangle.swift in Sources */,
 				8D6BAE4D22D35B5400FF383C /* Ellipse.swift in Sources */,
 				8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */,
+				8DD103BC22D4C8D10052B13B /* Coordintor.swift in Sources */,
+				8DD103AA22D494FB0052B13B /* ShapeViewModel.swift in Sources */,
+				8DD103C122D4C9A80052B13B /* AppAssemblerType.swift in Sources */,
 				8D6BAE5B22D37FC000FF383C /* Triangle.swift in Sources */,
-				8D6BAE5022D35D6700FF383C /* ShapeViewStyle.swift in Sources */,
+				8DD103BE22D4C8F30052B13B /* AppCoordinator.swift in Sources */,
 				8D6BAE4022D3456C00FF383C /* Shape.swift in Sources */,
+				8DD103B622D4BCE70052B13B /* DataBaseManager.swift in Sources */,
 				8DD103A722D47CC70052B13B /* Star.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,13 +508,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		8D6BAE2E22D332E900FF383C /* Photify.xcdatamodeld */ = {
+		8DD103B722D4C7520052B13B /* ManagedObjectModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				8D6BAE2F22D332E900FF383C /* Photify.xcdatamodel */,
+				8DD103B822D4C7520052B13B /* ManagedObjectModel.xcdatamodel */,
 			);
-			currentVersion = 8D6BAE2F22D332E900FF383C /* Photify.xcdatamodel */;
-			path = Photify.xcdatamodeld;
+			currentVersion = 8DD103B822D4C7520052B13B /* ManagedObjectModel.xcdatamodel */;
+			path = ManagedObjectModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
