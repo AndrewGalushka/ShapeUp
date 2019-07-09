@@ -12,13 +12,13 @@ class DataBaseManager {
     
     // MARK: - Properties(Private)
     
-    private let persistentContainer: NSPersistentContainer
+    private let persistentContainer: PersistentContainer
     private(set) var isLoaded = false
     
     // MARK: - Initializers
     
     init() {
-        persistentContainer = NSPersistentContainer(name: DataBaseManager.dataModelFileName)
+        persistentContainer = PersistentContainer(name: DataBaseManager.dataModelFileName)
         persistentContainer.loadPersistentStores { [weak self] (storeDescription, error) in
             if let error = error {
                 fatalError("Unable to load persistent stores: \(error)")
