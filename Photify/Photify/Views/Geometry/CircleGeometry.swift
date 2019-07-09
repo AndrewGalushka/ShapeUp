@@ -18,5 +18,10 @@ extension Geometry {
             self.center = center
             self.radius = radius
         }
+        
+        func pointOnArc(angle: Angle) -> CGPoint {
+            return CGPoint(x: Double(center.x) + Double(radius) * cos(angle.radians),
+                           y: Double(center.y) + Double(radius) * sin(angle.radians))
+        }
     }
 }

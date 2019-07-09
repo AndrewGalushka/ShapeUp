@@ -42,6 +42,17 @@ class ShapesContextViewController: UIViewController {
         
         let triangle = ShapeView(shape: Triangle(), frame: CGRect(x: 300, y: 100, width: 100, height: 100))
         self.scrollView.addSubview(triangle)
+        
+        let star = ShapeView(shape: Star())
+        star.frame = CGRect(origin: view.center, size: CGSize(width: 300, height: 300))
+        self.scrollView.addSubview(star)
+        
+        let starCircle = ShapeView(shape: Circle())
+        starCircle.frame = CGRect(origin: view.center, size: CGSize(width: 300, height: 300))
+        starCircle.fillColor = nil
+        starCircle.lineWidth = 1.0
+        starCircle.shapeLayer.strokeColor = UIColor.blue.cgColor
+        self.scrollView.addSubview(starCircle)
     }
 }
 
