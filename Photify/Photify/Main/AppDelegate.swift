@@ -12,9 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    lazy var dataBaseManager: CoreDataManager = CoreDataManager()
+    var appCoordinator: AppCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        let appCoordinator = AppCoordinator(window: window, launchOptions: launchOptions)
+        self.window = window
+        self.appCoordinator = appCoordinator
+        
+        self.appCoordinator?.start()
+        self.window?.makeKeyAndVisible()
         
         return true
     }

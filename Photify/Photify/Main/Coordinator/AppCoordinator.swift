@@ -9,12 +9,19 @@
 import UIKit
 
 class AppCoordinator: Coordinator {
+    private let window: UIWindow
     private let launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    private let appAssembler: AppAssemblerType
     
-    init(launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+    init(window: UIWindow,
+         launchOptions: [UIApplication.LaunchOptionsKey: Any]?,
+         appAssembler: AppAssemblerType = AppAssembler()) {
+        self.window = window
         self.launchOptions = launchOptions
+        self.appAssembler = appAssembler
     }
     
     func start() {
+        window.rootViewController = ShapesContextViewController.loadFromStoryboard()
     }
 }
