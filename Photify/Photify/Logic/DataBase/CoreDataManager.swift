@@ -1,5 +1,5 @@
 //
-//  DataBaseManager.swift
+//  CoreDataManager.swift
 //  Photify
 //
 //  Created by Galushka on 7/9/19.
@@ -8,7 +8,7 @@
 
 import CoreData
 
-class DataBaseManager {
+class CoreDataManager {
     
     // MARK: - Properties(Private)
     
@@ -18,8 +18,9 @@ class DataBaseManager {
     // MARK: - Initializers
     
     init() {
-        persistentContainer = PersistentContainer(name: DataBaseManager.dataModelFileName)
+        persistentContainer = PersistentContainer(name: CoreDataManager.dataModelFileName)
         persistentContainer.loadPersistentStores { [weak self] (storeDescription, error) in
+            
             if let error = error {
                 fatalError("Unable to load persistent stores: \(error)")
             }
@@ -29,6 +30,6 @@ class DataBaseManager {
     }
 }
 
-extension DataBaseManager {
+extension CoreDataManager {
     static let dataModelFileName = "ManagedObjectModel"
 }
