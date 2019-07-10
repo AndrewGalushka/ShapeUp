@@ -54,8 +54,8 @@ class ShapesContextViewController: UIViewController {
         starCircle.shapeLayer.strokeColor = UIColor.blue.cgColor
         self.scrollView.addSubview(starCircle)
         
-        let xMark = ShapeView(shape: XMark(lengthBetweenLines: 30))
-        xMark.frame = CGRect(x: view.center.x, y: 10, width: 400, height: 400)
+        let xMark = ShapeView(shape: XMark())
+        xMark.frame = CGRect(x: view.center.x, y: 10, width: 100, height: 100)
         xMark.shapeLayer.fillColor = UIColor.red.cgColor
         xMark.layer.borderWidth = 1.0
         self.scrollView.addSubview(xMark)

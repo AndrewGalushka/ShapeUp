@@ -11,6 +11,8 @@
 		8D18F17922D5D29200E7B1E0 /* ShapesContextViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D18F17822D5D29200E7B1E0 /* ShapesContextViewController.storyboard */; };
 		8D18F17C22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F17B22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift */; };
 		8D18F17E22D5FA5A00E7B1E0 /* XMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F17D22D5FA5A00E7B1E0 /* XMark.swift */; };
+		8D18F18422D60F8200E7B1E0 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F18322D60F8200E7B1E0 /* MainScreenViewController.swift */; };
+		8D18F18622D60F8C00E7B1E0 /* MainScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D18F18522D60F8C00E7B1E0 /* MainScreenViewController.storyboard */; };
 		8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2722D332E900FF383C /* AppDelegate.swift */; };
 		8D6BAE2A22D332E900FF383C /* ShapesContextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2922D332E900FF383C /* ShapesContextViewController.swift */; };
 		8D6BAE3222D332EA00FF383C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D6BAE3122D332EA00FF383C /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		8D18F17822D5D29200E7B1E0 /* ShapesContextViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShapesContextViewController.storyboard; sourceTree = "<group>"; };
 		8D18F17B22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardLoadable.swift"; sourceTree = "<group>"; };
 		8D18F17D22D5FA5A00E7B1E0 /* XMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMark.swift; sourceTree = "<group>"; };
+		8D18F18322D60F8200E7B1E0 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		8D18F18522D60F8C00E7B1E0 /* MainScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreenViewController.storyboard; sourceTree = "<group>"; };
 		8D6BAE2422D332E900FF383C /* Photify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6BAE2722D332E900FF383C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D6BAE2922D332E900FF383C /* ShapesContextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesContextViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,24 @@
 				8D18F17B22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8D18F17F22D60F3E00E7B1E0 /* ShapesCanvasView */ = {
+			isa = PBXGroup;
+			children = (
+				8D18F17822D5D29200E7B1E0 /* ShapesContextViewController.storyboard */,
+				8D6BAE2922D332E900FF383C /* ShapesContextViewController.swift */,
+			);
+			path = ShapesCanvasView;
+			sourceTree = "<group>";
+		};
+		8D18F18022D60F5400E7B1E0 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				8D18F18322D60F8200E7B1E0 /* MainScreenViewController.swift */,
+				8D18F18522D60F8C00E7B1E0 /* MainScreenViewController.storyboard */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 		8D6BAE1B22D332E900FF383C = {
@@ -183,8 +205,8 @@
 		8D6BAE6022D39BCC00FF383C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				8D18F17822D5D29200E7B1E0 /* ShapesContextViewController.storyboard */,
-				8D6BAE2922D332E900FF383C /* ShapesContextViewController.swift */,
+				8D18F18022D60F5400E7B1E0 /* MainView */,
+				8D18F17F22D60F3E00E7B1E0 /* ShapesCanvasView */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -294,6 +316,7 @@
 			files = (
 				8D6BAE3522D332EA00FF383C /* LaunchScreen.storyboard in Resources */,
 				8D18F17922D5D29200E7B1E0 /* ShapesContextViewController.storyboard in Resources */,
+				8D18F18622D60F8C00E7B1E0 /* MainScreenViewController.storyboard in Resources */,
 				8D6BAE3222D332EA00FF383C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +333,7 @@
 				8D6BAE5522D35F1F00FF383C /* CircleGeometry.swift in Sources */,
 				8D6BAE4922D357BE00FF383C /* Circle.swift in Sources */,
 				8D6BAE5722D35FC400FF383C /* RectangleGeometry.swift in Sources */,
+				8D18F18422D60F8200E7B1E0 /* MainScreenViewController.swift in Sources */,
 				8D6BAE4B22D3590500FF383C /* Hexagon.swift in Sources */,
 				8D18F17722D5D0C900E7B1E0 /* AppAssembler.swift in Sources */,
 				8D6BAE2A22D332E900FF383C /* ShapesContextViewController.swift in Sources */,
