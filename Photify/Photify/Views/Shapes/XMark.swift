@@ -9,12 +9,6 @@
 import CoreGraphics
 
 struct XMark: Shape {
-    let lengthBetweenLines: CGFloat
-    
-    init(lengthBetweenLines: CGFloat = 10) {
-        self.lengthBetweenLines = lengthBetweenLines
-    }
-    
     func path(in rect: CGRect) -> CGPath {
         let center = CGPoint(x: rect.width / 2, y: rect.height / 2)
         let minLength = min(rect.size.width, rect.size.height)
@@ -23,7 +17,7 @@ struct XMark: Shape {
                                                 y: center.y - canvasSize.height / 2),
                                 size: canvasSize)
         let canvasOrigin = canvasRect.origin
-        
+        let lengthBetweenLines = canvasSize.width * 0.1
         let pointOffsetFromCorner = sqrt(pow(lengthBetweenLines, 2) / 2)
         let pointOffsetFromCenter = sqrt(2 * pow(lengthBetweenLines, 2)) / 2
         
