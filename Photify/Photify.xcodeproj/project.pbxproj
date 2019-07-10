@@ -69,7 +69,7 @@
 		8DD103BB22D4C8D10052B13B /* Coordintor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordintor.swift; sourceTree = "<group>"; };
 		8DD103BD22D4C8F30052B13B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		8DD103C022D4C9A80052B13B /* AppAssemblerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssemblerType.swift; sourceTree = "<group>"; };
-		8DD103C222D4E1D90052B13B /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
+		8DD103C222D4E1D90052B13B /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; wrapsLines = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
