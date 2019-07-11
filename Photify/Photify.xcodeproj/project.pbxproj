@@ -32,7 +32,7 @@
 		8DD103AA22D494FB0052B13B /* ShapeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103A922D494FB0052B13B /* ShapeViewModel.swift */; };
 		8DD103B622D4BCE70052B13B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103B522D4BCE70052B13B /* CoreDataManager.swift */; };
 		8DD103B922D4C7520052B13B /* ManagedObjectModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103B722D4C7520052B13B /* ManagedObjectModel.xcdatamodeld */; };
-		8DD103BC22D4C8D10052B13B /* Coordintor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103BB22D4C8D10052B13B /* Coordintor.swift */; };
+		8DD103BC22D4C8D10052B13B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103BB22D4C8D10052B13B /* Coordinator.swift */; };
 		8DD103BE22D4C8F30052B13B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103BD22D4C8F30052B13B /* AppCoordinator.swift */; };
 		8DD103C122D4C9A80052B13B /* AppAssemblerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103C022D4C9A80052B13B /* AppAssemblerType.swift */; };
 		8DD103C322D4E1D90052B13B /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103C222D4E1D90052B13B /* PersistentContainer.swift */; };
@@ -66,7 +66,7 @@
 		8DD103A922D494FB0052B13B /* ShapeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViewModel.swift; sourceTree = "<group>"; };
 		8DD103B522D4BCE70052B13B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		8DD103B822D4C7520052B13B /* ManagedObjectModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ManagedObjectModel.xcdatamodel; sourceTree = "<group>"; };
-		8DD103BB22D4C8D10052B13B /* Coordintor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordintor.swift; sourceTree = "<group>"; };
+		8DD103BB22D4C8D10052B13B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8DD103BD22D4C8F30052B13B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		8DD103C022D4C9A80052B13B /* AppAssemblerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssemblerType.swift; sourceTree = "<group>"; };
 		8DD103C222D4E1D90052B13B /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; wrapsLines = 0; };
@@ -241,7 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				8DD103BF22D4C9660052B13B /* AppAssembler */,
-				8DD103BB22D4C8D10052B13B /* Coordintor.swift */,
+				8DD103BB22D4C8D10052B13B /* Coordinator.swift */,
 				8DD103BD22D4C8F30052B13B /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -344,7 +344,7 @@
 				8D6BAE4D22D35B5400FF383C /* Ellipse.swift in Sources */,
 				8DD103C322D4E1D90052B13B /* PersistentContainer.swift in Sources */,
 				8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */,
-				8DD103BC22D4C8D10052B13B /* Coordintor.swift in Sources */,
+				8DD103BC22D4C8D10052B13B /* Coordinator.swift in Sources */,
 				8DD103AA22D494FB0052B13B /* ShapeViewModel.swift in Sources */,
 				8DD103C122D4C9A80052B13B /* AppAssemblerType.swift in Sources */,
 				8D6BAE5B22D37FC000FF383C /* Triangle.swift in Sources */,

@@ -17,12 +17,11 @@ class AppCoordinator: Coordinator {
     init(window: UIWindow,
          navigationController: UINavigationController = UINavigationController(),
          launchOptions: [UIApplication.LaunchOptionsKey: Any]?,
-         appAssembler: AppAssemblerType = AppAssembler()) {
+         appAssembler: AppAssemblerType) {
         self.window = window
         self.navigationController = navigationController
         self.launchOptions = launchOptions
         self.appAssembler = appAssembler
-        _ = self.appAssembler.assembleDataBaseManager()
     }
     
     func start() {
