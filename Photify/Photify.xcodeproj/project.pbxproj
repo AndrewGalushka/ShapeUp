@@ -36,6 +36,7 @@
 		8DD103BE22D4C8F30052B13B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103BD22D4C8F30052B13B /* AppCoordinator.swift */; };
 		8DD103C122D4C9A80052B13B /* AppAssemblerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103C022D4C9A80052B13B /* AppAssemblerType.swift */; };
 		8DD103C322D4E1D90052B13B /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103C222D4E1D90052B13B /* PersistentContainer.swift */; };
+		8DF18A2B22D79CFD0090A2FE /* SingleReceiverBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		8DD103BD22D4C8F30052B13B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		8DD103C022D4C9A80052B13B /* AppAssemblerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssemblerType.swift; sourceTree = "<group>"; };
 		8DD103C222D4E1D90052B13B /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleReceiverBinding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				8DD103B422D4BCCB0052B13B /* DataBase */,
+				8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DF18A2B22D79CFD0090A2FE /* SingleReceiverBinding.swift in Sources */,
 				8D6BAE4222D345BC00FF383C /* ShapeView.swift in Sources */,
 				8D6BAE5922D3703400FF383C /* AngleGeometry.swift in Sources */,
 				8D6BAE5522D35F1F00FF383C /* CircleGeometry.swift in Sources */,

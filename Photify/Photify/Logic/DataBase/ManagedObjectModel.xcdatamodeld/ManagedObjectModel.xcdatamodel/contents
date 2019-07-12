@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+    <entity name="PointObject" representedClassName="PointObject" syncable="YES" codeGenerationType="class">
+        <attribute name="x" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="y" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="ShapeViewObject" representedClassName="ShapeViewObject" syncable="YES" codeGenerationType="class">
+        <attribute name="origin" optional="YES" attributeType="Transformable" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ShapeViewObject" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="PointObject" positionX="-54" positionY="0" width="128" height="75"/>
+    </elements>
 </model>
