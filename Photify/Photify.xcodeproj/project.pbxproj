@@ -13,6 +13,9 @@
 		8D18F17E22D5FA5A00E7B1E0 /* XMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F17D22D5FA5A00E7B1E0 /* XMark.swift */; };
 		8D18F18422D60F8200E7B1E0 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F18322D60F8200E7B1E0 /* MainScreenViewController.swift */; };
 		8D18F18622D60F8C00E7B1E0 /* MainScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D18F18522D60F8C00E7B1E0 /* MainScreenViewController.storyboard */; };
+		8D21CD1122DCC8B000EA3948 /* CanvasListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D21CD1022DCC8B000EA3948 /* CanvasListViewController.swift */; };
+		8D21CD1322DCC8BB00EA3948 /* CanvasListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D21CD1222DCC8BB00EA3948 /* CanvasListViewController.storyboard */; };
+		8D21CD1622DCC99B00EA3948 /* CanvasListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D21CD1522DCC99B00EA3948 /* CanvasListView.swift */; };
 		8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2722D332E900FF383C /* AppDelegate.swift */; };
 		8D6BAE2A22D332E900FF383C /* ShapesContextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2922D332E900FF383C /* ShapesContextViewController.swift */; };
 		8D6BAE3222D332EA00FF383C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D6BAE3122D332EA00FF383C /* Assets.xcassets */; };
@@ -46,6 +49,9 @@
 		8D18F17D22D5FA5A00E7B1E0 /* XMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMark.swift; sourceTree = "<group>"; };
 		8D18F18322D60F8200E7B1E0 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		8D18F18522D60F8C00E7B1E0 /* MainScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreenViewController.storyboard; sourceTree = "<group>"; };
+		8D21CD1022DCC8B000EA3948 /* CanvasListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListViewController.swift; sourceTree = "<group>"; };
+		8D21CD1222DCC8BB00EA3948 /* CanvasListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CanvasListViewController.storyboard; sourceTree = "<group>"; };
+		8D21CD1522DCC99B00EA3948 /* CanvasListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListView.swift; sourceTree = "<group>"; };
 		8D6BAE2422D332E900FF383C /* Photify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6BAE2722D332E900FF383C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D6BAE2922D332E900FF383C /* ShapesContextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesContextViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +115,24 @@
 				8D18F18522D60F8C00E7B1E0 /* MainScreenViewController.storyboard */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		8D21CD0F22DCC88300EA3948 /* CanvasListView */ = {
+			isa = PBXGroup;
+			children = (
+				8D21CD1422DCC95400EA3948 /* CanvasesTableView */,
+				8D21CD1022DCC8B000EA3948 /* CanvasListViewController.swift */,
+				8D21CD1222DCC8BB00EA3948 /* CanvasListViewController.storyboard */,
+			);
+			path = CanvasListView;
+			sourceTree = "<group>";
+		};
+		8D21CD1422DCC95400EA3948 /* CanvasesTableView */ = {
+			isa = PBXGroup;
+			children = (
+				8D21CD1522DCC99B00EA3948 /* CanvasListView.swift */,
+			);
+			path = CanvasesTableView;
 			sourceTree = "<group>";
 		};
 		8D6BAE1B22D332E900FF383C = {
@@ -207,6 +231,7 @@
 		8D6BAE6022D39BCC00FF383C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				8D21CD0F22DCC88300EA3948 /* CanvasListView */,
 				8D18F18022D60F5400E7B1E0 /* MainView */,
 				8D18F17F22D60F3E00E7B1E0 /* ShapesCanvasView */,
 			);
@@ -320,6 +345,7 @@
 				8D6BAE3522D332EA00FF383C /* LaunchScreen.storyboard in Resources */,
 				8D18F17922D5D29200E7B1E0 /* ShapesContextViewController.storyboard in Resources */,
 				8D18F18622D60F8C00E7B1E0 /* MainScreenViewController.storyboard in Resources */,
+				8D21CD1322DCC8BB00EA3948 /* CanvasListViewController.storyboard in Resources */,
 				8D6BAE3222D332EA00FF383C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,9 +372,11 @@
 				8DD103B922D4C7520052B13B /* ManagedObjectModel.xcdatamodeld in Sources */,
 				8D6BAE4522D3476500FF383C /* Rectangle.swift in Sources */,
 				8D6BAE4D22D35B5400FF383C /* Ellipse.swift in Sources */,
+				8D21CD1122DCC8B000EA3948 /* CanvasListViewController.swift in Sources */,
 				8DD103C322D4E1D90052B13B /* PersistentContainer.swift in Sources */,
 				8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */,
 				8DD103BC22D4C8D10052B13B /* Coordinator.swift in Sources */,
+				8D21CD1622DCC99B00EA3948 /* CanvasListView.swift in Sources */,
 				8DD103AA22D494FB0052B13B /* ShapeViewModel.swift in Sources */,
 				8DD103C122D4C9A80052B13B /* AppAssemblerType.swift in Sources */,
 				8D6BAE5B22D37FC000FF383C /* Triangle.swift in Sources */,
