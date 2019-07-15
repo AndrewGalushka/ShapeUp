@@ -31,24 +31,8 @@ class CoreDataManager {
     convenience init() {
         self.init(completion: {})
     }
-    
-//    static func foo() {
-//        let path = Bundle.main.path(forResource: "ManagedObjectModel", ofType: "momd")!
-//        let url = URL(fileURLWithPath: path)
-//        let mom = NSManagedObjectModel(contentsOf: url)!
-//        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: mom)
-//
-//        let description = NSPersistentStoreDescription(url: FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!)
-//        description.type = NSSQLiteStoreType
-//        description.shouldMigrateStoreAutomatically = true
-//        coordinator.addPersistentStore(with: description) { [weak coordinator] (description, error) in
-//            let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-//            moc.persistentStoreCoordinator = coordinator
-//        }
-//
-//    }
 }
 
-extension CoreDataManager {
+private extension CoreDataManager {
     static let dataModelFileName = "ManagedObjectModel"
 }
