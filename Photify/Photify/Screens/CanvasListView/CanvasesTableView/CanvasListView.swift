@@ -28,15 +28,7 @@ class CanvasListView: UIView {
         return tb
     }()
     
-    @IBInspectable var cornerRadius: CGFloat {
-        get {
-           return self.layer.cornerRadius
-        }
-        
-        set {
-            self.layer.cornerRadius = newValue
-        }
-    }
+    private var dataSource = [String]()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -48,6 +40,11 @@ class CanvasListView: UIView {
         setUp()
     }
     
+    func setCanvasNames(_ names: [String]) {
+        dataSource = names
+        tableView.reloadData()
+    }
+    
     private func setUp() {
         tableView.backgroundColor = .red
         tableView.dataSource = self
@@ -56,12 +53,12 @@ class CanvasListView: UIView {
 
 extension CanvasListView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "\(indexPath.row)"
+        cell.detailTextLabel?.text = dataSource[indexPath.row]
         
         return cell
     }
