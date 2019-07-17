@@ -13,9 +13,11 @@
 		8D18F17E22D5FA5A00E7B1E0 /* XMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F17D22D5FA5A00E7B1E0 /* XMark.swift */; };
 		8D18F18422D60F8200E7B1E0 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F18322D60F8200E7B1E0 /* MainScreenViewController.swift */; };
 		8D18F18622D60F8C00E7B1E0 /* MainScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D18F18522D60F8C00E7B1E0 /* MainScreenViewController.storyboard */; };
+		8D196CD822DF5BC0000E51D9 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D196CD722DF5BC0000E51D9 /* StoreManager.swift */; };
 		8D21CD1122DCC8B000EA3948 /* CanvasListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D21CD1022DCC8B000EA3948 /* CanvasListViewController.swift */; };
 		8D21CD1322DCC8BB00EA3948 /* CanvasListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D21CD1222DCC8BB00EA3948 /* CanvasListViewController.storyboard */; };
 		8D21CD1622DCC99B00EA3948 /* CanvasListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D21CD1522DCC99B00EA3948 /* CanvasListView.swift */; };
+		8D4D01CF22DF5FB000348F7A /* AtomicProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01CE22DF5FB000348F7A /* AtomicProperty.swift */; };
 		8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2722D332E900FF383C /* AppDelegate.swift */; };
 		8D6BAE2A22D332E900FF383C /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2922D332E900FF383C /* CanvasViewController.swift */; };
 		8D6BAE3222D332EA00FF383C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D6BAE3122D332EA00FF383C /* Assets.xcassets */; };
@@ -48,9 +50,11 @@
 		8D18F17D22D5FA5A00E7B1E0 /* XMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMark.swift; sourceTree = "<group>"; };
 		8D18F18322D60F8200E7B1E0 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		8D18F18522D60F8C00E7B1E0 /* MainScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreenViewController.storyboard; sourceTree = "<group>"; };
+		8D196CD722DF5BC0000E51D9 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StoreManager.swift; path = ../../../../../../Users/Galushka/Documents/StoreManager.swift; sourceTree = "<group>"; };
 		8D21CD1022DCC8B000EA3948 /* CanvasListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListViewController.swift; sourceTree = "<group>"; };
 		8D21CD1222DCC8BB00EA3948 /* CanvasListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CanvasListViewController.storyboard; sourceTree = "<group>"; };
 		8D21CD1522DCC99B00EA3948 /* CanvasListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListView.swift; sourceTree = "<group>"; };
+		8D4D01CE22DF5FB000348F7A /* AtomicProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicProperty.swift; sourceTree = "<group>"; };
 		8D6BAE2422D332E900FF383C /* Photify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6BAE2722D332E900FF383C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D6BAE2922D332E900FF383C /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 			children = (
 				8DD103B422D4BCCB0052B13B /* DataBase */,
 				8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */,
+				8D4D01CE22DF5FB000348F7A /* AtomicProperty.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 		8DD103B422D4BCCB0052B13B /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				8D196CD722DF5BC0000E51D9 /* StoreManager.swift */,
 				8DD103B522D4BCE70052B13B /* CoreDataManager.swift */,
 				8DD103C222D4E1D90052B13B /* PersistentContainer.swift */,
 				8DD103B722D4C7520052B13B /* ManagedObjectModel.xcdatamodeld */,
@@ -355,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DF18A2B22D79CFD0090A2FE /* SingleReceiverBinding.swift in Sources */,
+				8D196CD822DF5BC0000E51D9 /* StoreManager.swift in Sources */,
 				8D6BAE4222D345BC00FF383C /* ShapeView.swift in Sources */,
 				8D6BAE5922D3703400FF383C /* AngleGeometry.swift in Sources */,
 				8D6BAE5522D35F1F00FF383C /* CircleGeometry.swift in Sources */,
@@ -372,6 +379,7 @@
 				8D21CD1122DCC8B000EA3948 /* CanvasListViewController.swift in Sources */,
 				8DD103C322D4E1D90052B13B /* PersistentContainer.swift in Sources */,
 				8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */,
+				8D4D01CF22DF5FB000348F7A /* AtomicProperty.swift in Sources */,
 				8DD103BC22D4C8D10052B13B /* Coordinator.swift in Sources */,
 				8D21CD1622DCC99B00EA3948 /* CanvasListView.swift in Sources */,
 				8DD103C122D4C9A80052B13B /* AppAssemblerType.swift in Sources */,
