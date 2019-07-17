@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CanvasViewController.swift
 //  Photify
 //
 //  Created by Galushka on 7/8/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShapesContextViewController: UIViewController {
+class CanvasViewController: UIViewController {
     @IBOutlet weak var bottomControlsContainerView: UIView!
     
     @IBOutlet weak var scrollView: UIScrollView!

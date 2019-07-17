@@ -40,7 +40,7 @@ class MainScreenViewController: UIViewController {
     }
     
     @objc private func goToButtonTouchUpInside(_ sender: UIButton) {
-        let shapesCanvasVC = ShapesContextViewController.loadFromStoryboard()
+        let shapesCanvasVC = CanvasViewController.loadFromStoryboard()
         self.navigationController?.pushViewController(shapesCanvasVC, animated: true)
     }
 }
