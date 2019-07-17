@@ -13,23 +13,24 @@ class CoreDataManager {
     // MARK: - Properties(Private)
     
     private let persistentContainer: PersistentContainer
+    private(set) var isLoaded: AtomicProperty<Bool> = .init(value: false)
     
     // MARK: - Initializers
     
-    init(completion: @escaping () -> Void) {
+    init() {
         persistentContainer = PersistentContainer(name: CoreDataManager.dataModelFileName)
+    }
+    
+    func loadStorage(completion: @escaping () -> Void) {
         persistentContainer.loadPersistentStores { (storeDescription, error) in
             
             if let error = error {
                 fatalError("Unable to load persistent stores: \(error)")
             }
             
+            self.isLoaded.value = true
             completion()
         }
-    }
-    
-    convenience init() {
-        self.init(completion: {})
     }
 }
 
