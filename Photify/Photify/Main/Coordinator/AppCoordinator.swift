@@ -25,7 +25,7 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        let mainScreenVC = MainScreenViewController.loadFromStoryboard()
+        let mainScreenVC = CanvasListViewController.loadFromStoryboard()
         self.navigationController.setViewControllers([mainScreenVC], animated: false)
         window.rootViewController = self.navigationController
     }
