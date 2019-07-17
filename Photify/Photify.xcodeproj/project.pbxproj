@@ -32,7 +32,6 @@
 		8D6BAE5922D3703400FF383C /* AngleGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5822D3703400FF383C /* AngleGeometry.swift */; };
 		8D6BAE5B22D37FC000FF383C /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5A22D37FC000FF383C /* Triangle.swift */; };
 		8DD103A722D47CC70052B13B /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103A622D47CC70052B13B /* Star.swift */; };
-		8DD103AA22D494FB0052B13B /* ShapeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103A922D494FB0052B13B /* ShapeViewModel.swift */; };
 		8DD103B622D4BCE70052B13B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103B522D4BCE70052B13B /* CoreDataManager.swift */; };
 		8DD103B922D4C7520052B13B /* ManagedObjectModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103B722D4C7520052B13B /* ManagedObjectModel.xcdatamodeld */; };
 		8DD103BC22D4C8D10052B13B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103BB22D4C8D10052B13B /* Coordinator.swift */; };
@@ -70,7 +69,6 @@
 		8D6BAE5822D3703400FF383C /* AngleGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleGeometry.swift; sourceTree = "<group>"; };
 		8D6BAE5A22D37FC000FF383C /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		8DD103A622D47CC70052B13B /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
-		8DD103A922D494FB0052B13B /* ShapeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViewModel.swift; sourceTree = "<group>"; };
 		8DD103B522D4BCE70052B13B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		8DD103B822D4C7520052B13B /* ManagedObjectModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ManagedObjectModel.xcdatamodel; sourceTree = "<group>"; };
 		8DD103BB22D4C8D10052B13B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 		8DD103A822D494E10052B13B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8DD103A922D494FB0052B13B /* ShapeViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -377,7 +374,6 @@
 				8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */,
 				8DD103BC22D4C8D10052B13B /* Coordinator.swift in Sources */,
 				8D21CD1622DCC99B00EA3948 /* CanvasListView.swift in Sources */,
-				8DD103AA22D494FB0052B13B /* ShapeViewModel.swift in Sources */,
 				8DD103C122D4C9A80052B13B /* AppAssemblerType.swift in Sources */,
 				8D6BAE5B22D37FC000FF383C /* Triangle.swift in Sources */,
 				8D18F17C22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift in Sources */,
