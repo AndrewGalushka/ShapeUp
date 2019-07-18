@@ -12,8 +12,13 @@ class CanvasListViewController: UIViewController {
     @IBOutlet weak var canvasListView: CanvasListView!
     
     @IBAction func addButtonTouchAction(_ sender: UIBarButtonItem) {
-        let addCanvasAlert = UIAlertController.makeAddCanvasAlert(doneButtonActionHandler: { print($0) },
-                                                                  cancelButtonActionHandler: { print("Cancel Tapped") })
+        let doneClosure = { [unowned self] (canvasName: String) in
+            let canvas = CanvasModel(name: canvasName)
+            self.canvasListView.addCanvas(canvas)
+        }
+        
+        let addCanvasAlert = UIAlertController.makeAddCanvasAlert(doneActionHandler: doneClosure,
+                                                                  cancelActionHandler: { print("Cancel Tapped") })
         self.present(addCanvasAlert, animated: true, completion: nil)
     }
 }

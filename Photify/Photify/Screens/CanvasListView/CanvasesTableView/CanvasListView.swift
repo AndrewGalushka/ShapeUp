@@ -58,7 +58,7 @@ extension CanvasListView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.detailTextLabel?.text = dataSource[indexPath.row].name
+        cell.textLabel?.text = dataSource[indexPath.row].name
         
         return cell
     }

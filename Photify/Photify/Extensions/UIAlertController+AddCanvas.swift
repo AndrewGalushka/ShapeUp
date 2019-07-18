@@ -9,8 +9,8 @@
 import UIKit.UIAlertController
 
 extension UIAlertController {
-    static func makeAddCanvasAlert(doneButtonActionHandler doneHandler: @escaping (_: String) -> Void,
-                                   cancelButtonActionHandler cancelHandler: @escaping () -> Void) -> UIAlertController {
+    static func makeAddCanvasAlert(doneActionHandler doneHandler: @escaping (_: String) -> Void,
+                                   cancelActionHandler cancelHandler: @escaping () -> Void) -> UIAlertController {
         let alertController = UIAlertController(title: "New Canvas",
                                                 message: nil,
                                                 preferredStyle: .alert)
