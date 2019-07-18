@@ -16,12 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        let appAssembler = AppAssembler()
         let window = UIWindow(frame: UIScreen.main.bounds)
         let appCoordinator = AppCoordinator(window: window,
                                             launchOptions: launchOptions,
-                                            appAssembler: AppAssembler())
+                                            appAssembler: appAssembler)
         self.window = window
         self.appCoordinator = appCoordinator
+        
+        appAssembler.loadInternalData()
         
         self.appCoordinator?.start()
         self.window?.makeKeyAndVisible()

@@ -9,7 +9,13 @@
 import Foundation
 
 class AppAssembler: AppAssemblerType {
+    private(set) var isLoaded: Bool = false
     private lazy var storageManager: StorageManagerType = StorageManager.loadStorage()
+
+    func loadInternalData() {
+        _ = storageManager
+        self.isLoaded = true
+    }
     
     func assembleStorageManager() -> StorageManagerType {
         return storageManager
