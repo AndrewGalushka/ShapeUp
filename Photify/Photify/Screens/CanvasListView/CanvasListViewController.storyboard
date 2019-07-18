@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5vz-b3-kII" customClass="CanvasListView" customModule="Photify" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24" width="1366" height="980"/>
+                                <rect key="frame" x="0.0" y="74" width="1366" height="930"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -32,6 +32,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2dL-j4-Uc0"/>
                     </view>
+                    <navigationItem key="navigationItem" id="l79-nG-N5G">
+                        <barButtonItem key="leftBarButtonItem" title="Save" id="PQR-nO-yz8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="NJq-4w-n5p">
+                            <connections>
+                                <action selector="addButtonTouchAction:" destination="WyT-5b-AcH" id="LRQ-Bb-X2J"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GgS-CT-Ovg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

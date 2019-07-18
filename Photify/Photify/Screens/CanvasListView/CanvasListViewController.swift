@@ -8,5 +8,8 @@
 
 import UIKit
 
-class CanvasListViewController: UIViewController {    
+class CanvasListViewController: UIViewController {
+    
+    @IBAction func addButtonTouchAction(_ sender: UIBarButtonItem) {
+    }
 }
