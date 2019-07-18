@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct CanvasModel: CanvasType {
+struct CanvasModel: Canvas {
     let name: String
 }

@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol CanvasType {
+protocol Canvas {
     var name: String { get }
 }

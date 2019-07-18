@@ -18,9 +18,15 @@
 		8D21CD1622DCC99B00EA3948 /* CanvasListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D21CD1522DCC99B00EA3948 /* CanvasListView.swift */; };
 		8D4C8A2522E0590A00282747 /* UIAlertController+AddCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A2422E0590A00282747 /* UIAlertController+AddCanvas.swift */; };
 		8D4C8A2922E070F700282747 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A2822E070F700282747 /* StorageManager.swift */; };
+		8D4C8A2C22E0733C00282747 /* ManagedObjectMapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A2B22E0733C00282747 /* ManagedObjectMapable.swift */; };
+		8D4C8A2E22E0737700282747 /* CanvasEntityMapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A2D22E0737700282747 /* CanvasEntityMapable.swift */; };
+		8D4C8A3222E0980900282747 /* CoreDataEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A3122E0980900282747 /* CoreDataEntityMapper.swift */; };
+		8D4C8A3422E0984B00282747 /* CoreDataEntityMapper+Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A3322E0984B00282747 /* CoreDataEntityMapper+Canvas.swift */; };
+		8D4C8A3622E0A34900282747 /* CoreDataManagerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A3522E0A34900282747 /* CoreDataManagerAdapter.swift */; };
+		8D4C8A3822E0A7B000282747 /* DataBaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A3722E0A7B000282747 /* DataBaseAdapter.swift */; };
 		8D4D01CF22DF5FB000348F7A /* AtomicProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01CE22DF5FB000348F7A /* AtomicProperty.swift */; };
 		8D4D01D122DF67E100348F7A /* StorageManagerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D022DF67E100348F7A /* StorageManagerType.swift */; };
-		8D4D01D422DF70AF00348F7A /* CanvasType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D322DF70AF00348F7A /* CanvasType.swift */; };
+		8D4D01D422DF70AF00348F7A /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D322DF70AF00348F7A /* Canvas.swift */; };
 		8D4D01D622DF719700348F7A /* CanvasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D522DF719700348F7A /* CanvasModel.swift */; };
 		8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2722D332E900FF383C /* AppDelegate.swift */; };
 		8D6BAE2A22D332E900FF383C /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2922D332E900FF383C /* CanvasViewController.swift */; };
@@ -59,9 +65,15 @@
 		8D21CD1522DCC99B00EA3948 /* CanvasListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListView.swift; sourceTree = "<group>"; };
 		8D4C8A2422E0590A00282747 /* UIAlertController+AddCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AddCanvas.swift"; sourceTree = "<group>"; };
 		8D4C8A2822E070F700282747 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		8D4C8A2B22E0733C00282747 /* ManagedObjectMapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectMapable.swift; sourceTree = "<group>"; };
+		8D4C8A2D22E0737700282747 /* CanvasEntityMapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasEntityMapable.swift; sourceTree = "<group>"; };
+		8D4C8A3122E0980900282747 /* CoreDataEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntityMapper.swift; sourceTree = "<group>"; };
+		8D4C8A3322E0984B00282747 /* CoreDataEntityMapper+Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataEntityMapper+Canvas.swift"; sourceTree = "<group>"; };
+		8D4C8A3522E0A34900282747 /* CoreDataManagerAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerAdapter.swift; sourceTree = "<group>"; };
+		8D4C8A3722E0A7B000282747 /* DataBaseAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseAdapter.swift; sourceTree = "<group>"; };
 		8D4D01CE22DF5FB000348F7A /* AtomicProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicProperty.swift; sourceTree = "<group>"; };
 		8D4D01D022DF67E100348F7A /* StorageManagerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManagerType.swift; sourceTree = "<group>"; };
-		8D4D01D322DF70AF00348F7A /* CanvasType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasType.swift; sourceTree = "<group>"; };
+		8D4D01D322DF70AF00348F7A /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 		8D4D01D522DF719700348F7A /* CanvasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasModel.swift; sourceTree = "<group>"; };
 		8D6BAE2422D332E900FF383C /* Photify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6BAE2722D332E900FF383C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,14 +158,15 @@
 			path = CanvasesTableView;
 			sourceTree = "<group>";
 		};
-		8D4C8A2622E070D000282747 /* CoreData */ = {
+		8D4C8A2622E070D000282747 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8D4C8A2A22E072EF00282747 /* Adapter */,
 				8DD103B522D4BCE70052B13B /* CoreDataManager.swift */,
 				8DD103C222D4E1D90052B13B /* PersistentContainer.swift */,
 				8DD103B722D4C7520052B13B /* ManagedObjectModel.xcdatamodeld */,
 			);
-			path = CoreData;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		8D4C8A2722E070F100282747 /* Storage */ = {
@@ -161,15 +174,52 @@
 			children = (
 				8D4D01D022DF67E100348F7A /* StorageManagerType.swift */,
 				8D4C8A2822E070F700282747 /* StorageManager.swift */,
+				8D4C8A3722E0A7B000282747 /* DataBaseAdapter.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		8D4C8A2A22E072EF00282747 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				8D4C8A3922E0A7E800282747 /* Mapping */,
+				8D4C8A3522E0A34900282747 /* CoreDataManagerAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		8D4C8A2F22E097C800282747 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				8D4C8A2B22E0733C00282747 /* ManagedObjectMapable.swift */,
+				8D4C8A2D22E0737700282747 /* CanvasEntityMapable.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		8D4C8A3022E097D300282747 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				8D4C8A3122E0980900282747 /* CoreDataEntityMapper.swift */,
+				8D4C8A3322E0984B00282747 /* CoreDataEntityMapper+Canvas.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		8D4C8A3922E0A7E800282747 /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				8D4C8A2F22E097C800282747 /* Interface */,
+				8D4C8A3022E097D300282747 /* Implementation */,
+			);
+			path = Mapping;
 			sourceTree = "<group>";
 		};
 		8D4D01D222DF70A200348F7A /* Canvas */ = {
 			isa = PBXGroup;
 			children = (
 				8D4D01D522DF719700348F7A /* CanvasModel.swift */,
-				8D4D01D322DF70AF00348F7A /* CanvasType.swift */,
+				8D4D01D322DF70AF00348F7A /* Canvas.swift */,
 			);
 			path = Canvas;
 			sourceTree = "<group>";
@@ -299,7 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				8D4C8A2722E070F100282747 /* Storage */,
-				8D4C8A2622E070D000282747 /* CoreData */,
+				8D4C8A2622E070D000282747 /* Core */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -396,12 +446,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D4C8A3422E0984B00282747 /* CoreDataEntityMapper+Canvas.swift in Sources */,
 				8DF18A2B22D79CFD0090A2FE /* SingleReceiverBinding.swift in Sources */,
 				8D6BAE4222D345BC00FF383C /* ShapeView.swift in Sources */,
 				8D6BAE5922D3703400FF383C /* AngleGeometry.swift in Sources */,
 				8D6BAE5522D35F1F00FF383C /* CircleGeometry.swift in Sources */,
 				8D6BAE4922D357BE00FF383C /* Circle.swift in Sources */,
 				8D6BAE5722D35FC400FF383C /* RectangleGeometry.swift in Sources */,
+				8D4C8A3222E0980900282747 /* CoreDataEntityMapper.swift in Sources */,
 				8D18F18422D60F8200E7B1E0 /* MainScreenViewController.swift in Sources */,
 				8D6BAE4B22D3590500FF383C /* Hexagon.swift in Sources */,
 				8D18F17722D5D0C900E7B1E0 /* AppAssembler.swift in Sources */,
@@ -410,7 +462,7 @@
 				8D6BAE5322D35EFF00FF383C /* GeometryNamespace.swift in Sources */,
 				8D18F17E22D5FA5A00E7B1E0 /* XMark.swift in Sources */,
 				8DD103B922D4C7520052B13B /* ManagedObjectModel.xcdatamodeld in Sources */,
-				8D4D01D422DF70AF00348F7A /* CanvasType.swift in Sources */,
+				8D4D01D422DF70AF00348F7A /* Canvas.swift in Sources */,
 				8D6BAE4522D3476500FF383C /* Rectangle.swift in Sources */,
 				8D4C8A2922E070F700282747 /* StorageManager.swift in Sources */,
 				8D6BAE4D22D35B5400FF383C /* Ellipse.swift in Sources */,
@@ -422,13 +474,17 @@
 				8D21CD1622DCC99B00EA3948 /* CanvasListView.swift in Sources */,
 				8DD103C122D4C9A80052B13B /* AppAssemblerType.swift in Sources */,
 				8D6BAE5B22D37FC000FF383C /* Triangle.swift in Sources */,
+				8D4C8A2C22E0733C00282747 /* ManagedObjectMapable.swift in Sources */,
 				8D4D01D622DF719700348F7A /* CanvasModel.swift in Sources */,
 				8D18F17C22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift in Sources */,
+				8D4C8A2E22E0737700282747 /* CanvasEntityMapable.swift in Sources */,
+				8D4C8A3622E0A34900282747 /* CoreDataManagerAdapter.swift in Sources */,
 				8DD103BE22D4C8F30052B13B /* AppCoordinator.swift in Sources */,
 				8D6BAE4022D3456C00FF383C /* Shape.swift in Sources */,
 				8D4D01D122DF67E100348F7A /* StorageManagerType.swift in Sources */,
 				8DD103B622D4BCE70052B13B /* CoreDataManager.swift in Sources */,
 				8DD103A722D47CC70052B13B /* Star.swift in Sources */,
+				8D4C8A3822E0A7B000282747 /* DataBaseAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

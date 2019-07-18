@@ -21,6 +21,10 @@ final class CoreDataManager {
         persistentContainer = PersistentContainer(name: CoreDataManager.dataModelFileName)
     }
     
+    func mainContext() -> NSManagedObjectContext {
+        return persistentContainer.viewContext
+    }
+    
     func loadStorage(completion: @escaping () -> Void) {
         persistentContainer.loadPersistentStores { (storeDescription, error) in
             

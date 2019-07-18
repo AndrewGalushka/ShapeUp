@@ -10,10 +10,20 @@ import Foundation
 import CoreData
 
 final class StorageManager: StorageManagerType {
+    
+    // MARK: Properties(Private)
+    
     private let coreDataManager: CoreDataManager
+    private let dataBaseAdapter: DataBaseAdapter
+    
+    // MARK: Private Initializer
+    
     private init() {
         coreDataManager = CoreDataManager()
+        dataBaseAdapter = CoreDataManagerAdapter(coreDataManager: coreDataManager)
     }
+    
+    // MARK: Public Initializer
     
     static func loadStorage() -> StorageManager {
         let semaphore = DispatchSemaphore(value: 0)
@@ -27,19 +37,13 @@ final class StorageManager: StorageManagerType {
         return storage
     }
     
+    // MARK: - Methods(Public)
     
-    func addCanvas() {
-    
+    func saveCanvas(canvas: Canvas) {
+        dataBaseAdapter.saveCanvas(canvas)
     }
     
-    func fetchAllCanvases() -> [CanvasType] {
-        let fetchCanvasesRequest = NSFetchRequest<CanvasEntity>()
-        
-        do {
-            let canvases = try coreDataManager.fetch(fetchCanvasesRequest)
-            return []
-        } catch {
-            return []
-        }
+    func fetchAllCanvases() -> [Canvas] {
+        return dataBaseAdapter.fetchAllCanvases()
     }
 }
