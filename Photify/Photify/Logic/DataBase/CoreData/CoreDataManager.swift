@@ -8,7 +8,7 @@
 
 import CoreData
 
-class CoreDataManager {
+final class CoreDataManager {
     
     // MARK: - Properties(Private)
     
@@ -30,6 +30,19 @@ class CoreDataManager {
             
             self.isLoaded.value = true
             completion()
+        }
+    }
+    
+    func fetch<T>(_ fetchRequest: NSFetchRequest<T>) throws -> [T] {
+        let viewModel = persistentContainer.viewContext
+        return try viewModel.fetch(fetchRequest)
+    }
+    
+    func save() {
+        do {
+          try persistentContainer.viewContext.save()
+        } catch (let error as NSError) {
+            print("Unable to save viewContext error: \(error.localizedDescription)")
         }
     }
 }

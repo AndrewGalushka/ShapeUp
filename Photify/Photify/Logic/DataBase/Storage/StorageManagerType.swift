@@ -21,5 +21,5 @@ protocol StorageManagerType: AnyObject {
     
     // MARK - Read
     
-//    func fetchAllCanvases() -> CanvasType
+    func fetchAllCanvases() -> [CanvasType]
 }
