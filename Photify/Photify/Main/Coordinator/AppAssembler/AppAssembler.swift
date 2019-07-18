@@ -9,9 +9,9 @@
 import Foundation
 
 class AppAssembler: AppAssemblerType {
-    private lazy var coreDataManager: CoreDataManager = CoreDataManager()
+    private lazy var storageManager: StorageManagerType = StorageManager.loadStorage()
     
-    func assembleDataBaseManager() -> CoreDataManager {
-        return coreDataManager
+    func assembleStorageManager() -> StorageManagerType {
+        return storageManager
     }
 }

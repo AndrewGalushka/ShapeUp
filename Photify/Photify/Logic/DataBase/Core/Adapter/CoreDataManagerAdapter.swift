@@ -32,6 +32,7 @@ class CoreDataManagerAdapter: DataBaseAdapter {
     
     func saveCanvas(_ canvas: Canvas) {
         let canvasEntities = mapper.mapIn(canvases: [canvas], moc: self.coreDataManager.mainContext())
+        print(canvasEntities)
         coreDataManager.save()
     }
 }

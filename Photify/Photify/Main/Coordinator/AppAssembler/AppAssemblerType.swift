@@ -9,5 +9,5 @@
 import Foundation
 
 protocol AppAssemblerType {
-    func assembleDataBaseManager() -> CoreDataManager
+    func assembleStorageManager() -> StorageManagerType
 }
