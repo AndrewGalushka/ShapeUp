@@ -41,6 +41,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="canvasListView" destination="5vz-b3-kII" id="r7V-06-rjF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GgS-CT-Ovg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

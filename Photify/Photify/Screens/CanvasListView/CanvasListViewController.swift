@@ -9,6 +9,7 @@
 import UIKit
 
 class CanvasListViewController: UIViewController {
+    @IBOutlet weak var canvasListView: CanvasListView!
     
     @IBAction func addButtonTouchAction(_ sender: UIBarButtonItem) {
         let addCanvasAlert = UIAlertController.makeAddCanvasAlert(doneButtonActionHandler: { print($0) },

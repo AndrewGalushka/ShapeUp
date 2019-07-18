@@ -28,7 +28,7 @@ class CanvasListView: UIView {
         return tb
     }()
     
-    private var dataSource = [String]()
+    private var dataSource = [Canvas]()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,8 +40,8 @@ class CanvasListView: UIView {
         setUp()
     }
     
-    func setCanvasNames(_ names: [String]) {
-        dataSource = names
+    func addCanvas(_ canvas: Canvas) {
+        dataSource.append(canvas)
         tableView.reloadData()
     }
     
@@ -58,7 +58,7 @@ extension CanvasListView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.detailTextLabel?.text = dataSource[indexPath.row]
+        cell.detailTextLabel?.text = dataSource[indexPath.row].name
         
         return cell
     }
