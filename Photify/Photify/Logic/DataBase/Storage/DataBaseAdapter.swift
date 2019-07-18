@@ -10,5 +10,5 @@ import Foundation
 
 protocol DataBaseAdapter {
     func fetchAllCanvases() -> [Canvas]
-    func saveCanvas(_ canvas: Canvas)
+    func saveCanvases(_ canvas: [Canvas])
 }

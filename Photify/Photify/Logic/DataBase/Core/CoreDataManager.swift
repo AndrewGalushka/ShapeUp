@@ -37,7 +37,7 @@ final class CoreDataManager {
         }
     }
     
-    func fetch<T>(_ fetchRequest: NSFetchRequest<T>) throws -> [T] {
+    func fetch<T: NSManagedObject>(_ fetchRequest: NSFetchRequest<T>) throws -> [T] {
         let viewModel = persistentContainer.viewContext
         return try viewModel.fetch(fetchRequest)
     }

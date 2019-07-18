@@ -39,8 +39,8 @@ final class StorageManager: StorageManagerType {
     
     // MARK: - Methods(Public)
     
-    func saveCanvas(canvas: Canvas) {
-        dataBaseAdapter.saveCanvas(canvas)
+    func saveCanvases(_ canvases: [Canvas]) {
+        dataBaseAdapter.saveCanvases(canvases)
     }
     
     func fetchAllCanvases() -> [Canvas] {

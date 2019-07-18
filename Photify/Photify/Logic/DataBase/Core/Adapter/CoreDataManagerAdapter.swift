@@ -18,7 +18,7 @@ class CoreDataManagerAdapter: DataBaseAdapter {
     }
     
     func fetchAllCanvases() -> [Canvas] {
-        let fetchCanvasesRequest = NSFetchRequest<CanvasEntity>()
+        let fetchCanvasesRequest: NSFetchRequest<CanvasEntity> = CanvasEntity.fetchRequest()
         
         do {
             let canvasEntities = try coreDataManager.fetch(fetchCanvasesRequest)
@@ -30,8 +30,8 @@ class CoreDataManagerAdapter: DataBaseAdapter {
         }
     }
     
-    func saveCanvas(_ canvas: Canvas) {
-        let canvasEntities = mapper.mapIn(canvases: [canvas], moc: self.coreDataManager.mainContext())
+    func saveCanvases(_ canvases: [Canvas]) {
+        let canvasEntities = mapper.mapIn(canvases: canvases, moc: self.coreDataManager.mainContext())
         print(canvasEntities)
         coreDataManager.save()
     }

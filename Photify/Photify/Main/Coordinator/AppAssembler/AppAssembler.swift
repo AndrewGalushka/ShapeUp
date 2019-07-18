@@ -18,6 +18,10 @@ class AppAssembler: AppAssemblerType {
     }
     
     func assembleStorageManager() -> StorageManagerType {
+        if !isLoaded {
+            loadInternalData()
+        }
+        
         return storageManager
     }
 }

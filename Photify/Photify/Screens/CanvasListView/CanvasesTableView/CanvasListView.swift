@@ -40,8 +40,17 @@ class CanvasListView: UIView {
         setUp()
     }
     
+    func replaceExistingCanases(with canvases: [Canvas]) {
+        dataSource = canvases
+        tableView.reloadData()
+    }
+    
     func addCanvas(_ canvas: Canvas) {
-        dataSource.append(canvas)
+        self.addCanvases([canvas])
+    }
+    
+    func addCanvases(_ canvases: [Canvas]) {
+        dataSource.append(contentsOf: canvases)
         tableView.reloadData()
     }
     

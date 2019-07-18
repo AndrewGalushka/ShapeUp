@@ -11,6 +11,7 @@ import CoreData
 extension CoreDataEntityMapper: CanvasEntityMapable {
     
     struct CanvasModel: Photify.Canvas {
+        var uuid: UUID
         var name: String
     }
     
@@ -31,11 +32,12 @@ extension CoreDataEntityMapper: CanvasEntityMapable {
     }
     
     private func mapOut(_ canvasEntity: CanvasEntity) -> Photify.Canvas {
-        return CanvasModel(name: canvasEntity.name ?? "")
+        return CanvasModel(uuid: canvasEntity.identifier!, name: canvasEntity.name ?? "")
     }
     
     private func mapIn(_ canvas: Photify.Canvas, moc: NSManagedObjectContext) -> CanvasEntity {
         let canvasEntity = CanvasEntity(context: moc)
+        canvasEntity.identifier = UUID()
         canvasEntity.name = canvas.name
         
         return canvasEntity
