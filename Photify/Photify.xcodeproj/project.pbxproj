@@ -17,6 +17,7 @@
 		8D21CD1122DCC8B000EA3948 /* CanvasListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D21CD1022DCC8B000EA3948 /* CanvasListViewController.swift */; };
 		8D21CD1322DCC8BB00EA3948 /* CanvasListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D21CD1222DCC8BB00EA3948 /* CanvasListViewController.storyboard */; };
 		8D21CD1622DCC99B00EA3948 /* CanvasListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D21CD1522DCC99B00EA3948 /* CanvasListView.swift */; };
+		8D4C8A2522E0590A00282747 /* UIAlertController+AddCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A2422E0590A00282747 /* UIAlertController+AddCanvas.swift */; };
 		8D4D01CF22DF5FB000348F7A /* AtomicProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01CE22DF5FB000348F7A /* AtomicProperty.swift */; };
 		8D4D01D122DF67E100348F7A /* StorageManagerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D022DF67E100348F7A /* StorageManagerType.swift */; };
 		8D4D01D422DF70AF00348F7A /* CanvasType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D322DF70AF00348F7A /* CanvasType.swift */; };
@@ -57,6 +58,7 @@
 		8D21CD1022DCC8B000EA3948 /* CanvasListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		8D21CD1222DCC8BB00EA3948 /* CanvasListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CanvasListViewController.storyboard; sourceTree = "<group>"; };
 		8D21CD1522DCC99B00EA3948 /* CanvasListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListView.swift; sourceTree = "<group>"; };
+		8D4C8A2422E0590A00282747 /* UIAlertController+AddCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AddCanvas.swift"; sourceTree = "<group>"; };
 		8D4D01CE22DF5FB000348F7A /* AtomicProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicProperty.swift; sourceTree = "<group>"; };
 		8D4D01D022DF67E100348F7A /* StorageManagerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManagerType.swift; sourceTree = "<group>"; };
 		8D4D01D322DF70AF00348F7A /* CanvasType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasType.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				8D18F17B22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift */,
+				8D4C8A2422E0590A00282747 /* UIAlertController+AddCanvas.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				8D6BAE4B22D3590500FF383C /* Hexagon.swift in Sources */,
 				8D18F17722D5D0C900E7B1E0 /* AppAssembler.swift in Sources */,
 				8D6BAE2A22D332E900FF383C /* CanvasViewController.swift in Sources */,
+				8D4C8A2522E0590A00282747 /* UIAlertController+AddCanvas.swift in Sources */,
 				8D6BAE5322D35EFF00FF383C /* GeometryNamespace.swift in Sources */,
 				8D18F17E22D5FA5A00E7B1E0 /* XMark.swift in Sources */,
 				8DD103B922D4C7520052B13B /* ManagedObjectModel.xcdatamodeld in Sources */,
