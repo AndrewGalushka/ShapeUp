@@ -39,11 +39,7 @@ final class CoreDataManager {
     }
     
     func save() {
-        do {
-          try persistentContainer.viewContext.save()
-        } catch (let error as NSError) {
-            print("Unable to save viewContext error: \(error.localizedDescription)")
-        }
+        persistentContainer.saveContext()
     }
 }
 
