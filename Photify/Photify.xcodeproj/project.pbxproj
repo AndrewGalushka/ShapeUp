@@ -161,14 +161,14 @@
 			path = CanvasesListView;
 			sourceTree = "<group>";
 		};
-		8D4C8A2722E070F100282747 /* Storage */ = {
+		8D4C8A2722E070F100282747 /* StorageManager */ = {
 			isa = PBXGroup;
 			children = (
 				8D4D01D022DF67E100348F7A /* StorageManagerType.swift */,
 				8D4C8A2822E070F700282747 /* StorageManager.swift */,
 				8D4C8A3722E0A7B000282747 /* DataBaseAdapter.swift */,
 			);
-			path = Storage;
+			path = StorageManager;
 			sourceTree = "<group>";
 		};
 		8D4C8A2A22E072EF00282747 /* Adapter */ = {
@@ -357,7 +357,7 @@
 		8DB8B0EC22E1B44D00EB71D4 /* CoreServices */ = {
 			isa = PBXGroup;
 			children = (
-				8D4C8A2722E070F100282747 /* Storage */,
+				8D4C8A2722E070F100282747 /* StorageManager */,
 			);
 			path = CoreServices;
 			sourceTree = "<group>";
