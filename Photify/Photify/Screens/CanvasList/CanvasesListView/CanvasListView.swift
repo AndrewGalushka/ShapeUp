@@ -10,6 +10,9 @@ import UIKit
 
 @IBDesignable
 class CanvasListView: UIView {
+    
+    // MASK: - Properties(Private)
+    
     @IBInspectable private lazy var tableView: UITableView = {
         let tb = UITableView(frame: .zero)
         
@@ -30,6 +33,8 @@ class CanvasListView: UIView {
     
     private var dataSource = [Canvas]()
     
+    // MARK: - Initializers
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUp()
@@ -39,6 +44,8 @@ class CanvasListView: UIView {
         super.init(coder: aDecoder)
         setUp()
     }
+    
+    // MARK: - Methods(Public)
     
     func replaceExistingCanases(with canvases: [Canvas]) {
         dataSource = canvases
@@ -53,6 +60,8 @@ class CanvasListView: UIView {
         dataSource.append(contentsOf: canvases)
         tableView.reloadData()
     }
+    
+    // MARK: - Methods(Private)
     
     private func setUp() {
         tableView.backgroundColor = .red
