@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5vz-b3-kII" customClass="CanvasListView" customModule="Photify" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5vz-b3-kII" customClass="CanvasTableView" customModule="Photify" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="74" width="1366" height="930"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -46,7 +46,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="canvasListView" destination="5vz-b3-kII" id="Qd3-rU-H7O"/>
+                        <outlet property="canvasTableView" destination="5vz-b3-kII" id="Qd3-rU-H7O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GgS-CT-Ovg" userLabel="First Responder" sceneMemberID="firstResponder"/>

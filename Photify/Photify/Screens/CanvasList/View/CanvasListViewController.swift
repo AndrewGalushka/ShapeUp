@@ -9,25 +9,28 @@
 import UIKit
 
 class CanvasListViewController: UIViewController {
-    @IBOutlet weak var canvasListView: CanvasListView!
-    weak var storageManager: StorageManagerType?
     
-    var savedCanvases: [Canvas] = [Canvas]()
-    var newCanvases: [Canvas] = [Canvas]()
-    var canvases: [Canvas] {
-        return savedCanvases + newCanvases
-    }
+    // MARK: - IBOutlets
+    
+    @IBOutlet private weak var canvasTableView: CanvasTableView!
+    
+    // MARK: - Properties(Private)
+    
+    weak var presenter: CanvasesListPresenterProtocol?
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateCanvases()
+        
+        self.presenter?.viewLoaded()
     }
     
+    // MARK: - IBActions
+    
     @IBAction func addNavigationButtonTapActionHandler(_ sender: UIBarButtonItem) {
-        let doneClosure = { [unowned self] (canvasName: String) in
-            let canvas = CanvasModel(name: canvasName)
-            self.newCanvases.append(canvas)
-            self.canvasListView.replaceExistingCanases(with: self.canvases)
+        let doneClosure = { [unowned self] (canvasName: String) -> Void in
+            self.presenter?.addCanvasPressed(name: canvasName)
         }
         
         let addCanvasAlert = UIAlertController.makeAddCanvasAlert(doneActionHandler: doneClosure,
@@ -35,19 +38,13 @@ class CanvasListViewController: UIViewController {
         self.present(addCanvasAlert, animated: true, completion: nil)
     }
     
-    func updateCanvases() {
-        if let canvases = storageManager?.fetchAllCanvases() {
-            self.savedCanvases = canvases
-            self.newCanvases.removeAll()
-            canvasListView.replaceExistingCanases(with: canvases)
-        }
-    }
-    
     @IBAction func saveNavigationButtonTapActionHandler(_ sender: Any) {
-        guard !newCanvases.isEmpty else { return }
-        
-        storageManager?.saveCanvases(self.newCanvases)
-        self.savedCanvases.append(contentsOf: newCanvases)
-        self.newCanvases.removeAll()
+        self.presenter?.didTapSaveCanvases()
+    }
+}
+
+extension CanvasListViewController: CanvasListView {
+    func displayCanvases(_ canvases: [Canvas]) {
+        self.canvasTableView.replaceExistingCanases(with: canvases)
     }
 }

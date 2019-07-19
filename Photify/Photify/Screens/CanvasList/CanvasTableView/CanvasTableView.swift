@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class CanvasListView: UIView {
+class CanvasTableView: UIView {
     
     // MASK: - Properties(Private)
     
@@ -69,7 +69,7 @@ class CanvasListView: UIView {
     }
 }
 
-extension CanvasListView: UITableViewDataSource {
+extension CanvasTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }
@@ -81,3 +81,7 @@ extension CanvasListView: UITableViewDataSource {
         return cell
     }
 }
+
+//extension CanvasTableView: UITableViewDelegate {
+//    
+//}
