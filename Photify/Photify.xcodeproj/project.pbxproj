@@ -146,9 +146,9 @@
 		8D21CD0F22DCC88300EA3948 /* CanvasList */ = {
 			isa = PBXGroup;
 			children = (
+				8DB8B0E322E1AA2A00EB71D4 /* Presenter */,
+				8DB8B0E522E1AA4B00EB71D4 /* View */,
 				8D21CD1422DCC95400EA3948 /* CanvasesListView */,
-				8D21CD1022DCC8B000EA3948 /* CanvasListViewController.swift */,
-				8D21CD1222DCC8BB00EA3948 /* CanvasListViewController.storyboard */,
 			);
 			path = CanvasList;
 			sourceTree = "<group>";
@@ -159,17 +159,6 @@
 				8D21CD1522DCC99B00EA3948 /* CanvasListView.swift */,
 			);
 			path = CanvasesListView;
-			sourceTree = "<group>";
-		};
-		8D4C8A2622E070D000282747 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				8D4C8A2A22E072EF00282747 /* Adapter */,
-				8DD103B522D4BCE70052B13B /* CoreDataManager.swift */,
-				8DD103C222D4E1D90052B13B /* PersistentContainer.swift */,
-				8DD103B722D4C7520052B13B /* ManagedObjectModel.xcdatamodeld */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		8D4C8A2722E070F100282747 /* Storage */ = {
@@ -252,7 +241,10 @@
 				8D6BAE3D22D340E100FF383C /* Resources */,
 				8D18F17A22D5D2F300E7B1E0 /* Extensions */,
 				8D6BAE6022D39BCC00FF383C /* Screens */,
-				8DD103B322D4BCBE0052B13B /* Logic */,
+				8DB8B0E822E1AD3700EB71D4 /* Services */,
+				8DB8B0EC22E1B44D00EB71D4 /* CoreServices */,
+				8DD103B322D4BCBE0052B13B /* Core */,
+				8DB8B0EA22E1B38100EB71D4 /* Utility */,
 			);
 			path = Photify;
 			sourceTree = "<group>";
@@ -279,9 +271,7 @@
 		8D6BAE3E22D3455500FF383C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8D6BAE5122D35EE500FF383C /* Geometry */,
-				8D6BAE4322D3474E00FF383C /* Shapes */,
-				8D6BAE4E22D35D5600FF383C /* ShapeView */,
+				8DB8B0EB22E1B3BF00EB71D4 /* Shape */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -330,6 +320,57 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
+		8DB8B0E322E1AA2A00EB71D4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8DB8B0E522E1AA4B00EB71D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D21CD1022DCC8B000EA3948 /* CanvasListViewController.swift */,
+				8D21CD1222DCC8BB00EA3948 /* CanvasListViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8DB8B0E822E1AD3700EB71D4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8DB8B0EA22E1B38100EB71D4 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */,
+				8D4D01CE22DF5FB000348F7A /* AtomicProperty.swift */,
+			);
+			name = Utility;
+			path = Core/Utility;
+			sourceTree = "<group>";
+		};
+		8DB8B0EB22E1B3BF00EB71D4 /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				8D6BAE5122D35EE500FF383C /* Geometry */,
+				8D6BAE4322D3474E00FF383C /* Shapes */,
+				8D6BAE4E22D35D5600FF383C /* ShapeView */,
+			);
+			path = Shape;
+			sourceTree = "<group>";
+		};
+		8DB8B0EC22E1B44D00EB71D4 /* CoreServices */ = {
+			isa = PBXGroup;
+			children = (
+				8D4C8A2722E070F100282747 /* Storage */,
+			);
+			path = CoreServices;
+			sourceTree = "<group>";
+		};
 		8DD103A822D494E10052B13B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,21 +379,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		8DD103B322D4BCBE0052B13B /* Logic */ = {
+		8DD103B322D4BCBE0052B13B /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				8DD103B422D4BCCB0052B13B /* DataBase */,
-				8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */,
-				8D4D01CE22DF5FB000348F7A /* AtomicProperty.swift */,
 			);
-			path = Logic;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		8DD103B422D4BCCB0052B13B /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
-				8D4C8A2722E070F100282747 /* Storage */,
-				8D4C8A2622E070D000282747 /* Core */,
+				8D4C8A2A22E072EF00282747 /* Adapter */,
+				8DD103B522D4BCE70052B13B /* CoreDataManager.swift */,
+				8DD103C222D4E1D90052B13B /* PersistentContainer.swift */,
+				8DD103B722D4C7520052B13B /* ManagedObjectModel.xcdatamodeld */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
