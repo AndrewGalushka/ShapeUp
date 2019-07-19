@@ -143,22 +143,22 @@
 			path = MainView;
 			sourceTree = "<group>";
 		};
-		8D21CD0F22DCC88300EA3948 /* CanvasListView */ = {
+		8D21CD0F22DCC88300EA3948 /* CanvasList */ = {
 			isa = PBXGroup;
 			children = (
-				8D21CD1422DCC95400EA3948 /* CanvasesTableView */,
+				8D21CD1422DCC95400EA3948 /* CanvasesListView */,
 				8D21CD1022DCC8B000EA3948 /* CanvasListViewController.swift */,
 				8D21CD1222DCC8BB00EA3948 /* CanvasListViewController.storyboard */,
 			);
-			path = CanvasListView;
+			path = CanvasList;
 			sourceTree = "<group>";
 		};
-		8D21CD1422DCC95400EA3948 /* CanvasesTableView */ = {
+		8D21CD1422DCC95400EA3948 /* CanvasesListView */ = {
 			isa = PBXGroup;
 			children = (
 				8D21CD1522DCC99B00EA3948 /* CanvasListView.swift */,
 			);
-			path = CanvasesTableView;
+			path = CanvasesListView;
 			sourceTree = "<group>";
 		};
 		8D4C8A2622E070D000282747 /* Core */ = {
@@ -323,7 +323,7 @@
 		8D6BAE6022D39BCC00FF383C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				8D21CD0F22DCC88300EA3948 /* CanvasListView */,
+				8D21CD0F22DCC88300EA3948 /* CanvasList */,
 				8D18F18022D60F5400E7B1E0 /* MainView */,
 				8D18F17F22D60F3E00E7B1E0 /* ShapesCanvasView */,
 			);
