@@ -236,14 +236,14 @@
 			isa = PBXGroup;
 			children = (
 				8D6BAE3C22D340D100FF383C /* Main */,
-				8D6BAE3E22D3455500FF383C /* Views */,
-				8DD103A822D494E10052B13B /* Models */,
-				8D6BAE3D22D340E100FF383C /* Resources */,
-				8D18F17A22D5D2F300E7B1E0 /* Extensions */,
 				8D6BAE6022D39BCC00FF383C /* Screens */,
+				8DB8B0ED22E1B4EC00EB71D4 /* Drawing */,
 				8DB8B0E822E1AD3700EB71D4 /* Services */,
 				8DB8B0EC22E1B44D00EB71D4 /* CoreServices */,
 				8DD103B322D4BCBE0052B13B /* Core */,
+				8DD103A822D494E10052B13B /* Models */,
+				8D6BAE3D22D340E100FF383C /* Resources */,
+				8D18F17A22D5D2F300E7B1E0 /* Extensions */,
 				8DB8B0EA22E1B38100EB71D4 /* Utility */,
 			);
 			path = Photify;
@@ -266,14 +266,6 @@
 				8D6BAE3622D332EA00FF383C /* Info.plist */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		8D6BAE3E22D3455500FF383C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8DB8B0EB22E1B3BF00EB71D4 /* Shape */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		8D6BAE4322D3474E00FF383C /* Shapes */ = {
@@ -353,14 +345,13 @@
 			path = Core/Utility;
 			sourceTree = "<group>";
 		};
-		8DB8B0EB22E1B3BF00EB71D4 /* Shape */ = {
+		8DB8B0EB22E1B3BF00EB71D4 /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
-				8D6BAE5122D35EE500FF383C /* Geometry */,
 				8D6BAE4322D3474E00FF383C /* Shapes */,
 				8D6BAE4E22D35D5600FF383C /* ShapeView */,
 			);
-			path = Shape;
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 		8DB8B0EC22E1B44D00EB71D4 /* CoreServices */ = {
@@ -369,6 +360,15 @@
 				8D4C8A2722E070F100282747 /* Storage */,
 			);
 			path = CoreServices;
+			sourceTree = "<group>";
+		};
+		8DB8B0ED22E1B4EC00EB71D4 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				8D6BAE5122D35EE500FF383C /* Geometry */,
+				8DB8B0EB22E1B3BF00EB71D4 /* Shapes */,
+			);
+			path = Drawing;
 			sourceTree = "<group>";
 		};
 		8DD103A822D494E10052B13B /* Models */ = {
