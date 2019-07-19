@@ -242,9 +242,9 @@
 				8DB8B0EC22E1B44D00EB71D4 /* CoreServices */,
 				8DD103B322D4BCBE0052B13B /* Core */,
 				8DD103A822D494E10052B13B /* Models */,
-				8D6BAE3D22D340E100FF383C /* Resources */,
 				8D18F17A22D5D2F300E7B1E0 /* Extensions */,
 				8DB8B0EA22E1B38100EB71D4 /* Utility */,
+				8D6BAE3D22D340E100FF383C /* Resources */,
 			);
 			path = Photify;
 			sourceTree = "<group>";
