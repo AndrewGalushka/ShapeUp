@@ -11,4 +11,5 @@ import Foundation
 protocol DataBaseAdapter {
     func fetchAllCanvases() -> [Canvas]
     func saveCanvases(_ canvas: [Canvas])
+    func deleteCanvas(identifier: UUID)
 }

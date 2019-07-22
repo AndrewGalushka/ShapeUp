@@ -9,4 +9,8 @@
 import Foundation
 
 protocol CanvasListManagementServiceProtocol: AnyObject {
+    func fetchAllCanvases() -> [Canvas]
+    func addCanvas(name: String)
+    func deleteCanvas(_ canvas: Canvas)
+    func saveChanges()
 }

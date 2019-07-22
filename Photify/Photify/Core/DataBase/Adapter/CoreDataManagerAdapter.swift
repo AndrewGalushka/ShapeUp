@@ -35,4 +35,26 @@ class CoreDataManagerAdapter: DataBaseAdapter {
         print(canvasEntities)
         coreDataManager.save()
     }
+    
+    func deleteCanvas(identifier: UUID) {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = CanvasEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "%K == %@",
+                                             #keyPath(CanvasEntity.identifier),
+                                             identifier as CVarArg)
+        
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        deleteRequest.resultType = .resultTypeObjectIDs
+        
+        do {
+            let result = try self.coreDataManager.mainContext().execute(deleteRequest) as? NSBatchDeleteResult
+            let deletedObjectIDs = result?.result as? [NSManagedObjectID]
+            
+            if let deletedObjectIDs = deletedObjectIDs {
+                NSManagedObjectContext.mergeChanges(fromRemoteContextSave: [NSDeletedObjectsKey: deletedObjectIDs], into: [coreDataManager.mainContext()])
+            }
+            
+        } catch (let error as NSError) {
+            print("Deleting error: \(error)")
+        }
+    }
 }

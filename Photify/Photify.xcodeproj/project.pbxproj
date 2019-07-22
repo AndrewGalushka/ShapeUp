@@ -85,7 +85,7 @@
 		8D4C8A2D22E0737700282747 /* CanvasEntityMapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasEntityMapable.swift; sourceTree = "<group>"; };
 		8D4C8A3122E0980900282747 /* CoreDataEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntityMapper.swift; sourceTree = "<group>"; };
 		8D4C8A3322E0984B00282747 /* CoreDataEntityMapper+Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataEntityMapper+Canvas.swift"; sourceTree = "<group>"; };
-		8D4C8A3522E0A34900282747 /* CoreDataManagerAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerAdapter.swift; sourceTree = "<group>"; };
+		8D4C8A3522E0A34900282747 /* CoreDataManagerAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerAdapter.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		8D4C8A3722E0A7B000282747 /* DataBaseAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseAdapter.swift; sourceTree = "<group>"; };
 		8D4C8A3B22E0CC3400282747 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		8D4D01CE22DF5FB000348F7A /* AtomicProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicProperty.swift; sourceTree = "<group>"; };

@@ -46,4 +46,8 @@ final class StorageManager: StorageManagerType {
     func fetchAllCanvases() -> [Canvas] {
         return dataBaseAdapter.fetchAllCanvases()
     }
+    
+    func deleteCanvas(_ canvas: Canvas) {
+        self.dataBaseAdapter.deleteCanvas(identifier: canvas.identifier)
+    }
 }
