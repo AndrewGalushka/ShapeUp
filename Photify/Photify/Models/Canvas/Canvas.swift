@@ -9,5 +9,6 @@
 import Foundation
 
 protocol Canvas {
+    var identifier: UUID { get }
     var name: String { get }
 }
