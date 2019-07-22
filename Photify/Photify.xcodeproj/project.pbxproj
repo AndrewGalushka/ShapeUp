@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D18F17722D5D0C900E7B1E0 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F17622D5D0C900E7B1E0 /* AppAssembler.swift */; };
-		8D18F17922D5D29200E7B1E0 /* ShapesContextViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D18F17822D5D29200E7B1E0 /* ShapesContextViewController.storyboard */; };
+		8D18F17922D5D29200E7B1E0 /* CanvasViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */; };
 		8D18F17C22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F17B22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift */; };
 		8D18F17E22D5FA5A00E7B1E0 /* XMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F17D22D5FA5A00E7B1E0 /* XMark.swift */; };
 		8D18F18422D60F8200E7B1E0 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F18322D60F8200E7B1E0 /* MainScreenViewController.swift */; };
@@ -55,6 +55,8 @@
 		8DB8B10322E1E91500EB71D4 /* ModulesAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B10222E1E91500EB71D4 /* ModulesAssembler.swift */; };
 		8DB8B10922E2044C00EB71D4 /* PushRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B10822E2044C00EB71D4 /* PushRouter.swift */; };
 		8DB8B10B22E205B800EB71D4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B10A22E205B800EB71D4 /* Router.swift */; };
+		8DC0109B22E59E7500010BCA /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0109A22E59E7500010BCA /* Array+Extension.swift */; };
+		8DC0109D22E59F0E00010BCA /* CanvasTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0109C22E59F0E00010BCA /* CanvasTableViewDelegate.swift */; };
 		8DD103A722D47CC70052B13B /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103A622D47CC70052B13B /* Star.swift */; };
 		8DD103B622D4BCE70052B13B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103B522D4BCE70052B13B /* CoreDataManager.swift */; };
 		8DD103B922D4C7520052B13B /* ManagedObjectModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103B722D4C7520052B13B /* ManagedObjectModel.xcdatamodeld */; };
@@ -67,7 +69,7 @@
 
 /* Begin PBXFileReference section */
 		8D18F17622D5D0C900E7B1E0 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
-		8D18F17822D5D29200E7B1E0 /* ShapesContextViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShapesContextViewController.storyboard; sourceTree = "<group>"; };
+		8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CanvasViewController.storyboard; sourceTree = "<group>"; };
 		8D18F17B22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardLoadable.swift"; sourceTree = "<group>"; };
 		8D18F17D22D5FA5A00E7B1E0 /* XMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMark.swift; sourceTree = "<group>"; };
 		8D18F18322D60F8200E7B1E0 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,8 @@
 		8DB8B10222E1E91500EB71D4 /* ModulesAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesAssembler.swift; sourceTree = "<group>"; };
 		8DB8B10822E2044C00EB71D4 /* PushRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushRouter.swift; sourceTree = "<group>"; };
 		8DB8B10A22E205B800EB71D4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		8DC0109A22E59E7500010BCA /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		8DC0109C22E59F0E00010BCA /* CanvasTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasTableViewDelegate.swift; sourceTree = "<group>"; };
 		8DD103A622D47CC70052B13B /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		8DD103B522D4BCE70052B13B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		8DD103B822D4C7520052B13B /* ManagedObjectModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ManagedObjectModel.xcdatamodel; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				8D18F17B22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift */,
 				8D4C8A2422E0590A00282747 /* UIAlertController+AddCanvas.swift */,
 				8D4C8A3B22E0CC3400282747 /* UIColor+Extension.swift */,
+				8DC0109A22E59E7500010BCA /* Array+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -150,7 +155,7 @@
 		8D18F17F22D60F3E00E7B1E0 /* ShapesCanvasView */ = {
 			isa = PBXGroup;
 			children = (
-				8D18F17822D5D29200E7B1E0 /* ShapesContextViewController.storyboard */,
+				8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */,
 				8D6BAE2922D332E900FF383C /* CanvasViewController.swift */,
 			);
 			path = ShapesCanvasView;
@@ -181,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				8D21CD1522DCC99B00EA3948 /* CanvasTableView.swift */,
+				8DC0109C22E59F0E00010BCA /* CanvasTableViewDelegate.swift */,
 			);
 			path = CanvasTableView;
 			sourceTree = "<group>";
@@ -541,7 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D6BAE3522D332EA00FF383C /* LaunchScreen.storyboard in Resources */,
-				8D18F17922D5D29200E7B1E0 /* ShapesContextViewController.storyboard in Resources */,
+				8D18F17922D5D29200E7B1E0 /* CanvasViewController.storyboard in Resources */,
 				8D18F18622D60F8C00E7B1E0 /* MainScreenViewController.storyboard in Resources */,
 				8D21CD1322DCC8BB00EA3948 /* CanvasListViewController.storyboard in Resources */,
 				8D6BAE3222D332EA00FF383C /* Assets.xcassets in Resources */,
@@ -555,6 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DC0109D22E59F0E00010BCA /* CanvasTableViewDelegate.swift in Sources */,
 				8D4C8A3422E0984B00282747 /* CoreDataEntityMapper+Canvas.swift in Sources */,
 				8DF18A2B22D79CFD0090A2FE /* SingleReceiverBinding.swift in Sources */,
 				8D6BAE4222D345BC00FF383C /* ShapeView.swift in Sources */,
@@ -566,6 +573,7 @@
 				8D4C8A3222E0980900282747 /* CoreDataEntityMapper.swift in Sources */,
 				8D18F18422D60F8200E7B1E0 /* MainScreenViewController.swift in Sources */,
 				8DB8B10B22E205B800EB71D4 /* Router.swift in Sources */,
+				8DC0109B22E59E7500010BCA /* Array+Extension.swift in Sources */,
 				8DB8B0FB22E1C36E00EB71D4 /* CanvasListView.swift in Sources */,
 				8D6BAE4B22D3590500FF383C /* Hexagon.swift in Sources */,
 				8D18F17722D5D0C900E7B1E0 /* AppAssembler.swift in Sources */,

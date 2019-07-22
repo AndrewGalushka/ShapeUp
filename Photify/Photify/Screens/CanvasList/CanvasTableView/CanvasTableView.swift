@@ -33,6 +33,10 @@ class CanvasTableView: UIView {
     
     private var dataSource = [Canvas]()
     
+    // MARK: - Properties(Public)
+    
+    weak var delegate: CanvasTableViewDelegate?
+    
     // MARK: - Initializers
     
     override init(frame: CGRect) {
@@ -66,6 +70,7 @@ class CanvasTableView: UIView {
     private func setUp() {
         tableView.backgroundColor = .red
         tableView.dataSource = self
+        tableView.delegate = self
     }
 }
 
@@ -82,6 +87,9 @@ extension CanvasTableView: UITableViewDataSource {
     }
 }
 
-//extension CanvasTableView: UITableViewDelegate {
-//    
-//}
+extension CanvasTableView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let selectedCanvas = dataSource.item(at: indexPath.row) else { return }
+        delegate?.canvasTableView(self, didSelectCanvas: selectedCanvas)
+    }
+}

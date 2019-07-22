@@ -53,6 +53,7 @@ class CanvasesListPresenter: CanvasesListPresenterProtocol {
     }
     
     func didTapOnCanvas(_ canvas: Canvas) {
+        self.output?.didTapOnCanvas(canvas)
     }
     
     // MARK: - Methods(Private)

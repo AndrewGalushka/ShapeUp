@@ -23,6 +23,7 @@ class CanvasListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setup()
         self.presenter?.viewLoaded()
     }
     
@@ -40,6 +41,18 @@ class CanvasListViewController: UIViewController {
     
     @IBAction func saveNavigationButtonTapActionHandler(_ sender: Any) {
         self.presenter?.didTapSaveCanvases()
+    }
+    
+    // MARK: Methods(Private)
+    
+    private func setup() {
+        self.canvasTableView.delegate = self
+    }
+}
+
+extension CanvasListViewController: CanvasTableViewDelegate {
+    func canvasTableView(_ canvasTableView: CanvasTableView, didSelectCanvas selectedCanvas: Canvas) {
+        self.presenter?.didTapOnCanvas(selectedCanvas)
     }
 }
 

@@ -42,11 +42,12 @@ class AppCoordinator: Coordinator {
         
         self.addModule(initialModule)
         
-//        let settings = Router.Settings(animated: false,
-//                                       willPopHandler: <#T##Router.Settings.WillPopHandler?##Router.Settings.WillPopHandler?##() -> Void#>,
-//                                       didPopHandler: <#T##Router.Settings.DidPopHandler?##Router.Settings.DidPopHandler?##() -> Void#>)
+        let settings = Router.Settings(animated: false,
+                                       willPopHandler: nil) { [weak self] in
+                                        self?.removeModule(initialModule)
+        }
         
-        self.router.setRootModule(initialModule, settings: Router.Settings())
+        self.router.setRootModule(initialModule, settings: settings)
         window.rootViewController = self.navigationController
     }
     
@@ -75,7 +76,22 @@ class AppCoordinator: Coordinator {
 }
 
 extension AppCoordinator: CanvasListModuleOutput {
+    
     func didTapOnCanvas(_ canvas: Canvas) {
+        let canvasModule = CanvasViewController.loadFromStoryboard()
         
+        self.addModule(canvasModule)
+        
+        let settings = Router.Settings(animated: true, willPopHandler: nil) { [weak self] in
+            self?.removeModule(canvasModule)
+        }
+        
+        self.router.push(module: canvasModule, settings: settings)
+    }
+}
+
+extension CanvasViewController: ViewControllerBasedModule {
+    var asViewController: UIViewController {
+        return self
     }
 }
