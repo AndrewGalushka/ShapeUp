@@ -12,54 +12,41 @@ class CanvasesListPresenter: CanvasesListPresenterProtocol {
     
     // MARK: - Propeties(Private)
     
-    private let storageManager: StorageManagerType
+    private let canvasListManagemetService: CanvasListManagementServiceProtocol
     
     // MARK: - Properties(Public)
     
     weak var output: CanvasesListPresenterOutput?
     weak var view: CanvasListView?
     
-    var savedCanvases: [Canvas] = [Canvas]()
-    var newCanvases: [Canvas] = [Canvas]()
-    var canvases: [Canvas] {
-        return savedCanvases + newCanvases
-    }
-    
     // MARK: - Initializers
     
     init(storageManager: StorageManagerType) {
-        self.storageManager = storageManager
+        self.canvasListManagemetService = CanvasListManagementService(storageManager: storageManager)
     }
     
     // MARK: - CanvasesListPresenterProtocol imp
     
     func viewLoaded() {
-        self.fetchCanvases()
+        let canvases = self.canvasListManagemetService.fetchAllCanvases()
         self.view?.displayCanvases(canvases)
     }
     
     func addCanvasPressed(name: String) {
-        let canvas = CanvasModel(name: name)
-        newCanvases.append(canvas)
-        self.view?.displayCanvases(canvases)
+        canvasListManagemetService.addCanvas(name: name)
+        self.view?.displayCanvases(canvasListManagemetService.canvases)
+    }
+    
+    func removeCanvasPressed(canavas canvasToDelete: Canvas) {
+        canvasListManagemetService.deleteCanvas(canvasToDelete)
+        self.view?.displayCanvases(canvasListManagemetService.canvases)
     }
     
     func didTapSaveCanvases() {
-        guard !self.canvases.isEmpty else { return }
-        
-        self.storageManager.saveCanvases(self.newCanvases)
-        savedCanvases.append(contentsOf: newCanvases)
-        self.newCanvases.removeAll()
+        self.canvasListManagemetService.saveChanges()
     }
     
     func didTapOnCanvas(_ canvas: Canvas) {
         self.output?.didTapOnCanvas(canvas)
-    }
-    
-    // MARK: - Methods(Private)
-    
-    private func fetchCanvases() {
-        let fetchedCanvases = storageManager.fetchAllCanvases()
-        self.savedCanvases = fetchedCanvases
     }
 }

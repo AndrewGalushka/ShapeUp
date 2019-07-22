@@ -11,6 +11,7 @@ import Foundation
 protocol CanvasesListPresenterProtocol: AnyObject {
     func viewLoaded()
     func addCanvasPressed(name: String)
+    func removeCanvasPressed(canavas canvasToDelete: Canvas)
     func didTapOnCanvas(_ canvas: Canvas)
     func didTapSaveCanvases()
 }
