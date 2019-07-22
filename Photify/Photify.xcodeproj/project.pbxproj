@@ -57,6 +57,8 @@
 		8DB8B10B22E205B800EB71D4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B10A22E205B800EB71D4 /* Router.swift */; };
 		8DC0109B22E59E7500010BCA /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0109A22E59E7500010BCA /* Array+Extension.swift */; };
 		8DC0109D22E59F0E00010BCA /* CanvasTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0109C22E59F0E00010BCA /* CanvasTableViewDelegate.swift */; };
+		8DC010A022E5B1CF00010BCA /* CanvasListManagementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0109F22E5B1CF00010BCA /* CanvasListManagementService.swift */; };
+		8DC010A222E5B1F100010BCA /* CanvasListManagementServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC010A122E5B1F100010BCA /* CanvasListManagementServiceProtocol.swift */; };
 		8DD103A722D47CC70052B13B /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103A622D47CC70052B13B /* Star.swift */; };
 		8DD103B622D4BCE70052B13B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103B522D4BCE70052B13B /* CoreDataManager.swift */; };
 		8DD103B922D4C7520052B13B /* ManagedObjectModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103B722D4C7520052B13B /* ManagedObjectModel.xcdatamodeld */; };
@@ -120,6 +122,8 @@
 		8DB8B10A22E205B800EB71D4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		8DC0109A22E59E7500010BCA /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		8DC0109C22E59F0E00010BCA /* CanvasTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasTableViewDelegate.swift; sourceTree = "<group>"; };
+		8DC0109F22E5B1CF00010BCA /* CanvasListManagementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListManagementService.swift; sourceTree = "<group>"; };
+		8DC010A122E5B1F100010BCA /* CanvasListManagementServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListManagementServiceProtocol.swift; sourceTree = "<group>"; };
 		8DD103A622D47CC70052B13B /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		8DD103B522D4BCE70052B13B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		8DD103B822D4C7520052B13B /* ManagedObjectModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ManagedObjectModel.xcdatamodel; sourceTree = "<group>"; };
@@ -368,6 +372,7 @@
 		8DB8B0E822E1AD3700EB71D4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8DC0109E22E5B17B00010BCA /* CanvasListManagementService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -441,6 +446,15 @@
 				8DB8B10A22E205B800EB71D4 /* Router.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		8DC0109E22E5B17B00010BCA /* CanvasListManagementService */ = {
+			isa = PBXGroup;
+			children = (
+				8DC0109F22E5B1CF00010BCA /* CanvasListManagementService.swift */,
+				8DC010A122E5B1F100010BCA /* CanvasListManagementServiceProtocol.swift */,
+			);
+			path = CanvasListManagementService;
 			sourceTree = "<group>";
 		};
 		8DD103A822D494E10052B13B /* Models */ = {
@@ -595,6 +609,7 @@
 				8DB8B10922E2044C00EB71D4 /* PushRouter.swift in Sources */,
 				8D4D01CF22DF5FB000348F7A /* AtomicProperty.swift in Sources */,
 				8DD103BC22D4C8D10052B13B /* Coordinator.swift in Sources */,
+				8DC010A222E5B1F100010BCA /* CanvasListManagementServiceProtocol.swift in Sources */,
 				8D21CD1622DCC99B00EA3948 /* CanvasTableView.swift in Sources */,
 				8DD103C122D4C9A80052B13B /* AppAssemblerType.swift in Sources */,
 				8DB8B0F322E1B8E600EB71D4 /* ViewControllerBasedModule.swift in Sources */,
@@ -603,6 +618,7 @@
 				8D4C8A2C22E0733C00282747 /* ManagedObjectMapable.swift in Sources */,
 				8D4D01D622DF719700348F7A /* CanvasModel.swift in Sources */,
 				8D18F17C22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift in Sources */,
+				8DC010A022E5B1CF00010BCA /* CanvasListManagementService.swift in Sources */,
 				8DB8B0F922E1BEDF00EB71D4 /* CanvasesListPresenter.swift in Sources */,
 				8D4C8A2E22E0737700282747 /* CanvasEntityMapable.swift in Sources */,
 				8D4C8A3622E0A34900282747 /* CoreDataManagerAdapter.swift in Sources */,
