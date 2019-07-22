@@ -10,4 +10,5 @@ import Foundation
 
 protocol CanvasTableViewDelegate: AnyObject {
     func canvasTableView(_ canvasTableView: CanvasTableView, didSelectCanvas selectedCanvas: Canvas)
+    func canvasTableView(_ canvasTableView: CanvasTableView, deleteCanvas canvasToDelete: Canvas)
 }

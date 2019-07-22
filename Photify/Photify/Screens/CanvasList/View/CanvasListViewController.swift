@@ -54,6 +54,10 @@ extension CanvasListViewController: CanvasTableViewDelegate {
     func canvasTableView(_ canvasTableView: CanvasTableView, didSelectCanvas selectedCanvas: Canvas) {
         self.presenter?.didTapOnCanvas(selectedCanvas)
     }
+    
+    func canvasTableView(_ canvasTableView: CanvasTableView, deleteCanvas canvasToDelete: Canvas) {
+        self.presenter?.removeCanvasPressed(canavas: canvasToDelete)
+    }
 }
 
 extension CanvasListViewController: CanvasListView {

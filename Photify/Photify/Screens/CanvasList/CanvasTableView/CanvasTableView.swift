@@ -92,4 +92,15 @@ extension CanvasTableView: UITableViewDelegate {
         guard let selectedCanvas = dataSource.item(at: indexPath.row) else { return }
         delegate?.canvasTableView(self, didSelectCanvas: selectedCanvas)
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            self.delegate?.canvasTableView(self, deleteCanvas: dataSource[indexPath.row])
+        }
+    }
 }
