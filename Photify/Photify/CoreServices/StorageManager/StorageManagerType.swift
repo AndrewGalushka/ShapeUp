@@ -18,7 +18,7 @@ protocol StorageManagerType: AnyObject {
     // MARK - Write
     
     func saveCanvases(_ canvases: [Canvas])
-    func deleteCanvas(_ canvases: Canvas)
+    func deleteCanvases(_ canvases: [Canvas])
     
     // MARK - Read
     

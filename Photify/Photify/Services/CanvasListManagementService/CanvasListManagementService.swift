@@ -49,7 +49,7 @@ class CanvasListManagementService: CanvasListManagementServiceProtocol {
         if pendingCanvasesToSave.contains(where: { canvas.identifier == $0.identifier }) {
             pendingCanvasesToSave.removeAll(where: { $0.identifier == canvas.identifier })
         } else if self.fetchedCanvases.contains(where: { canvas.identifier == $0.identifier }) {
-            self.storageManager.deleteCanvas(canvas)
+            self.storageManager.deleteCanvases([canvas])
             self.fetchedCanvases.removeAll(where: { $0.identifier == canvas.identifier })
         }
     }
