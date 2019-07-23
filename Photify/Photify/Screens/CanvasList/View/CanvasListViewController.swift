@@ -40,7 +40,7 @@ class CanvasListViewController: UIViewController {
     }
     
     @IBAction func saveNavigationButtonTapActionHandler(_ sender: Any) {
-        self.presenter?.didTapSaveCanvases()
+        self.presenter?.didTapSaveButton()
     }
     
     // MARK: Methods(Private)

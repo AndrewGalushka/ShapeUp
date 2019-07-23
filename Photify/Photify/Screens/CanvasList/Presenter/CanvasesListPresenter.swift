@@ -42,7 +42,7 @@ class CanvasesListPresenter: CanvasesListPresenterProtocol {
         self.view?.displayCanvases(canvasListManagemetService.canvases)
     }
     
-    func didTapSaveCanvases() {
+    func didTapSaveButton() {
         self.canvasListManagemetService.saveChanges()
     }
     

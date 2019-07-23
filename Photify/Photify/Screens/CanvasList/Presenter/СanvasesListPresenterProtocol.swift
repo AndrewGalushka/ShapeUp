@@ -13,5 +13,5 @@ protocol CanvasesListPresenterProtocol: AnyObject {
     func addCanvasPressed(name: String)
     func removeCanvasPressed(canavas canvasToDelete: Canvas)
     func didTapOnCanvas(_ canvas: Canvas)
-    func didTapSaveCanvases()
+    func didTapSaveButton()
 }
