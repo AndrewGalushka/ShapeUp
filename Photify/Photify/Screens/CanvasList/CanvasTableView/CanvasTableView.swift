@@ -81,6 +81,8 @@ extension CanvasTableView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+        cell.selectionStyle = .blue
+        cell.accessoryType = .disclosureIndicator
         cell.textLabel?.text = dataSource[indexPath.row].name
         
         return cell
@@ -89,6 +91,7 @@ extension CanvasTableView: UITableViewDataSource {
 
 extension CanvasTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         guard let selectedCanvas = dataSource.item(at: indexPath.row) else { return }
         delegate?.canvasTableView(self, didSelectCanvas: selectedCanvas)
     }
