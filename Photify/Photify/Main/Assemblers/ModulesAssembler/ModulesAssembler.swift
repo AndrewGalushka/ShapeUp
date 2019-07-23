@@ -9,11 +9,18 @@
 import Foundation
 
 class ModulesAssembler: ModulesBuilder {
+    
+    // MARK: Properties(Private)
+    
     private let appAssembler: AppAssemblerType
+    
+    // MARK: Initializers
     
     init(appAssembler: AppAssemblerType) {
         self.appAssembler = appAssembler
     }
+    
+    // MARK: - ModulesBuilder imp
     
     func assembleCanvasListModule() -> CanvasListModule {
         let storageManager = appAssembler.assembleStorageManager()
@@ -25,5 +32,15 @@ class ModulesAssembler: ModulesBuilder {
                                       presenter: canvasesListPresenter)
         
         return module
+    }
+    
+    func assembleCanvasModule() -> CanvasModule {
+        let canvasView = CanvasViewController.loadFromStoryboard()
+        let canvasPresenter = CanvasPresenter()
+        
+        let canvasModule = CanvasModule(view: canvasView,
+                                  presenter: canvasPresenter)
+        
+        return canvasModule
     }
 }

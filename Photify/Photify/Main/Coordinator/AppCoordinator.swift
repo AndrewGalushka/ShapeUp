@@ -78,7 +78,7 @@ class AppCoordinator: Coordinator {
 extension AppCoordinator: CanvasListModuleOutput {
     
     func didTapOnCanvas(_ canvas: Canvas) {
-        let canvasModule = CanvasViewController.loadFromStoryboard()
+        let canvasModule = modulesAssembler.assembleCanvasModule()
         
         self.addModule(canvasModule)
         
@@ -87,11 +87,5 @@ extension AppCoordinator: CanvasListModuleOutput {
         }
         
         self.router.push(module: canvasModule, settings: settings)
-    }
-}
-
-extension CanvasViewController: ViewControllerBasedModule {
-    var asViewController: UIViewController {
-        return self
     }
 }

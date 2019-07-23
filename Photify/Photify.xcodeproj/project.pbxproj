@@ -66,6 +66,12 @@
 		8DD103BE22D4C8F30052B13B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103BD22D4C8F30052B13B /* AppCoordinator.swift */; };
 		8DD103C122D4C9A80052B13B /* AppAssemblerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103C022D4C9A80052B13B /* AppAssemblerType.swift */; };
 		8DD103C322D4E1D90052B13B /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103C222D4E1D90052B13B /* PersistentContainer.swift */; };
+		8DE758CC22E703090069A6B4 /* CanvasModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758CB22E703090069A6B4 /* CanvasModule.swift */; };
+		8DE758CE22E703300069A6B4 /* CanvasModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758CD22E703300069A6B4 /* CanvasModuleOutput.swift */; };
+		8DE758D022E703B20069A6B4 /* CanvasPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758CF22E703B20069A6B4 /* CanvasPresenter.swift */; };
+		8DE758D222E703BF0069A6B4 /* CanvasPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758D122E703BF0069A6B4 /* CanvasPresenterProtocol.swift */; };
+		8DE758D422E703F90069A6B4 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758D322E703F90069A6B4 /* CanvasView.swift */; };
+		8DE758D622E705F70069A6B4 /* CanvasPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758D522E705F70069A6B4 /* CanvasPresenterOutput.swift */; };
 		8DF18A2B22D79CFD0090A2FE /* SingleReceiverBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +137,12 @@
 		8DD103BD22D4C8F30052B13B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		8DD103C022D4C9A80052B13B /* AppAssemblerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssemblerType.swift; sourceTree = "<group>"; };
 		8DD103C222D4E1D90052B13B /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		8DE758CB22E703090069A6B4 /* CanvasModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasModule.swift; sourceTree = "<group>"; };
+		8DE758CD22E703300069A6B4 /* CanvasModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasModuleOutput.swift; sourceTree = "<group>"; };
+		8DE758CF22E703B20069A6B4 /* CanvasPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasPresenter.swift; sourceTree = "<group>"; };
+		8DE758D122E703BF0069A6B4 /* CanvasPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasPresenterProtocol.swift; sourceTree = "<group>"; };
+		8DE758D322E703F90069A6B4 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		8DE758D522E705F70069A6B4 /* CanvasPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasPresenterOutput.swift; sourceTree = "<group>"; };
 		8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleReceiverBinding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,13 +168,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		8D18F17F22D60F3E00E7B1E0 /* ShapesCanvasView */ = {
+		8D18F17F22D60F3E00E7B1E0 /* CanvasView */ = {
 			isa = PBXGroup;
 			children = (
-				8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */,
-				8D6BAE2922D332E900FF383C /* CanvasViewController.swift */,
+				8DE758CB22E703090069A6B4 /* CanvasModule.swift */,
+				8DE758CD22E703300069A6B4 /* CanvasModuleOutput.swift */,
+				8DE758C922E702E60069A6B4 /* Presenter */,
+				8DE758C822E702E10069A6B4 /* View */,
 			);
-			path = ShapesCanvasView;
+			path = CanvasView;
 			sourceTree = "<group>";
 		};
 		8D18F18022D60F5400E7B1E0 /* MainView */ = {
@@ -344,7 +358,7 @@
 			children = (
 				8D21CD0F22DCC88300EA3948 /* CanvasList */,
 				8D18F18022D60F5400E7B1E0 /* MainView */,
-				8D18F17F22D60F3E00E7B1E0 /* ShapesCanvasView */,
+				8D18F17F22D60F3E00E7B1E0 /* CanvasView */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -502,6 +516,26 @@
 			path = Assemblers;
 			sourceTree = "<group>";
 		};
+		8DE758C822E702E10069A6B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DE758D322E703F90069A6B4 /* CanvasView.swift */,
+				8D6BAE2922D332E900FF383C /* CanvasViewController.swift */,
+				8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8DE758C922E702E60069A6B4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8DE758CF22E703B20069A6B4 /* CanvasPresenter.swift */,
+				8DE758D122E703BF0069A6B4 /* CanvasPresenterProtocol.swift */,
+				8DE758D522E705F70069A6B4 /* CanvasPresenterOutput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -577,6 +611,7 @@
 			files = (
 				8DC0109D22E59F0E00010BCA /* CanvasTableViewDelegate.swift in Sources */,
 				8D4C8A3422E0984B00282747 /* CoreDataEntityMapper+Canvas.swift in Sources */,
+				8DE758D422E703F90069A6B4 /* CanvasView.swift in Sources */,
 				8DF18A2B22D79CFD0090A2FE /* SingleReceiverBinding.swift in Sources */,
 				8D6BAE4222D345BC00FF383C /* ShapeView.swift in Sources */,
 				8D6BAE5922D3703400FF383C /* AngleGeometry.swift in Sources */,
@@ -585,6 +620,7 @@
 				8D6BAE4922D357BE00FF383C /* Circle.swift in Sources */,
 				8D6BAE5722D35FC400FF383C /* RectangleGeometry.swift in Sources */,
 				8D4C8A3222E0980900282747 /* CoreDataEntityMapper.swift in Sources */,
+				8DE758D022E703B20069A6B4 /* CanvasPresenter.swift in Sources */,
 				8D18F18422D60F8200E7B1E0 /* MainScreenViewController.swift in Sources */,
 				8DB8B10B22E205B800EB71D4 /* Router.swift in Sources */,
 				8DC0109B22E59E7500010BCA /* Array+Extension.swift in Sources */,
@@ -598,10 +634,12 @@
 				8D18F17E22D5FA5A00E7B1E0 /* XMark.swift in Sources */,
 				8DB8B0F722E1BD5700EB71D4 /* СanvasesListPresenterProtocol.swift in Sources */,
 				8DD103B922D4C7520052B13B /* ManagedObjectModel.xcdatamodeld in Sources */,
+				8DE758CC22E703090069A6B4 /* CanvasModule.swift in Sources */,
 				8D4D01D422DF70AF00348F7A /* Canvas.swift in Sources */,
 				8D6BAE4522D3476500FF383C /* Rectangle.swift in Sources */,
 				8D4C8A2922E070F700282747 /* StorageManager.swift in Sources */,
 				8DB8B0F022E1B7B200EB71D4 /* CanvasListModule.swift in Sources */,
+				8DE758CE22E703300069A6B4 /* CanvasModuleOutput.swift in Sources */,
 				8D6BAE4D22D35B5400FF383C /* Ellipse.swift in Sources */,
 				8D21CD1122DCC8B000EA3948 /* CanvasListViewController.swift in Sources */,
 				8DD103C322D4E1D90052B13B /* PersistentContainer.swift in Sources */,
@@ -611,6 +649,7 @@
 				8DD103BC22D4C8D10052B13B /* Coordinator.swift in Sources */,
 				8DC010A222E5B1F100010BCA /* CanvasListManagementServiceProtocol.swift in Sources */,
 				8D21CD1622DCC99B00EA3948 /* CanvasTableView.swift in Sources */,
+				8DE758D622E705F70069A6B4 /* CanvasPresenterOutput.swift in Sources */,
 				8DD103C122D4C9A80052B13B /* AppAssemblerType.swift in Sources */,
 				8DB8B0F322E1B8E600EB71D4 /* ViewControllerBasedModule.swift in Sources */,
 				8D6BAE5B22D37FC000FF383C /* Triangle.swift in Sources */,
@@ -624,6 +663,7 @@
 				8D4C8A3622E0A34900282747 /* CoreDataManagerAdapter.swift in Sources */,
 				8DB8B10122E1E47B00EB71D4 /* ModulesBuilder.swift in Sources */,
 				8DD103BE22D4C8F30052B13B /* AppCoordinator.swift in Sources */,
+				8DE758D222E703BF0069A6B4 /* CanvasPresenterProtocol.swift in Sources */,
 				8D6BAE4022D3456C00FF383C /* Shape.swift in Sources */,
 				8D4D01D122DF67E100348F7A /* StorageManagerType.swift in Sources */,
 				8DD103B622D4BCE70052B13B /* CoreDataManager.swift in Sources */,

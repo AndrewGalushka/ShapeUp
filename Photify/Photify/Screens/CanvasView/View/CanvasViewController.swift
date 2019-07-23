@@ -10,8 +10,9 @@ import UIKit
 
 class CanvasViewController: UIViewController {
     @IBOutlet weak var bottomControlsContainerView: UIView!
-    
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    weak var presenter: CanvasPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,5 +61,8 @@ class CanvasViewController: UIViewController {
         xMark.layer.borderWidth = 1.0
         self.scrollView.addSubview(xMark)
     }
+}
+
+extension CanvasViewController: CanvasView {
 }
 

@@ -15,7 +15,7 @@
             <objects>
                 <viewController storyboardIdentifier="ShapesContextViewController" id="Ga7-Su-8we" customClass="CanvasViewController" customModule="Photify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qBY-fG-6Bs">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrd-3O-xj6">
