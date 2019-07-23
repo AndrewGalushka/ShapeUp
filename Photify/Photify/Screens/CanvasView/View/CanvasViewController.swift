@@ -16,6 +16,9 @@ class CanvasViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.presenter?.viewLoaded()
+        
         scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
     }
     
@@ -64,5 +67,8 @@ class CanvasViewController: UIViewController {
 }
 
 extension CanvasViewController: CanvasView {
+    func setTitleText(to text: String) {
+        self.title = text
+    }
 }
 

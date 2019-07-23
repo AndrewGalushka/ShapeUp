@@ -9,4 +9,5 @@
 import Foundation
 
 protocol CanvasView: AnyObject {
+    func setTitleText(to text: String)
 }

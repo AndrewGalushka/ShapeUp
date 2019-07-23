@@ -78,7 +78,7 @@ class AppCoordinator: Coordinator {
 extension AppCoordinator: CanvasListModuleOutput {
     
     func didTapOnCanvas(_ canvas: Canvas) {
-        let canvasModule = modulesAssembler.assembleCanvasModule()
+        let canvasModule = modulesAssembler.assembleCanvasModule(canvas: canvas)
         
         self.addModule(canvasModule)
         

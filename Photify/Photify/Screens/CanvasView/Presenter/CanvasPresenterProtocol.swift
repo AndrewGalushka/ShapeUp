@@ -9,4 +9,5 @@
 import Foundation
 
 protocol CanvasPresenterProtocol: AnyObject {
+    func viewLoaded()
 }

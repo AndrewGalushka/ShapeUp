@@ -34,12 +34,12 @@ class ModulesAssembler: ModulesBuilder {
         return module
     }
     
-    func assembleCanvasModule() -> CanvasModule {
+    func assembleCanvasModule(canvas: Canvas) -> CanvasModule {
         let canvasView = CanvasViewController.loadFromStoryboard()
-        let canvasPresenter = CanvasPresenter()
+        let canvasPresenter = CanvasPresenter(canvas: canvas)
         
         let canvasModule = CanvasModule(view: canvasView,
-                                  presenter: canvasPresenter)
+                                        presenter: canvasPresenter)
         
         return canvasModule
     }
