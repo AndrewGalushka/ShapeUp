@@ -19,23 +19,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrd-3O-xj6">
-                                <rect key="frame" x="0.0" y="946" width="1366" height="50"/>
+                                <rect key="frame" x="0.0" y="916" width="1366" height="80"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tnm-ua-kGQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="1366" height="50"/>
-                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2NZ-dC-sFy" customClass="ShapesCollectionView" customModule="Photify" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="1366" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Tnm-ua-kGQ" firstAttribute="top" secondItem="rrd-3O-xj6" secondAttribute="top" id="293-if-cXS"/>
-                                    <constraint firstAttribute="trailing" secondItem="Tnm-ua-kGQ" secondAttribute="trailing" id="FC3-lr-obX"/>
-                                    <constraint firstItem="Tnm-ua-kGQ" firstAttribute="leading" secondItem="rrd-3O-xj6" secondAttribute="leading" id="p34-at-nuc"/>
-                                    <constraint firstAttribute="bottom" secondItem="Tnm-ua-kGQ" secondAttribute="bottom" id="pGB-nc-ISM"/>
-                                    <constraint firstAttribute="height" constant="50" id="tOM-Zr-N3j"/>
+                                    <constraint firstAttribute="bottom" secondItem="2NZ-dC-sFy" secondAttribute="bottom" id="8ee-cj-tIF"/>
+                                    <constraint firstItem="2NZ-dC-sFy" firstAttribute="top" secondItem="rrd-3O-xj6" secondAttribute="top" id="CJu-H3-1g2"/>
+                                    <constraint firstAttribute="trailing" secondItem="2NZ-dC-sFy" secondAttribute="trailing" id="cNh-7M-Lbd"/>
+                                    <constraint firstItem="2NZ-dC-sFy" firstAttribute="leading" secondItem="rrd-3O-xj6" secondAttribute="leading" id="t9K-u9-Mwt"/>
+                                    <constraint firstAttribute="height" constant="80" id="tOM-Zr-N3j"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDH-zg-Diw">
-                                <rect key="frame" x="0.0" y="74" width="1366" height="872"/>
+                                <rect key="frame" x="0.0" y="74" width="1366" height="842"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,7 +51,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5iw-PO-Aex"/>
                     </view>
-                    <navigationItem key="navigationItem" id="rva-UK-MmZ"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="rva-UK-MmZ"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="bottomControlsContainerView" destination="rrd-3O-xj6" id="TEC-7d-rvs"/>
@@ -59,6 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCB-we-bHj" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="14.934114202049779" y="17.578125"/>
         </scene>
     </scenes>
 </document>

@@ -72,6 +72,9 @@
 		8DE758D222E703BF0069A6B4 /* CanvasPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758D122E703BF0069A6B4 /* CanvasPresenterProtocol.swift */; };
 		8DE758D422E703F90069A6B4 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758D322E703F90069A6B4 /* CanvasView.swift */; };
 		8DE758D622E705F70069A6B4 /* CanvasPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758D522E705F70069A6B4 /* CanvasPresenterOutput.swift */; };
+		8DE758DC22E7561B0069A6B4 /* ShapesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758DB22E7561B0069A6B4 /* ShapesCollectionView.swift */; };
+		8DE758DF22E756A60069A6B4 /* ShapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758DD22E756A60069A6B4 /* ShapeCollectionViewCell.swift */; };
+		8DE758E022E756A60069A6B4 /* ShapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DE758DE22E756A60069A6B4 /* ShapeCollectionViewCell.xib */; };
 		8DF18A2B22D79CFD0090A2FE /* SingleReceiverBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +146,9 @@
 		8DE758D122E703BF0069A6B4 /* CanvasPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasPresenterProtocol.swift; sourceTree = "<group>"; };
 		8DE758D322E703F90069A6B4 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		8DE758D522E705F70069A6B4 /* CanvasPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasPresenterOutput.swift; sourceTree = "<group>"; };
+		8DE758DB22E7561B0069A6B4 /* ShapesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesCollectionView.swift; sourceTree = "<group>"; };
+		8DE758DD22E756A60069A6B4 /* ShapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeCollectionViewCell.swift; sourceTree = "<group>"; };
+		8DE758DE22E756A60069A6B4 /* ShapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShapeCollectionViewCell.xib; sourceTree = "<group>"; };
 		8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleReceiverBinding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -288,6 +294,7 @@
 				8DB8B0ED22E1B4EC00EB71D4 /* Drawing */,
 				8DB8B0E822E1AD3700EB71D4 /* Services */,
 				8DB8B0EC22E1B44D00EB71D4 /* CoreServices */,
+				8DE758DA22E754B70069A6B4 /* Controls */,
 				8DD103B322D4BCBE0052B13B /* Core */,
 				8DD103A822D494E10052B13B /* Models */,
 				8DB8B0F122E1B7C500EB71D4 /* Protocols */,
@@ -536,6 +543,16 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		8DE758DA22E754B70069A6B4 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				8DE758DB22E7561B0069A6B4 /* ShapesCollectionView.swift */,
+				8DE758DD22E756A60069A6B4 /* ShapeCollectionViewCell.swift */,
+				8DE758DE22E756A60069A6B4 /* ShapeCollectionViewCell.xib */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -594,6 +611,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE758E022E756A60069A6B4 /* ShapeCollectionViewCell.xib in Resources */,
 				8D6BAE3522D332EA00FF383C /* LaunchScreen.storyboard in Resources */,
 				8D18F17922D5D29200E7B1E0 /* CanvasViewController.storyboard in Resources */,
 				8D18F18622D60F8C00E7B1E0 /* MainScreenViewController.storyboard in Resources */,
@@ -634,6 +652,7 @@
 				8D18F17E22D5FA5A00E7B1E0 /* XMark.swift in Sources */,
 				8DB8B0F722E1BD5700EB71D4 /* СanvasesListPresenterProtocol.swift in Sources */,
 				8DD103B922D4C7520052B13B /* ManagedObjectModel.xcdatamodeld in Sources */,
+				8DE758DF22E756A60069A6B4 /* ShapeCollectionViewCell.swift in Sources */,
 				8DE758CC22E703090069A6B4 /* CanvasModule.swift in Sources */,
 				8D4D01D422DF70AF00348F7A /* Canvas.swift in Sources */,
 				8D6BAE4522D3476500FF383C /* Rectangle.swift in Sources */,
@@ -652,6 +671,7 @@
 				8DE758D622E705F70069A6B4 /* CanvasPresenterOutput.swift in Sources */,
 				8DD103C122D4C9A80052B13B /* AppAssemblerType.swift in Sources */,
 				8DB8B0F322E1B8E600EB71D4 /* ViewControllerBasedModule.swift in Sources */,
+				8DE758DC22E7561B0069A6B4 /* ShapesCollectionView.swift in Sources */,
 				8D6BAE5B22D37FC000FF383C /* Triangle.swift in Sources */,
 				8DB8B0FD22E1DFCC00EB71D4 /* CanvasesListPresenterOutput.swift in Sources */,
 				8D4C8A2C22E0733C00282747 /* ManagedObjectMapable.swift in Sources */,
