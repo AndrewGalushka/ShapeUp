@@ -14,3 +14,31 @@ extension Array {
         return self[index]
     }
 }
+
+extension Array {
+    func arrayByRemovingDuplicates<T: Hashable>(identifiedBy keypath: KeyPath<Element, T>) -> [Element] {
+        var resultingArray = self
+        
+        for index in 0..<count {
+            var isFirstOccurrence = true
+            let identifier = self[index][keyPath: keypath]
+            
+            resultingArray.removeAll { (element) -> Bool in
+                
+                if element[keyPath: keypath] == identifier {
+                    
+                    if isFirstOccurrence {
+                        isFirstOccurrence = false
+                        return false
+                    }
+                    
+                    return true
+                }
+                
+                return false
+            }
+        }
+        
+        return resultingArray
+    }
+}
