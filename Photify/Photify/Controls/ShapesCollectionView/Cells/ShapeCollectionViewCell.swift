@@ -10,6 +10,10 @@ import UIKit
 
 class ShapeCollectionViewCell: UICollectionViewCell {
 
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var shapeContainerView: SingleViewContainer!
+    
     // MARK: Properties(Private)
     
     private var shapeLayer = CAShapeLayer()
@@ -20,8 +24,7 @@ class ShapeCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        shapeLayer.frame = self.contentView.bounds
-        self.contentView.layer.addSublayer(shapeLayer)
+        self.setup()
     }
     
     override func prepareForReuse() {
@@ -35,11 +38,17 @@ class ShapeCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        shapeLayer.frame = contentView.bounds
-        
         if let viewModel = self.viewModel {
-            shapeLayer.path = viewModel.shape.path(in: contentView.bounds)
+            shapeContainerView.setNeedsLayout()
+            shapeContainerView.layoutIfNeeded()
+            shapeLayer.path = viewModel.shape.path(in: self.shapeContainerView.bounds)
         }
+    }
+    
+    // MARK: - Methods(Private)
+    
+    func setup() {
+        self.shapeContainerView.embedLayer(shapeLayer)
     }
 }
 

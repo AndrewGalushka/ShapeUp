@@ -18,9 +18,24 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="367" height="284"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAF-yK-Uz7" customClass="SingleViewContainer" customModule="Photify" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="351" height="268"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="xAF-yK-Uz7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="0dD-Na-N3j"/>
+                <constraint firstItem="xAF-yK-Uz7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="ZYk-k1-ow9"/>
+                <constraint firstAttribute="bottom" secondItem="xAF-yK-Uz7" secondAttribute="bottom" constant="8" id="cyU-wS-VjN"/>
+                <constraint firstAttribute="trailing" secondItem="xAF-yK-Uz7" secondAttribute="trailing" constant="8" id="vb5-Z6-l8O"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="367" height="284"/>
+            <connections>
+                <outlet property="shapeContainerView" destination="xAF-yK-Uz7" id="Y1M-G8-TRP"/>
+            </connections>
             <point key="canvasLocation" x="279" y="111"/>
         </collectionViewCell>
     </objects>
