@@ -10,6 +10,7 @@ import UIKit
 
 class SingleViewContainer: UIView {
     private(set) var embededView: UIView?
+    private(set) var embededLayer: CALayer?
     
     private var isUsesAutolayout: Bool {
         return !self.translatesAutoresizingMaskIntoConstraints
@@ -22,8 +23,26 @@ class SingleViewContainer: UIView {
         self.embededView = view
     }
     
+    func embedLayer(_ layer: CALayer) {
+        self.clean()
+        
+        self.embededLayer?.frame = self.bounds
+        self.layer.addSublayer(layer)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if let embededLayer = embededLayer {
+            embededLayer.frame = self.bounds
+        }
+    }
+    
     private func clean() {
         embededView?.removeFromSuperview()
         embededView = nil
+        
+        embededLayer?.removeFromSuperlayer()
+        embededLayer = nil
     }
 }
