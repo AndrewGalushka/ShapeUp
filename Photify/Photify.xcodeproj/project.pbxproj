@@ -58,6 +58,8 @@
 		8DBB258A22E842E500546D23 /* ShapesCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB258922E842E500546D23 /* ShapesCollectionViewLayout.swift */; };
 		8DBB258E22E84BF600546D23 /* AnyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB258D22E84BF600546D23 /* AnyShape.swift */; };
 		8DBB259222E8523D00546D23 /* ShapesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB259122E8523D00546D23 /* ShapesProvider.swift */; };
+		8DBB259822E8585A00546D23 /* SingleViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB259722E8585A00546D23 /* SingleViewContainer.swift */; };
+		8DBB259A22E8596500546D23 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB259922E8596500546D23 /* UIView+Extensions.swift */; };
 		8DC0109B22E59E7500010BCA /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0109A22E59E7500010BCA /* Array+Extension.swift */; };
 		8DC0109D22E59F0E00010BCA /* CanvasTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0109C22E59F0E00010BCA /* CanvasTableViewDelegate.swift */; };
 		8DC010A022E5B1CF00010BCA /* CanvasListManagementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0109F22E5B1CF00010BCA /* CanvasListManagementService.swift */; };
@@ -135,6 +137,8 @@
 		8DBB258922E842E500546D23 /* ShapesCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesCollectionViewLayout.swift; sourceTree = "<group>"; };
 		8DBB258D22E84BF600546D23 /* AnyShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyShape.swift; sourceTree = "<group>"; };
 		8DBB259122E8523D00546D23 /* ShapesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesProvider.swift; sourceTree = "<group>"; };
+		8DBB259722E8585A00546D23 /* SingleViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewContainer.swift; sourceTree = "<group>"; };
+		8DBB259922E8596500546D23 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; wrapsLines = 0; };
 		8DC0109A22E59E7500010BCA /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		8DC0109C22E59F0E00010BCA /* CanvasTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasTableViewDelegate.swift; sourceTree = "<group>"; };
 		8DC0109F22E5B1CF00010BCA /* CanvasListManagementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListManagementService.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 				8D4C8A2422E0590A00282747 /* UIAlertController+AddCanvas.swift */,
 				8D4C8A3B22E0CC3400282747 /* UIColor+Extension.swift */,
 				8DC0109A22E59E7500010BCA /* Array+Extension.swift */,
+				8DBB259922E8596500546D23 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				8DB8B0E822E1AD3700EB71D4 /* Services */,
 				8DB8B0EC22E1B44D00EB71D4 /* CoreServices */,
 				8DE758DA22E754B70069A6B4 /* Controls */,
+				8DBB259622E8583A00546D23 /* Views */,
 				8DD103B322D4BCBE0052B13B /* Core */,
 				8DD103A822D494E10052B13B /* Models */,
 				8DB8B0F122E1B7C500EB71D4 /* Protocols */,
@@ -504,6 +510,14 @@
 			path = ShapesProvider;
 			sourceTree = "<group>";
 		};
+		8DBB259622E8583A00546D23 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8DBB259722E8585A00546D23 /* SingleViewContainer.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		8DC0109E22E5B17B00010BCA /* CanvasListManagementService */ = {
 			isa = PBXGroup;
 			children = (
@@ -666,6 +680,7 @@
 				8DF18A2B22D79CFD0090A2FE /* SingleReceiverBinding.swift in Sources */,
 				8D6BAE4222D345BC00FF383C /* ShapeView.swift in Sources */,
 				8D6BAE5922D3703400FF383C /* AngleGeometry.swift in Sources */,
+				8DBB259A22E8596500546D23 /* UIView+Extensions.swift in Sources */,
 				8DB8B0F522E1BBF300EB71D4 /* CanvasListModuleOutput.swift in Sources */,
 				8D6BAE5522D35F1F00FF383C /* CircleGeometry.swift in Sources */,
 				8DBB258A22E842E500546D23 /* ShapesCollectionViewLayout.swift in Sources */,
@@ -716,6 +731,7 @@
 				8DB8B0F922E1BEDF00EB71D4 /* CanvasesListPresenter.swift in Sources */,
 				8D4C8A2E22E0737700282747 /* CanvasEntityMapable.swift in Sources */,
 				8D4C8A3622E0A34900282747 /* CoreDataManagerAdapter.swift in Sources */,
+				8DBB259822E8585A00546D23 /* SingleViewContainer.swift in Sources */,
 				8DB8B10122E1E47B00EB71D4 /* ModulesBuilder.swift in Sources */,
 				8DD103BE22D4C8F30052B13B /* AppCoordinator.swift in Sources */,
 				8DE758D222E703BF0069A6B4 /* CanvasPresenterProtocol.swift in Sources */,
