@@ -13,7 +13,7 @@ class ShapesCollectionView: UIView {
     // MASK: - Properties(Private)
     
     private lazy var collectionView: UICollectionView = {
-        let tb = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        let tb = UICollectionView(frame: .zero, collectionViewLayout: ShapesCollectionViewLayout())
         
         self.addSubview(tb)
         
@@ -44,9 +44,8 @@ class ShapesCollectionView: UIView {
     
     // MARK: - Methods(Private)
     
-    private var colors: [UIColor] = { () -> [UIColor] in
-        return (0...10).map {_ -> UIColor in
-            return UIColor.random() }
+    private var shapes: [Shape] = { () -> [Shape] in
+       return ShapesProvider().allExistingShapes()
     }()
     
     private func setUp() {
@@ -58,17 +57,19 @@ class ShapesCollectionView: UIView {
         collectionView.register(UINib(nibName: "\(ShapeCollectionViewCell.self)", bundle: nil),
                                 forCellWithReuseIdentifier: "\(ShapeCollectionViewCell.self)")
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
 }
 
-extension ShapesCollectionView: UICollectionViewDataSource {
+extension ShapesCollectionView: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return colors.count
+        return shapes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let shapeCell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(ShapeCollectionViewCell.self)", for: indexPath)
-        (shapeCell as? ShapeCollectionViewCellConfigurable)?.configure(color: colors[indexPath.row])
+        (shapeCell as? ShapeCollectionViewCellConfigurable)?.configure(shape: shapes[indexPath.row],
+                                                                       color: .random())
             
         return shapeCell
     }

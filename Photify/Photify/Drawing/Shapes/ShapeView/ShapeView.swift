@@ -9,7 +9,7 @@
 import UIKit
 
 class ShapeView<S>: UIView where S: Shape {
-    private var shape: S
+    var shape: S
     
     var fillColor: CGColor? {
         get {
