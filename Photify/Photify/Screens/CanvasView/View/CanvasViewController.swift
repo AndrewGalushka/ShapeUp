@@ -9,17 +9,24 @@
 import UIKit
 
 class CanvasViewController: UIViewController {
-    @IBOutlet weak var bottomControlsContainerView: UIView!
-    @IBOutlet weak var scrollView: UIScrollView!
+    
+    // MARK: - IBOutlets
+    
+    @IBOutlet private weak var bottomControlsContainerView: UIView!
+    @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var colorPicker: ColorPicker!
+    
+    // MARK: - Properties(Public)
     
     weak var presenter: CanvasPresenterProtocol?
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setup()
         self.presenter?.viewLoaded()
-        
-        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,6 +70,19 @@ class CanvasViewController: UIViewController {
         xMark.shapeLayer.fillColor = UIColor.red.cgColor
         xMark.layer.borderWidth = 1.0
         self.scrollView.addSubview(xMark)
+    }
+    
+    // MARK: - Methods(Private)
+    
+    private func setup() {
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(colorPickerTapped))
+        self.colorPicker.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func colorPickerTapped() {
+        colorPicker.toggleIsExpanded()
     }
 }
 

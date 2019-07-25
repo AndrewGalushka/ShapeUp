@@ -142,7 +142,7 @@
 		8DBB259122E8523D00546D23 /* ShapesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesProvider.swift; sourceTree = "<group>"; };
 		8DBB259722E8585A00546D23 /* SingleViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewContainer.swift; sourceTree = "<group>"; };
 		8DBB259922E8596500546D23 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; wrapsLines = 0; };
-		8DBB259C22E886B700546D23 /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
+		8DBB259C22E886B700546D23 /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		8DC0109A22E59E7500010BCA /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		8DC0109C22E59F0E00010BCA /* CanvasTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasTableViewDelegate.swift; sourceTree = "<group>"; };
 		8DC0109F22E5B1CF00010BCA /* CanvasListManagementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListManagementService.swift; sourceTree = "<group>"; };

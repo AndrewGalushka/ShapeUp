@@ -12,13 +12,22 @@ import UIKit
 class ColorPicker: UIView {
     
     @IBInspectable
-    var expandDirection: ExpandDirection = .up {
+    private(set) var isExpanded: Bool = false {
         didSet {
-            self.embedExpandingContainer()
+            if isExpanded {
+                expandingContainer.backgroundColor = .cyan
+            } else {
+                expandingContainer.backgroundColor = .red
+            }
         }
     }
     
-    private(set) var isExpanded = false
+    private(set) var expandDirection: ExpandDirection = .up {
+        didSet {
+            setup()
+        }
+    }
+    
     private let configs = Configurations()
     private lazy var parentCircle = ColoredCircleView()
     private lazy var expandingContainer: UIView = {
@@ -41,17 +50,55 @@ class ColorPicker: UIView {
         self.setup()
     }
     
+    // MARK: - Methods(Public)
+    
+    func toggleIsExpanded() {
+        
+        let startingPath: CGPath
+        let finalPath: CGPath
+        
+        if self.isExpanded {
+            startingPath = CGPath(rect: self.expandingContainer.bounds, transform: nil)
+            finalPath = CGPath(rect: CGRect(x: 0, y: expandingContainer.bounds.height, width: expandingContainer.bounds.width, height: 0),
+                                   transform: nil)
+        } else {
+            startingPath = CGPath(rect: CGRect(x: 0, y: expandingContainer.bounds.height, width: expandingContainer.bounds.width, height: 0),
+                                  transform: nil)
+            finalPath = CGPath(rect: self.expandingContainer.bounds, transform: nil)
+        }
+        
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = startingPath
+        self.expandingContainer.layer.mask = maskLayer
+        
+        let animation = CABasicAnimation(keyPath: "path")
+        animation.fromValue = maskLayer.path
+        animation.toValue = finalPath
+        animation.duration = 0.25
+        animation.timingFunction = .init(name: CAMediaTimingFunctionName.easeOut)
+        
+        CATransaction.begin()
+        CATransaction.setDisableActions(true)
+        maskLayer.path = finalPath
+        CATransaction.commit()
+        
+        self.isExpanded.toggle()
+        
+    }
+    
     // MARK: - Methods(Private)
     
     private func setup() {
-        self.embedParentCircle()
+        self.configureInitialUI()
     }
     
     private func configureInitialUI() {
         embedParentCircle()
+        embedExpandingContainer()
     }
     
     private func embedParentCircle() {
+        self.parentCircle.removeFromSuperview()
         self.addSubview(parentCircle)
         parentCircle.translatesAutoresizingMaskIntoConstraints = false
         
@@ -62,38 +109,53 @@ class ColorPicker: UIView {
     }
     
     private func embedExpandingContainer() {
-        self.insertSubview(expandingContainer, belowSubview: parentCircle)
+        self.setNeedsLayout()
+        self.layoutIfNeeded()
+        
+        self.expandingContainer.removeFromSuperview()
         self.expandingContainer.translatesAutoresizingMaskIntoConstraints = false
+        self.insertSubview(expandingContainer, belowSubview: parentCircle)
+        
+        let containerSize = calculateContainerSize()
+        
+        self.expandingContainer.widthAnchor.constraint(equalToConstant: containerSize.width).isActive = true
+        self.expandingContainer.heightAnchor.constraint(equalToConstant: containerSize.height).isActive = true
         
         switch expandDirection {
         case .up:
-            parentCircle.centerXAnchor.constraint(equalTo: parentCircle.centerXAnchor).isActive = true
+            expandingContainer.centerXAnchor.constraint(equalTo: parentCircle.centerXAnchor).isActive = true
+            expandingContainer.bottomAnchor.constraint(equalTo: parentCircle.topAnchor, constant: -configs.insetsBetweenCircles).isActive = true
         case .down:
-            break
+            expandingContainer.centerXAnchor.constraint(equalTo: parentCircle.centerXAnchor).isActive = true
+            expandingContainer.topAnchor.constraint(equalTo: parentCircle.bottomAnchor, constant: -configs.insetsBetweenCircles).isActive = true
         case .left:
-            break
+            expandingContainer.centerYAnchor.constraint(equalTo: parentCircle.centerYAnchor).isActive = true
+            expandingContainer.leftAnchor.constraint(equalTo: parentCircle.trailingAnchor, constant: -configs.insetsBetweenCircles)
         case .right:
-            break
+            expandingContainer.centerYAnchor.constraint(equalTo: parentCircle.centerYAnchor).isActive = true
+            expandingContainer.rightAnchor.constraint(equalTo: parentCircle.leftAnchor, constant: -configs.insetsBetweenCircles)
         }
     }
 
-    private func calcuateContainerSize() -> CGSize {
+    private func calculateContainerSize() -> CGSize {
         let minItemLength = self.configs.circleDiameter
         let availableHeight = self.bounds.height - configs.circleDiameter - configs.insetsBetweenCircles
         let availableWidth = self.bounds.width - configs.circleDiameter - configs.insetsBetweenCircles
         
         switch expandDirection {
-        case .up:
-            break
-        case .down:
-            break
-        case .left:
-            break
-        case .right:
-            break
+        case .up, .down:
+            let height = max(minItemLength, availableHeight)
+            let width = configs.circleDiameter
+            
+            return CGSize(width: width,
+                          height: height)
+        case .left, .right:
+            let width = max(minItemLength, availableWidth)
+            let height = configs.circleDiameter
+            
+            return CGSize(width: width,
+                          height: height)
         }
-        
-        return .zero
     }
 }
 
