@@ -38,12 +38,21 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDH-zg-Diw">
                                 <rect key="frame" x="0.0" y="74" width="1366" height="842"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmK-X6-TZ8" customClass="ColoredCircleView" customModule="Photify" customModuleProvider="target">
+                                <rect key="frame" x="1306" y="856" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="IDS-oc-99b"/>
+                                    <constraint firstAttribute="height" constant="50" id="ZIs-Ke-MZV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mDH-zg-Diw" firstAttribute="leading" secondItem="5iw-PO-Aex" secondAttribute="leading" id="4er-LW-7an"/>
                             <constraint firstItem="5iw-PO-Aex" firstAttribute="bottom" secondItem="rrd-3O-xj6" secondAttribute="bottom" constant="8" id="6Qi-zO-4W7"/>
+                            <constraint firstItem="rrd-3O-xj6" firstAttribute="top" secondItem="fmK-X6-TZ8" secondAttribute="bottom" constant="10" id="Ozl-zY-Elx"/>
                             <constraint firstItem="rrd-3O-xj6" firstAttribute="top" secondItem="mDH-zg-Diw" secondAttribute="bottom" id="TJh-Xh-TPB"/>
+                            <constraint firstItem="5iw-PO-Aex" firstAttribute="trailing" secondItem="fmK-X6-TZ8" secondAttribute="trailing" constant="10" id="Xhb-U3-vTD"/>
                             <constraint firstItem="mDH-zg-Diw" firstAttribute="top" secondItem="5iw-PO-Aex" secondAttribute="top" id="ZiN-Ic-k0k"/>
                             <constraint firstItem="rrd-3O-xj6" firstAttribute="leading" secondItem="5iw-PO-Aex" secondAttribute="leading" id="keu-Y7-5el"/>
                             <constraint firstItem="5iw-PO-Aex" firstAttribute="trailing" secondItem="mDH-zg-Diw" secondAttribute="trailing" id="tHp-yD-qJG"/>
