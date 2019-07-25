@@ -20,7 +20,7 @@ class ColorPicker: UIView {
     
     private(set) var isExpanded = false
     private let configs = Configurations()
-    private lazy var parentCircle = ColoredCircle()
+    private lazy var parentCircle = ColoredCircleView()
     private lazy var expandingContainer: UIView = {
         let view = UIView()
         view.backgroundColor = .blue
