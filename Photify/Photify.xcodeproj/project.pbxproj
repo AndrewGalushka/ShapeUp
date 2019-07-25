@@ -73,6 +73,11 @@
 		8DD103BE22D4C8F30052B13B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103BD22D4C8F30052B13B /* AppCoordinator.swift */; };
 		8DD103C122D4C9A80052B13B /* AppAssemblerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103C022D4C9A80052B13B /* AppAssemblerType.swift */; };
 		8DD103C322D4E1D90052B13B /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103C222D4E1D90052B13B /* PersistentContainer.swift */; };
+		8DD1A16B22E9FD340016BE5C /* ColorsPickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1A16A22E9FD340016BE5C /* ColorsPickerCollectionView.swift */; };
+		8DD1A16D22E9FDD20016BE5C /* ColorsPickerCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1A16C22E9FDD20016BE5C /* ColorsPickerCollectionViewLayout.swift */; };
+		8DD1A17322EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1A17122EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.swift */; };
+		8DD1A17422EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DD1A17222EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.xib */; };
+		8DD1A17822EA03470016BE5C /* ColorsPickerCollectionViewColorCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1A17722EA03470016BE5C /* ColorsPickerCollectionViewColorCellDelegate.swift */; };
 		8DE758CC22E703090069A6B4 /* CanvasModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758CB22E703090069A6B4 /* CanvasModule.swift */; };
 		8DE758CE22E703300069A6B4 /* CanvasModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758CD22E703300069A6B4 /* CanvasModuleOutput.swift */; };
 		8DE758D022E703B20069A6B4 /* CanvasPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758CF22E703B20069A6B4 /* CanvasPresenter.swift */; };
@@ -154,6 +159,11 @@
 		8DD103BD22D4C8F30052B13B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		8DD103C022D4C9A80052B13B /* AppAssemblerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssemblerType.swift; sourceTree = "<group>"; };
 		8DD103C222D4E1D90052B13B /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		8DD1A16A22E9FD340016BE5C /* ColorsPickerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPickerCollectionView.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		8DD1A16C22E9FDD20016BE5C /* ColorsPickerCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPickerCollectionViewLayout.swift; sourceTree = "<group>"; };
+		8DD1A17122EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPickerCollectionViewColorCell.swift; sourceTree = "<group>"; };
+		8DD1A17222EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorsPickerCollectionViewColorCell.xib; sourceTree = "<group>"; };
+		8DD1A17722EA03470016BE5C /* ColorsPickerCollectionViewColorCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPickerCollectionViewColorCellDelegate.swift; sourceTree = "<group>"; };
 		8DE758CB22E703090069A6B4 /* CanvasModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasModule.swift; sourceTree = "<group>"; };
 		8DE758CD22E703300069A6B4 /* CanvasModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasModuleOutput.swift; sourceTree = "<group>"; };
 		8DE758CF22E703B20069A6B4 /* CanvasPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasPresenter.swift; sourceTree = "<group>"; };
@@ -525,6 +535,7 @@
 		8DBB259B22E8869A00546D23 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				8DD1A16922E9FCEA0016BE5C /* ColorsPickerCollectionView */,
 				8DBB259C22E886B700546D23 /* ColorPicker.swift */,
 				8D84290A22E8A86500D20FFC /* ColoredCircleView.swift */,
 			);
@@ -583,6 +594,26 @@
 				8DB8B0FE22E1E3B100EB71D4 /* AppAssemblers */,
 			);
 			path = Assemblers;
+			sourceTree = "<group>";
+		};
+		8DD1A16922E9FCEA0016BE5C /* ColorsPickerCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				8DD1A16E22EA00AC0016BE5C /* Cells */,
+				8DD1A16A22E9FD340016BE5C /* ColorsPickerCollectionView.swift */,
+				8DD1A16C22E9FDD20016BE5C /* ColorsPickerCollectionViewLayout.swift */,
+			);
+			path = ColorsPickerCollectionView;
+			sourceTree = "<group>";
+		};
+		8DD1A16E22EA00AC0016BE5C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8DD1A17122EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.swift */,
+				8DD1A17222EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.xib */,
+				8DD1A17722EA03470016BE5C /* ColorsPickerCollectionViewColorCellDelegate.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		8DE758C822E702E10069A6B4 /* View */ = {
@@ -678,6 +709,7 @@
 				8D18F18622D60F8C00E7B1E0 /* MainScreenViewController.storyboard in Resources */,
 				8D21CD1322DCC8BB00EA3948 /* CanvasListViewController.storyboard in Resources */,
 				8D6BAE3222D332EA00FF383C /* Assets.xcassets in Resources */,
+				8DD1A17422EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,8 +731,10 @@
 				8D6BAE5522D35F1F00FF383C /* CircleGeometry.swift in Sources */,
 				8DBB258A22E842E500546D23 /* ShapesCollectionViewLayout.swift in Sources */,
 				8D6BAE4922D357BE00FF383C /* Circle.swift in Sources */,
+				8DD1A16B22E9FD340016BE5C /* ColorsPickerCollectionView.swift in Sources */,
 				8D6BAE5722D35FC400FF383C /* RectangleGeometry.swift in Sources */,
 				8D4C8A3222E0980900282747 /* CoreDataEntityMapper.swift in Sources */,
+				8DD1A16D22E9FDD20016BE5C /* ColorsPickerCollectionViewLayout.swift in Sources */,
 				8DE758D022E703B20069A6B4 /* CanvasPresenter.swift in Sources */,
 				8D18F18422D60F8200E7B1E0 /* MainScreenViewController.swift in Sources */,
 				8DB8B10B22E205B800EB71D4 /* Router.swift in Sources */,
@@ -732,6 +766,7 @@
 				8D4D01CF22DF5FB000348F7A /* AtomicProperty.swift in Sources */,
 				8DD103BC22D4C8D10052B13B /* Coordinator.swift in Sources */,
 				8DC010A222E5B1F100010BCA /* CanvasListManagementServiceProtocol.swift in Sources */,
+				8DD1A17322EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.swift in Sources */,
 				8D21CD1622DCC99B00EA3948 /* CanvasTableView.swift in Sources */,
 				8DE758D622E705F70069A6B4 /* CanvasPresenterOutput.swift in Sources */,
 				8DD103C122D4C9A80052B13B /* AppAssemblerType.swift in Sources */,
@@ -746,6 +781,7 @@
 				8DC010A022E5B1CF00010BCA /* CanvasListManagementService.swift in Sources */,
 				8DB8B0F922E1BEDF00EB71D4 /* CanvasesListPresenter.swift in Sources */,
 				8D4C8A2E22E0737700282747 /* CanvasEntityMapable.swift in Sources */,
+				8DD1A17822EA03470016BE5C /* ColorsPickerCollectionViewColorCellDelegate.swift in Sources */,
 				8D4C8A3622E0A34900282747 /* CoreDataManagerAdapter.swift in Sources */,
 				8DBB259822E8585A00546D23 /* SingleViewContainer.swift in Sources */,
 				8DB8B10122E1E47B00EB71D4 /* ModulesBuilder.swift in Sources */,

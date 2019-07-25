@@ -24,8 +24,17 @@ class ColorPicker: UIView {
     private lazy var parentCircle = ColoredCircleView()
     private lazy var expandingContainer: UIView = {
         let view = UIView()
-        view.backgroundColor = .blue
+        view.backgroundColor = .clear
+        
         return view
+    }()
+    
+    private var colorsCollectionView: ColorsPickerCollectionView = {
+        let collectionView = ColorsPickerCollectionView(autoLayoutEnabled: true)
+        collectionView.colors = [.black, .darkGray, .lightGray, .white, .gray, .red, .green, .blue, .cyan, .yellow, .magenta,
+                                       .orange, .purple, .brown]
+        
+        return collectionView
     }()
     
     var expandingContainerHeightConstraint: NSLayoutConstraint?
@@ -44,34 +53,15 @@ class ColorPicker: UIView {
         self.setup()
     }
     
-    var counter = 0
-    
-    override func updateConstraints() {
-        super.updateConstraints()
-        self.constraints.forEach {
-            print($0)
-        }
-        
-        print("updateConstraints: \(self.bounds.height)")
-    }
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         
         self.updateLayoutForExpandingContainer()
-        print("layoutSubviews: \(self.bounds.height)")
-    }
-    
-    override func layoutMarginsDidChange() {
-        super.layoutMarginsDidChange()
-        print("layoutMarginsDidChange: \(self.bounds.height)")
     }
     
     // MARK: - Methods(Public)
     
-    func toggleIsExpanded() {
-        self.expandDirection = .down
-        
+    func toggleIsExpanded() {        
         let startingPath: CGPath
         let finalPath: CGPath
         
@@ -109,6 +99,13 @@ class ColorPicker: UIView {
     // MARK: - Methods(Private)
     
     private func setup() {
+        self.colorsCollectionView.didSelectColorHandler = { (color: UIColor?) -> Void in
+            self.toggleIsExpanded()
+            self.parentCircle.color = color
+        }
+        
+        UIView.embed(view: colorsCollectionView, inside: expandingContainer, usingAutoLayout: true)
+        
         self.configureInitialUI()
         expandingContainer.layer.mask = CAShapeLayer()
     }

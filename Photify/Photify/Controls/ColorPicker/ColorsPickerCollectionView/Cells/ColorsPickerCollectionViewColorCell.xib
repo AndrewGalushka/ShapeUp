@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ColorsPickerCollectionViewColorCell" customModule="Photify" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="243" height="233"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="243" height="233"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ni-ht-5Hn" customClass="ColoredCircleView" customModule="Photify" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="243" height="233"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLr-qI-Iq4">
+                        <rect key="frame" x="0.0" y="0.0" width="243" height="233"/>
+                        <connections>
+                            <action selector="corcleButtonTouchUpInsideActionHandler:" destination="gTV-IL-0wX" eventType="touchUpInside" id="KV5-NF-seS"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1Ni-ht-5Hn" secondAttribute="bottom" id="8T6-r0-Ina"/>
+                <constraint firstAttribute="trailing" secondItem="DLr-qI-Iq4" secondAttribute="trailing" id="P7p-5E-J44"/>
+                <constraint firstItem="DLr-qI-Iq4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="e8E-l0-tQF"/>
+                <constraint firstAttribute="trailing" secondItem="1Ni-ht-5Hn" secondAttribute="trailing" id="jBC-iH-fsA"/>
+                <constraint firstAttribute="bottom" secondItem="DLr-qI-Iq4" secondAttribute="bottom" id="k2F-Ou-TwK"/>
+                <constraint firstItem="DLr-qI-Iq4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qDI-dF-TdZ"/>
+                <constraint firstItem="1Ni-ht-5Hn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rHb-2q-Cux"/>
+                <constraint firstItem="1Ni-ht-5Hn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sVH-Y1-I8X"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="243" height="233"/>
+            <connections>
+                <outlet property="coloredCircleView" destination="1Ni-ht-5Hn" id="HPc-Qb-oN1"/>
+            </connections>
+            <point key="canvasLocation" x="74.637681159420296" y="130.24553571428572"/>
+        </collectionViewCell>
+    </objects>
+</document>
