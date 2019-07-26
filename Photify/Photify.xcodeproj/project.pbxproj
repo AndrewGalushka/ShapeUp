@@ -46,6 +46,8 @@
 		8D6BAE5B22D37FC000FF383C /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5A22D37FC000FF383C /* Triangle.swift */; };
 		8D84290B22E8A86500D20FFC /* ColoredCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84290A22E8A86500D20FFC /* ColoredCircleView.swift */; };
 		8DB7D77C22EB2BC700430C18 /* ColorPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7D77B22EB2BC700430C18 /* ColorPickerDelegate.swift */; };
+		8DB7D77E22EB3C7700430C18 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7D77D22EB3C7700430C18 /* Color.swift */; };
+		8DB7D78122EB3CD000430C18 /* RGBAColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7D78022EB3CD000430C18 /* RGBAColor.swift */; };
 		8DB8B0F022E1B7B200EB71D4 /* CanvasListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B0EF22E1B7B200EB71D4 /* CanvasListModule.swift */; };
 		8DB8B0F322E1B8E600EB71D4 /* ViewControllerBasedModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B0F222E1B8E600EB71D4 /* ViewControllerBasedModule.swift */; };
 		8DB8B0F522E1BBF300EB71D4 /* CanvasListModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B0F422E1BBF300EB71D4 /* CanvasListModuleOutput.swift */; };
@@ -133,6 +135,8 @@
 		8D6BAE5A22D37FC000FF383C /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		8D84290A22E8A86500D20FFC /* ColoredCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredCircleView.swift; sourceTree = "<group>"; };
 		8DB7D77B22EB2BC700430C18 /* ColorPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerDelegate.swift; sourceTree = "<group>"; };
+		8DB7D77D22EB3C7700430C18 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		8DB7D78022EB3CD000430C18 /* RGBAColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBAColor.swift; sourceTree = "<group>"; };
 		8DB8B0EF22E1B7B200EB71D4 /* CanvasListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListModule.swift; sourceTree = "<group>"; };
 		8DB8B0F222E1B8E600EB71D4 /* ViewControllerBasedModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBasedModule.swift; sourceTree = "<group>"; };
 		8DB8B0F422E1BBF300EB71D4 /* CanvasListModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListModuleOutput.swift; sourceTree = "<group>"; };
@@ -399,6 +403,15 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
+		8DB7D77F22EB3CAD00430C18 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				8DB7D78022EB3CD000430C18 /* RGBAColor.swift */,
+				8DB7D77D22EB3C7700430C18 /* Color.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
 		8DB8B0E322E1AA2A00EB71D4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -557,6 +570,7 @@
 		8DD103A822D494E10052B13B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8DB7D77F22EB3CAD00430C18 /* Color */,
 				8D4D01D222DF70A200348F7A /* Canvas */,
 			);
 			path = Models;
@@ -772,6 +786,7 @@
 				8DC010A222E5B1F100010BCA /* CanvasListManagementServiceProtocol.swift in Sources */,
 				8DD1A17322EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.swift in Sources */,
 				8D21CD1622DCC99B00EA3948 /* CanvasTableView.swift in Sources */,
+				8DB7D77E22EB3C7700430C18 /* Color.swift in Sources */,
 				8DE758D622E705F70069A6B4 /* CanvasPresenterOutput.swift in Sources */,
 				8DD103C122D4C9A80052B13B /* AppAssemblerType.swift in Sources */,
 				8DB8B0F322E1B8E600EB71D4 /* ViewControllerBasedModule.swift in Sources */,
@@ -795,6 +810,7 @@
 				8D4D01D122DF67E100348F7A /* StorageManagerType.swift in Sources */,
 				8DBB258E22E84BF600546D23 /* AnyShape.swift in Sources */,
 				8DD103B622D4BCE70052B13B /* CoreDataManager.swift in Sources */,
+				8DB7D78122EB3CD000430C18 /* RGBAColor.swift in Sources */,
 				8DD103A722D47CC70052B13B /* Star.swift in Sources */,
 				8D4C8A3822E0A7B000282747 /* DataBaseAdapter.swift in Sources */,
 				8D4C8A3C22E0CC3400282747 /* UIColor+Extension.swift in Sources */,
