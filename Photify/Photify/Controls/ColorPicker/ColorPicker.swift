@@ -13,8 +13,11 @@ class ColorPicker: UIView {
     
     // MARK - Properties(Private)
     
-    @IBInspectable
-    private(set) var isExpanded: Bool = false
+    private(set) var isExpanded: Bool = false {
+        didSet {
+            colorsCollectionView.isUserInteractionEnabled = isExpanded
+        }
+    }
     
     private(set) var expandDirection: ExpandDirection = .up {
         didSet {
@@ -78,14 +81,14 @@ class ColorPicker: UIView {
         let finalPath: CGPath
         
         if self.isExpanded {
-            startingPath = UIBezierPath(roundedRect: CGRect(x: 0, y: expandingContainer.bounds.height, width: expandingContainer.bounds.width, height: 0),
-                                        cornerRadius: configs.circleRadiusFromDiameter).cgPath
-            finalPath = UIBezierPath(roundedRect: self.expandingContainer.bounds,
-                                     cornerRadius: configs.circleRadiusFromDiameter).cgPath
-        } else {
             startingPath = UIBezierPath(roundedRect: self.expandingContainer.bounds,
                                         cornerRadius: configs.circleRadiusFromDiameter).cgPath
             finalPath = UIBezierPath(roundedRect: CGRect(x: 0, y: expandingContainer.bounds.height, width: expandingContainer.bounds.width, height: 0),
+                                     cornerRadius: configs.circleRadiusFromDiameter).cgPath
+        } else {
+            startingPath = UIBezierPath(roundedRect: CGRect(x: 0, y: expandingContainer.bounds.height, width: expandingContainer.bounds.width, height: 0),
+                                        cornerRadius: configs.circleRadiusFromDiameter).cgPath
+            finalPath = UIBezierPath(roundedRect: self.expandingContainer.bounds,
                                      cornerRadius: configs.circleRadiusFromDiameter).cgPath
         }
         
@@ -117,12 +120,14 @@ class ColorPicker: UIView {
         self.configureInitialUI()
         expandingContainer.layer.mask = CAShapeLayer()
     }
-        
+    
     private func configureColorsCollectionView() {
         self.colorsCollectionView.didSelectColorHandler = { [unowned self] (color: UIColor?) -> Void in
             self.toggleIsExpanded()
             self.parentCircle.color = color
         }
+        
+        colorsCollectionView.isUserInteractionEnabled = isExpanded
         
         UIView.embed(view: colorsCollectionView, inside: expandingContainer, usingAutoLayout: true)
     }
