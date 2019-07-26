@@ -37,7 +37,7 @@ class ColorPicker: UIView {
         return collectionView
     }()
     
-    var expandingContainerHeightConstraint: NSLayoutConstraint?
+    private var expandingContainerHeightConstraint: NSLayoutConstraint?
     
     // MARK: - Lifecycle
     
@@ -171,11 +171,11 @@ class ColorPicker: UIView {
         }
     }
 
-    func updateLayoutForParentCircle() {
+    private func updateLayoutForParentCircle() {
         
     }
     
-    func updateLayoutForExpandingContainer() {
+    private func updateLayoutForExpandingContainer() {
         guard let expandingContainerHeightConstraint = self.expandingContainerHeightConstraint else { return }
         let containerSize = calculateContainerSize()
         
