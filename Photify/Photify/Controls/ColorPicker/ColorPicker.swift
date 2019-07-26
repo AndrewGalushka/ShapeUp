@@ -116,8 +116,12 @@ class ColorPicker: UIView {
         expandingContainer.layer.mask = CAShapeLayer()
     }
     
+    deinit {
+        print("deinit")
+    }
+    
     private func configureColorsCollectionView() {
-        self.colorsCollectionView.didSelectColorHandler = { (color: UIColor?) -> Void in
+        self.colorsCollectionView.didSelectColorHandler = { [unowned self] (color: UIColor?) -> Void in
             self.toggleIsExpanded()
             self.parentCircle.color = color
         }
