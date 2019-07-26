@@ -94,8 +94,8 @@ class ColorPicker: UIView {
         let animation = CABasicAnimation(keyPath: "path")
         animation.fromValue = startingPath
         animation.toValue = finalPath
-        animation.duration = 1.0
-//        animation.timingFunction = .init(name: CAMediaTimingFunctionName.easeInEaseOut)
+        animation.duration = 0.25
+        animation.timingFunction = .init(name: CAMediaTimingFunctionName.easeInEaseOut)
         
         shapeMask.add(animation, forKey: kCATransition)
         
