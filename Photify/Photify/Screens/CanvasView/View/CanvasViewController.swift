@@ -77,8 +77,7 @@ class CanvasViewController: UIViewController {
     private func setup() {
         scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(colorPickerTapped))
-        self.colorPicker.addGestureRecognizer(tapGesture)
+        colorPicker.delegate = self
     }
     
     @objc private func colorPickerTapped() {
@@ -89,6 +88,16 @@ class CanvasViewController: UIViewController {
 extension CanvasViewController: CanvasView {
     func setTitleText(to text: String) {
         self.title = text
+    }
+}
+
+extension CanvasViewController: ColorPickerDelegate {
+    
+    func colorPicker(_ colorPicker: ColorPicker, didPickColor pickedColor: UIColor?) {
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, options: .curveEaseIn, animations: {
+            self.scrollView.backgroundColor = pickedColor
+        }, completion: nil)
     }
 }
 

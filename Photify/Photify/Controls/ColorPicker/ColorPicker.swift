@@ -11,6 +11,10 @@ import UIKit
 @IBDesignable
 class ColorPicker: UIView {
     
+    // MARK: - Properties(Public)
+    
+    weak var delegate: ColorPickerDelegate?
+    
     // MARK - Properties(Private)
     
     private(set) var isExpanded: Bool = false {
@@ -117,7 +121,8 @@ class ColorPicker: UIView {
     
     private func setup() {
         configureColorsCollectionView()
-        self.configureInitialUI()
+        configureInitialLayout()
+        setupParrentCircleButton()
         expandingContainer.layer.mask = CAShapeLayer()
     }
     
@@ -125,6 +130,7 @@ class ColorPicker: UIView {
         self.colorsCollectionView.didSelectColorHandler = { [unowned self] (color: UIColor?) -> Void in
             self.toggleIsExpanded()
             self.parentCircle.color = color
+            self.delegate?.colorPicker(self, didPickColor: color)
         }
         
         colorsCollectionView.isUserInteractionEnabled = isExpanded
@@ -132,7 +138,7 @@ class ColorPicker: UIView {
         UIView.embed(view: colorsCollectionView, inside: expandingContainer, usingAutoLayout: true)
     }
     
-    private func configureInitialUI() {
+    private func configureInitialLayout() {
         embedParentCircle()
         embedExpandingContainer()
     }
@@ -178,6 +184,17 @@ class ColorPicker: UIView {
         }
     }
 
+    private func setupParrentCircleButton() {
+        let parrentCircleButton = UIButton(type: .custom)
+        parrentCircleButton.backgroundColor = .clear
+        parrentCircleButton.addTarget(self, action: #selector(parentCircleButtonTouchUpInsideActionHandler(_:)),
+                                      for: .touchUpInside)
+        
+        UIView.embed(view: parrentCircleButton,
+                     inside: self.parentCircle,
+                     usingAutoLayout: true)
+    }
+    
     private func updateLayoutForParentCircle() {
         
     }
@@ -210,6 +227,10 @@ class ColorPicker: UIView {
             return CGSize(width: width,
                           height: height)
         }
+    }
+    
+    @objc private func parentCircleButtonTouchUpInsideActionHandler(_ button: UIButton) {
+        self.toggleIsExpanded()
     }
 }
 
