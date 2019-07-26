@@ -61,35 +61,47 @@ class ColorPicker: UIView {
     
     // MARK: - Methods(Public)
     
-    func toggleIsExpanded() {        
-        let startingPath: CGPath
+    func toggleIsExpanded() {
+        
+        let shapeMask: CAShapeLayer
+        
+        if let existingShapeMask = self.expandingContainer.layer.mask as? CAShapeLayer {
+            shapeMask = existingShapeMask
+        } else {
+            shapeMask = CAShapeLayer()
+            expandingContainer.layer.mask = shapeMask
+        }
+        
+        var startingPath: CGPath
         let finalPath: CGPath
         
         if self.isExpanded {
-            startingPath = CGPath(rect: CGRect(x: 0, y: expandingContainer.bounds.height, width: expandingContainer.bounds.width, height: 0),
-                                  transform: nil)
-            finalPath = CGPath(rect: self.expandingContainer.bounds, transform: nil)
+            startingPath = UIBezierPath(roundedRect: CGRect(x: 0, y: expandingContainer.bounds.height, width: expandingContainer.bounds.width, height: 0),
+                                        cornerRadius: configs.circleRadiusFromDiameter).cgPath
+            finalPath = UIBezierPath(roundedRect: self.expandingContainer.bounds,
+                                     cornerRadius: configs.circleRadiusFromDiameter).cgPath
         } else {
-            startingPath = CGPath(rect: self.expandingContainer.bounds, transform: nil)
-            finalPath = CGPath(rect: CGRect(x: 0, y: expandingContainer.bounds.height, width: expandingContainer.bounds.width, height: 0),
-                               transform: nil)
+            startingPath = UIBezierPath(roundedRect: self.expandingContainer.bounds,
+                                        cornerRadius: configs.circleRadiusFromDiameter).cgPath
+            finalPath = UIBezierPath(roundedRect: CGRect(x: 0, y: expandingContainer.bounds.height, width: expandingContainer.bounds.width, height: 0),
+                                     cornerRadius: configs.circleRadiusFromDiameter).cgPath
         }
         
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = startingPath
-        self.expandingContainer.layer.mask = maskLayer
+        if let currentAnimationPath = shapeMask.presentation()?.path {
+            startingPath = currentAnimationPath
+        }
         
         let animation = CABasicAnimation(keyPath: "path")
-        animation.fromValue = maskLayer.path
+        animation.fromValue = startingPath
         animation.toValue = finalPath
-        animation.duration = 0.25
-        animation.timingFunction = .init(name: CAMediaTimingFunctionName.easeOut)
+        animation.duration = 1.0
+//        animation.timingFunction = .init(name: CAMediaTimingFunctionName.easeInEaseOut)
         
-        maskLayer.add(animation, forKey: nil)
+        shapeMask.add(animation, forKey: kCATransition)
         
         CATransaction.begin()
         CATransaction.setDisableActions(true)
-        maskLayer.path = finalPath
+        shapeMask.path = finalPath
         CATransaction.commit()
         
         self.isExpanded.toggle()
@@ -99,15 +111,18 @@ class ColorPicker: UIView {
     // MARK: - Methods(Private)
     
     private func setup() {
+        configureColorsCollectionView()
+        self.configureInitialUI()
+        expandingContainer.layer.mask = CAShapeLayer()
+    }
+    
+    private func configureColorsCollectionView() {
         self.colorsCollectionView.didSelectColorHandler = { (color: UIColor?) -> Void in
             self.toggleIsExpanded()
             self.parentCircle.color = color
         }
         
         UIView.embed(view: colorsCollectionView, inside: expandingContainer, usingAutoLayout: true)
-        
-        self.configureInitialUI()
-        expandingContainer.layer.mask = CAShapeLayer()
     }
     
     private func configureInitialUI() {
@@ -195,6 +210,10 @@ extension ColorPicker {
     struct Configurations {
         let circleDiameter: CGFloat = 50
         let insetsBetweenCircles: CGFloat = 8.0
+        
+        var circleRadiusFromDiameter: CGFloat {
+            return circleDiameter / 2.0
+        }
     }
     
     enum ExpandDirection: Int {
