@@ -57,7 +57,9 @@ class ColorsPickerCollectionView: UIView {
     }
     
     private func configureCollectionView() {
-        self.collectionView.backgroundColor = .white
+        self.collectionView.showsVerticalScrollIndicator = false
+        self.collectionView.showsHorizontalScrollIndicator = false
+        self.collectionView.backgroundColor = .clear
         collectionView.register(ColorsPickerCollectionViewColorCell.nib,
                                 forCellWithReuseIdentifier: ColorsPickerCollectionViewColorCell.reuseIdentifier)
         collectionView.dataSource = self
