@@ -9,8 +9,10 @@
 import Foundation
 
 protocol RGBAColor {
-    var red: Int8 { get }
-    var green: Int8 { get }
-    var blue: Int8 { get }
-    var alpha: Int8 { get }
+    var red: Float { get }
+    var green: Float { get }
+    var blue: Float { get }
+    var alpha: Float { get }
+    
+    init(red: Float, green: Float, blue: Float, alpha: Float)
 }

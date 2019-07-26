@@ -48,6 +48,7 @@
 		8DB7D77C22EB2BC700430C18 /* ColorPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7D77B22EB2BC700430C18 /* ColorPickerDelegate.swift */; };
 		8DB7D77E22EB3C7700430C18 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7D77D22EB3C7700430C18 /* Color.swift */; };
 		8DB7D78122EB3CD000430C18 /* RGBAColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7D78022EB3CD000430C18 /* RGBAColor.swift */; };
+		8DB7D78322EB45A300430C18 /* UIColor+RGBAColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7D78222EB45A300430C18 /* UIColor+RGBAColor.swift */; };
 		8DB8B0F022E1B7B200EB71D4 /* CanvasListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B0EF22E1B7B200EB71D4 /* CanvasListModule.swift */; };
 		8DB8B0F322E1B8E600EB71D4 /* ViewControllerBasedModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B0F222E1B8E600EB71D4 /* ViewControllerBasedModule.swift */; };
 		8DB8B0F522E1BBF300EB71D4 /* CanvasListModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B0F422E1BBF300EB71D4 /* CanvasListModuleOutput.swift */; };
@@ -137,6 +138,7 @@
 		8DB7D77B22EB2BC700430C18 /* ColorPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerDelegate.swift; sourceTree = "<group>"; };
 		8DB7D77D22EB3C7700430C18 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8DB7D78022EB3CD000430C18 /* RGBAColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBAColor.swift; sourceTree = "<group>"; };
+		8DB7D78222EB45A300430C18 /* UIColor+RGBAColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGBAColor.swift"; sourceTree = "<group>"; };
 		8DB8B0EF22E1B7B200EB71D4 /* CanvasListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListModule.swift; sourceTree = "<group>"; };
 		8DB8B0F222E1B8E600EB71D4 /* ViewControllerBasedModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBasedModule.swift; sourceTree = "<group>"; };
 		8DB8B0F422E1BBF300EB71D4 /* CanvasListModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListModuleOutput.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				8D4C8A3B22E0CC3400282747 /* UIColor+Extension.swift */,
 				8DC0109A22E59E7500010BCA /* Array+Extension.swift */,
 				8DBB259922E8596500546D23 /* UIView+Extensions.swift */,
+				8DB7D78222EB45A300430C18 /* UIColor+RGBAColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -814,6 +817,7 @@
 				8DD103A722D47CC70052B13B /* Star.swift in Sources */,
 				8D4C8A3822E0A7B000282747 /* DataBaseAdapter.swift in Sources */,
 				8D4C8A3C22E0CC3400282747 /* UIColor+Extension.swift in Sources */,
+				8DB7D78322EB45A300430C18 /* UIColor+RGBAColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
