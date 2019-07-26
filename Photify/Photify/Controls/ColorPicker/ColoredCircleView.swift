@@ -22,6 +22,12 @@ class ColoredCircleView: UIView {
         }
     }
     
+    override var backgroundColor: UIColor? {
+        didSet {
+            self.changeBorderColorIfNeeded()
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -47,6 +53,22 @@ class ColoredCircleView: UIView {
         layer.borderWidth = 1.0
         layer.borderColor = UIColor.black.cgColor
         recalculateCornerRadiusAndSet()
+    }
+    
+    private func changeBorderColorIfNeeded() {
+        let newBorderColor: CGColor
+        
+        if backgroundColor == .black {
+            newBorderColor = UIColor.white.cgColor
+        } else {
+            newBorderColor = UIColor.black.cgColor
+        }
+        
+        let isNeedUpdateBorderColor = layer.borderColor != newBorderColor
+        
+        if isNeedUpdateBorderColor {
+            layer.borderColor = newBorderColor
+        }
     }
     
     private func recalculateCornerRadiusAndSet() {
