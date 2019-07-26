@@ -9,11 +9,11 @@
 import UIKit
 
 extension UIColor {
-    convenience init(rbgaColor: RGBAColor) {
-        self.init(red: CGFloat(rbgaColor.red),
-                  green: CGFloat(rbgaColor.green),
-                  blue: CGFloat(rbgaColor.blue),
-                  alpha: CGFloat(rbgaColor.alpha))
+    convenience init(rgbaColor: RGBAColor) {
+        self.init(red: CGFloat(rgbaColor.red),
+                  green: CGFloat(rgbaColor.green),
+                  blue: CGFloat(rgbaColor.blue),
+                  alpha: CGFloat(rgbaColor.alpha))
     }
 }
 
