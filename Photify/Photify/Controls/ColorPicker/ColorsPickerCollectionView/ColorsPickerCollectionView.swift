@@ -24,6 +24,9 @@ class ColorsPickerCollectionView: UIView {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: ColorsPickerCollectionViewLayout())
         let isAutolayoutEnabled = !self.translatesAutoresizingMaskIntoConstraints
         UIView.embed(view: cv, inside: self, usingAutoLayout: isAutolayoutEnabled)
+        
+        cv.transform = CGAffineTransform.identity.rotated(by: CGFloat.pi) // 180 degrees
+        
         return cv
     }()
     
