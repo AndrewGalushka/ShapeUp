@@ -11,6 +11,8 @@ import UIKit
 @IBDesignable
 class ColorPicker: UIView {
     
+    // MARK - Properties(Private)
+    
     @IBInspectable
     private(set) var isExpanded: Bool = false
     
@@ -115,11 +117,7 @@ class ColorPicker: UIView {
         self.configureInitialUI()
         expandingContainer.layer.mask = CAShapeLayer()
     }
-    
-    deinit {
-        print("deinit")
-    }
-    
+        
     private func configureColorsCollectionView() {
         self.colorsCollectionView.didSelectColorHandler = { [unowned self] (color: UIColor?) -> Void in
             self.toggleIsExpanded()
