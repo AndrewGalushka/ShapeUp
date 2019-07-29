@@ -50,6 +50,7 @@
 		8D8ABB5322EF25010084E4BB /* ShapeStyle+CAShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8ABB5222EF25010084E4BB /* ShapeStyle+CAShapeLayer.swift */; };
 		8D8ABB5522EF2A160084E4BB /* ShapeStyle+Fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8ABB5422EF2A160084E4BB /* ShapeStyle+Fill.swift */; };
 		8D8ABB5722EF2A4F0084E4BB /* ShapeStyle+Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8ABB5622EF2A4F0084E4BB /* ShapeStyle+Line.swift */; };
+		8D8ABB5B22EF45CD0084E4BB /* ShapeCollectionViewCell+Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8ABB5A22EF45CD0084E4BB /* ShapeCollectionViewCell+Configurable.swift */; };
 		8DB7D77C22EB2BC700430C18 /* ColorPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7D77B22EB2BC700430C18 /* ColorPickerDelegate.swift */; };
 		8DB7D77E22EB3C7700430C18 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7D77D22EB3C7700430C18 /* Color.swift */; };
 		8DB7D78122EB3CD000430C18 /* RGBAColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7D78022EB3CD000430C18 /* RGBAColor.swift */; };
@@ -145,6 +146,7 @@
 		8D8ABB5222EF25010084E4BB /* ShapeStyle+CAShapeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+CAShapeLayer.swift"; sourceTree = "<group>"; };
 		8D8ABB5422EF2A160084E4BB /* ShapeStyle+Fill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+Fill.swift"; sourceTree = "<group>"; };
 		8D8ABB5622EF2A4F0084E4BB /* ShapeStyle+Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+Line.swift"; sourceTree = "<group>"; };
+		8D8ABB5A22EF45CD0084E4BB /* ShapeCollectionViewCell+Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeCollectionViewCell+Configurable.swift"; sourceTree = "<group>"; };
 		8DB7D77B22EB2BC700430C18 /* ColorPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerDelegate.swift; sourceTree = "<group>"; };
 		8DB7D77D22EB3C7700430C18 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8DB7D78022EB3CD000430C18 /* RGBAColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBAColor.swift; sourceTree = "<group>"; };
@@ -551,6 +553,7 @@
 		8DBB258C22E8432300546D23 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				8D8ABB5A22EF45CD0084E4BB /* ShapeCollectionViewCell+Configurable.swift */,
 				8DE758DD22E756A60069A6B4 /* ShapeCollectionViewCell.swift */,
 				8DE758DE22E756A60069A6B4 /* ShapeCollectionViewCell.xib */,
 			);
@@ -804,6 +807,7 @@
 				8DBB259222E8523D00546D23 /* ShapesProvider.swift in Sources */,
 				8D4C8A2922E070F700282747 /* StorageManager.swift in Sources */,
 				8DB8B0F022E1B7B200EB71D4 /* CanvasListModule.swift in Sources */,
+				8D8ABB5B22EF45CD0084E4BB /* ShapeCollectionViewCell+Configurable.swift in Sources */,
 				8DE758CE22E703300069A6B4 /* CanvasModuleOutput.swift in Sources */,
 				8D6BAE4D22D35B5400FF383C /* Ellipse.swift in Sources */,
 				8D21CD1122DCC8B000EA3948 /* CanvasListViewController.swift in Sources */,

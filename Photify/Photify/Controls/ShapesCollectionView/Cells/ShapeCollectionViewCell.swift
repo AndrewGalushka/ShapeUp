@@ -48,6 +48,11 @@ class ShapeCollectionViewCell: UICollectionViewCell {
     // MARK: - Methods(Private)
     
     private func setup() {
+        setupUI()
+        configureDragInteraction()
+    }
+    
+    private func setupUI() {
         self.shapeContainerView.embedLayer(shapeLayer)
         self.contentView.backgroundColor = .init(red: 239 / 255.0, green: 237 / 255.0, blue: 238 / 255.0, alpha: 1.0)
         self.contentView.layer.cornerRadius = 8.0
@@ -56,27 +61,36 @@ class ShapeCollectionViewCell: UICollectionViewCell {
         self.shapeLayer.lineWidth = 3.0
         self.shapeLayer.lineJoin = .round
     }
+    
+    private func configureDragInteraction() {
+        let dragInteraction = UIDragInteraction(delegate: self)
+        self.contentView.addInteraction(dragInteraction)
+    }
 }
 
-extension ShapeCollectionViewCell: ShapeCollectionViewCellConfigurable {
+extension ShapeCollectionViewCell: UIDragInteractionDelegate {
+    func dragInteraction(_ interaction: UIDragInteraction, itemsForBeginning session: UIDragSession) -> [UIDragItem] {
+        guard self.viewModel != nil else { return [] }
+        
+        let renderer = UIGraphicsImageRenderer(bounds: shapeLayer.frame)
+        let contentViewSnapshotImage = renderer.image { (context) in
+            self.shapeLayer.render(in: context.cgContext)
+        }
+        
+        let itemProvider = NSItemProvider(object: contentViewSnapshotImage)
+        let dragItem = UIDragItem(itemProvider: itemProvider)
+        dragItem.localObject = contentViewSnapshotImage
+        
+        return [dragItem]
+    }
+}
 
+
+extension ShapeCollectionViewCell: ShapeCollectionViewCellConfigurable {
+    
     func configure(_ viewModel: ViewModel) {
         self.viewModel = viewModel
         self.shapeLayer.path = viewModel.shape.path(in: self.shapeContainerView.bounds)
         shapeLayer.configure(shapeStyle: viewModel.shapeStyle)
     }
-    
-    struct ViewModel {
-        let shape: Shape
-        let shapeStyle: ShapeStyle
-        
-        init(shape: Shape, shapeStyle: ShapeStyle) {
-            self.shape = shape
-            self.shapeStyle = shapeStyle
-        }
-    }
-}
-
-protocol ShapeCollectionViewCellConfigurable {
-    func configure(_ viewModel: ShapeCollectionViewCell.ViewModel)
 }
