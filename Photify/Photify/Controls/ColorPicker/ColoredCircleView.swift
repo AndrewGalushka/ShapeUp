@@ -50,7 +50,7 @@ class ColoredCircleView: UIView {
     }
     
     private func setup() {
-        layer.borderWidth = 1.0
+        layer.borderWidth = 2.0
         layer.borderColor = UIColor.black.cgColor
         recalculateCornerRadiusAndSet()
     }
