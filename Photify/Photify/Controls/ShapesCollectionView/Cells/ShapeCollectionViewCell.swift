@@ -47,7 +47,7 @@ class ShapeCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Methods(Private)
     
-    func setup() {
+    private func setup() {
         self.shapeContainerView.embedLayer(shapeLayer)
         self.contentView.backgroundColor = .init(red: 239 / 255.0, green: 237 / 255.0, blue: 238 / 255.0, alpha: 1.0)
         self.contentView.layer.cornerRadius = 8.0
