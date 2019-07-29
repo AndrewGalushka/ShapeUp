@@ -13,21 +13,14 @@ class ShapesCollectionView: UIView {
     // MASK: - Properties(Private)
     
     private lazy var collectionView: UICollectionView = {
-        let tb = UICollectionView(frame: .zero, collectionViewLayout: ShapesCollectionViewLayout())
+        let layout = ShapesCollectionViewLayout()
+        layout.scrollDirection = .horizontal
+        let tableView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+
+        let usesAutoLayout = !self.translatesAutoresizingMaskIntoConstraints
+        UIView.embed(view: tableView, inside: self, usingAutoLayout: usesAutoLayout)
         
-        self.addSubview(tb)
-        
-        if self.translatesAutoresizingMaskIntoConstraints {
-            tb.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        } else {
-            tb.translatesAutoresizingMaskIntoConstraints = false
-            tb.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-            tb.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-            tb.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-            tb.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        }
-        
-        return tb
+        return tableView
     }()
     
     // MARK: - Initializers
@@ -69,7 +62,9 @@ class ShapesCollectionView: UIView {
     }
     
     private func configureCollectionView() {
-        self.collectionView.backgroundColor = .white
+        self.collectionView.backgroundColor = .clear
+        self.collectionView.showsHorizontalScrollIndicator = false
+        
         collectionView.register(UINib(nibName: "\(ShapeCollectionViewCell.self)", bundle: nil),
                                 forCellWithReuseIdentifier: "\(ShapeCollectionViewCell.self)")
         collectionView.dataSource = self
