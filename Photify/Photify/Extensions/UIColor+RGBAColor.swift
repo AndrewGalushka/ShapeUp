@@ -28,4 +28,8 @@ extension RGBAColor {
                   blue: Float(blue),
                   alpha: Float(alpha))
     }
+    
+    var uiColor: UIColor {
+        return .init(rgbaColor: self)
+    }
 }

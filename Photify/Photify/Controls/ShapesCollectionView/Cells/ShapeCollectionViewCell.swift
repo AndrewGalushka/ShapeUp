@@ -51,6 +51,10 @@ class ShapeCollectionViewCell: UICollectionViewCell {
         self.shapeContainerView.embedLayer(shapeLayer)
         self.contentView.backgroundColor = .init(red: 239 / 255.0, green: 237 / 255.0, blue: 238 / 255.0, alpha: 1.0)
         self.contentView.layer.cornerRadius = 8.0
+        
+        self.shapeLayer.fillColor = nil
+        self.shapeLayer.lineWidth = 3.0
+        self.shapeLayer.lineJoin = .round
     }
 }
 
@@ -59,7 +63,7 @@ extension ShapeCollectionViewCell: ShapeCollectionViewCellConfigurable {
     func configure(_ viewModel: ViewModel) {
         self.viewModel = viewModel
         self.shapeLayer.path = viewModel.shape.path(in: self.shapeContainerView.bounds)
-        shapeLayer.fillColor = UIColor(rgbaColor: viewModel.color).cgColor
+        shapeLayer.strokeColor = UIColor(rgbaColor: viewModel.color).cgColor
     }
     
     struct ViewModel {
