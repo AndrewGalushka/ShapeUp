@@ -57,6 +57,7 @@ extension ShapeCollectionViewCell: ShapeCollectionViewCellConfigurable {
 
     func configure(_ viewModel: ViewModel) {
         self.viewModel = viewModel
+        self.shapeLayer.path = viewModel.shape.path(in: self.shapeContainerView.bounds)
         shapeLayer.fillColor = UIColor(rgbaColor: viewModel.color).cgColor
     }
     
