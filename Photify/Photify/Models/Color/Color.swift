@@ -9,6 +9,6 @@
 import Foundation
 
 
-struct Color: RGBAColor {
+struct Color: RGBAColor, Codable {
     let red, green, blue, alpha: Float 
 }
