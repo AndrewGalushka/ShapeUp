@@ -16,12 +16,24 @@ struct ShapeStyle: Codable {
         self.fillStyle.color = fillColor
     }
     
-    init(strokeColor: Color) {
+    init(strokeColor: Color, lineWidth: Float = 1.0) {
         self.lineStyle.strokeColor = strokeColor
+        self.lineStyle.width = lineWidth
     }
     
     init(lineStyle: LineStyle, fillStyle: FillStyle) {
         self.lineStyle = lineStyle
         self.fillStyle = fillStyle
+    }
+    
+    init() {
+        self.lineStyle = LineStyle()
+        self.fillStyle = FillStyle()
+    }
+}
+
+extension ShapeStyle {
+    static var empty: ShapeStyle {
+        return ShapeStyle()
     }
 }

@@ -31,7 +31,7 @@ class ShapeCollectionViewCell: UICollectionViewCell {
         super.prepareForReuse()
         
         shapeLayer.path = nil
-        shapeLayer.fillColor = nil
+        shapeLayer.configure(shapeStyle: .empty)
         viewModel = nil
     }
     
@@ -63,16 +63,16 @@ extension ShapeCollectionViewCell: ShapeCollectionViewCellConfigurable {
     func configure(_ viewModel: ViewModel) {
         self.viewModel = viewModel
         self.shapeLayer.path = viewModel.shape.path(in: self.shapeContainerView.bounds)
-        shapeLayer.strokeColor = UIColor(rgbaColor: viewModel.color).cgColor
+        shapeLayer.configure(shapeStyle: viewModel.shapeStyle)
     }
     
     struct ViewModel {
         let shape: Shape
-        let color: Color
+        let shapeStyle: ShapeStyle
         
-        init(shape: Shape, color: Color) {
+        init(shape: Shape, shapeStyle: ShapeStyle) {
             self.shape = shape
-            self.color = color
+            self.shapeStyle = shapeStyle
         }
     }
 }
