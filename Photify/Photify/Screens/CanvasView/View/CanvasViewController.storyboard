@@ -19,27 +19,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrd-3O-xj6">
-                                <rect key="frame" x="0.0" y="916" width="1366" height="80"/>
+                                <rect key="frame" x="0.0" y="836" width="1366" height="160"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2NZ-dC-sFy" customClass="ShapesCollectionView" customModule="Photify" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="1366" height="80"/>
+                                        <rect key="frame" x="0.0" y="40" width="1366" height="80"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="5Ka-ow-Lyb"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caP-Dd-X5I">
+                                        <rect key="frame" x="0.0" y="0.0" width="1366" height="40"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQ5-E3-WcM">
+                                        <rect key="frame" x="0.0" y="120" width="1366" height="40"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="2NZ-dC-sFy" secondAttribute="bottom" id="8ee-cj-tIF"/>
-                                    <constraint firstItem="2NZ-dC-sFy" firstAttribute="top" secondItem="rrd-3O-xj6" secondAttribute="top" id="CJu-H3-1g2"/>
+                                    <constraint firstAttribute="bottom" secondItem="zQ5-E3-WcM" secondAttribute="bottom" id="3ZC-Th-sOp"/>
+                                    <constraint firstItem="caP-Dd-X5I" firstAttribute="leading" secondItem="rrd-3O-xj6" secondAttribute="leading" id="5mO-X6-EB7"/>
+                                    <constraint firstItem="zQ5-E3-WcM" firstAttribute="top" secondItem="2NZ-dC-sFy" secondAttribute="bottom" id="6Uu-wL-7cD"/>
+                                    <constraint firstAttribute="trailing" secondItem="caP-Dd-X5I" secondAttribute="trailing" id="6e8-Ne-SaJ"/>
+                                    <constraint firstItem="2NZ-dC-sFy" firstAttribute="centerY" secondItem="rrd-3O-xj6" secondAttribute="centerY" id="7Cf-YC-W3D"/>
+                                    <constraint firstAttribute="trailing" secondItem="zQ5-E3-WcM" secondAttribute="trailing" id="A1W-sh-9fo"/>
+                                    <constraint firstItem="zQ5-E3-WcM" firstAttribute="leading" secondItem="rrd-3O-xj6" secondAttribute="leading" id="XsQ-4l-Hqo"/>
+                                    <constraint firstItem="caP-Dd-X5I" firstAttribute="top" secondItem="rrd-3O-xj6" secondAttribute="top" id="Y2C-C2-VMP"/>
                                     <constraint firstAttribute="trailing" secondItem="2NZ-dC-sFy" secondAttribute="trailing" id="cNh-7M-Lbd"/>
+                                    <constraint firstItem="2NZ-dC-sFy" firstAttribute="top" secondItem="caP-Dd-X5I" secondAttribute="bottom" id="ion-kj-rGs"/>
                                     <constraint firstItem="2NZ-dC-sFy" firstAttribute="leading" secondItem="rrd-3O-xj6" secondAttribute="leading" id="t9K-u9-Mwt"/>
-                                    <constraint firstAttribute="height" constant="80" id="tOM-Zr-N3j"/>
+                                    <constraint firstAttribute="height" constant="160" id="tOM-Zr-N3j"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDH-zg-Diw">
-                                <rect key="frame" x="0.0" y="74" width="1366" height="842"/>
+                                <rect key="frame" x="0.0" y="74" width="1366" height="762"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmK-X6-TZ8" customClass="ColorPicker" customModule="Photify" customModuleProvider="target">
-                                <rect key="frame" x="1306" y="74" width="50" height="832"/>
+                                <rect key="frame" x="1306" y="74" width="50" height="752"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="IDS-oc-99b"/>
                                 </constraints>
