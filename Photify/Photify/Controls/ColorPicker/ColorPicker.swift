@@ -40,8 +40,7 @@ class ColorPicker: UIView {
     
     private var colorsCollectionView: ColorsPickerCollectionView = {
         let collectionView = ColorsPickerCollectionView(autoLayoutEnabled: true)
-        collectionView.colors = [.black, .darkGray, .lightGray, .white, .gray, .red, .green, .blue, .cyan, .yellow, .magenta,
-                                       .orange, .purple, .brown]
+        collectionView.colors = ColorPicker.predefinedColors
         
         return collectionView
     }()
@@ -195,10 +194,6 @@ class ColorPicker: UIView {
                      usingAutoLayout: true)
     }
     
-    private func updateLayoutForParentCircle() {
-        
-    }
-    
     private func updateLayoutForExpandingContainer() {
         guard let expandingContainerHeightConstraint = self.expandingContainerHeightConstraint else { return }
         let containerSize = calculateContainerSize()
@@ -249,5 +244,24 @@ extension ColorPicker {
         case down
         case left
         case right
+    }
+}
+
+extension ColorPicker {
+    static var predefinedColors: [UIColor] {
+        return [.black,
+                .darkGray,
+                .lightGray,
+                .white,
+                .gray,
+                .red,
+                .green,
+                .blue,
+                .cyan,
+                .yellow,
+                .magenta,
+                .orange,
+                .purple,
+                .brown]
     }
 }
