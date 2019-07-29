@@ -15,6 +15,7 @@ class CanvasViewController: UIViewController {
     @IBOutlet private weak var bottomControlsContainerView: UIView!
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var colorPicker: ColorPicker!
+    @IBOutlet private weak var shapesCollectionView: ShapesCollectionView!
     
     // MARK: - Properties(Public)
     
@@ -79,10 +80,6 @@ class CanvasViewController: UIViewController {
         
         colorPicker.delegate = self
     }
-    
-    @objc private func colorPickerTapped() {
-        colorPicker.toggleIsExpanded()
-    }
 }
 
 extension CanvasViewController: CanvasView {
@@ -93,11 +90,8 @@ extension CanvasViewController: CanvasView {
 
 extension CanvasViewController: ColorPickerDelegate {
     
-    func colorPicker(_ colorPicker: ColorPicker, didPickColor pickedColor: UIColor?) {
-        
-        UIView.animate(withDuration: 0.25, delay: 0.0, options: .curveEaseIn, animations: {
-            self.scrollView.backgroundColor = pickedColor
-        }, completion: nil)
+    func colorPicker(_ colorPicker: ColorPicker, didPickColor pickedColor: Color?) {
+        self.shapesCollectionView.changeShapesColors(to: pickedColor!)
     }
 }
 

@@ -10,5 +10,5 @@ import Foundation
 
 
 struct Color: RGBAColor {
-    let red, green, blue, alpha: Float
+    let red, green, blue, alpha: Float 
 }

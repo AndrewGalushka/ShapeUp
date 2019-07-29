@@ -49,32 +49,28 @@ class ShapeCollectionViewCell: UICollectionViewCell {
     
     func setup() {
         self.shapeContainerView.embedLayer(shapeLayer)
+        self.contentView.backgroundColor = .lightGray
     }
 }
 
 extension ShapeCollectionViewCell: ShapeCollectionViewCellConfigurable {
+
+    func configure(_ viewModel: ViewModel) {
+        self.viewModel = viewModel
+        shapeLayer.fillColor = UIColor(rgbaColor: viewModel.color).cgColor
+    }
     
-    class ViewModel {
+    struct ViewModel {
         let shape: Shape
-        let color: UIColor
+        let color: Color
         
-        init(shape: Shape, color: UIColor) {
+        init(shape: Shape, color: Color) {
             self.shape = shape
             self.color = color
         }
     }
-    
-    func configure(shape: Shape, color: UIColor) {
-        contentView.layer.backgroundColor = UIColor.darkGray.cgColor
-        contentView.clipsToBounds = true
-        
-        shapeLayer.path = shape.path(in: shapeLayer.bounds)
-        shapeLayer.fillColor = color.cgColor
-        
-        viewModel = ViewModel(shape: shape, color: color)
-    }
 }
 
 protocol ShapeCollectionViewCellConfigurable {
-    func configure(shape: Shape, color: UIColor)
+    func configure(_ viewModel: ShapeCollectionViewCell.ViewModel)
 }

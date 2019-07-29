@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D11BFCB22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D11BFCA22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift */; };
 		8D18F17722D5D0C900E7B1E0 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F17622D5D0C900E7B1E0 /* AppAssembler.swift */; };
 		8D18F17922D5D29200E7B1E0 /* CanvasViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */; };
 		8D18F17C22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F17B22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift */; };
@@ -95,6 +96,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D11BFCA22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapesCollectionView+ViewModel.swift"; sourceTree = "<group>"; };
 		8D18F17622D5D0C900E7B1E0 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
 		8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CanvasViewController.storyboard; sourceTree = "<group>"; };
 		8D18F17B22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardLoadable.swift"; sourceTree = "<group>"; };
@@ -329,7 +331,6 @@
 				8DB8B0E822E1AD3700EB71D4 /* Services */,
 				8DB8B0EC22E1B44D00EB71D4 /* CoreServices */,
 				8DE758DA22E754B70069A6B4 /* Controls */,
-				8DBB259622E8583A00546D23 /* Views */,
 				8DD103B322D4BCBE0052B13B /* Core */,
 				8DD103A822D494E10052B13B /* Models */,
 				8DB8B0F122E1B7C500EB71D4 /* Protocols */,
@@ -520,6 +521,8 @@
 			children = (
 				8DE758DB22E7561B0069A6B4 /* ShapesCollectionView.swift */,
 				8DBB258922E842E500546D23 /* ShapesCollectionViewLayout.swift */,
+				8D11BFCA22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift */,
+				8DBB259622E8583A00546D23 /* Views */,
 				8DBB258C22E8432300546D23 /* Cells */,
 			);
 			path = ShapesCollectionView;
@@ -553,8 +556,8 @@
 		8DBB259B22E8869A00546D23 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
-				8D84290A22E8A86500D20FFC /* ColoredCircleView.swift */,
 				8DD1A16922E9FCEA0016BE5C /* ColorsPickerCollectionView */,
+				8D84290A22E8A86500D20FFC /* ColoredCircleView.swift */,
 				8DBB259C22E886B700546D23 /* ColorPicker.swift */,
 				8DB7D77B22EB2BC700430C18 /* ColorPickerDelegate.swift */,
 			);
@@ -785,6 +788,7 @@
 				8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */,
 				8DB8B10922E2044C00EB71D4 /* PushRouter.swift in Sources */,
 				8D4D01CF22DF5FB000348F7A /* AtomicProperty.swift in Sources */,
+				8D11BFCB22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift in Sources */,
 				8DD103BC22D4C8D10052B13B /* Coordinator.swift in Sources */,
 				8DC010A222E5B1F100010BCA /* CanvasListManagementServiceProtocol.swift in Sources */,
 				8DD1A17322EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.swift in Sources */,

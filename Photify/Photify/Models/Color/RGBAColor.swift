@@ -16,3 +16,9 @@ protocol RGBAColor {
     
     init(red: Float, green: Float, blue: Float, alpha: Float)
 }
+
+extension RGBAColor {
+    static var white: Self {
+        return Self(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    }
+}

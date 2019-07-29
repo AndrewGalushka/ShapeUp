@@ -130,7 +130,7 @@ class ColorPicker: UIView {
         self.colorsCollectionView.didSelectColorHandler = { [unowned self] (color: UIColor?) -> Void in
             self.toggleIsExpanded()
             self.parentCircle.color = color
-            self.delegate?.colorPicker(self, didPickColor: color)
+            self.delegate?.colorPicker(self, didPickColor: Color(uiColor: color ?? .white))
         }
         
         colorsCollectionView.isUserInteractionEnabled = isExpanded

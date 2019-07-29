@@ -9,5 +9,5 @@
 import UIKit
 
 protocol ColorPickerDelegate: AnyObject {
-    func colorPicker(_ colorPicker: ColorPicker, didPickColor pickedColor: UIColor?)
+    func colorPicker(_ colorPicker: ColorPicker, didPickColor pickedColor: Color?)
 }

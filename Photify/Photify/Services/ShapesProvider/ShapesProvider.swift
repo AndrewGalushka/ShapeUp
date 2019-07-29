@@ -11,12 +11,12 @@ import Foundation
 class ShapesProvider {
     
     func allExistingShapes() -> [Shape] {
-        return [Rectangle(),
+        return [XMark(),
                 Circle(),
                 Ellipse(),
                 Hexagon(),
                 Triangle(),
                 Star(),
-                XMark()]
+                Rectangle()]
     }
 }

@@ -42,10 +42,26 @@ class ShapesCollectionView: UIView {
         setUp()
     }
     
+    // MARK: - Methods(Public)
+    
+    func setShapes(_ shapes: [ViewModel]) {
+        self.shapes = shapes
+        self.collectionView.reloadData()
+    }
+    
+    func changeShapesColors(to color: Color) {
+        for i in shapes.indices {
+            shapes[i].color = color
+        }
+        self.collectionView.reloadData()
+    }
+    
     // MARK: - Methods(Private)
     
-    private var shapes: [Shape] = { () -> [Shape] in
-       return ShapesProvider().allExistingShapes()
+    private var shapes: [ViewModel] = { () -> [ViewModel] in
+        return ShapesProvider().allExistingShapes().map {
+            ViewModel(shape: $0, color: Color(uiColor: .random()))
+        }
     }()
     
     private func setUp() {
@@ -67,10 +83,15 @@ extension ShapesCollectionView: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let shapeCell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(ShapeCollectionViewCell.self)", for: indexPath)
-        (shapeCell as? ShapeCollectionViewCellConfigurable)?.configure(shape: shapes[indexPath.row],
-                                                                       color: .random())
+        let viewModel = shapes[indexPath.row]
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(ShapeCollectionViewCell.self)", for: indexPath)
+        
+        if let shapeCell = cell as? ShapeCollectionViewCellConfigurable {
+            shapeCell.configure(.init(shape: viewModel.shape,
+                                      color: viewModel.color))
+        }
             
-        return shapeCell
+        return cell
     }
 }

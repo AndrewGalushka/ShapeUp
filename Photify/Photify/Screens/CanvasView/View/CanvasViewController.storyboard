@@ -66,6 +66,7 @@
                         <outlet property="bottomControlsContainerView" destination="rrd-3O-xj6" id="TEC-7d-rvs"/>
                         <outlet property="colorPicker" destination="fmK-X6-TZ8" id="Gfe-UJ-gcz"/>
                         <outlet property="scrollView" destination="mDH-zg-Diw" id="41j-qQ-Yeo"/>
+                        <outlet property="shapesCollectionView" destination="2NZ-dC-sFy" id="ZyE-PF-Ofz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCB-we-bHj" sceneMemberID="firstResponder"/>
