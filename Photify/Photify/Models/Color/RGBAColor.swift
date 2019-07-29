@@ -21,4 +21,8 @@ extension RGBAColor {
     static var white: Self {
         return Self(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
+    
+    static var clear: Self {
+        return Self(red: 0, green: 0, blue: 0, alpha: 0)
+    }
 }
