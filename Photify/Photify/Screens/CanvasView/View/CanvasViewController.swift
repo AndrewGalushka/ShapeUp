@@ -37,15 +37,20 @@ class CanvasViewController: UIViewController {
     // MARK: - Methods(Private)
     
     private func setup() {
-        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
-        
-        colorPicker.delegate = self
-        
+        configureScrollView()
+        configureColorPicker()
         configureDropInteraction()
     }
     
+    private func configureScrollView() {
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+    }
+    
+    private func configureColorPicker() {
+        colorPicker.delegate = self
+    }
+    
     private func configureDropInteraction() {
-        
         canvasDropInteractor = CanvasViewDropInteractor(parentView: self.view, scrollView: scrollView)
         canvasDropInteractor.configure()
     }
