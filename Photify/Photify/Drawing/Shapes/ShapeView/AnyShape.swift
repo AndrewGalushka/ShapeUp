@@ -11,7 +11,7 @@ import CoreGraphics
 struct AnyShape: Shape {
     private let _pathInRect: (_ rect: CGRect) -> CGPath
     
-    init<S: Shape>(shape: S) {
+    init(shape: Shape) {
         self._pathInRect = { (rect: CGRect) -> CGPath in
             return shape.path(in: rect)
         }
