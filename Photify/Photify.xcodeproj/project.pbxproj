@@ -45,6 +45,7 @@
 		8D6BAE5722D35FC400FF383C /* RectangleGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5622D35FC400FF383C /* RectangleGeometry.swift */; };
 		8D6BAE5922D3703400FF383C /* AngleGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5822D3703400FF383C /* AngleGeometry.swift */; };
 		8D6BAE5B22D37FC000FF383C /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5A22D37FC000FF383C /* Triangle.swift */; };
+		8D7F235022F031E700BA7245 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7F234F22F031E700BA7245 /* CGRect+Extensions.swift */; };
 		8D84290B22E8A86500D20FFC /* ColoredCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84290A22E8A86500D20FFC /* ColoredCircleView.swift */; };
 		8D8ABB5122EF03440084E4BB /* ShapeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8ABB5022EF03440084E4BB /* ShapeStyle.swift */; };
 		8D8ABB5322EF25010084E4BB /* ShapeStyle+CAShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8ABB5222EF25010084E4BB /* ShapeStyle+CAShapeLayer.swift */; };
@@ -141,6 +142,7 @@
 		8D6BAE5622D35FC400FF383C /* RectangleGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleGeometry.swift; sourceTree = "<group>"; };
 		8D6BAE5822D3703400FF383C /* AngleGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleGeometry.swift; sourceTree = "<group>"; };
 		8D6BAE5A22D37FC000FF383C /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		8D7F234F22F031E700BA7245 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
 		8D84290A22E8A86500D20FFC /* ColoredCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredCircleView.swift; sourceTree = "<group>"; };
 		8D8ABB5022EF03440084E4BB /* ShapeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeStyle.swift; sourceTree = "<group>"; };
 		8D8ABB5222EF25010084E4BB /* ShapeStyle+CAShapeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+CAShapeLayer.swift"; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				8DBB259922E8596500546D23 /* UIView+Extensions.swift */,
 				8DB7D78222EB45A300430C18 /* UIColor+RGBAColor.swift */,
 				8D8ABB5222EF25010084E4BB /* ShapeStyle+CAShapeLayer.swift */,
+				8D7F234F22F031E700BA7245 /* CGRect+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -798,6 +801,7 @@
 				8D18F17E22D5FA5A00E7B1E0 /* XMark.swift in Sources */,
 				8D8ABB5122EF03440084E4BB /* ShapeStyle.swift in Sources */,
 				8DB8B0F722E1BD5700EB71D4 /* СanvasesListPresenterProtocol.swift in Sources */,
+				8D7F235022F031E700BA7245 /* CGRect+Extensions.swift in Sources */,
 				8DD103B922D4C7520052B13B /* ManagedObjectModel.xcdatamodeld in Sources */,
 				8DE758DF22E756A60069A6B4 /* ShapeCollectionViewCell.swift in Sources */,
 				8DE758CC22E703090069A6B4 /* CanvasModule.swift in Sources */,
