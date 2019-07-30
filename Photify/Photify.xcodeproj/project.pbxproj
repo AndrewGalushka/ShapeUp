@@ -670,10 +670,10 @@
 		8DE758C822E702E10069A6B4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8D7F235122F043BA00BA7245 /* CanvasViewDropInteractor.swift */,
 				8DE758D322E703F90069A6B4 /* CanvasView.swift */,
 				8D6BAE2922D332E900FF383C /* CanvasViewController.swift */,
 				8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */,
+				8D7F235122F043BA00BA7245 /* CanvasViewDropInteractor.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
