@@ -79,6 +79,13 @@ class CanvasViewController: UIViewController {
         scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         
         colorPicker.delegate = self
+        
+        configureDropInteraction()
+    }
+    
+    private func configureDropInteraction() {
+        let dropInteraction = UIDropInteraction(delegate: self)
+        view.addInteraction(dropInteraction)
     }
 }
 
@@ -95,3 +102,58 @@ extension CanvasViewController: ColorPickerDelegate {
     }
 }
 
+extension CanvasViewController: UIDropInteractionDelegate {
+    func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> Bool {
+        return session.canLoadObjects(ofClass: UIImage.self) && session.items.count == 1
+    }
+    
+    func dropInteraction(_ interaction: UIDropInteraction, sessionDidEnter session: UIDropSession) {
+        let location = session.location(in: self.view)
+        
+        if self.scrollView.frame.contains(location) {
+            self.scrollView.layer.borderWidth = 5
+            self.scrollView.layer.borderColor = UIColor.darkGray.withAlphaComponent(0.5).cgColor
+        }
+    }
+    
+    func dropInteraction(_ interaction: UIDropInteraction, sessionDidUpdate session: UIDropSession) -> UIDropProposal {
+        let location = session.location(in: self.view)
+        
+        let dropOperation: UIDropOperation
+        
+        if self.scrollView.frame.contains(location) {
+            self.scrollView.layer.borderWidth = 5
+            self.scrollView.layer.borderColor = UIColor.darkGray.withAlphaComponent(0.5).cgColor
+            
+            dropOperation = .copy
+        } else {
+            self.scrollView.layer.borderWidth = 0.0
+            self.scrollView.layer.borderColor = nil
+            
+            dropOperation = .cancel
+        }
+        
+        return UIDropProposal(operation: dropOperation)
+    }
+    
+    func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
+        guard let (shape, shapeStyle) = session.items.first?.localObject as? (Shape, ShapeStyle) else { return }
+        let dropLocation = session.location(in: self.scrollView)
+        
+        let shapeView = ShapeView(shape: AnyShape(shape: shape),
+                                  frame: CGRect(center: dropLocation, size: .init(width: 64, height: 64)))
+        shapeView.shapeLayer.configure(shapeStyle: shapeStyle)
+        
+        shapeView.alpha = 0.0
+        self.scrollView.addSubview(shapeView)
+        
+        UIView.animate(withDuration: 0.25) {
+            shapeView.alpha = 1.0
+        }
+    }
+    
+    func dropInteraction(_ interaction: UIDropInteraction, sessionDidEnd session: UIDropSession) {
+        self.scrollView.layer.borderWidth = 0.0
+        self.scrollView.layer.borderColor = nil
+    }
+}
