@@ -12,6 +12,5 @@ public protocol CanvasStorable {
     var identifier: UUID { get }
     var name: String { get }
     
-    init(identifier: UUID,
-         name: String)
+    init(identifier: UUID, name: String)
 }

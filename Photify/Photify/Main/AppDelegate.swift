@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Database
+import DataStorage
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

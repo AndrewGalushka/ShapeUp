@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import DataStorage
 
 protocol StorageManagerType: AnyObject {
     
@@ -17,10 +18,10 @@ protocol StorageManagerType: AnyObject {
     
     // MARK - Write
     
-    func saveCanvases(_ canvases: [Canvas])
-    func deleteCanvases(_ canvases: [Canvas])
+    func saveCanvases(_ canvases: [CanvasStorable])
+    func deleteCanvases(_ canvases: [CanvasStorable])
     
     // MARK - Read
     
-    func fetchAllCanvases() -> [Canvas]
+    func fetchAllCanvases() -> [CanvasStorable]
 }

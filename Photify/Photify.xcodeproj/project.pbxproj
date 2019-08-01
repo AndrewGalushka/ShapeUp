@@ -8,17 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8D11BFCB22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D11BFCA22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift */; };
-		8D18D8DB22F1C95800C588E9 /* Database.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D18D8D922F1C95800C588E9 /* Database.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D18D8EE22F1E65D00C588E9 /* CanvasStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18D8ED22F1E65D00C588E9 /* CanvasStorable.swift */; };
-		8D18D8EF22F1E86400C588E9 /* Database.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D18D8D722F1C95800C588E9 /* Database.framework */; };
-		8D18D8F122F1E8C300C588E9 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18D8F022F1E8C300C588E9 /* DataStorage.swift */; };
-		8D18D8F222F1ED0700C588E9 /* CoreDataEntityMapper+Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A3322E0984B00282747 /* CoreDataEntityMapper+Canvas.swift */; };
-		8D18D8F322F1ED0700C588E9 /* CoreDataEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A3122E0980900282747 /* CoreDataEntityMapper.swift */; };
-		8D18D8F422F1ED0700C588E9 /* ManagedObjectMapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A2B22E0733C00282747 /* ManagedObjectMapable.swift */; };
-		8D18D8F522F1ED0700C588E9 /* CoreDataManagerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A3522E0A34900282747 /* CoreDataManagerAdapter.swift */; };
-		8D18D8F622F1ED0700C588E9 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103B522D4BCE70052B13B /* CoreDataManager.swift */; };
-		8D18D8F722F1ED0700C588E9 /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103C222D4E1D90052B13B /* PersistentContainer.swift */; };
-		8D18D8F822F1ED0700C588E9 /* CanvasEntityMapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A2D22E0737700282747 /* CanvasEntityMapable.swift */; };
 		8D18F17722D5D0C900E7B1E0 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F17622D5D0C900E7B1E0 /* AppAssembler.swift */; };
 		8D18F17922D5D29200E7B1E0 /* CanvasViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */; };
 		8D18F17C22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F17B22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift */; };
@@ -29,9 +18,7 @@
 		8D1B86D122F2CC530094BAB8 /* AtomicProperty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1B86CA22F2CC530094BAB8 /* AtomicProperty.framework */; };
 		8D1B86D222F2CC530094BAB8 /* AtomicProperty.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1B86CA22F2CC530094BAB8 /* AtomicProperty.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8D1B86D722F2CC600094BAB8 /* AtomicProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01CE22DF5FB000348F7A /* AtomicProperty.swift */; };
-		8D1B86D922F2D07F0094BAB8 /* ManagedObjectModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DD103B722D4C7520052B13B /* ManagedObjectModel.xcdatamodeld */; };
 		8D1B86DB22F2D4400094BAB8 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A2822E070F700282747 /* StorageManager.swift */; };
-		8D1B86E222F2D6340094BAB8 /* DataStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B86E122F2D6340094BAB8 /* DataStorageAdapter.swift */; };
 		8D21CD1122DCC8B000EA3948 /* CanvasListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D21CD1022DCC8B000EA3948 /* CanvasListViewController.swift */; };
 		8D21CD1322DCC8BB00EA3948 /* CanvasListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D21CD1222DCC8BB00EA3948 /* CanvasListViewController.storyboard */; };
 		8D21CD1622DCC99B00EA3948 /* CanvasTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D21CD1522DCC99B00EA3948 /* CanvasTableView.swift */; };
@@ -39,7 +26,6 @@
 		8D4C8A3C22E0CC3400282747 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A3B22E0CC3400282747 /* UIColor+Extension.swift */; };
 		8D4D01D122DF67E100348F7A /* StorageManagerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D022DF67E100348F7A /* StorageManagerType.swift */; };
 		8D4D01D422DF70AF00348F7A /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D322DF70AF00348F7A /* Canvas.swift */; };
-		8D4D01D622DF719700348F7A /* CanvasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D522DF719700348F7A /* CanvasModel.swift */; };
 		8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2722D332E900FF383C /* AppDelegate.swift */; };
 		8D6BAE2A22D332E900FF383C /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2922D332E900FF383C /* CanvasViewController.swift */; };
 		8D6BAE3222D332EA00FF383C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D6BAE3122D332EA00FF383C /* Assets.xcassets */; };
@@ -97,6 +83,19 @@
 		8DD1A17322EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1A17122EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.swift */; };
 		8DD1A17422EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DD1A17222EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.xib */; };
 		8DD1A17822EA03470016BE5C /* ColorsPickerCollectionViewColorCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1A17722EA03470016BE5C /* ColorsPickerCollectionViewColorCellDelegate.swift */; };
+		8DD4246322F3018C003122B4 /* DataStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DD4246122F3018C003122B4 /* DataStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DD4249222F3022D003122B4 /* CanvasEntityMapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4248322F3022D003122B4 /* CanvasEntityMapable.swift */; };
+		8DD4249322F3022D003122B4 /* CoreDataEntityMapper+Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4248422F3022D003122B4 /* CoreDataEntityMapper+Canvas.swift */; };
+		8DD4249422F3022D003122B4 /* ManagedObjectMapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4248522F3022D003122B4 /* ManagedObjectMapable.swift */; };
+		8DD4249522F3022D003122B4 /* CoreDataEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4248622F3022D003122B4 /* CoreDataEntityMapper.swift */; };
+		8DD4249622F3022D003122B4 /* DataStorageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4248722F3022D003122B4 /* DataStorageAdapter.swift */; };
+		8DD4249722F3022D003122B4 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4248922F3022D003122B4 /* DataStorage.swift */; };
+		8DD4249822F3022D003122B4 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4248B22F3022D003122B4 /* CoreDataManager.swift */; };
+		8DD4249922F3022D003122B4 /* ManagedObjectModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4248C22F3022D003122B4 /* ManagedObjectModel.xcdatamodeld */; };
+		8DD4249A22F3022D003122B4 /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4248E22F3022D003122B4 /* PersistentContainer.swift */; };
+		8DD4249B22F3022D003122B4 /* CoreDataManagerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4248F22F3022D003122B4 /* CoreDataManagerAdapter.swift */; };
+		8DD4249C22F3022D003122B4 /* CanvasStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4249122F3022D003122B4 /* CanvasStorable.swift */; };
+		8DD4249D22F303A0003122B4 /* DataStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD4245F22F3018C003122B4 /* DataStorage.framework */; };
 		8DE758CC22E703090069A6B4 /* CanvasModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758CB22E703090069A6B4 /* CanvasModule.swift */; };
 		8DE758CE22E703300069A6B4 /* CanvasModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758CD22E703300069A6B4 /* CanvasModuleOutput.swift */; };
 		8DE758D022E703B20069A6B4 /* CanvasPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758CF22E703B20069A6B4 /* CanvasPresenter.swift */; };
@@ -135,11 +134,6 @@
 
 /* Begin PBXFileReference section */
 		8D11BFCA22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapesCollectionView+ViewModel.swift"; sourceTree = "<group>"; };
-		8D18D8D722F1C95800C588E9 /* Database.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Database.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D18D8D922F1C95800C588E9 /* Database.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
-		8D18D8DA22F1C95800C588E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D18D8ED22F1E65D00C588E9 /* CanvasStorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasStorable.swift; sourceTree = "<group>"; };
-		8D18D8F022F1E8C300C588E9 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		8D18F17622D5D0C900E7B1E0 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
 		8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CanvasViewController.storyboard; sourceTree = "<group>"; };
 		8D18F17B22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardLoadable.swift"; sourceTree = "<group>"; };
@@ -149,22 +143,15 @@
 		8D1B86CA22F2CC530094BAB8 /* AtomicProperty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AtomicProperty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1B86CC22F2CC530094BAB8 /* AtomicProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AtomicProperty.h; sourceTree = "<group>"; };
 		8D1B86CD22F2CC530094BAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D1B86E122F2D6340094BAB8 /* DataStorageAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorageAdapter.swift; sourceTree = "<group>"; };
 		8D21CD1022DCC8B000EA3948 /* CanvasListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		8D21CD1222DCC8BB00EA3948 /* CanvasListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CanvasListViewController.storyboard; sourceTree = "<group>"; };
 		8D21CD1522DCC99B00EA3948 /* CanvasTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasTableView.swift; sourceTree = "<group>"; };
 		8D4C8A2422E0590A00282747 /* UIAlertController+AddCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AddCanvas.swift"; sourceTree = "<group>"; };
 		8D4C8A2822E070F700282747 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		8D4C8A2B22E0733C00282747 /* ManagedObjectMapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedObjectMapable.swift; sourceTree = "<group>"; };
-		8D4C8A2D22E0737700282747 /* CanvasEntityMapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasEntityMapable.swift; sourceTree = "<group>"; };
-		8D4C8A3122E0980900282747 /* CoreDataEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntityMapper.swift; sourceTree = "<group>"; };
-		8D4C8A3322E0984B00282747 /* CoreDataEntityMapper+Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataEntityMapper+Canvas.swift"; sourceTree = "<group>"; };
-		8D4C8A3522E0A34900282747 /* CoreDataManagerAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerAdapter.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		8D4C8A3B22E0CC3400282747 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		8D4D01CE22DF5FB000348F7A /* AtomicProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicProperty.swift; sourceTree = "<group>"; };
 		8D4D01D022DF67E100348F7A /* StorageManagerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManagerType.swift; sourceTree = "<group>"; };
 		8D4D01D322DF70AF00348F7A /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
-		8D4D01D522DF719700348F7A /* CanvasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasModel.swift; sourceTree = "<group>"; };
 		8D6BAE2422D332E900FF383C /* Photify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6BAE2722D332E900FF383C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		8D6BAE2922D332E900FF383C /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
@@ -216,17 +203,28 @@
 		8DC0109F22E5B1CF00010BCA /* CanvasListManagementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListManagementService.swift; sourceTree = "<group>"; };
 		8DC010A122E5B1F100010BCA /* CanvasListManagementServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListManagementServiceProtocol.swift; sourceTree = "<group>"; };
 		8DD103A622D47CC70052B13B /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
-		8DD103B522D4BCE70052B13B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		8DD103B822D4C7520052B13B /* ManagedObjectModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ManagedObjectModel.xcdatamodel; sourceTree = "<group>"; };
 		8DD103BB22D4C8D10052B13B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8DD103BD22D4C8F30052B13B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		8DD103C022D4C9A80052B13B /* AppAssemblerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssemblerType.swift; sourceTree = "<group>"; };
-		8DD103C222D4E1D90052B13B /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		8DD1A16A22E9FD340016BE5C /* ColorsPickerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPickerCollectionView.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		8DD1A16C22E9FDD20016BE5C /* ColorsPickerCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPickerCollectionViewLayout.swift; sourceTree = "<group>"; };
 		8DD1A17122EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPickerCollectionViewColorCell.swift; sourceTree = "<group>"; };
 		8DD1A17222EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorsPickerCollectionViewColorCell.xib; sourceTree = "<group>"; };
 		8DD1A17722EA03470016BE5C /* ColorsPickerCollectionViewColorCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPickerCollectionViewColorCellDelegate.swift; sourceTree = "<group>"; };
+		8DD4245F22F3018C003122B4 /* DataStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DD4246122F3018C003122B4 /* DataStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataStorage.h; sourceTree = "<group>"; };
+		8DD4246222F3018C003122B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DD4248322F3022D003122B4 /* CanvasEntityMapable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasEntityMapable.swift; sourceTree = "<group>"; };
+		8DD4248422F3022D003122B4 /* CoreDataEntityMapper+Canvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataEntityMapper+Canvas.swift"; sourceTree = "<group>"; };
+		8DD4248522F3022D003122B4 /* ManagedObjectMapable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectMapable.swift; sourceTree = "<group>"; };
+		8DD4248622F3022D003122B4 /* CoreDataEntityMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataEntityMapper.swift; sourceTree = "<group>"; };
+		8DD4248722F3022D003122B4 /* DataStorageAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorageAdapter.swift; sourceTree = "<group>"; };
+		8DD4248922F3022D003122B4 /* DataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		8DD4248B22F3022D003122B4 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		8DD4248D22F3022D003122B4 /* ManagedObjectModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ManagedObjectModel.xcdatamodel; sourceTree = "<group>"; };
+		8DD4248E22F3022D003122B4 /* PersistentContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
+		8DD4248F22F3022D003122B4 /* CoreDataManagerAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManagerAdapter.swift; sourceTree = "<group>"; };
+		8DD4249122F3022D003122B4 /* CanvasStorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasStorable.swift; sourceTree = "<group>"; };
 		8DE758CB22E703090069A6B4 /* CanvasModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasModule.swift; sourceTree = "<group>"; };
 		8DE758CD22E703300069A6B4 /* CanvasModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasModuleOutput.swift; sourceTree = "<group>"; };
 		8DE758CF22E703B20069A6B4 /* CanvasPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasPresenter.swift; sourceTree = "<group>"; };
@@ -240,13 +238,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8D18D8D422F1C95800C588E9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8D1B86C722F2CC530094BAB8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,40 +249,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DD4249D22F303A0003122B4 /* DataStorage.framework in Frameworks */,
 				8D1B86D122F2CC530094BAB8 /* AtomicProperty.framework in Frameworks */,
-				8D18D8EF22F1E86400C588E9 /* Database.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD4245C22F3018C003122B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8D18D8D822F1C95800C588E9 /* Database */ = {
-			isa = PBXGroup;
-			children = (
-				8D1B86E122F2D6340094BAB8 /* DataStorageAdapter.swift */,
-				8D1B86C322F2C8A70094BAB8 /* Mappers */,
-				8D18D8F922F1ED4700C588E9 /* EntitiyTypes */,
-				8D1B86C422F2C8C50094BAB8 /* Source */,
-				8D18D8D922F1C95800C588E9 /* Database.h */,
-				8D18D8DA22F1C95800C588E9 /* Info.plist */,
-			);
-			path = Database;
-			sourceTree = "<group>";
-		};
 		8D18D8E122F1C9F100C588E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8D18D8F922F1ED4700C588E9 /* EntitiyTypes */ = {
-			isa = PBXGroup;
-			children = (
-				8D18D8ED22F1E65D00C588E9 /* CanvasStorable.swift */,
-			);
-			path = EntitiyTypes;
 			sourceTree = "<group>";
 		};
 		8D18F17A22D5D2F300E7B1E0 /* Extensions */ = {
@@ -329,26 +306,6 @@
 			path = MainView;
 			sourceTree = "<group>";
 		};
-		8D1B86C322F2C8A70094BAB8 /* Mappers */ = {
-			isa = PBXGroup;
-			children = (
-				8D4C8A2B22E0733C00282747 /* ManagedObjectMapable.swift */,
-				8D4C8A2D22E0737700282747 /* CanvasEntityMapable.swift */,
-				8D4C8A3122E0980900282747 /* CoreDataEntityMapper.swift */,
-				8D4C8A3322E0984B00282747 /* CoreDataEntityMapper+Canvas.swift */,
-			);
-			path = Mappers;
-			sourceTree = "<group>";
-		};
-		8D1B86C422F2C8C50094BAB8 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				8D18D8F022F1E8C300C588E9 /* DataStorage.swift */,
-				8D1B86E322F2DCEB0094BAB8 /* Core */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
 		8D1B86CB22F2CC530094BAB8 /* AtomicProperty */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,17 +314,6 @@
 				8D1B86CD22F2CC530094BAB8 /* Info.plist */,
 			);
 			path = AtomicProperty;
-			sourceTree = "<group>";
-		};
-		8D1B86E322F2DCEB0094BAB8 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				8D4C8A3522E0A34900282747 /* CoreDataManagerAdapter.swift */,
-				8DD103B522D4BCE70052B13B /* CoreDataManager.swift */,
-				8DD103C222D4E1D90052B13B /* PersistentContainer.swift */,
-				8DD103B722D4C7520052B13B /* ManagedObjectModel.xcdatamodeld */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		8D21CD0F22DCC88300EA3948 /* CanvasList */ = {
@@ -403,7 +349,6 @@
 		8D4D01D222DF70A200348F7A /* Canvas */ = {
 			isa = PBXGroup;
 			children = (
-				8D4D01D522DF719700348F7A /* CanvasModel.swift */,
 				8D4D01D322DF70AF00348F7A /* Canvas.swift */,
 			);
 			path = Canvas;
@@ -413,8 +358,8 @@
 			isa = PBXGroup;
 			children = (
 				8D6BAE2622D332E900FF383C /* Photify */,
-				8D18D8D822F1C95800C588E9 /* Database */,
 				8D1B86CB22F2CC530094BAB8 /* AtomicProperty */,
+				8DD4246022F3018C003122B4 /* DataStorage */,
 				8D6BAE2522D332E900FF383C /* Products */,
 				8D18D8E122F1C9F100C588E9 /* Frameworks */,
 			);
@@ -424,8 +369,8 @@
 			isa = PBXGroup;
 			children = (
 				8D6BAE2422D332E900FF383C /* Photify.app */,
-				8D18D8D722F1C95800C588E9 /* Database.framework */,
 				8D1B86CA22F2CC530094BAB8 /* AtomicProperty.framework */,
+				8DD4245F22F3018C003122B4 /* DataStorage.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -746,6 +691,58 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		8DD4246022F3018C003122B4 /* DataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				8DD4248722F3022D003122B4 /* DataStorageAdapter.swift */,
+				8DD4249022F3022D003122B4 /* EntitiyTypes */,
+				8DD4248222F3022D003122B4 /* Mappers */,
+				8DD4248822F3022D003122B4 /* Source */,
+				8DD4246122F3018C003122B4 /* DataStorage.h */,
+				8DD4246222F3018C003122B4 /* Info.plist */,
+			);
+			path = DataStorage;
+			sourceTree = "<group>";
+		};
+		8DD4248222F3022D003122B4 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				8DD4248322F3022D003122B4 /* CanvasEntityMapable.swift */,
+				8DD4248422F3022D003122B4 /* CoreDataEntityMapper+Canvas.swift */,
+				8DD4248522F3022D003122B4 /* ManagedObjectMapable.swift */,
+				8DD4248622F3022D003122B4 /* CoreDataEntityMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		8DD4248822F3022D003122B4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8DD4248922F3022D003122B4 /* DataStorage.swift */,
+				8DD4248A22F3022D003122B4 /* Core */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		8DD4248A22F3022D003122B4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8DD4248B22F3022D003122B4 /* CoreDataManager.swift */,
+				8DD4248C22F3022D003122B4 /* ManagedObjectModel.xcdatamodeld */,
+				8DD4248E22F3022D003122B4 /* PersistentContainer.swift */,
+				8DD4248F22F3022D003122B4 /* CoreDataManagerAdapter.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8DD4249022F3022D003122B4 /* EntitiyTypes */ = {
+			isa = PBXGroup;
+			children = (
+				8DD4249122F3022D003122B4 /* CanvasStorable.swift */,
+			);
+			path = EntitiyTypes;
+			sourceTree = "<group>";
+		};
 		8DE758C822E702E10069A6B4 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -779,14 +776,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		8D18D8D222F1C95800C588E9 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8D18D8DB22F1C95800C588E9 /* Database.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8D1B86C522F2CC530094BAB8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -795,27 +784,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8DD4245A22F3018C003122B4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD4246322F3018C003122B4 /* DataStorage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8D18D8D622F1C95800C588E9 /* Database */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8D18D8DE22F1C95800C588E9 /* Build configuration list for PBXNativeTarget "Database" */;
-			buildPhases = (
-				8D18D8D222F1C95800C588E9 /* Headers */,
-				8D18D8D322F1C95800C588E9 /* Sources */,
-				8D18D8D422F1C95800C588E9 /* Frameworks */,
-				8D18D8D522F1C95800C588E9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Database;
-			productName = Database;
-			productReference = 8D18D8D722F1C95800C588E9 /* Database.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		8D1B86C922F2CC530094BAB8 /* AtomicProperty */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D1B86D322F2CC530094BAB8 /* Build configuration list for PBXNativeTarget "AtomicProperty" */;
@@ -853,6 +832,24 @@
 			productReference = 8D6BAE2422D332E900FF383C /* Photify.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8DD4245E22F3018C003122B4 /* DataStorage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DD4246622F3018C003122B4 /* Build configuration list for PBXNativeTarget "DataStorage" */;
+			buildPhases = (
+				8DD4245A22F3018C003122B4 /* Headers */,
+				8DD4245B22F3018C003122B4 /* Sources */,
+				8DD4245C22F3018C003122B4 /* Frameworks */,
+				8DD4245D22F3018C003122B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DataStorage;
+			productName = DataStorage;
+			productReference = 8DD4245F22F3018C003122B4 /* DataStorage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -863,15 +860,15 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Galushka;
 				TargetAttributes = {
-					8D18D8D622F1C95800C588E9 = {
-						CreatedOnToolsVersion = 10.2.1;
-						LastSwiftMigration = 1020;
-					};
 					8D1B86C922F2CC530094BAB8 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 					8D6BAE2322D332E900FF383C = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					8DD4245E22F3018C003122B4 = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -889,20 +886,13 @@
 			projectRoot = "";
 			targets = (
 				8D6BAE2322D332E900FF383C /* Photify */,
-				8D18D8D622F1C95800C588E9 /* Database */,
 				8D1B86C922F2CC530094BAB8 /* AtomicProperty */,
+				8DD4245E22F3018C003122B4 /* DataStorage */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8D18D8D522F1C95800C588E9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8D1B86C822F2CC530094BAB8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -924,27 +914,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		8D18D8D322F1C95800C588E9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+		8DD4245D22F3018C003122B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D18D8F722F1ED0700C588E9 /* PersistentContainer.swift in Sources */,
-				8D1B86E222F2D6340094BAB8 /* DataStorageAdapter.swift in Sources */,
-				8D18D8EE22F1E65D00C588E9 /* CanvasStorable.swift in Sources */,
-				8D1B86D922F2D07F0094BAB8 /* ManagedObjectModel.xcdatamodeld in Sources */,
-				8D18D8F122F1E8C300C588E9 /* DataStorage.swift in Sources */,
-				8D18D8F522F1ED0700C588E9 /* CoreDataManagerAdapter.swift in Sources */,
-				8D18D8F422F1ED0700C588E9 /* ManagedObjectMapable.swift in Sources */,
-				8D18D8F822F1ED0700C588E9 /* CanvasEntityMapable.swift in Sources */,
-				8D18D8F322F1ED0700C588E9 /* CoreDataEntityMapper.swift in Sources */,
-				8D18D8F622F1ED0700C588E9 /* CoreDataManager.swift in Sources */,
-				8D18D8F222F1ED0700C588E9 /* CoreDataEntityMapper+Canvas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
 		8D1B86C622F2CC530094BAB8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1017,7 +996,6 @@
 				8D6BAE5B22D37FC000FF383C /* Triangle.swift in Sources */,
 				8D8ABB5322EF25010084E4BB /* ShapeStyle+CAShapeLayer.swift in Sources */,
 				8DB8B0FD22E1DFCC00EB71D4 /* CanvasesListPresenterOutput.swift in Sources */,
-				8D4D01D622DF719700348F7A /* CanvasModel.swift in Sources */,
 				8D18F17C22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift in Sources */,
 				8DC010A022E5B1CF00010BCA /* CanvasListManagementService.swift in Sources */,
 				8DB8B0F922E1BEDF00EB71D4 /* CanvasesListPresenter.swift in Sources */,
@@ -1033,6 +1011,24 @@
 				8DD103A722D47CC70052B13B /* Star.swift in Sources */,
 				8D4C8A3C22E0CC3400282747 /* UIColor+Extension.swift in Sources */,
 				8DB7D78322EB45A300430C18 /* UIColor+RGBAColor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD4245B22F3018C003122B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD4249622F3022D003122B4 /* DataStorageAdapter.swift in Sources */,
+				8DD4249322F3022D003122B4 /* CoreDataEntityMapper+Canvas.swift in Sources */,
+				8DD4249B22F3022D003122B4 /* CoreDataManagerAdapter.swift in Sources */,
+				8DD4249422F3022D003122B4 /* ManagedObjectMapable.swift in Sources */,
+				8DD4249722F3022D003122B4 /* DataStorage.swift in Sources */,
+				8DD4249922F3022D003122B4 /* ManagedObjectModel.xcdatamodeld in Sources */,
+				8DD4249522F3022D003122B4 /* CoreDataEntityMapper.swift in Sources */,
+				8DD4249C22F3022D003122B4 /* CanvasStorable.swift in Sources */,
+				8DD4249822F3022D003122B4 /* CoreDataManager.swift in Sources */,
+				8DD4249222F3022D003122B4 /* CanvasEntityMapable.swift in Sources */,
+				8DD4249A22F3022D003122B4 /* PersistentContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1058,65 +1054,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8D18D8DC22F1C95800C588E9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YDDE2DY87F;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Database/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Galushka.Database;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8D18D8DD22F1C95800C588E9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YDDE2DY87F;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Database/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Galushka.Database;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		8D1B86D422F2CC530094BAB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1124,7 +1061,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YDDE2DY87F;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1152,7 +1089,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YDDE2DY87F;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1328,18 +1265,66 @@
 			};
 			name = Release;
 		};
+		8DD4246422F3018C003122B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DataStorage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Galushka.DataStorage;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DD4246522F3018C003122B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DataStorage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Galushka.DataStorage;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8D18D8DE22F1C95800C588E9 /* Build configuration list for PBXNativeTarget "Database" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8D18D8DC22F1C95800C588E9 /* Debug */,
-				8D18D8DD22F1C95800C588E9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8D1B86D322F2CC530094BAB8 /* Build configuration list for PBXNativeTarget "AtomicProperty" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1367,15 +1352,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		8DD4246622F3018C003122B4 /* Build configuration list for PBXNativeTarget "DataStorage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DD4246422F3018C003122B4 /* Debug */,
+				8DD4246522F3018C003122B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		8DD103B722D4C7520052B13B /* ManagedObjectModel.xcdatamodeld */ = {
+		8DD4248C22F3022D003122B4 /* ManagedObjectModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				8DD103B822D4C7520052B13B /* ManagedObjectModel.xcdatamodel */,
+				8DD4248D22F3022D003122B4 /* ManagedObjectModel.xcdatamodel */,
 			);
-			currentVersion = 8DD103B822D4C7520052B13B /* ManagedObjectModel.xcdatamodel */;
+			currentVersion = 8DD4248D22F3022D003122B4 /* ManagedObjectModel.xcdatamodel */;
 			path = ManagedObjectModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

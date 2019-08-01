@@ -33,14 +33,17 @@ class CanvasListManagementService: CanvasListManagementServiceProtocol {
     // MARK: CanvasListManagementServiceProtocol imp
     
     func fetchAllCanvases() -> [Canvas] {
-        let fetchedCanvases = storageManager.fetchAllCanvases()
+        let fetchedCanvases = storageManager.fetchAllCanvases().map {
+            return Canvas(identifier: $0.identifier, name: $0.name)
+        }
+        
         self.fetchedCanvases = fetchedCanvases
         
         return self.currentCanvasList()
     }
     
     func addCanvas(name: String) {
-        let canvas = CanvasModel(name: name)
+        let canvas = Canvas(name: name)
         self.pendingCanvasesToSave.append(canvas)
     }
     
@@ -79,7 +82,7 @@ class CanvasListManagementService: CanvasListManagementServiceProtocol {
     }
     
     private func hasChanges() -> Bool {
-        let canvasListHasChanges = !self.pendingCanvasesToDelete.isEmpty || !self.pendingCanvasesToSave.isEmpty
-        return canvasListHasChanges
+        let isCanvasListHasChanges = !self.pendingCanvasesToDelete.isEmpty || !self.pendingCanvasesToSave.isEmpty
+        return isCanvasListHasChanges
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol DataStorageAdapter {
+public protocol DataStorageAdapter {
     func load(completion: @escaping () -> Void)
     
     func fetchAllCanvases() -> [CanvasStorable]
