@@ -10,20 +10,20 @@ import CoreData
 
 extension CoreDataEntityMapper: CanvasEntityMapable {
     
-    struct CanvasModel: Photify.Canvas {
+    struct CanvasModel: CanvasStorable {
         var identifier: UUID
         var name: String
     }
     
-    func mapOut(canvasEntities: [CanvasEntity]) -> [Photify.Canvas] {
-        let canvases: [Canvas] = canvasEntities.map {
-           self.mapOut($0)
+    func mapOut(canvasEntities: [CanvasEntity]) -> [CanvasStorable] {
+        let canvases: [CanvasStorable] = canvasEntities.map {
+            self.mapOut($0)
         }
         
         return canvases
     }
     
-    func mapIn(canvases: [Canvas], moc: NSManagedObjectContext) -> [CanvasEntity] {
+    func mapIn(canvases: [CanvasStorable], moc: NSManagedObjectContext) -> [CanvasEntity] {
         let canvasEntities: [CanvasEntity] = canvases.map {
             self.mapIn($0, moc: moc)
         }
@@ -31,11 +31,11 @@ extension CoreDataEntityMapper: CanvasEntityMapable {
         return canvasEntities
     }
     
-    private func mapOut(_ canvasEntity: CanvasEntity) -> Photify.Canvas {
+    private func mapOut(_ canvasEntity: CanvasEntity) -> CanvasStorable {
         return CanvasModel(identifier: canvasEntity.identifier!, name: canvasEntity.name ?? "")
     }
     
-    private func mapIn(_ canvas: Photify.Canvas, moc: NSManagedObjectContext) -> CanvasEntity {
+    private func mapIn(_ canvas: CanvasStorable, moc: NSManagedObjectContext) -> CanvasEntity {
         let canvasEntity = CanvasEntity(context: moc)
         canvasEntity.identifier = canvas.identifier
         canvasEntity.name = canvas.name

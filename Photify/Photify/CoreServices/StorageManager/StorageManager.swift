@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import CoreData
+import Database
 
 final class StorageManager: StorageManagerType {
     
