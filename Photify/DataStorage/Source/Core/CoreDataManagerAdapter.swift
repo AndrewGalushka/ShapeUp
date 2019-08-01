@@ -8,7 +8,7 @@
 
 import CoreData
 
-class CoreDataManagerAdapter: DataBaseAdapter {
+class CoreDataManagerAdapter: DataStorageAdapter {
     let coreDataManager: CoreDataManager
     private let mapper: CoreDataEntityMapable
     
@@ -17,7 +17,13 @@ class CoreDataManagerAdapter: DataBaseAdapter {
         self.mapper = mapper
     }
     
-    func fetchAllCanvases() -> [Canvas] {
+    func load(completion: @escaping () -> Void) {
+        self.coreDataManager.loadStorage {
+            completion()
+        }
+    }
+    
+    func fetchAllCanvases() -> [CanvasStorable] {
         let fetchCanvasesRequest: NSFetchRequest<CanvasEntity> = CanvasEntity.fetchRequest()
         
         do {
@@ -30,7 +36,7 @@ class CoreDataManagerAdapter: DataBaseAdapter {
         }
     }
     
-    func saveCanvases(_ canvases: [Canvas]) {
+    func saveCanvases(_ canvases: [CanvasStorable]) {
         let canvasEntities = mapper.mapIn(canvases: canvases, moc: self.coreDataManager.mainContext())
         print(canvasEntities)
         coreDataManager.save()

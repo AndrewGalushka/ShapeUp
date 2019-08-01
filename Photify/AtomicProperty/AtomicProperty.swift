@@ -28,15 +28,15 @@ fileprivate final class ReadWriteLock {
     }
 }
 
-class AtomicProperty<T> {
+public class AtomicProperty<T> {
     private var underlyingValue: T
     private let lock = ReadWriteLock()
     
-    init(value: T) {
+    public init(value: T) {
         self.underlyingValue = value
     }
     
-    var value: T {
+    public var value: T {
         get {
             lock.readLock()
             let value = underlyingValue

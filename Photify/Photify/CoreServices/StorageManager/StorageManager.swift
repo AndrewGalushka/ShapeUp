@@ -7,47 +7,44 @@
 //
 
 import Foundation
-import CoreData
+import DataStorage
 
 final class StorageManager: StorageManagerType {
     
     // MARK: Properties(Private)
     
-    private let coreDataManager: CoreDataManager
-    private let dataBaseAdapter: DataBaseAdapter
+    private let dataStorage = DataStorage()
     
     // MARK: Private Initializer
     
-    private init() {
-        coreDataManager = CoreDataManager()
-        dataBaseAdapter = CoreDataManagerAdapter(coreDataManager: coreDataManager)
-    }
+    private init() {}
     
     // MARK: Public Initializer
     
     static func loadStorage() -> StorageManager {
         let semaphore = DispatchSemaphore(value: 0)
-        let storage = StorageManager()
+        let storageManager = StorageManager()
         
-        storage.coreDataManager.loadStorage {
+        storageManager.dataStorage.load {
             semaphore.signal()
         }
         
         semaphore.wait()
-        return storage
+        
+        return storageManager
     }
     
     // MARK: - Methods(Public)
     
-    func saveCanvases(_ canvases: [Canvas]) {
-        dataBaseAdapter.saveCanvases(canvases)
+    func saveCanvases(_ canvases: [CanvasStorable]) {
+        dataStorage.saveCanvases(canvases)
     }
     
-    func fetchAllCanvases() -> [Canvas] {
-        return dataBaseAdapter.fetchAllCanvases()
+    func fetchAllCanvases() -> [CanvasStorable] {
+        return dataStorage.fetchAllCanvases()
     }
     
-    func deleteCanvases(_ canvases: [Canvas]) {
-        self.dataBaseAdapter.deleteCanvases(identifiers: canvases.map { $0.identifier })
+    func deleteCanvases(_ canvases: [CanvasStorable]) {
+        self.dataStorage.deleteCanvases(identifiers: canvases.map { $0.identifier })
     }
 }

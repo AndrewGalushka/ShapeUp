@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DataStorage
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

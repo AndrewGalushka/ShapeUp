@@ -7,8 +7,19 @@
 //
 
 import Foundation
+import DataStorage
 
-protocol Canvas {
-    var identifier: UUID { get }
-    var name: String { get }
+struct Canvas: CanvasStorable {
+    let identifier: UUID
+    let name: String
+    
+    init(name: String) {
+        self.name = name
+        self.identifier = UUID()
+    }
+    
+    init(identifier: UUID, name: String) {
+        self.identifier = identifier
+        self.name = name
+    }
 }

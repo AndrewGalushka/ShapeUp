@@ -7,6 +7,7 @@
 //
 
 import CoreData
+import AtomicProperty
 
 final class CoreDataManager {
     
