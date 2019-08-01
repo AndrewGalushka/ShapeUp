@@ -98,6 +98,8 @@
 		8DD4249D22F303A0003122B4 /* DataStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD4245F22F3018C003122B4 /* DataStorage.framework */; };
 		8DD4249F22F31AA6003122B4 /* CanvasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4249E22F31AA6003122B4 /* CanvasService.swift */; };
 		8DD424A222F31AF8003122B4 /* CanvasServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD424A122F31AF8003122B4 /* CanvasServiceProtocol.swift */; };
+		8DD424A422F32332003122B4 /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD424A322F32332003122B4 /* ShapeType.swift */; };
+		8DD424A722F32530003122B4 /* ShapeViewRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD424A622F32530003122B4 /* ShapeViewRepresentation.swift */; };
 		8DE758CC22E703090069A6B4 /* CanvasModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758CB22E703090069A6B4 /* CanvasModule.swift */; };
 		8DE758CE22E703300069A6B4 /* CanvasModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758CD22E703300069A6B4 /* CanvasModuleOutput.swift */; };
 		8DE758D022E703B20069A6B4 /* CanvasPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758CF22E703B20069A6B4 /* CanvasPresenter.swift */; };
@@ -229,6 +231,8 @@
 		8DD4249122F3022D003122B4 /* CanvasStorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasStorable.swift; sourceTree = "<group>"; };
 		8DD4249E22F31AA6003122B4 /* CanvasService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasService.swift; sourceTree = "<group>"; };
 		8DD424A122F31AF8003122B4 /* CanvasServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasServiceProtocol.swift; sourceTree = "<group>"; };
+		8DD424A322F32332003122B4 /* ShapeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeType.swift; sourceTree = "<group>"; };
+		8DD424A622F32530003122B4 /* ShapeViewRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViewRepresentation.swift; sourceTree = "<group>"; };
 		8DE758CB22E703090069A6B4 /* CanvasModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasModule.swift; sourceTree = "<group>"; };
 		8DE758CD22E703300069A6B4 /* CanvasModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasModuleOutput.swift; sourceTree = "<group>"; };
 		8DE758CF22E703B20069A6B4 /* CanvasPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasPresenter.swift; sourceTree = "<group>"; };
@@ -527,6 +531,7 @@
 				8D8ABB4F22EF03350084E4BB /* ShapeStyle */,
 				8D6BAE4322D3474E00FF383C /* Shapes */,
 				8D6BAE4E22D35D5600FF383C /* ShapeView */,
+				8DD424A322F32332003122B4 /* ShapeType.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -645,6 +650,7 @@
 		8DD103A822D494E10052B13B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8DD424A522F324AE003122B4 /* ShapeViewRepresentation */,
 				8DB7D77F22EB3CAD00430C18 /* Color */,
 				8D4D01D222DF70A200348F7A /* Canvas */,
 			);
@@ -755,6 +761,14 @@
 				8DD424A122F31AF8003122B4 /* CanvasServiceProtocol.swift */,
 			);
 			path = CanvasService;
+			sourceTree = "<group>";
+		};
+		8DD424A522F324AE003122B4 /* ShapeViewRepresentation */ = {
+			isa = PBXGroup;
+			children = (
+				8DD424A622F32530003122B4 /* ShapeViewRepresentation.swift */,
+			);
+			path = ShapeViewRepresentation;
 			sourceTree = "<group>";
 		};
 		8DE758C822E702E10069A6B4 /* View */ = {
@@ -983,6 +997,7 @@
 				8D8ABB5122EF03440084E4BB /* ShapeStyle.swift in Sources */,
 				8DB8B0F722E1BD5700EB71D4 /* СanvasesListPresenterProtocol.swift in Sources */,
 				8D7F235022F031E700BA7245 /* CGRect+Extensions.swift in Sources */,
+				8DD424A722F32530003122B4 /* ShapeViewRepresentation.swift in Sources */,
 				8DE758DF22E756A60069A6B4 /* ShapeCollectionViewCell.swift in Sources */,
 				8DE758CC22E703090069A6B4 /* CanvasModule.swift in Sources */,
 				8D4D01D422DF70AF00348F7A /* Canvas.swift in Sources */,
@@ -999,6 +1014,7 @@
 				8DB8B10922E2044C00EB71D4 /* PushRouter.swift in Sources */,
 				8D11BFCB22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift in Sources */,
 				8DD103BC22D4C8D10052B13B /* Coordinator.swift in Sources */,
+				8DD424A422F32332003122B4 /* ShapeType.swift in Sources */,
 				8DC010A222E5B1F100010BCA /* CanvasListManagementServiceProtocol.swift in Sources */,
 				8DD1A17322EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.swift in Sources */,
 				8D21CD1622DCC99B00EA3948 /* CanvasTableView.swift in Sources */,
