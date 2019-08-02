@@ -11,8 +11,8 @@ import Foundation
 public protocol DataStorageAdapter {
     func load(completion: @escaping () -> Void)
     
-    func fetchAllCanvases() -> [CanvasStorable]
-    func saveCanvases(_ canvas: [CanvasStorable])
+    func fetchAllCanvases() -> [CanvasDTO]
+    func saveCanvases(_ canvas: [CanvasDTO])
     func deleteCanvases(identifiers: [UUID])
 }
 

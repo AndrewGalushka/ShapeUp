@@ -3,7 +3,7 @@
     <entity name="CanvasEntity" representedClassName="CanvasEntity" syncable="YES" codeGenerationType="class">
         <attribute name="identifier" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" defaultValueString="Unnamed" syncable="YES"/>
-        <relationship name="shapes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ShapeEntity" inverseName="canvasEntity" inverseEntity="ShapeEntity" syncable="YES"/>
+        <relationship name="shapes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ShapeViewEntity" inverseName="canvasEntity" inverseEntity="ShapeViewEntity" syncable="YES"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="identifier"/>
@@ -16,8 +16,9 @@
         <attribute name="green" attributeType="Float" minValueString="0" maxValueString="1" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="red" attributeType="Float" minValueString="0" maxValueString="1" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="ShapeEntity" representedClassName="ShapeEntity" syncable="YES" codeGenerationType="class">
+    <entity name="ShapeViewEntity" representedClassName="ShapeViewEntity" syncable="YES" codeGenerationType="class">
         <attribute name="height" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="shapeMetaData" optional="YES" attributeType="Binary" valueTransformerName="" syncable="YES"/>
         <attribute name="width" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="xOrigin" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="yOrigin" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -25,7 +26,7 @@
     </entity>
     <elements>
         <element name="CanvasEntity" positionX="-18" positionY="27" width="128" height="90"/>
-        <element name="ShapeEntity" positionX="-18" positionY="45" width="128" height="120"/>
         <element name="ColorEntity" positionX="-9" positionY="81" width="128" height="105"/>
+        <element name="ShapeViewEntity" positionX="-18" positionY="45" width="128" height="135"/>
     </elements>
 </model>
