@@ -8,5 +8,5 @@
 
 import Foundation
 
-struct ShapeDTO: ShapeStorable {
+struct ShapeDTO {
 }

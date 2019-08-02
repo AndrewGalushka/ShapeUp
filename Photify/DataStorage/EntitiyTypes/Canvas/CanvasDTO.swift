@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct CanvasDTO: CanvasStorable {
+public struct CanvasDTO {
     public var identifier: UUID
     public var name: String
     
