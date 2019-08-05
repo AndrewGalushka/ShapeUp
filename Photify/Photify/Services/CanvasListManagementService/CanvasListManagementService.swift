@@ -52,18 +52,24 @@ class CanvasListManagementService: CanvasListManagementServiceProtocol {
         if pendingCanvasesToSave.contains(where: { canvas.identifier == $0.identifier }) {
             pendingCanvasesToSave.removeAll(where: { $0.identifier == canvas.identifier })
         } else if self.fetchedCanvases.contains(where: { canvas.identifier == $0.identifier }) {
-            self.storageManager.deleteCanvases([canvas])
             self.fetchedCanvases.removeAll(where: { $0.identifier == canvas.identifier })
+            self.pendingCanvasesToDelete.append(canvas)
         }
     }
     
     func saveChanges() {
-        guard !self.pendingCanvasesToSave.isEmpty else { return }
         
-        self.storageManager.saveCanvases(pendingCanvasesToSave)
+        if !self.pendingCanvasesToSave.isEmpty {
+            self.storageManager.saveCanvases(pendingCanvasesToSave)
+            
+            self.fetchedCanvases.append(contentsOf: pendingCanvasesToSave)
+            self.pendingCanvasesToSave.removeAll()
+        }
         
-        self.fetchedCanvases.append(contentsOf: pendingCanvasesToSave)
-        self.pendingCanvasesToSave.removeAll()
+        if !self.pendingCanvasesToDelete.isEmpty {
+            self.storageManager.deleteCanvases(pendingCanvasesToDelete)
+            self.pendingCanvasesToDelete.removeAll()
+        }
     }
     
     // MARK: Methods(Private)

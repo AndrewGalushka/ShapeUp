@@ -43,6 +43,33 @@ final class CoreDataManager {
         return try viewModel.fetch(fetchRequest)
     }
     
+    func delete<T: NSManagedObject>(_ fetchRequest: NSFetchRequest<T>) throws -> [NSManagedObjectID] {
+        let viewModel = persistentContainer.viewContext
+        
+        do {
+            let existingEntities = try viewModel.fetch(fetchRequest)
+            
+            guard !existingEntities.isEmpty else {
+                return []
+            }
+            
+            var deletedEntitiesIDs = [NSManagedObjectID]()
+            
+            for entity in existingEntities {
+                deletedEntitiesIDs.append(entity.objectID)
+                viewModel.delete(entity)
+            }
+            
+            return deletedEntitiesIDs
+            
+        } catch let error as NSError {
+            print("Deleting error: \(error)")
+            
+            return []
+        }
+        
+    }
+    
     func save() {
         persistentContainer.saveContext()
     }

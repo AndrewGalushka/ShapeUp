@@ -43,25 +43,44 @@ class CoreDataManagerAdapter: DataStorageAdapter {
     }
     
     func deleteCanvases(identifiers: [UUID]) {
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Canvas.fetchRequest()
+        let fetchRequest: NSFetchRequest<Canvas> = Canvas.fetchRequest()
+        
         fetchRequest.predicate = NSPredicate(format: "%K in %@",
                                              #keyPath(Canvas.identifier),
                                              identifiers as CVarArg)
         
+        do {
+            let deletedObjectIDs = try coreDataManager.delete(fetchRequest)
+            print("Deleted object ids \(deletedObjectIDs)")
+            
+            coreDataManager.save()
+        } catch let error as NSError {
+            print("Deleting error: \(error)")
+        }
+    }
+    
+    /*
+    func deleteCanvases(identifiers: [UUID]) {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Canvas.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "%K in %@",
+                                             #keyPath(Canvas.identifier),
+                                             identifiers as CVarArg)
+
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         deleteRequest.resultType = .resultTypeObjectIDs
-        
+
         do {
             let result = try self.coreDataManager.mainContext().execute(deleteRequest) as? NSBatchDeleteResult
             let deletedObjectIDs = result?.result as? [NSManagedObjectID]
-            
+
             if let deletedObjectIDs = deletedObjectIDs {
                 print("Deleted object ids \(deletedObjectIDs)")
                 NSManagedObjectContext.mergeChanges(fromRemoteContextSave: [NSDeletedObjectsKey: deletedObjectIDs], into: [coreDataManager.mainContext()])
             }
-            
+
         } catch (let error as NSError) {
             print("Deleting error: \(error)")
         }
     }
+ */
 }

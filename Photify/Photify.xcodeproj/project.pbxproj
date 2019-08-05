@@ -13,6 +13,9 @@
 		8D09351222F4AEEE0040F3B2 /* ManagedObjectModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4248C22F3022D003122B4 /* ManagedObjectModel.xcdatamodeld */; };
 		8D0C0F9E22F8100A00231D37 /* StorageModelsTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C0F9D22F8100A00231D37 /* StorageModelsTranslator.swift */; };
 		8D0C0FA022F8113400231D37 /* StorageModelsTranslator+Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C0F9F22F8113400231D37 /* StorageModelsTranslator+Canvas.swift */; };
+		8D0C0FA422F834BB00231D37 /* DataStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD4245F22F3018C003122B4 /* DataStorage.framework */; };
+		8D0C0FA522F834BB00231D37 /* DataStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD4245F22F3018C003122B4 /* DataStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D0C0FA922F834C100231D37 /* AtomicProperty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1B86CA22F2CC530094BAB8 /* AtomicProperty.framework */; };
 		8D11BFCB22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D11BFCA22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift */; };
 		8D18F17722D5D0C900E7B1E0 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F17622D5D0C900E7B1E0 /* AppAssembler.swift */; };
 		8D18F17922D5D29200E7B1E0 /* CanvasViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */; };
@@ -111,6 +114,30 @@
 		8DE758E022E756A60069A6B4 /* ShapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DE758DE22E756A60069A6B4 /* ShapeCollectionViewCell.xib */; };
 		8DF18A2B22D79CFD0090A2FE /* SingleReceiverBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8D0C0FA622F834BB00231D37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D6BAE1C22D332E900FF383C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DD4245E22F3018C003122B4;
+			remoteInfo = DataStorage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8D0C0FA822F834BB00231D37 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8D0C0FA522F834BB00231D37 /* DataStorage.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8D0934EF22F488800040F3B2 /* CanvasDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasDTO.swift; sourceTree = "<group>"; };
@@ -236,6 +263,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D0C0FA922F834C100231D37 /* AtomicProperty.framework in Frameworks */,
+				8D0C0FA422F834BB00231D37 /* DataStorage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,10 +778,10 @@
 		8DD4248A22F3022D003122B4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				8DD4248B22F3022D003122B4 /* CoreDataManager.swift */,
-				8DD4248C22F3022D003122B4 /* ManagedObjectModel.xcdatamodeld */,
-				8DD4248E22F3022D003122B4 /* PersistentContainer.swift */,
 				8DD4248F22F3022D003122B4 /* CoreDataManagerAdapter.swift */,
+				8DD4248B22F3022D003122B4 /* CoreDataManager.swift */,
+				8DD4248E22F3022D003122B4 /* PersistentContainer.swift */,
+				8DD4248C22F3022D003122B4 /* ManagedObjectModel.xcdatamodeld */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -860,10 +889,12 @@
 				8D6BAE2022D332E900FF383C /* Sources */,
 				8D6BAE2122D332E900FF383C /* Frameworks */,
 				8D6BAE2222D332E900FF383C /* Resources */,
+				8D0C0FA822F834BB00231D37 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8D0C0FA722F834BB00231D37 /* PBXTargetDependency */,
 			);
 			name = Photify;
 			productName = Photify;
@@ -1079,6 +1110,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8D0C0FA722F834BB00231D37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DD4245E22F3018C003122B4 /* DataStorage */;
+			targetProxy = 8D0C0FA622F834BB00231D37 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		8D6BAE3322D332EA00FF383C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -1266,6 +1305,7 @@
 		8D6BAE3A22D332EA00FF383C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDDE2DY87F;
@@ -1285,6 +1325,7 @@
 		8D6BAE3B22D332EA00FF383C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDDE2DY87F;
