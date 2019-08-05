@@ -11,9 +11,17 @@ import Foundation
 public struct CanvasDTO {
     public var identifier: UUID
     public var name: String
+    public internal(set) var shapes: [ShapeViewDTO]
     
     public init(identifier: UUID, name: String) {
         self.identifier = identifier
         self.name = name
+        self.shapes = []
+    }
+    
+    init(identifier: UUID, name: String, shapes: [ShapeViewDTO]) {
+        self.identifier = identifier
+        self.name = name
+        self.shapes = []
     }
 }
