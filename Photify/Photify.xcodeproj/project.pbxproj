@@ -274,6 +274,14 @@
 			path = Mapper;
 			sourceTree = "<group>";
 		};
+		8D0C0FA122F81D5300231D37 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				8DD4248422F3022D003122B4 /* CoreDataEntityMapper+Canvas.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
 		8D18D8E122F1C9F100C588E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -721,10 +729,10 @@
 		8DD4248222F3022D003122B4 /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
-				8DD4248322F3022D003122B4 /* CanvasEntityMapable.swift */,
-				8DD4248422F3022D003122B4 /* CoreDataEntityMapper+Canvas.swift */,
 				8DD4248522F3022D003122B4 /* ManagedObjectMapable.swift */,
+				8DD4248322F3022D003122B4 /* CanvasEntityMapable.swift */,
 				8DD4248622F3022D003122B4 /* CoreDataEntityMapper.swift */,
+				8D0C0FA122F81D5300231D37 /* Canvas */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
