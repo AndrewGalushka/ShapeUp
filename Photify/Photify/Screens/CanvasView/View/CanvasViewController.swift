@@ -44,7 +44,7 @@ class CanvasViewController: UIViewController {
     
     private func configureScrollView() {
         scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
-        scrollView.backgroundColor = .init(red: 239 / 255.0, green: 237 / 255.0, blue: 238 / 255.0, alpha: 1.0)
+        scrollView.backgroundColor = Design.Colors.canvasBackgroundWhite
     }
     
     private func configureColorPicker() {

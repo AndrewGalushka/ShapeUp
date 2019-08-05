@@ -18,6 +18,8 @@
 		8D0C0FA922F834C100231D37 /* AtomicProperty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1B86CA22F2CC530094BAB8 /* AtomicProperty.framework */; };
 		8D0C0FAB22F869E400231D37 /* ShapeViewMapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C0FAA22F869E400231D37 /* ShapeViewMapable.swift */; };
 		8D0C0FAD22F86F6C00231D37 /* CoreDataEntityMapper+ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C0FAC22F86F6C00231D37 /* CoreDataEntityMapper+ShapeView.swift */; };
+		8D0C0FB122F8886300231D37 /* DesignNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C0FB022F8886300231D37 /* DesignNamespace.swift */; };
+		8D0C0FB322F8888400231D37 /* Design+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C0FB222F8888400231D37 /* Design+Colors.swift */; };
 		8D11BFCB22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D11BFCA22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift */; };
 		8D18F17722D5D0C900E7B1E0 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F17622D5D0C900E7B1E0 /* AppAssembler.swift */; };
 		8D18F17922D5D29200E7B1E0 /* CanvasViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */; };
@@ -148,6 +150,8 @@
 		8D0C0F9F22F8113400231D37 /* StorageModelsTranslator+Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageModelsTranslator+Canvas.swift"; sourceTree = "<group>"; };
 		8D0C0FAA22F869E400231D37 /* ShapeViewMapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViewMapable.swift; sourceTree = "<group>"; };
 		8D0C0FAC22F86F6C00231D37 /* CoreDataEntityMapper+ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataEntityMapper+ShapeView.swift"; sourceTree = "<group>"; };
+		8D0C0FB022F8886300231D37 /* DesignNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignNamespace.swift; sourceTree = "<group>"; };
+		8D0C0FB222F8888400231D37 /* Design+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Design+Colors.swift"; sourceTree = "<group>"; };
 		8D11BFCA22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapesCollectionView+ViewModel.swift"; sourceTree = "<group>"; };
 		8D18F17622D5D0C900E7B1E0 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
 		8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CanvasViewController.storyboard; sourceTree = "<group>"; };
@@ -323,6 +327,15 @@
 				8D0C0FAC22F86F6C00231D37 /* CoreDataEntityMapper+ShapeView.swift */,
 			);
 			path = ShapeView;
+			sourceTree = "<group>";
+		};
+		8D0C0FAF22F8885100231D37 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				8D0C0FB022F8886300231D37 /* DesignNamespace.swift */,
+				8D0C0FB222F8888400231D37 /* Design+Colors.swift */,
+			);
+			path = Design;
 			sourceTree = "<group>";
 		};
 		8D18D8E122F1C9F100C588E9 /* Frameworks */ = {
@@ -573,6 +586,7 @@
 		8DB8B0EA22E1B38100EB71D4 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				8D0C0FAF22F8885100231D37 /* Design */,
 				8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */,
 			);
 			name = Utility;
@@ -1036,6 +1050,7 @@
 				8D6BAE5722D35FC400FF383C /* RectangleGeometry.swift in Sources */,
 				8DD1A16D22E9FDD20016BE5C /* ColorsPickerCollectionViewLayout.swift in Sources */,
 				8DE758D022E703B20069A6B4 /* CanvasPresenter.swift in Sources */,
+				8D0C0FB122F8886300231D37 /* DesignNamespace.swift in Sources */,
 				8D18F18422D60F8200E7B1E0 /* MainScreenViewController.swift in Sources */,
 				8DB8B10B22E205B800EB71D4 /* Router.swift in Sources */,
 				8DC0109B22E59E7500010BCA /* Array+Extension.swift in Sources */,
@@ -1081,6 +1096,7 @@
 				8DB8B0F322E1B8E600EB71D4 /* ViewControllerBasedModule.swift in Sources */,
 				8DE758DC22E7561B0069A6B4 /* ShapesCollectionView.swift in Sources */,
 				8DBB259D22E886B700546D23 /* ColorPicker.swift in Sources */,
+				8D0C0FB322F8888400231D37 /* Design+Colors.swift in Sources */,
 				8D6BAE5B22D37FC000FF383C /* Triangle.swift in Sources */,
 				8D8ABB5322EF25010084E4BB /* ShapeStyle+CAShapeLayer.swift in Sources */,
 				8DB8B0FD22E1DFCC00EB71D4 /* CanvasesListPresenterOutput.swift in Sources */,
