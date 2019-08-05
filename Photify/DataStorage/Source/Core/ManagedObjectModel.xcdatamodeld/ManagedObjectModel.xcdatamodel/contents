@@ -10,15 +10,9 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
-    <entity name="ColorEntity" representedClassName="ColorEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="alpha" attributeType="Float" minValueString="0" maxValueString="1" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="blue" attributeType="Float" minValueString="0" maxValueString="1" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="green" attributeType="Float" minValueString="0" maxValueString="1" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="red" attributeType="Float" minValueString="0" maxValueString="1" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-    </entity>
     <entity name="ShapeViewEntity" representedClassName="ShapeViewEntity" syncable="YES" codeGenerationType="class">
         <attribute name="height" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="shapeMetaData" optional="YES" attributeType="Binary" valueTransformerName="" syncable="YES"/>
+        <attribute name="shapeMetadata" optional="YES" attributeType="Binary" valueTransformerName="" syncable="YES"/>
         <attribute name="width" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="xOrigin" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="yOrigin" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -26,7 +20,6 @@
     </entity>
     <elements>
         <element name="CanvasEntity" positionX="-18" positionY="27" width="128" height="90"/>
-        <element name="ColorEntity" positionX="-9" positionY="81" width="128" height="105"/>
         <element name="ShapeViewEntity" positionX="-18" positionY="45" width="128" height="135"/>
     </elements>
 </model>
