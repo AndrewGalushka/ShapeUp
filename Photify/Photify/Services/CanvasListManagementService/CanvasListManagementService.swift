@@ -43,7 +43,7 @@ class CanvasListManagementService: CanvasListManagementServiceProtocol {
     }
     
     func addCanvas(name: String) {
-        let canvas = Canvas(name: name)
+        let canvas = Canvas(identifier: UUID(), name: name)
         self.pendingCanvasesToSave.append(canvas)
     }
     
