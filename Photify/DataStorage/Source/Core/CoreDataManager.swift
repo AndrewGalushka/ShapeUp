@@ -49,7 +49,7 @@ final class CoreDataManager {
         do {
             let existingEntities = try viewModel.fetch(fetchRequest)
             
-            guard !existingEntities.isEmpty else {
+            if existingEntities.isEmpty {
                 return []
             }
             
