@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import DataStorage
 
-struct Canvas: CanvasStorable {
+struct Canvas {
     let identifier: UUID
     let name: String
     

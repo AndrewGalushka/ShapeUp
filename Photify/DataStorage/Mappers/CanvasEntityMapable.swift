@@ -9,7 +9,7 @@
 import CoreData
 
 public protocol CanvasEntityMapable {
-    func mapOut(canvasEntities: [CanvasEntity]) -> [CanvasStorable]
-    func mapIn(canvases: [CanvasStorable], moc: NSManagedObjectContext) -> [CanvasEntity]
+    func mapOut(canvasEntities: [CanvasEntity]) -> [CanvasDTO]
+    func mapIn(canvases: [CanvasDTO], moc: NSManagedObjectContext) -> [CanvasEntity]
 }
 

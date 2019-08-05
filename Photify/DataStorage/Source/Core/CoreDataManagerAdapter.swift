@@ -23,7 +23,7 @@ class CoreDataManagerAdapter: DataStorageAdapter {
         }
     }
     
-    func fetchAllCanvases() -> [CanvasStorable] {
+    func fetchAllCanvases() -> [CanvasDTO] {
         let fetchCanvasesRequest: NSFetchRequest<CanvasEntity> = CanvasEntity.fetchRequest()
         
         do {
@@ -36,7 +36,7 @@ class CoreDataManagerAdapter: DataStorageAdapter {
         }
     }
     
-    func saveCanvases(_ canvases: [CanvasStorable]) {
+    func saveCanvases(_ canvases: [CanvasDTO]) {
         let canvasEntities = mapper.mapIn(canvases: canvases, moc: self.coreDataManager.mainContext())
         print(canvasEntities)
         coreDataManager.save()
