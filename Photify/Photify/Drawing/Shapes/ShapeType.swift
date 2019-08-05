@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ShapeType: String {
+enum ShapeType: Int {
     case rectangle
     case circle
     case ellipse
