@@ -1,5 +1,5 @@
 //
-//  CanvasEntityMapable.swift
+//  CanvasMapable.swift
 //  Photify
 //
 //  Created by Galushka on 7/18/19.
@@ -8,8 +8,8 @@
 
 import CoreData
 
-protocol CanvasEntityMapable {
-    func mapOut(canvasEntities: [CanvasEntity]) -> [CanvasDTO]
-    func mapIn(canvases: [CanvasDTO], moc: NSManagedObjectContext) -> [CanvasEntity]
+protocol CanvasMapable {
+    func mapOut(canvases: [Canvas]) -> [CanvasDTO]
+    func mapIn(canvasesDTOs: [CanvasDTO], moc: NSManagedObjectContext) -> [Canvas]
 }
 

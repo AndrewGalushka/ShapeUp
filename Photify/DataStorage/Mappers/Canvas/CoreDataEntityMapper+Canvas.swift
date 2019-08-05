@@ -8,33 +8,33 @@
 
 import CoreData
 
-extension CoreDataEntityMapper: CanvasEntityMapable {
+extension CoreDataEntityMapper: CanvasMapable {
     
-    func mapOut(canvasEntities: [CanvasEntity]) -> [CanvasDTO] {
-        let canvases: [CanvasDTO] = canvasEntities.map {
+    func mapOut(canvases: [Canvas]) -> [CanvasDTO] {
+        let canvases: [CanvasDTO] = canvases.map {
             self.mapOut($0)
         }
         
         return canvases
     }
     
-    func mapIn(canvases: [CanvasDTO], moc: NSManagedObjectContext) -> [CanvasEntity] {
-        let canvasEntities: [CanvasEntity] = canvases.map {
+    func mapIn(canvasesDTOs: [CanvasDTO], moc: NSManagedObjectContext) -> [Canvas] {
+        let canvasEntities: [Canvas] = canvasesDTOs.map {
             self.mapIn($0, moc: moc)
         }
         
         return canvasEntities
     }
     
-    private func mapOut(_ canvasEntity: CanvasEntity) -> CanvasDTO {
-        return CanvasDTO(identifier: canvasEntity.identifier!, name: canvasEntity.name ?? "")
+    private func mapOut(_ Canvas: Canvas) -> CanvasDTO {
+        return CanvasDTO(identifier: Canvas.identifier!, name: Canvas.name ?? "")
     }
     
-    private func mapIn(_ canvas: CanvasDTO, moc: NSManagedObjectContext) -> CanvasEntity {
-        let canvasEntity = CanvasEntity(context: moc)
-        canvasEntity.identifier = canvas.identifier
-        canvasEntity.name = canvas.name
+    private func mapIn(_ canvasDTO: CanvasDTO, moc: NSManagedObjectContext) -> Canvas {
+        let canvas = Canvas(context: moc)
+        canvas.identifier = canvasDTO.identifier
+        canvas.name = canvasDTO.name
         
-        return canvasEntity
+        return canvas
     }
 }
