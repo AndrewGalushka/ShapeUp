@@ -23,12 +23,12 @@ class CoreDataManagerAdapter: DataStorageAdapter {
         }
     }
     
-    func fetchAllCanvases() -> [CanvasStorable] {
-        let fetchCanvasesRequest: NSFetchRequest<CanvasEntity> = CanvasEntity.fetchRequest()
+    func fetchAllCanvases() -> [CanvasDTO] {
+        let fetchCanvasesRequest: NSFetchRequest<Canvas> = Canvas.fetchRequest()
         
         do {
             let canvasEntities = try coreDataManager.fetch(fetchCanvasesRequest)
-            let canvases = mapper.mapOut(canvasEntities: canvasEntities)
+            let canvases = mapper.mapOut(canvases: canvasEntities)
             return canvases
         } catch (let error as NSError) {
             print("fetchAllCanvases Error: \(error.localizedDescription)")
@@ -36,16 +36,16 @@ class CoreDataManagerAdapter: DataStorageAdapter {
         }
     }
     
-    func saveCanvases(_ canvases: [CanvasStorable]) {
-        let canvasEntities = mapper.mapIn(canvases: canvases, moc: self.coreDataManager.mainContext())
+    func saveCanvases(_ canvases: [CanvasDTO]) {
+        let canvasEntities = mapper.mapIn(canvasesDTOs: canvases, moc: self.coreDataManager.mainContext())
         print(canvasEntities)
         coreDataManager.save()
     }
     
     func deleteCanvases(identifiers: [UUID]) {
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = CanvasEntity.fetchRequest()
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Canvas.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "%K in %@",
-                                             #keyPath(CanvasEntity.identifier),
+                                             #keyPath(Canvas.identifier),
                                              identifiers as CVarArg)
         
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)

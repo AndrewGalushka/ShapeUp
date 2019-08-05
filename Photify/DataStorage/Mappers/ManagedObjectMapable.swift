@@ -8,4 +8,4 @@
 
 import Foundation
 
-public typealias CoreDataEntityMapable = CanvasEntityMapable
+typealias CoreDataEntityMapable = CanvasMapable

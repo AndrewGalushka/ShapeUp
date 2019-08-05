@@ -21,11 +21,11 @@ public final class DataStorage {
         }
     }
     
-    public func fetchAllCanvases() -> [CanvasStorable] {
+    public func fetchAllCanvases() -> [CanvasDTO] {
         return dataStorageAdapter.fetchAllCanvases()
     }
     
-    public func saveCanvases(_ canvases: [CanvasStorable]) {
+    public func saveCanvases(_ canvases: [CanvasDTO]) {
         dataStorageAdapter.saveCanvases(canvases)
     }
     

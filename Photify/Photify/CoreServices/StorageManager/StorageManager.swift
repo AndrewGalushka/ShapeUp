@@ -14,6 +14,7 @@ final class StorageManager: StorageManagerType {
     // MARK: Properties(Private)
     
     private let dataStorage = DataStorage()
+    private let translator = StorageModelsTranslator()
     
     // MARK: Private Initializer
     
@@ -36,15 +37,17 @@ final class StorageManager: StorageManagerType {
     
     // MARK: - Methods(Public)
     
-    func saveCanvases(_ canvases: [CanvasStorable]) {
-        dataStorage.saveCanvases(canvases)
+    func saveCanvases(_ canvases: [Canvas]) {
+        let canvasesDTOs = translator.translate(canvases: canvases)
+        dataStorage.saveCanvases(canvasesDTOs)
     }
     
-    func fetchAllCanvases() -> [CanvasStorable] {
-        return dataStorage.fetchAllCanvases()
+    func fetchAllCanvases() -> [Canvas] {
+        let results = dataStorage.fetchAllCanvases()
+        return translator.translate(canvasDTOs: results)
     }
     
-    func deleteCanvases(_ canvases: [CanvasStorable]) {
+    func deleteCanvases(_ canvases: [Canvas]) {
         self.dataStorage.deleteCanvases(identifiers: canvases.map { $0.identifier })
     }
 }
