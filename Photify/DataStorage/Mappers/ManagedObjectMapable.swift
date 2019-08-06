@@ -8,4 +8,4 @@
 
 import Foundation
 
-typealias CoreDataEntityMapable = CanvasMapable & ShapeViewMapable
+typealias CoreDataEntityMapable = CanvasMapable & ShapeViewMapable & ColorMapable

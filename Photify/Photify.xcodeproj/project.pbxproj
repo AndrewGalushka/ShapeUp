@@ -42,6 +42,8 @@
 		8D4C8A3C22E0CC3400282747 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A3B22E0CC3400282747 /* UIColor+Extension.swift */; };
 		8D4CB03922F9CE4100E60B1F /* Canvas+ShapeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4CB03822F9CE4100E60B1F /* Canvas+ShapeViewModel.swift */; };
 		8D4CB03D22F9DCD400E60B1F /* ColorDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4CB03C22F9DCD400E60B1F /* ColorDTO.swift */; };
+		8D4CB04022F9DDA900E60B1F /* ColorMapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4CB03F22F9DDA900E60B1F /* ColorMapable.swift */; };
+		8D4CB04222F9DE6800E60B1F /* CoreDataEntityMapper+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4CB04122F9DE6800E60B1F /* CoreDataEntityMapper+Color.swift */; };
 		8D4D01D122DF67E100348F7A /* StorageManagerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D022DF67E100348F7A /* StorageManagerType.swift */; };
 		8D4D01D422DF70AF00348F7A /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D322DF70AF00348F7A /* Canvas.swift */; };
 		8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2722D332E900FF383C /* AppDelegate.swift */; };
@@ -181,6 +183,8 @@
 		8D4C8A3B22E0CC3400282747 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		8D4CB03822F9CE4100E60B1F /* Canvas+ShapeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Canvas+ShapeViewModel.swift"; sourceTree = "<group>"; };
 		8D4CB03C22F9DCD400E60B1F /* ColorDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDTO.swift; sourceTree = "<group>"; };
+		8D4CB03F22F9DDA900E60B1F /* ColorMapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMapable.swift; sourceTree = "<group>"; };
+		8D4CB04122F9DE6800E60B1F /* CoreDataEntityMapper+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataEntityMapper+Color.swift"; sourceTree = "<group>"; };
 		8D4D01CE22DF5FB000348F7A /* AtomicProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicProperty.swift; sourceTree = "<group>"; };
 		8D4D01D022DF67E100348F7A /* StorageManagerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManagerType.swift; sourceTree = "<group>"; };
 		8D4D01D322DF70AF00348F7A /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
@@ -485,6 +489,15 @@
 			isa = PBXGroup;
 			children = (
 				8D4CB03C22F9DCD400E60B1F /* ColorDTO.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		8D4CB03E22F9DD8E00E60B1F /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				8D4CB03F22F9DDA900E60B1F /* ColorMapable.swift */,
+				8D4CB04122F9DE6800E60B1F /* CoreDataEntityMapper+Color.swift */,
 			);
 			path = Color;
 			sourceTree = "<group>";
@@ -859,6 +872,7 @@
 				8DD4248622F3022D003122B4 /* CoreDataEntityMapper.swift */,
 				8D0C0FA122F81D5300231D37 /* Canvas */,
 				8D0C0FAE22F86F8000231D37 /* ShapeView */,
+				8D4CB03E22F9DD8E00E60B1F /* Color */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -1195,6 +1209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D09351222F4AEEE0040F3B2 /* ManagedObjectModel.xcdatamodeld in Sources */,
+				8D4CB04222F9DE6800E60B1F /* CoreDataEntityMapper+Color.swift in Sources */,
 				8D0C0FAD22F86F6C00231D37 /* CoreDataEntityMapper+ShapeView.swift in Sources */,
 				8DD4249622F3022D003122B4 /* DataStorageAdapter.swift in Sources */,
 				8D0EA80922F974640069A619 /* CoreDataManagerAdapter+CanvasShapesViewsStore.swift in Sources */,
@@ -1202,6 +1217,7 @@
 				8DD4249B22F3022D003122B4 /* CoreDataManagerAdapter.swift in Sources */,
 				8D0934F022F488800040F3B2 /* CanvasDTO.swift in Sources */,
 				8DD4249422F3022D003122B4 /* ManagedObjectMapable.swift in Sources */,
+				8D4CB04022F9DDA900E60B1F /* ColorMapable.swift in Sources */,
 				8DD4249722F3022D003122B4 /* DataStorage.swift in Sources */,
 				8D0C0FAB22F869E400231D37 /* ShapeViewMapable.swift in Sources */,
 				8DD4249522F3022D003122B4 /* CoreDataEntityMapper.swift in Sources */,
