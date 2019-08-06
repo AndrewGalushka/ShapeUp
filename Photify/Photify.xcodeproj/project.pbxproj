@@ -41,6 +41,7 @@
 		8D4C8A2522E0590A00282747 /* UIAlertController+AddCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A2422E0590A00282747 /* UIAlertController+AddCanvas.swift */; };
 		8D4C8A3C22E0CC3400282747 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A3B22E0CC3400282747 /* UIColor+Extension.swift */; };
 		8D4CB03922F9CE4100E60B1F /* Canvas+ShapeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4CB03822F9CE4100E60B1F /* Canvas+ShapeViewModel.swift */; };
+		8D4CB03D22F9DCD400E60B1F /* ColorDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4CB03C22F9DCD400E60B1F /* ColorDTO.swift */; };
 		8D4D01D122DF67E100348F7A /* StorageManagerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D022DF67E100348F7A /* StorageManagerType.swift */; };
 		8D4D01D422DF70AF00348F7A /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D322DF70AF00348F7A /* Canvas.swift */; };
 		8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2722D332E900FF383C /* AppDelegate.swift */; };
@@ -179,6 +180,7 @@
 		8D4C8A2822E070F700282747 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		8D4C8A3B22E0CC3400282747 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		8D4CB03822F9CE4100E60B1F /* Canvas+ShapeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Canvas+ShapeViewModel.swift"; sourceTree = "<group>"; };
+		8D4CB03C22F9DCD400E60B1F /* ColorDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDTO.swift; sourceTree = "<group>"; };
 		8D4D01CE22DF5FB000348F7A /* AtomicProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicProperty.swift; sourceTree = "<group>"; };
 		8D4D01D022DF67E100348F7A /* StorageManagerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManagerType.swift; sourceTree = "<group>"; };
 		8D4D01D322DF70AF00348F7A /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
@@ -477,6 +479,14 @@
 				8D4D01D022DF67E100348F7A /* StorageManagerType.swift */,
 			);
 			path = StorageManager;
+			sourceTree = "<group>";
+		};
+		8D4CB03B22F9DCC100E60B1F /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				8D4CB03C22F9DCD400E60B1F /* ColorDTO.swift */,
+			);
+			path = Color;
 			sourceTree = "<group>";
 		};
 		8D4D01D222DF70A200348F7A /* Canvas */ = {
@@ -876,6 +886,7 @@
 			children = (
 				8D0934EE22F488600040F3B2 /* Canvas */,
 				8D0934ED22F488590040F3B2 /* ShapeView */,
+				8D4CB03B22F9DCC100E60B1F /* Color */,
 			);
 			path = EntitiyTypes;
 			sourceTree = "<group>";
@@ -1196,6 +1207,7 @@
 				8DD4249522F3022D003122B4 /* CoreDataEntityMapper.swift in Sources */,
 				8DD4249822F3022D003122B4 /* CoreDataManager.swift in Sources */,
 				8DD4249222F3022D003122B4 /* CanvasEntityMapable.swift in Sources */,
+				8D4CB03D22F9DCD400E60B1F /* ColorDTO.swift in Sources */,
 				8DD4249A22F3022D003122B4 /* PersistentContainer.swift in Sources */,
 				8D0934F222F48A410040F3B2 /* ShapeViewDTO.swift in Sources */,
 				8D0EA80722F974070069A619 /* CoreDataManagerAdapter+CanvasStore.swift in Sources */,
