@@ -9,6 +9,23 @@
 import CoreData
 
 protocol ShapeViewMapable {
-    func mapOut(shapeViews: [ShapeView]) -> [ShapeViewDTO]
-    func mapIn(shapeViewsDTOs: [ShapeViewDTO], moc: NSManagedObjectContext) -> [ShapeView]
+    func translate(shapeView: ShapeView) -> ShapeViewDTO
+    func translate(shapeViewDTO: ShapeViewDTO, moc: NSManagedObjectContext) -> ShapeView
+    
+    func translate(shapeViews: [ShapeView]) -> [ShapeViewDTO]
+    func translate(shapeViewsDTOs: [ShapeViewDTO], moc: NSManagedObjectContext) -> [ShapeView]
+}
+
+extension ShapeViewMapable {
+    func translate(shapeViews: [ShapeView]) -> [ShapeViewDTO] {
+        return shapeViews.map {
+            self.translate(shapeView: $0)
+        }
+    }
+    
+    func translate(shapeViewsDTOs: [ShapeViewDTO], moc: NSManagedObjectContext) -> [ShapeView] {
+        return shapeViewsDTOs.map {
+            self.translate(shapeViewDTO: $0, moc: moc)
+        }
+    }
 }

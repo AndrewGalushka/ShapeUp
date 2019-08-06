@@ -9,19 +9,8 @@
 import CoreData
 
 extension CoreDataEntityMapper: ShapeViewMapable {
-    func mapOut(shapeViews: [ShapeView]) -> [ShapeViewDTO] {
-        return shapeViews.map {
-            self._mapOut($0)
-        }
-    }
     
-    func mapIn(shapeViewsDTOs: [ShapeViewDTO], moc: NSManagedObjectContext) -> [ShapeView] {
-        return shapeViewsDTOs.map {
-            self._mapIn($0, moc: moc)
-        }
-    }
-    
-    private func _mapOut(_ shapeView: ShapeView) -> ShapeViewDTO {
+    func translate(shapeView: ShapeView) -> ShapeViewDTO {
         let origin = ShapeViewDTO.Point(x: shapeView.xOrigin,
                                         y: shapeView.yOrigin)
         let size = ShapeViewDTO.Size(width: shapeView.width,
@@ -31,12 +20,12 @@ extension CoreDataEntityMapper: ShapeViewMapable {
                             size: size)
     }
     
-    private func _mapIn(_ shapeDTO: ShapeViewDTO, moc: NSManagedObjectContext) -> ShapeView {
+    func translate(shapeViewDTO: ShapeViewDTO, moc: NSManagedObjectContext) -> ShapeView {
         let shapeView = ShapeView(context: moc)
-        shapeView.xOrigin = shapeDTO.origin.x
-        shapeView.yOrigin = shapeDTO.origin.y
-        shapeView.width = shapeDTO.size.width
-        shapeView.height = shapeDTO.size.height
+        shapeView.xOrigin = shapeViewDTO.origin.x
+        shapeView.yOrigin = shapeViewDTO.origin.y
+        shapeView.width = shapeViewDTO.size.width
+        shapeView.height = shapeViewDTO.size.height
         
         return shapeView
     }
