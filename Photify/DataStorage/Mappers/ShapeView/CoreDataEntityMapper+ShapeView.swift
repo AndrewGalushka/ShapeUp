@@ -25,8 +25,7 @@ extension CoreDataEntityMapper: ShapeViewMapable {
         return ShapeViewDTO(xOrigin: shapeView.xOrigin,
                             yOrigin: shapeView.yOrigin,
                             height: shapeView.height,
-                            width: shapeView.width,
-                            metadata: shapeView.shapeMetadata)
+                            width: shapeView.width)
     }
     
     private func _mapIn(_ shapeDTO: ShapeViewDTO, moc: NSManagedObjectContext) -> ShapeView {
@@ -35,7 +34,6 @@ extension CoreDataEntityMapper: ShapeViewMapable {
         shapeView.yOrigin = shapeDTO.yOrigin
         shapeView.width = shapeDTO.width
         shapeView.height = shapeDTO.height
-        shapeView.shapeMetadata = shapeDTO.metadata
         
         return shapeView
     }
