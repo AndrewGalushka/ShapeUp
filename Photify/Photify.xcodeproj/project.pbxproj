@@ -298,12 +298,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8D0934ED22F488590040F3B2 /* Shape */ = {
+		8D0934ED22F488590040F3B2 /* ShapeDTO */ = {
 			isa = PBXGroup;
 			children = (
 				8D0934F122F48A410040F3B2 /* ShapeViewDTO.swift */,
 			);
-			path = Shape;
+			path = ShapeDTO;
 			sourceTree = "<group>";
 		};
 		8D0934EE22F488600040F3B2 /* Canvas */ = {
@@ -875,7 +875,7 @@
 			isa = PBXGroup;
 			children = (
 				8D0934EE22F488600040F3B2 /* Canvas */,
-				8D0934ED22F488590040F3B2 /* Shape */,
+				8D0934ED22F488590040F3B2 /* ShapeDTO */,
 			);
 			path = EntitiyTypes;
 			sourceTree = "<group>";
