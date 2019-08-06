@@ -10,6 +10,12 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
+    <entity name="Color" representedClassName="Color" syncable="YES" codeGenerationType="class">
+        <attribute name="alpha" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="blue" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="green" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="red" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <entity name="ShapeView" representedClassName=".ShapeView" syncable="YES" codeGenerationType="class">
         <attribute name="height" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="width" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -20,5 +26,6 @@
     <elements>
         <element name="Canvas" positionX="-18" positionY="27" width="128" height="90"/>
         <element name="ShapeView" positionX="-18" positionY="45" width="128" height="120"/>
+        <element name="Color" positionX="0" positionY="90" width="128" height="105"/>
     </elements>
 </model>
