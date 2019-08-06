@@ -15,6 +15,7 @@
         <attribute name="blue" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="green" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="red" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="shapeView" optional="YES" maxCount="1" deletionRule="Deny" destinationEntity="ShapeView" inverseName="color" inverseEntity="ShapeView" syncable="YES"/>
     </entity>
     <entity name="ShapeView" representedClassName=".ShapeView" syncable="YES" codeGenerationType="class">
         <attribute name="height" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -22,10 +23,11 @@
         <attribute name="xOrigin" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="yOrigin" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="canvas" optional="YES" maxCount="1" deletionRule="Deny" destinationEntity="Canvas" inverseName="shapes" inverseEntity="Canvas" syncable="YES"/>
+        <relationship name="color" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Color" inverseName="shapeView" inverseEntity="Color" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Canvas" positionX="-18" positionY="27" width="128" height="90"/>
-        <element name="ShapeView" positionX="-18" positionY="45" width="128" height="120"/>
-        <element name="Color" positionX="0" positionY="90" width="128" height="105"/>
+        <element name="Canvas" positionX="-575.64453125" positionY="-71.2890625" width="128" height="88"/>
+        <element name="ShapeView" positionX="-342.08984375" positionY="-78.9296875" width="128" height="133"/>
+        <element name="Color" positionX="-64.22265625" positionY="-91.9765625" width="128" height="118"/>
     </elements>
 </model>
