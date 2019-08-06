@@ -12,7 +12,6 @@
     </entity>
     <entity name="ShapeView" representedClassName=".ShapeView" syncable="YES" codeGenerationType="class">
         <attribute name="height" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="shapeMetadata" optional="YES" attributeType="Binary" valueTransformerName="" syncable="YES"/>
         <attribute name="width" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="xOrigin" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="yOrigin" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -20,6 +19,6 @@
     </entity>
     <elements>
         <element name="Canvas" positionX="-18" positionY="27" width="128" height="90"/>
-        <element name="ShapeView" positionX="-18" positionY="45" width="128" height="135"/>
+        <element name="ShapeView" positionX="-18" positionY="45" width="128" height="120"/>
     </elements>
 </model>
