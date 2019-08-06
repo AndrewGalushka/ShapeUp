@@ -9,15 +9,21 @@
 import Foundation
 
 public struct ShapeViewDTO {
-    public var xOrigin: Float
-    public var yOrigin: Float
-    public var height: Float
-    public var width: Float
+    public var origin: Point
+    public var size: Size
     
-    public init(xOrigin: Float, yOrigin: Float, height: Float, width: Float) {
-        self.xOrigin = xOrigin
-        self.yOrigin = yOrigin
-        self.height = height
-        self.width = width
+    public init(origin: ShapeViewDTO.Point, size: ShapeViewDTO.Size) {
+        self.origin = origin
+        self.size = size
+    }
+}
+
+public extension ShapeViewDTO {
+    struct Point {
+        public var x, y: Float
+    }
+    
+    struct Size {
+        public var width, height: Float
     }
 }
