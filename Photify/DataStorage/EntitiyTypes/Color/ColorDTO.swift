@@ -8,9 +8,6 @@
 
 import Foundation
 
-struct ColorDTO {
-    var red: Float
-    var green: Float
-    var blue: Float
-    var alpha: Float
+public struct ColorDTO {
+    public var red, green, blue, alpha: Float
 }
