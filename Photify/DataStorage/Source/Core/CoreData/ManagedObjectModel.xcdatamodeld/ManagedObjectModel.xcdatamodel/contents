@@ -10,7 +10,7 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
-    <entity name="ShapeView" representedClassName="ShapeView" syncable="YES" codeGenerationType="class">
+    <entity name="ShapeView" representedClassName=".ShapeView" syncable="YES" codeGenerationType="class">
         <attribute name="height" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="shapeMetadata" optional="YES" attributeType="Binary" valueTransformerName="" syncable="YES"/>
         <attribute name="width" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
