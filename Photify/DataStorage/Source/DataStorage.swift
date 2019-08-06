@@ -21,6 +21,8 @@ public final class DataStorage {
         }
     }
     
+    // MARK: - Canvas
+    
     public func fetchAllCanvases() -> [CanvasDTO] {
         return dataStorageAdapter.fetchAllCanvases()
     }
@@ -31,5 +33,23 @@ public final class DataStorage {
     
     public func deleteCanvases(identifiers: [UUID]) {
         dataStorageAdapter.deleteCanvases(identifiers: identifiers)
+    }
+    
+    // MARK: - ShapeView
+    
+    public func fetchAllShapesViews(inside canvas: CanvasDTO) -> CanvasDTO? {
+        return self.dataStorageAdapter.fetchAllShapesViews(inside: canvas)
+    }
+    
+    public func fetchAllShapesViews(inside canvasWithID: UUID) -> CanvasDTO? {
+        return self.dataStorageAdapter.fetchAllShapesViews(inside: canvasWithID)
+    }
+    
+    public func addShapesViews(_ shapeViewDTOs: [ShapeViewDTO], to canvas: CanvasDTO) {
+        self.dataStorageAdapter.addShapesViews(shapeViewDTOs, to: canvas)
+    }
+    
+    public func addShapesViews(_ shapeViewDTOs: [ShapeViewDTO], to canvasWithID: UUID) {
+        self.dataStorageAdapter.addShapesViews(shapeViewDTOs, to: canvasWithID)
     }
 }

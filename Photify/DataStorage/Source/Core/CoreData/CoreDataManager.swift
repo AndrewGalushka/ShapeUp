@@ -67,7 +67,6 @@ final class CoreDataManager {
             
             return []
         }
-        
     }
     
     func save() {

@@ -8,5 +8,7 @@
 
 import Foundation
 
+/// Communication with Canvases
 protocol CanvasServiceProtocol {
+    
 }

@@ -23,6 +23,8 @@
 		8D0C0FB522F889FF00231D37 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C0FB422F889FF00231D37 /* Grid.swift */; };
 		8D0C0FB922F88F2F00231D37 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C0FB822F88F2F00231D37 /* GridView.swift */; };
 		8D0C0FBB22F8925600231D37 /* AtomicProperty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1B86CA22F2CC530094BAB8 /* AtomicProperty.framework */; };
+		8D0EA80722F974070069A619 /* CoreDataManagerAdapter+CanvasStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0EA80622F974070069A619 /* CoreDataManagerAdapter+CanvasStore.swift */; };
+		8D0EA80922F974640069A619 /* CoreDataManagerAdapter+CanvasShapesViewsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0EA80822F974640069A619 /* CoreDataManagerAdapter+CanvasShapesViewsStore.swift */; };
 		8D11BFCB22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D11BFCA22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift */; };
 		8D18F17722D5D0C900E7B1E0 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F17622D5D0C900E7B1E0 /* AppAssembler.swift */; };
 		8D18F17922D5D29200E7B1E0 /* CanvasViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */; };
@@ -157,6 +159,8 @@
 		8D0C0FB222F8888400231D37 /* Design+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Design+Colors.swift"; sourceTree = "<group>"; };
 		8D0C0FB422F889FF00231D37 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		8D0C0FB822F88F2F00231D37 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		8D0EA80622F974070069A619 /* CoreDataManagerAdapter+CanvasStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManagerAdapter+CanvasStore.swift"; sourceTree = "<group>"; };
+		8D0EA80822F974640069A619 /* CoreDataManagerAdapter+CanvasShapesViewsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManagerAdapter+CanvasShapesViewsStore.swift"; sourceTree = "<group>"; };
 		8D11BFCA22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapesCollectionView+ViewModel.swift"; sourceTree = "<group>"; };
 		8D18F17622D5D0C900E7B1E0 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
 		8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CanvasViewController.storyboard; sourceTree = "<group>"; };
@@ -359,6 +363,35 @@
 				8D0C0FB822F88F2F00231D37 /* GridView.swift */,
 			);
 			path = GridView;
+			sourceTree = "<group>";
+		};
+		8D0EA80222F973580069A619 /* DataStoreAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				8DD4248722F3022D003122B4 /* DataStorageAdapter.swift */,
+			);
+			path = DataStoreAdapter;
+			sourceTree = "<group>";
+		};
+		8D0EA80322F973C00069A619 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				8D0EA80522F973E40069A619 /* Adapter */,
+				8DD4248B22F3022D003122B4 /* CoreDataManager.swift */,
+				8DD4248E22F3022D003122B4 /* PersistentContainer.swift */,
+				8DD4248C22F3022D003122B4 /* ManagedObjectModel.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		8D0EA80522F973E40069A619 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				8DD4248F22F3022D003122B4 /* CoreDataManagerAdapter.swift */,
+				8D0EA80622F974070069A619 /* CoreDataManagerAdapter+CanvasStore.swift */,
+				8D0EA80822F974640069A619 /* CoreDataManagerAdapter+CanvasShapesViewsStore.swift */,
+			);
+			path = Adapter;
 			sourceTree = "<group>";
 		};
 		8D18D8E122F1C9F100C588E9 /* Frameworks */ = {
@@ -797,7 +830,6 @@
 		8DD4246022F3018C003122B4 /* DataStorage */ = {
 			isa = PBXGroup;
 			children = (
-				8DD4248722F3022D003122B4 /* DataStorageAdapter.swift */,
 				8DD4249022F3022D003122B4 /* EntitiyTypes */,
 				8DD4248222F3022D003122B4 /* Mappers */,
 				8DD4248822F3022D003122B4 /* Source */,
@@ -830,10 +862,8 @@
 		8DD4248A22F3022D003122B4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				8DD4248F22F3022D003122B4 /* CoreDataManagerAdapter.swift */,
-				8DD4248B22F3022D003122B4 /* CoreDataManager.swift */,
-				8DD4248E22F3022D003122B4 /* PersistentContainer.swift */,
-				8DD4248C22F3022D003122B4 /* ManagedObjectModel.xcdatamodeld */,
+				8D0EA80222F973580069A619 /* DataStoreAdapter */,
+				8D0EA80322F973C00069A619 /* CoreData */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1152,6 +1182,7 @@
 				8D09351222F4AEEE0040F3B2 /* ManagedObjectModel.xcdatamodeld in Sources */,
 				8D0C0FAD22F86F6C00231D37 /* CoreDataEntityMapper+ShapeView.swift in Sources */,
 				8DD4249622F3022D003122B4 /* DataStorageAdapter.swift in Sources */,
+				8D0EA80922F974640069A619 /* CoreDataManagerAdapter+CanvasShapesViewsStore.swift in Sources */,
 				8DD4249322F3022D003122B4 /* CoreDataEntityMapper+Canvas.swift in Sources */,
 				8DD4249B22F3022D003122B4 /* CoreDataManagerAdapter.swift in Sources */,
 				8D0934F022F488800040F3B2 /* CanvasDTO.swift in Sources */,
@@ -1163,6 +1194,7 @@
 				8DD4249222F3022D003122B4 /* CanvasEntityMapable.swift in Sources */,
 				8DD4249A22F3022D003122B4 /* PersistentContainer.swift in Sources */,
 				8D0934F222F48A410040F3B2 /* ShapeViewDTO.swift in Sources */,
+				8D0EA80722F974070069A619 /* CoreDataManagerAdapter+CanvasStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
