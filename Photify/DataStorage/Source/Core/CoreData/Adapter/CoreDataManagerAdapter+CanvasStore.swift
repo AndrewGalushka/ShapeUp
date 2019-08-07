@@ -13,9 +13,9 @@ extension CoreDataManagerAdapter {
         let fetchCanvasesRequest: NSFetchRequest<Canvas> = Canvas.fetchRequest()
         
         do {
-            let canvasEntities = try coreDataManager.fetch(fetchCanvasesRequest)
-            let canvases = mapper.mapOut(canvases: canvasEntities)
-            return canvases
+            let canvases = try coreDataManager.fetch(fetchCanvasesRequest)
+            let canvasesDTOs = mapper.translate(canvases: canvases)
+            return canvasesDTOs
         } catch (let error as NSError) {
             print("fetchAllCanvases Error: \(error.localizedDescription)")
             return []
@@ -23,8 +23,8 @@ extension CoreDataManagerAdapter {
     }
     
     func saveCanvases(_ canvases: [CanvasDTO]) {
-        let canvasEntities = mapper.mapIn(canvasesDTOs: canvases, moc: self.coreDataManager.mainContext())
-        print(canvasEntities)
+        let canvases = mapper.translate(canvasesDTOs: canvases, moc: self.coreDataManager.mainContext())
+        print(canvases)
         coreDataManager.save()
     }
     

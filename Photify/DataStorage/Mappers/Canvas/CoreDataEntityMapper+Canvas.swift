@@ -9,24 +9,7 @@
 import CoreData
 
 extension CoreDataEntityMapper: CanvasMapable {
-    
-    func mapOut(canvases: [Canvas]) -> [CanvasDTO] {
-        let canvases: [CanvasDTO] = canvases.map {
-            self.mapOut($0)
-        }
-        
-        return canvases
-    }
-    
-    func mapIn(canvasesDTOs: [CanvasDTO], moc: NSManagedObjectContext) -> [Canvas] {
-        let canvasEntities: [Canvas] = canvasesDTOs.map {
-            self.mapIn($0, moc: moc)
-        }
-        
-        return canvasEntities
-    }
-    
-    private func mapOut(_ canvas: Canvas) -> CanvasDTO {
+    func translate(canvas: Canvas) -> CanvasDTO {
         var canvasDTO = CanvasDTO(identifier: canvas.identifier!, name: canvas.name ?? "")
         
         if let shapes = (canvas.shapes?.compactMap { $0 as? ShapeView }) {
@@ -36,7 +19,7 @@ extension CoreDataEntityMapper: CanvasMapable {
         return canvasDTO
     }
     
-    private func mapIn(_ canvasDTO: CanvasDTO, moc: NSManagedObjectContext) -> Canvas {
+    func translate(canvasDTO: CanvasDTO, moc: NSManagedObjectContext) -> Canvas {
         let canvas = Canvas(context: moc)
         canvas.identifier = canvasDTO.identifier
         canvas.name = canvasDTO.name
