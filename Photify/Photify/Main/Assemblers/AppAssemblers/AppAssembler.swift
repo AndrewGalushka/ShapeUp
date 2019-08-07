@@ -10,14 +10,14 @@ import Foundation
 
 class AppAssembler: AppAssemblerType {
     private(set) var isLoaded: Bool = false
-    private lazy var storageManager: StoreManageable = StorageManager.loadStorage()
+    private lazy var storageManager: StorageManageable = StorageManager.loadStorage()
 
     func loadInternalData() {
         _ = storageManager
         self.isLoaded = true
     }
     
-    func assembleStorageManager() -> StoreManageable {
+    func assembleStorageManager() -> StorageManageable {
         if !isLoaded {
             loadInternalData()
         }

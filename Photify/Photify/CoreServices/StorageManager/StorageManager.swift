@@ -9,12 +9,10 @@
 import Foundation
 import DataStorage
 
-final class StorageManager: StoreManageable {
+final class StorageManager: StorageLoadable {
     
-    // MARK: Properties(Private)
-    
-    private let dataStorage = DataStorage()
-    private let translator: StorageModelsTranslatable = StorageModelsTranslator()
+    let dataStorage = DataStorage()
+    let translator: StorageModelsTranslatable = StorageModelsTranslator()
     
     // MARK: Private Initializer
     
@@ -33,21 +31,5 @@ final class StorageManager: StoreManageable {
         semaphore.wait()
         
         return storageManager
-    }
-    
-    // MARK: - Methods(Public)
-    
-    func saveCanvases(_ canvases: [Canvas]) {
-        let canvasesDTOs = translator.translate(canvases: canvases)
-        dataStorage.saveCanvases(canvasesDTOs)
-    }
-    
-    func fetchAllCanvases() -> [Canvas] {
-        let results = dataStorage.fetchAllCanvases()
-        return translator.translate(canvasesDTOs: results)
-    }
-    
-    func deleteCanvases(_ canvases: [Canvas]) {
-        self.dataStorage.deleteCanvases(identifiers: canvases.map { $0.identifier })
     }
 }

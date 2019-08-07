@@ -12,7 +12,7 @@ class CanvasListManagementService: CanvasListManagementServiceProtocol {
     
     // MARK: - Properties(Private)
     
-    private let storageManager: StoreManageable
+    private let storageManager: StorageManageable
     
     private var fetchedCanvases: [Canvas] = [Canvas]()
     private var pendingCanvasesToSave: [Canvas] = [Canvas]()
@@ -26,7 +26,7 @@ class CanvasListManagementService: CanvasListManagementServiceProtocol {
     
     // MARK: Initializers
     
-    init(storageManager: StoreManageable) {
+    init(storageManager: StorageManageable) {
         self.storageManager = storageManager
     }
     

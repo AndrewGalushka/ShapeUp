@@ -9,13 +9,14 @@
 import Foundation
 import DataStorage
 
-protocol StoreManageable: CanvasStorable {
-    
+typealias StorageManageable = AnyObject & StorageLoadable & CanvasStorable & CanvasShapeViewStorable
+
+protocol StorageLoadable {
     /// Synchronously load persistent storage
     static func loadStorage() -> Self
 }
 
-protocol CanvasStorable: AnyObject {
+protocol CanvasStorable {
     
     // MARK - Write
     
@@ -27,5 +28,15 @@ protocol CanvasStorable: AnyObject {
     func fetchAllCanvases() -> [Canvas]
 }
 
+protocol CanvasShapeViewStorable {
+    
+    // MARK - Read
+    
+    func fetchCanvasBy(ID: UUID)
+    
+    // MARK: - Write
+    
+    func addShapeView(_ shapeView: Canvas.ShapeView, in canvas: Canvas) -> Canvas?
+}
 
 
