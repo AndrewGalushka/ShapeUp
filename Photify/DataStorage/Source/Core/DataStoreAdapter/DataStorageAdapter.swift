@@ -24,8 +24,7 @@ public protocol CanvasShapeViewsStorable {
     func fetchAllShapesViews(inside canvas: CanvasDTO) -> CanvasDTO?
     func fetchAllShapesViews(inside canvasWithID: UUID) -> CanvasDTO?
     
-    func addShapesViews(_ shapeViewDTOs: [ShapeViewDTO], to canvas: CanvasDTO)
-    func addShapesViews(_ shapeViewDTOs: [ShapeViewDTO], to canvasWithID: UUID)
+    func addShapesViews(_ shapeViewDTOs: [ShapeViewDTO], to canvas: CanvasDTO) -> CanvasDTO?
 }
 
 
