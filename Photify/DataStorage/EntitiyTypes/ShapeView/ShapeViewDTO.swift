@@ -12,14 +12,30 @@ public struct ShapeViewDTO {
     public var origin: Point
     public var size: Size
     public var color: ColorDTO?
+    
+    public init(origin: ShapeViewDTO.Point, size: ShapeViewDTO.Size, color: ColorDTO?) {
+        self.origin = origin
+        self.size = size
+        self.color = color
+    }
 }
 
 public extension ShapeViewDTO {
     struct Point {
         public var x, y: Float
+        
+        public init(x: Float, y: Float) {
+            self.x = x
+            self.y = y
+        }
     }
     
     struct Size {
         public var width, height: Float
+        
+        public init(width: Float, height: Float) {
+            self.width = width
+            self.height = height
+        }
     }
 }
