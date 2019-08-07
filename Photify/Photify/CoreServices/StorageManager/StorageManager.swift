@@ -9,7 +9,7 @@
 import Foundation
 import DataStorage
 
-final class StorageManager: StorageManagerType {
+final class StorageManager: StoreManageable {
     
     // MARK: Properties(Private)
     

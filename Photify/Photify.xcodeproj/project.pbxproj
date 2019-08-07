@@ -50,7 +50,7 @@
 		8D4CB03D22F9DCD400E60B1F /* ColorDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4CB03C22F9DCD400E60B1F /* ColorDTO.swift */; };
 		8D4CB04022F9DDA900E60B1F /* ColorMapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4CB03F22F9DDA900E60B1F /* ColorMapable.swift */; };
 		8D4CB04222F9DE6800E60B1F /* CoreDataEntityMapper+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4CB04122F9DE6800E60B1F /* CoreDataEntityMapper+Color.swift */; };
-		8D4D01D122DF67E100348F7A /* StorageManagerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D022DF67E100348F7A /* StorageManagerType.swift */; };
+		8D4D01D122DF67E100348F7A /* StoreManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D022DF67E100348F7A /* StoreManageable.swift */; };
 		8D4D01D422DF70AF00348F7A /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D322DF70AF00348F7A /* Canvas.swift */; };
 		8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2722D332E900FF383C /* AppDelegate.swift */; };
 		8D6BAE2A22D332E900FF383C /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2922D332E900FF383C /* CanvasViewController.swift */; };
@@ -198,7 +198,7 @@
 		8D4CB03F22F9DDA900E60B1F /* ColorMapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMapable.swift; sourceTree = "<group>"; };
 		8D4CB04122F9DE6800E60B1F /* CoreDataEntityMapper+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataEntityMapper+Color.swift"; sourceTree = "<group>"; };
 		8D4D01CE22DF5FB000348F7A /* AtomicProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicProperty.swift; sourceTree = "<group>"; };
-		8D4D01D022DF67E100348F7A /* StorageManagerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManagerType.swift; sourceTree = "<group>"; };
+		8D4D01D022DF67E100348F7A /* StoreManageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManageable.swift; sourceTree = "<group>"; };
 		8D4D01D322DF70AF00348F7A /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 		8D6BAE2422D332E900FF383C /* Photify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6BAE2722D332E900FF383C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; wrapsLines = 0; };
@@ -522,7 +522,7 @@
 			children = (
 				8D0C0F9C22F80F5700231D37 /* Translator */,
 				8D4C8A2822E070F700282747 /* StorageManager.swift */,
-				8D4D01D022DF67E100348F7A /* StorageManagerType.swift */,
+				8D4D01D022DF67E100348F7A /* StoreManageable.swift */,
 			);
 			path = StorageManager;
 			sourceTree = "<group>";
@@ -1235,7 +1235,7 @@
 				8DE758D222E703BF0069A6B4 /* CanvasPresenterProtocol.swift in Sources */,
 				8D6BAE4022D3456C00FF383C /* Shape.swift in Sources */,
 				8D0C0FB922F88F2F00231D37 /* GridView.swift in Sources */,
-				8D4D01D122DF67E100348F7A /* StorageManagerType.swift in Sources */,
+				8D4D01D122DF67E100348F7A /* StoreManageable.swift in Sources */,
 				8DBB258E22E84BF600546D23 /* AnyShape.swift in Sources */,
 				8DB7D78122EB3CD000430C18 /* RGBAColor.swift in Sources */,
 				8DD103A722D47CC70052B13B /* Star.swift in Sources */,

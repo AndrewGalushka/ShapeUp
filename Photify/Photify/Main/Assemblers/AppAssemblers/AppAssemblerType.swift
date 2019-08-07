@@ -11,5 +11,5 @@ import Foundation
 protocol AppAssemblerType {
     var isLoaded: Bool { get }
     func loadInternalData()
-    func assembleStorageManager() -> StorageManagerType
+    func assembleStorageManager() -> StoreManageable
 }

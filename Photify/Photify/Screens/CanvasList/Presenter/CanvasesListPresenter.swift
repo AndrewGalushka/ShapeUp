@@ -21,7 +21,7 @@ class CanvasesListPresenter: CanvasesListPresenterProtocol {
     
     // MARK: - Initializers
     
-    init(storageManager: StorageManagerType) {
+    init(storageManager: StoreManageable) {
         self.canvasListManagemetService = CanvasListManagementService(storageManager: storageManager)
     }
     
