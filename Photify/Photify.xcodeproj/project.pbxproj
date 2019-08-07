@@ -572,7 +572,6 @@
 				8DB8B0E822E1AD3700EB71D4 /* Services */,
 				8DB8B0EC22E1B44D00EB71D4 /* CoreServices */,
 				8DE758DA22E754B70069A6B4 /* Controls */,
-				8DD103B322D4BCBE0052B13B /* Core */,
 				8DD103A822D494E10052B13B /* Models */,
 				8DB8B0F122E1B7C500EB71D4 /* Protocols */,
 				8D18F17A22D5D2F300E7B1E0 /* Extensions */,
@@ -837,13 +836,6 @@
 				8D4D01D222DF70A200348F7A /* Canvas */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		8DD103B322D4BCBE0052B13B /* Core */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		8DD103BA22D4C8B90052B13B /* Coordinator */ = {
