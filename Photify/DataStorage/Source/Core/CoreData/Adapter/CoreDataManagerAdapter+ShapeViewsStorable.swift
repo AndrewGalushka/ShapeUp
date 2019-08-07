@@ -1,5 +1,5 @@
 //
-//  CoreDataManagerAdapter+CanvasShapesViewsStore.swift
+//  CoreDataManagerAdapter+ShapeViewsStorable.swift
 //  DataStorage
 //
 //  Created by Galushka on 8/6/19.
@@ -8,7 +8,7 @@
 
 import CoreData
 
-extension CoreDataManagerAdapter {
+extension CoreDataManagerAdapter: CanvasShapeViewsStorable {
     func fetchAllShapesViews(inside canvas: CanvasDTO) -> CanvasDTO? {
         fatalError()
     }

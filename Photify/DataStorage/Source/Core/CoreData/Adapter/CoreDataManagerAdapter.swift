@@ -8,7 +8,7 @@
 
 import CoreData
 
-class CoreDataManagerAdapter: DataStorageAdapter {
+class CoreDataManagerAdapter: DataStorageAdapterLoadable {
     let coreDataManager: CoreDataManager
     let mapper: CoreDataEntityMapable
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias DataStorageAdapter = DataStorageAdapterLoadable & CanvasStorable & CanvasShapesViewsStorable
+typealias DataStorageAdapter = DataStorageAdapterLoadable & CanvasStorable & CanvasShapeViewsStorable
 
 public protocol DataStorageAdapterLoadable: AnyObject {
     func load(completion: @escaping () -> Void)
@@ -20,7 +20,7 @@ public protocol CanvasStorable {
     func deleteCanvases(identifiers: [UUID])
 }
 
-public protocol CanvasShapesViewsStorable {
+public protocol CanvasShapeViewsStorable {
     func fetchAllShapesViews(inside canvas: CanvasDTO) -> CanvasDTO?
     func fetchAllShapesViews(inside canvasWithID: UUID) -> CanvasDTO?
     

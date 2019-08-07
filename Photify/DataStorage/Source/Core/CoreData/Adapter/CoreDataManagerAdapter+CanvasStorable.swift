@@ -1,5 +1,5 @@
 //
-//  CoreDataManagerAdapter+CanvasStore.swift
+//  CoreDataManagerAdapter+CanvasStorable.swift
 //  DataStorage
 //
 //  Created by Galushka on 8/6/19.
@@ -8,7 +8,7 @@
 
 import CoreData
 
-extension CoreDataManagerAdapter {
+extension CoreDataManagerAdapter: CanvasStorable {
     func fetchAllCanvases() -> [CanvasDTO] {
         let fetchCanvasesRequest: NSFetchRequest<Canvas> = Canvas.fetchRequest()
         
