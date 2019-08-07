@@ -9,11 +9,6 @@
 import Foundation
 
 struct Canvas {
-    let identifier: UUID
-    let name: String
-    
-    init(identifier: UUID, name: String) {
-        self.identifier = identifier
-        self.name = name
-    }
+    var identifier: UUID
+    var name: String
 }
