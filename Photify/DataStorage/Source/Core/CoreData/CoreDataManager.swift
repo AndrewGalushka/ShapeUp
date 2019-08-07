@@ -38,12 +38,12 @@ final class CoreDataManager {
         }
     }
     
-    func fetch<T: NSManagedObject>(_ fetchRequest: NSFetchRequest<T>) throws -> [T] {
+    func fetch<T: NSManagedObject>(by fetchRequest: NSFetchRequest<T>) throws -> [T] {
         let viewModel = persistentContainer.viewContext
         return try viewModel.fetch(fetchRequest)
     }
     
-    func delete<T: NSManagedObject>(_ fetchRequest: NSFetchRequest<T>) throws -> [NSManagedObjectID] {
+    func delete<T: NSManagedObject>(by fetchRequest: NSFetchRequest<T>) throws -> [NSManagedObjectID] {
         let viewModel = persistentContainer.viewContext
         
         do {

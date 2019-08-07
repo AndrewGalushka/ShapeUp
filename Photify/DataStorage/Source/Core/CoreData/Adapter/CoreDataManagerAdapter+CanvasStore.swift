@@ -13,7 +13,7 @@ extension CoreDataManagerAdapter {
         let fetchCanvasesRequest: NSFetchRequest<Canvas> = Canvas.fetchRequest()
         
         do {
-            let canvases = try coreDataManager.fetch(fetchCanvasesRequest)
+            let canvases = try coreDataManager.fetch(by: fetchCanvasesRequest)
             let canvasesDTOs = mapper.translate(canvases: canvases)
             return canvasesDTOs
         } catch (let error as NSError) {
@@ -36,7 +36,7 @@ extension CoreDataManagerAdapter {
                                              identifiers as CVarArg)
         
         do {
-            let deletedObjectIDs = try coreDataManager.delete(fetchRequest)
+            let deletedObjectIDs = try coreDataManager.delete(by: fetchRequest)
             print("Deleted object ids \(deletedObjectIDs)")
             
             coreDataManager.save()
