@@ -8,4 +8,4 @@
 
 import Foundation
 
-typealias StorageModelsTranslatable = CanvasMapable & ColorMapable
+typealias StorageModelsTranslatable = CanvasMapable & ColorMapable & CanvasShapeViewMapable
