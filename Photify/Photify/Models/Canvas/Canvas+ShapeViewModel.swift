@@ -10,7 +10,8 @@ import CoreGraphics
 
 extension Canvas {
     struct ShapeView {
-        let origin: CGPoint
-        let size: CGSize
+        var origin: CGPoint
+        var size: CGSize
+        var color: Color?
     }
 }
