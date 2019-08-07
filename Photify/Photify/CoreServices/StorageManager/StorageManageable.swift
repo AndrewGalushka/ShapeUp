@@ -9,9 +9,9 @@
 import Foundation
 import DataStorage
 
-typealias StorageManageable = AnyObject & StorageLoadable & CanvasStorable & CanvasShapeViewStorable
+typealias StorageManageable = StorageLoadable & CanvasStorable & CanvasShapeViewStorable
 
-protocol StorageLoadable {
+protocol StorageLoadable: AnyObject {
     /// Synchronously load persistent storage
     static func loadStorage() -> Self
 }
