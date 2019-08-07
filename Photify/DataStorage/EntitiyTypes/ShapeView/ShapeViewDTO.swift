@@ -11,11 +11,7 @@ import Foundation
 public struct ShapeViewDTO {
     public var origin: Point
     public var size: Size
-    
-    public init(origin: ShapeViewDTO.Point, size: ShapeViewDTO.Size) {
-        self.origin = origin
-        self.size = size
-    }
+    public var color: ColorDTO?
 }
 
 public extension ShapeViewDTO {
