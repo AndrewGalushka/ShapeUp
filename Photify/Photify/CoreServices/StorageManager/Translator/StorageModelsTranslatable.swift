@@ -1,5 +1,5 @@
 //
-//  StorageModelsTranslator.swift
+//  StorageModelsTranslatable.swift
 //  Photify
 //
 //  Created by Galushka on 8/5/19.
@@ -8,4 +8,4 @@
 
 import Foundation
 
-struct StorageModelsTranslator { }
+typealias StorageModelsTranslatable = CanvasMapable & ColorMapable
