@@ -15,6 +15,8 @@ extension StorageModelsTranslator: CanvasMapable {
     }
     
     func translate(canvasDTO: CanvasDTO) -> Canvas {
-        return Canvas(identifier: canvasDTO.identifier, name: canvasDTO.name)
+        return Canvas(identifier: canvasDTO.identifier,
+                      name: canvasDTO.name,
+                      shapes: self.translate(shapeViewsDTOs: canvasDTO.shapes))
     }
 }

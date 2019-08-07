@@ -11,4 +11,5 @@ import Foundation
 struct Canvas {
     var identifier: UUID
     var name: String
+    var shapes: [ShapeView]
 }

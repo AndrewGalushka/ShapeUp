@@ -33,17 +33,14 @@ class CanvasListManagementService: CanvasListManagementServiceProtocol {
     // MARK: CanvasListManagementServiceProtocol imp
     
     func fetchAllCanvases() -> [Canvas] {
-        let fetchedCanvases = storageManager.fetchAllCanvases().map {
-            return Canvas(identifier: $0.identifier, name: $0.name)
-        }
-        
+        let fetchedCanvases = storageManager.fetchAllCanvases()
         self.fetchedCanvases = fetchedCanvases
         
         return self.currentCanvasList()
     }
     
     func addCanvas(name: String) {
-        let canvas = Canvas(identifier: UUID(), name: name)
+        let canvas = Canvas(identifier: UUID(), name: name, shapes: [])
         self.pendingCanvasesToSave.append(canvas)
     }
     
