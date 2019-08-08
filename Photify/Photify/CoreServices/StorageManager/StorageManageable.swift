@@ -25,14 +25,13 @@ protocol CanvasStorable {
     
     // MARK - Read
     
+    func fetchCanvasBy(ID: UUID) -> Canvas?
     func fetchAllCanvases() -> [Canvas]
 }
 
 protocol CanvasShapeViewStorable {
     
     // MARK - Read
-    
-    func fetchCanvasBy(ID: UUID)
     
     // MARK: - Write
     

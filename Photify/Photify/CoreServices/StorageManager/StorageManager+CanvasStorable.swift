@@ -9,6 +9,16 @@
 import Foundation
 
 extension StorageManager: CanvasStorable {
+    
+    func fetchCanvasBy(ID: UUID) -> Canvas? {
+        guard let fetchedCanvas = dataStorage.fetchCanvasBy(ID: ID) else {
+            return nil
+        }
+        
+        let canvas = translator.translate(canvasDTO: fetchedCanvas)
+        return canvas
+    }
+    
     func saveCanvases(_ canvases: [Canvas]) {
         let canvasesDTOs = translator.translate(canvases: canvases)
         dataStorage.saveCanvases(canvasesDTOs)

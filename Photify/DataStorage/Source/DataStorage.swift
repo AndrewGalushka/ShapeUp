@@ -27,6 +27,10 @@ public final class DataStorage {
         return dataStorageAdapter.fetchAllCanvases()
     }
     
+    public func fetchCanvasBy(ID canavsID: UUID) -> CanvasDTO? {
+        return dataStorageAdapter.fetchCanvasBy(ID: canavsID)
+    }
+    
     public func saveCanvases(_ canvases: [CanvasDTO]) {
         dataStorageAdapter.saveCanvases(canvases)
     }

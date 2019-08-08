@@ -8,12 +8,7 @@
 
 import Foundation
 
-extension StorageManager: CanvasShapeViewStorable {
-    func fetchCanvasBy(ID: UUID) {
-        #warning("Need to add real implementation")
-        fatalError()
-    }
-    
+extension StorageManager: CanvasShapeViewStorable {    
     func addShapeView(_ shapeView: Canvas.ShapeView, in canvas: Canvas) -> Canvas? {
         let shapeViewDTO = translator.translate(shapeView: shapeView)
         let canvasDTO = translator.translate(canvas: canvas)
