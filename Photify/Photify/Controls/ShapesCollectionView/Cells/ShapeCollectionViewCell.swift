@@ -64,6 +64,11 @@ class ShapeCollectionViewCell: UICollectionViewCell {
     
     private func configureDragInteraction() {
         let dragInteraction = UIDragInteraction(delegate: self)
+        
+        // NOTE: For iPhone devices we mast explicitly set this property
+        // For iPad this is enabled by default
+        dragInteraction.isEnabled = true
+        
         self.contentView.addInteraction(dragInteraction)
     }
 }
