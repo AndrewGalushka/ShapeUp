@@ -74,7 +74,5 @@ extension CoreDataManagerAdapter: CanvasShapeViewsStorable {
             print("[addShapesViews([ShapeViewDTO], CanvasDTO)] Error: \(error)")
             return nil
         }
-        
-        
     }
 }
