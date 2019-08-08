@@ -36,6 +36,7 @@ protocol CanvasShapeViewStorable {
     // MARK: - Write
     
     func addShapeView(_ shapeView: Canvas.ShapeView, in canvas: Canvas) -> Canvas?
+    func addShapeView(_ shapeViews: [Canvas.ShapeView], in canvas: Canvas) -> Canvas?
 }
 
 

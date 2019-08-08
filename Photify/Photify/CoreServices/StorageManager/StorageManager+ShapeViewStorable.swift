@@ -8,12 +8,19 @@
 
 import Foundation
 
-extension StorageManager: CanvasShapeViewStorable {    
+extension StorageManager: CanvasShapeViewStorable {
     func addShapeView(_ shapeView: Canvas.ShapeView, in canvas: Canvas) -> Canvas? {
-        let shapeViewDTO = translator.translate(shapeView: shapeView)
+        return self.addShapeView([shapeView], in: canvas)
+    }
+    
+    func addShapeView(_ shapeViews: [Canvas.ShapeView], in canvas: Canvas) -> Canvas? {
+        let shapeViewDTOs = translator.translate(shapeViews: shapeViews)
         let canvasDTO = translator.translate(canvas: canvas)
         
-        #warning("Need to add real implementation")
-        fatalError()
+        guard let updatedCanvasDTO = self.dataStorage.addShapeViews(shapeViewDTOs, to: canvasDTO) else {
+            return nil
+        }
+        
+        return translator.translate(canvasDTO: updatedCanvasDTO)
     }
 }
