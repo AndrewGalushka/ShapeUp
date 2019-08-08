@@ -9,7 +9,7 @@
 import CoreData
 
 extension CoreDataManagerAdapter: CanvasShapeViewsStorable {
-    func fetchAllShapesViews(inside canvas: CanvasDTO) -> CanvasDTO? {
+    func fetchShapeViews(inside canvas: CanvasDTO) -> CanvasDTO? {
         let request: NSFetchRequest<ShapeView> = ShapeView.fetchRequest()
         request.predicate = NSPredicate(format: "%K.%K == %@",
                                         #keyPath(ShapeView.canvas),
@@ -25,12 +25,12 @@ extension CoreDataManagerAdapter: CanvasShapeViewsStorable {
             return updatedCanvasDTO
             
         } catch let error as NSError {
-            print("[fetchAllShapesViews(inside: CanvasDTO)] Error: \(error)")
+            print("[fetchShapeViews(inside: CanvasDTO)] Error: \(error)")
             return nil
         }
     }
     
-    func fetchAllShapesViews(inside canvasWithID: UUID) -> CanvasDTO? {
+    func fetchShapeViews(inside canvasWithID: UUID) -> CanvasDTO? {
         let request: NSFetchRequest<Canvas> = Canvas.fetchRequest()
         request.predicate = NSPredicate(format: "%K == %@",
                                         #keyPath(Canvas.identifier),
@@ -45,12 +45,12 @@ extension CoreDataManagerAdapter: CanvasShapeViewsStorable {
             return canvasDTO
             
         } catch let error as NSError {
-            print("[fetchAllShapesViews(inside: UUID] Error: \(error)")
+            print("[fetchShapeViews(inside: UUID] Error: \(error)")
             return nil
         }
     }
     
-    func addShapesViews(_ shapeViewDTOs: [ShapeViewDTO], to canvas: CanvasDTO) -> CanvasDTO? {
+    func addShapeViews(_ shapeViewDTOs: [ShapeViewDTO], to canvas: CanvasDTO) -> CanvasDTO? {
         
         do {
             let canvasFetchRequest: NSFetchRequest<Canvas> = Canvas.fetchRequest()

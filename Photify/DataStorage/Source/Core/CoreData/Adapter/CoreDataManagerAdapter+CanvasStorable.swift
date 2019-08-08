@@ -9,6 +9,27 @@
 import CoreData
 
 extension CoreDataManagerAdapter: CanvasStorable {
+    
+    func fetchCanvasBy(ID: UUID) -> CanvasDTO? {
+        let canvasByIDFetchRequest: NSFetchRequest<Canvas> = Canvas.fetchRequest()
+        canvasByIDFetchRequest.fetchLimit = 1
+        canvasByIDFetchRequest.predicate = NSPredicate(format: "%K == %@",
+                                                       #keyPath(Canvas.identifier),
+                                                       ID as CVarArg)
+        
+        do {
+            guard let fetchedCanvas = try coreDataManager.fetch(by: canvasByIDFetchRequest).first else {
+                return nil
+            }
+            
+            return self.mapper.translate(canvas: fetchedCanvas)
+            
+        } catch let error as NSError {
+            print("[fetchCanvasBy(ID: UUID)] Error: \(error)")
+            return nil
+        }
+    }
+    
     func fetchAllCanvases() -> [CanvasDTO] {
         let fetchCanvasesRequest: NSFetchRequest<Canvas> = Canvas.fetchRequest()
         

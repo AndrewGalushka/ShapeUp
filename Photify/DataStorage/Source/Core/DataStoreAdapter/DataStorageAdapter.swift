@@ -15,16 +15,17 @@ public protocol DataStorageAdapterLoadable: AnyObject {
 }
 
 public protocol CanvasStorable {
+    func fetchCanvasBy(ID: UUID) -> CanvasDTO?
     func fetchAllCanvases() -> [CanvasDTO]
     func saveCanvases(_ canvas: [CanvasDTO])
     func deleteCanvases(identifiers: [UUID])
 }
 
 public protocol CanvasShapeViewsStorable {
-    func fetchAllShapesViews(inside canvas: CanvasDTO) -> CanvasDTO?
-    func fetchAllShapesViews(inside canvasWithID: UUID) -> CanvasDTO?
+    func fetchShapeViews(inside canvas: CanvasDTO) -> CanvasDTO?
+    func fetchShapeViews(inside canvasWithID: UUID) -> CanvasDTO?
     
-    func addShapesViews(_ shapeViewDTOs: [ShapeViewDTO], to canvas: CanvasDTO) -> CanvasDTO?
+    func addShapeViews(_ shapeViewDTOs: [ShapeViewDTO], to canvas: CanvasDTO) -> CanvasDTO?
 }
 
 
