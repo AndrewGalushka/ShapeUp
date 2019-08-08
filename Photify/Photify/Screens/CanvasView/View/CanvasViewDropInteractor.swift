@@ -47,7 +47,7 @@ class CanvasViewDropInteractor: NSObject, UIDropInteractionDelegate {
         let location = session.location(in: parentView)
         
         if self.scrollView.frame.contains(location) {
-            self.scrollView.layer.borderWidth = 5
+            self.scrollView.layer.borderWidth = 3
             self.scrollView.layer.borderColor = UIColor.darkGray.withAlphaComponent(0.5).cgColor
         }
     }
@@ -58,7 +58,7 @@ class CanvasViewDropInteractor: NSObject, UIDropInteractionDelegate {
         let dropOperation: UIDropOperation
         
         if self.scrollView.frame.contains(location) {
-            self.scrollView.layer.borderWidth = 5
+            self.scrollView.layer.borderWidth = 3
             self.scrollView.layer.borderColor = UIColor.darkGray.withAlphaComponent(0.5).cgColor
             
             dropOperation = .copy
