@@ -58,6 +58,14 @@ class CanvasViewController: UIViewController {
 }
 
 extension CanvasViewController: CanvasView {
+    func displayShapes(_ shapeViewModels: [Canvas.ShapeView]) {
+        for shapeViewModel in shapeViewModels {
+            let view = UIView(frame: .init(origin: shapeViewModel.origin, size: shapeViewModel.size))
+            view.backgroundColor = shapeViewModel.color?.uiColor
+            self.scrollView.addSubview(view)
+        }
+    }
+    
     func setTitleText(to text: String) {
         self.title = text
     }
