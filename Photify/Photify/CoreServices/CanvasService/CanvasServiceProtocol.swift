@@ -10,5 +10,7 @@ import Foundation
 
 /// Communication with Canvases
 protocol CanvasServiceProtocol {
+    var canvas: Canvas { get }
     
+    func saveShapeView(_ shapeView: Canvas.ShapeView)
 }
