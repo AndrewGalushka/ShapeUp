@@ -60,7 +60,7 @@ class CanvasViewDropInteractor: NSObject, UIDropInteractionDelegate {
         
         let dropOperation: UIDropOperation
         
-        if self.scrollView.frame.contains(location) {
+        if self.scrollView.point(inside: location, with: nil) {
             self.scrollView.layer.borderWidth = 3
             self.scrollView.layer.borderColor = UIColor.darkGray.withAlphaComponent(0.5).cgColor
             
