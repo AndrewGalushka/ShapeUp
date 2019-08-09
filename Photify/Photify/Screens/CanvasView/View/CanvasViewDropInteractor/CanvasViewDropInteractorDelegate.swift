@@ -1,0 +1,15 @@
+//
+//  CanvasViewDropInteractorDelegate.swift
+//  Photify
+//
+//  Created by Galushka on 8/9/19.
+//  Copyright © 2019 Galushka. All rights reserved.
+//
+
+import Foundation
+import struct CoreGraphics.CGPoint
+
+protocol CanvasViewDropInteractorDelegate: AnyObject {
+    func canvasDropInteractor(_ dropInteractor: CanvasViewDropInteractor, dropShape: Shape, style: ShapeStyle, atLocation: CGPoint)
+}
+

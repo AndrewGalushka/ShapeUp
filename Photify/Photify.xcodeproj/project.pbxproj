@@ -15,7 +15,6 @@
 		8D0C0FA022F8113400231D37 /* StorageModelsTranslator+Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C0F9F22F8113400231D37 /* StorageModelsTranslator+Canvas.swift */; };
 		8D0C0FA422F834BB00231D37 /* DataStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD4245F22F3018C003122B4 /* DataStorage.framework */; };
 		8D0C0FA522F834BB00231D37 /* DataStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD4245F22F3018C003122B4 /* DataStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8D0C0FA922F834C100231D37 /* AtomicProperty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1B86CA22F2CC530094BAB8 /* AtomicProperty.framework */; };
 		8D0C0FAB22F869E400231D37 /* ShapeViewMapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C0FAA22F869E400231D37 /* ShapeViewMapable.swift */; };
 		8D0C0FAD22F86F6C00231D37 /* CoreDataEntityMapper+ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C0FAC22F86F6C00231D37 /* CoreDataEntityMapper+ShapeView.swift */; };
 		8D0C0FB122F8886300231D37 /* DesignNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C0FB022F8886300231D37 /* DesignNamespace.swift */; };
@@ -40,6 +39,9 @@
 		8D18F17E22D5FA5A00E7B1E0 /* XMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F17D22D5FA5A00E7B1E0 /* XMark.swift */; };
 		8D18F18422D60F8200E7B1E0 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F18322D60F8200E7B1E0 /* MainScreenViewController.swift */; };
 		8D18F18622D60F8C00E7B1E0 /* MainScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D18F18522D60F8C00E7B1E0 /* MainScreenViewController.storyboard */; };
+		8D19EB3622FD796C00D21160 /* CanvasViewDropInteractorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D19EB3522FD796C00D21160 /* CanvasViewDropInteractorDelegate.swift */; };
+		8D19EB3722FD877D00D21160 /* AtomicProperty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1B86CA22F2CC530094BAB8 /* AtomicProperty.framework */; };
+		8D19EB3822FD877D00D21160 /* AtomicProperty.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1B86CA22F2CC530094BAB8 /* AtomicProperty.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8D1B86CE22F2CC530094BAB8 /* AtomicProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D1B86CC22F2CC530094BAB8 /* AtomicProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D1B86D722F2CC600094BAB8 /* AtomicProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01CE22DF5FB000348F7A /* AtomicProperty.swift */; };
 		8D1B86DB22F2D4400094BAB8 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A2822E070F700282747 /* StorageManager.swift */; };
@@ -144,6 +146,13 @@
 			remoteGlobalIDString = 8DD4245E22F3018C003122B4;
 			remoteInfo = DataStorage;
 		};
+		8D19EB3922FD877D00D21160 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D6BAE1C22D332E900FF383C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1B86C922F2CC530094BAB8;
+			remoteInfo = AtomicProperty;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -153,6 +162,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8D19EB3822FD877D00D21160 /* AtomicProperty.framework in Embed Frameworks */,
 				8D0C0FA522F834BB00231D37 /* DataStorage.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -188,6 +198,7 @@
 		8D18F17D22D5FA5A00E7B1E0 /* XMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMark.swift; sourceTree = "<group>"; };
 		8D18F18322D60F8200E7B1E0 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		8D18F18522D60F8C00E7B1E0 /* MainScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreenViewController.storyboard; sourceTree = "<group>"; };
+		8D19EB3522FD796C00D21160 /* CanvasViewDropInteractorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewDropInteractorDelegate.swift; sourceTree = "<group>"; };
 		8D1B86CA22F2CC530094BAB8 /* AtomicProperty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AtomicProperty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1B86CC22F2CC530094BAB8 /* AtomicProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AtomicProperty.h; sourceTree = "<group>"; };
 		8D1B86CD22F2CC530094BAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -304,7 +315,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D0C0FA922F834C100231D37 /* AtomicProperty.framework in Frameworks */,
+				8D19EB3722FD877D00D21160 /* AtomicProperty.framework in Frameworks */,
 				8D0C0FA422F834BB00231D37 /* DataStorage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +499,15 @@
 				8D18F18522D60F8C00E7B1E0 /* MainScreenViewController.storyboard */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		8D19EB3422FD795400D21160 /* CanvasViewDropInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				8D7F235122F043BA00BA7245 /* CanvasViewDropInteractor.swift */,
+				8D19EB3522FD796C00D21160 /* CanvasViewDropInteractorDelegate.swift */,
+			);
+			path = CanvasViewDropInteractor;
 			sourceTree = "<group>";
 		};
 		8D1B86CB22F2CC530094BAB8 /* AtomicProperty */ = {
@@ -968,7 +988,7 @@
 				8DE758D322E703F90069A6B4 /* CanvasView.swift */,
 				8D6BAE2922D332E900FF383C /* CanvasViewController.swift */,
 				8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */,
-				8D7F235122F043BA00BA7245 /* CanvasViewDropInteractor.swift */,
+				8D19EB3422FD795400D21160 /* CanvasViewDropInteractor */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1045,6 +1065,7 @@
 			);
 			dependencies = (
 				8D0C0FA722F834BB00231D37 /* PBXTargetDependency */,
+				8D19EB3A22FD877D00D21160 /* PBXTargetDependency */,
 			);
 			name = Photify;
 			productName = Photify;
@@ -1190,6 +1211,7 @@
 				8D6BAE5322D35EFF00FF383C /* GeometryNamespace.swift in Sources */,
 				8D18F17E22D5FA5A00E7B1E0 /* XMark.swift in Sources */,
 				8D8ABB5122EF03440084E4BB /* ShapeStyle.swift in Sources */,
+				8D19EB3622FD796C00D21160 /* CanvasViewDropInteractorDelegate.swift in Sources */,
 				8DB8B0F722E1BD5700EB71D4 /* СanvasesListPresenterProtocol.swift in Sources */,
 				8D7F235022F031E700BA7245 /* CGRect+Extensions.swift in Sources */,
 				8DD424A722F32530003122B4 /* ShapeViewRepresentation.swift in Sources */,
@@ -1285,6 +1307,11 @@
 			isa = PBXTargetDependency;
 			target = 8DD4245E22F3018C003122B4 /* DataStorage */;
 			targetProxy = 8D0C0FA622F834BB00231D37 /* PBXContainerItemProxy */;
+		};
+		8D19EB3A22FD877D00D21160 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1B86C922F2CC530094BAB8 /* AtomicProperty */;
+			targetProxy = 8D19EB3922FD877D00D21160 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
