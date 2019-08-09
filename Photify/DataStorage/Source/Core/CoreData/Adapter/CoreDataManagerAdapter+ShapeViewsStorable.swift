@@ -42,6 +42,7 @@ extension CoreDataManagerAdapter: CanvasShapeViewsStorable {
             }
             
             let canvasDTO = self.mapper.translate(canvas: canvas)
+            
             return canvasDTO
             
         } catch let error as NSError {
@@ -68,6 +69,11 @@ extension CoreDataManagerAdapter: CanvasShapeViewsStorable {
             fetchedCanvas.addToShapes(shapesSet)
             
             let updatedCanvasDTO = self.mapper.translate(canvas: fetchedCanvas)
+            
+            DispatchQueue.global().async {
+                self.coreDataManager.save()
+            }
+            
             return updatedCanvasDTO
             
         } catch let error as NSError {
