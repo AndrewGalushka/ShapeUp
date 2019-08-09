@@ -27,11 +27,13 @@ final class CoreDataManager {
     }
     
     func loadStorage(completion: @escaping () -> Void) {
-        persistentContainer.loadPersistentStores { (storeDescription, error) in
+        persistentContainer.loadPersistentStores { [weak persistentContainer] (storeDescription, error) in
             
             if let error = error {
                 fatalError("Unable to load persistent stores: \(error)")
             }
+            
+            print("DB path \(persistentContainer?.persistentStoreCoordinator.persistentStores.first?.url?.path ?? "<<UNKNOWN>>")")
             
             self.isLoaded.value = true
             completion()
