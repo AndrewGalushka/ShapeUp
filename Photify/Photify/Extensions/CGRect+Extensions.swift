@@ -15,4 +15,8 @@ extension CGRect {
         
         self.init(origin: origin, size: size)
     }
+    
+    var center: CGPoint {
+        return CGPoint(x: self.midX, y: self.midY)
+    }
 }
