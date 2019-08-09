@@ -64,15 +64,20 @@ extension CanvasViewController: CanvasViewDropInteractorDelegate {
                               dropShape shape: Shape,
                               style: ShapeStyle,
                               atLocation dropCenter: CGPoint) {
+        let shapeRect = CGRect(center: dropCenter, size: .init(width: 72, height: 72))
+        
         let shapeView = ShapeView(shape: AnyShape(shape: shape))
         shapeView.shapeLayer.configure(shapeStyle: style)
-        shapeView.frame = CGRect(center: dropCenter, size: .init(width: 72, height: 72))
+        shapeView.frame = shapeRect
         self.scrollView.addSubview(shapeView)
+        
+        presenter?.handleShapeDrop(atLocation: dropCenter, size: shapeRect.size, color: style.lineStyle.strokeColor)
     }
 }
 
 extension CanvasViewController: CanvasView {
     func displayShapes(_ shapeViewModels: [Canvas.ShapeView]) {
+        
         for shapeViewModel in shapeViewModels {
             let view = UIView(frame: .init(origin: shapeViewModel.origin, size: shapeViewModel.size))
             view.backgroundColor = shapeViewModel.color?.uiColor

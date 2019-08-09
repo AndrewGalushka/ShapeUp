@@ -6,7 +6,7 @@
 //  Copyright © 2019 Galushka. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class CanvasPresenter: CanvasPresenterProtocol {
     
@@ -29,6 +29,14 @@ class CanvasPresenter: CanvasPresenterProtocol {
     
     func viewLoaded() {
         self.view?.setTitleText(to: canvasService.canvas.name)
+        self.canvasService.refresh()
         self.view?.displayShapes(canvasService.canvas.shapes)
+    }
+    
+    func handleShapeDrop(atLocation center: CGPoint, size: CGSize, color: Color) {
+        let shapeRect = CGRect(center: center, size: size)
+        let shapeViewModel = Canvas.ShapeView(origin: shapeRect.origin, size: shapeRect.size, color: color)
+        
+        self.canvasService.saveShapeView(shapeViewModel)
     }
 }

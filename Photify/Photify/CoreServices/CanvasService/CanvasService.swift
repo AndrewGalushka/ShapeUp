@@ -9,12 +9,18 @@
 import Foundation
 
 class CanvasService: CanvasServiceProtocol {
-    let canvas: Canvas
-    private let shapeStorage: CanvasShapeViewStorable
+    private(set) var canvas: Canvas
+    private let shapeStorage: CanvasShapeViewStorable & CanvasStorable
     
-    init(canvas: Canvas, shapeStorage: CanvasShapeViewStorable) {
+    init(canvas: Canvas, shapeStorage: CanvasShapeViewStorable & CanvasStorable) {
         self.canvas = canvas
         self.shapeStorage = shapeStorage
+    }
+    
+    func refresh() {
+        if let refreshedCanvas = shapeStorage.fetchCanvasBy(ID: canvas.identifier) {
+            self.canvas = refreshedCanvas
+        }
     }
     
     func saveShapeView(_ shapeView: Canvas.ShapeView) {

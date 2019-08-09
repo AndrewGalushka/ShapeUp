@@ -12,5 +12,6 @@ import Foundation
 protocol CanvasServiceProtocol {
     var canvas: Canvas { get }
     
+    func refresh()
     func saveShapeView(_ shapeView: Canvas.ShapeView)
 }
