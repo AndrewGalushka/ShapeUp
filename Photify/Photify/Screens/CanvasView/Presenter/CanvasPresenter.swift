@@ -9,9 +9,10 @@
 import Foundation
 
 class CanvasPresenter: CanvasPresenterProtocol {
+    
     // MARK: Properties(Private)
     
-    let canvas: Canvas
+    private let canvasService: CanvasServiceProtocol
     
     // MARK: Properties(Public)
     
@@ -20,13 +21,14 @@ class CanvasPresenter: CanvasPresenterProtocol {
     
     // MARK: Initializers
     
-    init(canvas: Canvas) {
-        self.canvas = canvas
+    init(canvasService: CanvasServiceProtocol) {
+        self.canvasService = canvasService
     }
     
     // MARK: - CanvasPresenterProtocol Imp
     
     func viewLoaded() {
-        self.view?.setTitleText(to: canvas.name)
+        self.view?.setTitleText(to: canvasService.canvas.name)
+        self.view?.displayShapes(canvasService.canvas.shapes)
     }
 }

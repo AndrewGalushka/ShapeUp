@@ -24,4 +24,8 @@ class AppAssembler: AppAssemblerType {
         
         return storageManager
     }
+    
+    func assembleCanvasService(canvas: Canvas) -> CanvasServiceProtocol {
+        return CanvasService(canvas: canvas, shapeStorage: storageManager)
+    }
 }

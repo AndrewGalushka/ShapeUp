@@ -12,4 +12,5 @@ protocol AppAssemblerType {
     var isLoaded: Bool { get }
     func loadInternalData()
     func assembleStorageManager() -> StorageManageable
+    func assembleCanvasService(canvas: Canvas) -> CanvasServiceProtocol
 }

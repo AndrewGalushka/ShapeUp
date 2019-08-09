@@ -35,8 +35,9 @@ class ModulesAssembler: ModulesBuilder {
     }
     
     func assembleCanvasModule(canvas: Canvas) -> CanvasModule {
+        let canvasService = appAssembler.assembleCanvasService(canvas: canvas)
         let canvasView = CanvasViewController.loadFromStoryboard()
-        let canvasPresenter = CanvasPresenter(canvas: canvas)
+        let canvasPresenter = CanvasPresenter(canvasService: canvasService)
         
         let canvasModule = CanvasModule(view: canvasView,
                                         presenter: canvasPresenter)
