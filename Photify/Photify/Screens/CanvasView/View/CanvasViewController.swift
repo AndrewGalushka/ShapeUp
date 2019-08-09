@@ -43,6 +43,7 @@ class CanvasViewController: UIViewController {
     }
     
     private func configureScrollView() {
+        scrollView.panGestureRecognizer.minimumNumberOfTouches = 2
         scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         scrollView.backgroundColor = Design.Colors.canvasBackgroundWhite
     }
