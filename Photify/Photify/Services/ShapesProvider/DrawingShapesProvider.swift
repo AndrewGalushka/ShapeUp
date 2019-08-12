@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DrawingShapesProvider {
+struct DrawingShapesProvider {
     
     func allExistingShapeTypes() -> [ShapeType] {
         return ShapeType.AllCases()
