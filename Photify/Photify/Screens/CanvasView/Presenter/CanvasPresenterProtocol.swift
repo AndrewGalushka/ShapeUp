@@ -11,5 +11,5 @@ import CoreGraphics.CGGeometry
 
 protocol CanvasPresenterProtocol: AnyObject {
     func viewLoaded()
-    func handleShapeDrop(atLocation center: CGPoint, size: CGSize, shapeType: ShapeType, color: Color)
+    func handleShapeDrop(shape: Shape, style: ShapeStyle, atLocation center: CGPoint, size: CGSize)
 }

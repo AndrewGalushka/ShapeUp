@@ -33,9 +33,15 @@ class CanvasPresenter: CanvasPresenterProtocol {
         self.view?.displayShapes(canvasService.canvas.shapes)
     }
     
-    func handleShapeDrop(atLocation center: CGPoint, size: CGSize, shapeType: ShapeType, color: Color) {
-        let shapeRect = CGRect(center: center, size: size)
-        let shapeViewModel = Canvas.ShapeView(origin: shapeRect.origin, size: shapeRect.size, shapeType: shapeType, color: color)
+    func handleShapeDrop(shape: Shape, style: ShapeStyle, atLocation center: CGPoint, size: CGSize) {
+        let shapeFrame = CGRect(center: center, size: size)
+        let shapeType = ShapeType.circle
+        let color = style.lineStyle.strokeColor
+        
+        let shapeViewModel = Canvas.ShapeView(origin: shapeFrame.origin,
+                                              size: shapeFrame.size,
+                                              shapeType: shapeType,
+                                              color: color)
         
         self.canvasService.saveShapeView(shapeViewModel)
     }
