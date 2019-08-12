@@ -52,7 +52,7 @@ class ShapesCollectionView: UIView {
     // MARK: - Methods(Private)
     
     private var shapes: [ViewModel] = { () -> [ViewModel] in
-        return ShapesProvider().allExistingShapes().map {
+        return DrawingShapesProvider().allExistingShapes().map {
             ViewModel(shape: $0, color: Color(uiColor: .random()))
         }
     }()
