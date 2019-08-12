@@ -20,7 +20,10 @@ extension StorageModelsTranslator: CanvasShapeViewMapable {
             colorDTO = self.translate(color: color)
         }
         
-        return ShapeViewDTO(origin: origin, size: size, color: colorDTO)
+        return ShapeViewDTO(origin: origin,
+                            size: size,
+                            shapeType: shapeView.shapeType.rawValue,
+                            color: colorDTO)
     }
     
     func translate(shapeViewDTO: ShapeViewDTO) -> Canvas.ShapeView {
@@ -30,8 +33,11 @@ extension StorageModelsTranslator: CanvasShapeViewMapable {
             color = self.translate(colorDTO: colorDTO)
         }
         
+        let shapeType = ShapeType(rawValue: shapeViewDTO.shapeType) ?? .circle
+        
         return Canvas.ShapeView(origin: shapeViewDTO.origin.cgPoint,
                                 size: shapeViewDTO.size.cgSize,
+                                shapeType: shapeType,
                                 color: color)
     }
 }

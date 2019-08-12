@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ShapeType: Int32 {
+enum ShapeType: Int32, CaseIterable {
     case rectangle
     case circle
     case ellipse

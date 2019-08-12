@@ -12,6 +12,7 @@ extension Canvas {
     struct ShapeView {
         var origin: CGPoint
         var size: CGSize
+        var shapeType: ShapeType
         var color: Color?
     }
 }

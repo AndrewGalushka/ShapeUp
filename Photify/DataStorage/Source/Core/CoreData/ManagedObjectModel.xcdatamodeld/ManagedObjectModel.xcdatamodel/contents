@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="1.1">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18G87" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="1.1">
     <entity name="Canvas" representedClassName=".Canvas" syncable="YES" codeGenerationType="class">
         <attribute name="identifier" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" defaultValueString="Unnamed" syncable="YES"/>
@@ -19,6 +19,7 @@
     </entity>
     <entity name="ShapeView" representedClassName=".ShapeView" syncable="YES" codeGenerationType="class">
         <attribute name="height" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="width" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="xOrigin" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="yOrigin" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -27,7 +28,7 @@
     </entity>
     <elements>
         <element name="Canvas" positionX="-575.64453125" positionY="-71.2890625" width="128" height="88"/>
-        <element name="ShapeView" positionX="-342.08984375" positionY="-78.9296875" width="128" height="133"/>
         <element name="Color" positionX="-64.22265625" positionY="-91.9765625" width="128" height="118"/>
+        <element name="ShapeView" positionX="-342.08984375" positionY="-78.9296875" width="128" height="150"/>
     </elements>
 </model>

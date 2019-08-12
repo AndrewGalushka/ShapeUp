@@ -12,11 +12,13 @@ public struct ShapeViewDTO {
     public var origin: Point
     public var size: Size
     public var color: ColorDTO?
+    public var shapeType: Int32
     
-    public init(origin: ShapeViewDTO.Point, size: ShapeViewDTO.Size, color: ColorDTO?) {
+    public init(origin: ShapeViewDTO.Point, size: ShapeViewDTO.Size, shapeType: Int32, color: ColorDTO?) {
         self.origin = origin
         self.size = size
         self.color = color
+        self.shapeType = shapeType
     }
 }
 

@@ -24,6 +24,7 @@ extension CoreDataEntityMapper: ShapeViewMapable {
         
         return ShapeViewDTO(origin: origin,
                             size: size,
+                            shapeType: 0,
                             color: colorDTO)
     }
     
