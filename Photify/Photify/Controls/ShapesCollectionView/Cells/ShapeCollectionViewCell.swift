@@ -14,12 +14,12 @@ class ShapeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var shapeContainerView: SingleViewContainer!
     
-    // MARK: Properties(Private)
+    // MARK: - Properties(Private)
     
     private var shapeLayer = CAShapeLayer()
     private var viewModel: ViewModel?
     
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
