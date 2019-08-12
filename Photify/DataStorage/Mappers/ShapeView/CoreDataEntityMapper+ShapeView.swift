@@ -24,7 +24,7 @@ extension CoreDataEntityMapper: ShapeViewMapable {
         
         return ShapeViewDTO(origin: origin,
                             size: size,
-                            shapeType: 0,
+                            shapeType: shapeView.type,
                             color: colorDTO)
     }
     
@@ -34,6 +34,7 @@ extension CoreDataEntityMapper: ShapeViewMapable {
         shapeView.yOrigin = shapeViewDTO.origin.y
         shapeView.width = shapeViewDTO.size.width
         shapeView.height = shapeViewDTO.size.height
+        shapeView.type = shapeViewDTO.shapeType
         
         if let colorDTO  = shapeViewDTO.color {
             shapeView.color = self.translate(colorDTO: colorDTO, moc: moc)
