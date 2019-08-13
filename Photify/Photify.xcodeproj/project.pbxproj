@@ -57,6 +57,7 @@
 		8D4D01D122DF67E100348F7A /* StorageManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D022DF67E100348F7A /* StorageManageable.swift */; };
 		8D4D01D422DF70AF00348F7A /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01D322DF70AF00348F7A /* Canvas.swift */; };
 		8D62FCE32302A8B6001DF102 /* ShapeTypeToShapeConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62FCE22302A8B6001DF102 /* ShapeTypeToShapeConvertable.swift */; };
+		8D62FCE62302B6A0001DF102 /* ShapesDragAndDropDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62FCE52302B6A0001DF102 /* ShapesDragAndDropDTO.swift */; };
 		8D6BAE2822D332E900FF383C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2722D332E900FF383C /* AppDelegate.swift */; };
 		8D6BAE2A22D332E900FF383C /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE2922D332E900FF383C /* CanvasViewController.swift */; };
 		8D6BAE3222D332EA00FF383C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D6BAE3122D332EA00FF383C /* Assets.xcassets */; };
@@ -217,6 +218,7 @@
 		8D4D01D022DF67E100348F7A /* StorageManageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManageable.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		8D4D01D322DF70AF00348F7A /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 		8D62FCE22302A8B6001DF102 /* ShapeTypeToShapeConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTypeToShapeConvertable.swift; sourceTree = "<group>"; };
+		8D62FCE52302B6A0001DF102 /* ShapesDragAndDropDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesDragAndDropDTO.swift; sourceTree = "<group>"; };
 		8D6BAE2422D332E900FF383C /* Photify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6BAE2722D332E900FF383C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		8D6BAE2922D332E900FF383C /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
@@ -581,6 +583,14 @@
 			path = Canvas;
 			sourceTree = "<group>";
 		};
+		8D62FCE42302B687001DF102 /* ShapesDragAndDropDTO */ = {
+			isa = PBXGroup;
+			children = (
+				8D62FCE52302B6A0001DF102 /* ShapesDragAndDropDTO.swift */,
+			);
+			path = ShapesDragAndDropDTO;
+			sourceTree = "<group>";
+		};
 		8D6BAE1B22D332E900FF383C = {
 			isa = PBXGroup;
 			children = (
@@ -871,6 +881,7 @@
 		8DD103A822D494E10052B13B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8D62FCE42302B687001DF102 /* ShapesDragAndDropDTO */,
 				8DD424A522F324AE003122B4 /* ShapeViewRepresentation */,
 				8DB7D77F22EB3CAD00430C18 /* Color */,
 				8D4D01D222DF70A200348F7A /* Canvas */,
@@ -1239,6 +1250,7 @@
 				8D10D9F122FAE5F200A3BD28 /* StorageModelsTranslator+ShapeView.swift in Sources */,
 				8DB8B10922E2044C00EB71D4 /* PushRouter.swift in Sources */,
 				8D11BFCB22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift in Sources */,
+				8D62FCE62302B6A0001DF102 /* ShapesDragAndDropDTO.swift in Sources */,
 				8DD103BC22D4C8D10052B13B /* Coordinator.swift in Sources */,
 				8DD424A422F32332003122B4 /* ShapeType.swift in Sources */,
 				8DC010A222E5B1F100010BCA /* CanvasListManagementServiceProtocol.swift in Sources */,
