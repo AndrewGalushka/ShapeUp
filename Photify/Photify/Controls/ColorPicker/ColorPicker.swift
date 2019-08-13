@@ -262,6 +262,7 @@ extension ColorPicker {
                 .magenta,
                 .orange,
                 .purple,
-                .brown]
+                .brown,
+                .spaceGray]
     }
 }
