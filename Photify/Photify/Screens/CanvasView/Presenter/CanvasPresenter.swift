@@ -36,7 +36,7 @@ class CanvasPresenter: CanvasPresenterProtocol {
     func handleShapeDrop(shapeType: ShapeType, style: ShapeStyle, atLocation center: CGPoint, size: CGSize) {
         let shapeFrame = CGRect(center: center, size: size)
         let shapeType = shapeType
-        let color = style.lineStyle.strokeColor
+        let color = style.fillStyle.color
         
         let shapeViewModel = Canvas.ShapeView(origin: shapeFrame.origin,
                                               size: shapeFrame.size,

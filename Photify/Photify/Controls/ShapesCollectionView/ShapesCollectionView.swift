@@ -84,7 +84,7 @@ extension ShapesCollectionView: UICollectionViewDataSource, UICollectionViewDele
         
         if let shapeCell = cell as? ShapeCollectionViewCellConfigurable {
             shapeCell.configure(.init(shapeType: viewModel.shapeType,
-                                      shapeStyle: ShapeStyle(strokeColor: viewModel.color, lineWidth: 2.0)))
+                                      shapeStyle: ShapeStyle(fillColor: viewModel.color)))
         }
             
         return cell
