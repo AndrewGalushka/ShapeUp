@@ -11,11 +11,11 @@ import UIKit
 extension ShapeCollectionViewCell {
     
     struct ViewModel {
-        let shape: Shape
+        let shapeType: ShapeType
         let shapeStyle: ShapeStyle
         
-        init(shape: Shape, shapeStyle: ShapeStyle) {
-            self.shape = shape
+        init(shapeType: ShapeType, shapeStyle: ShapeStyle) {
+            self.shapeType = shapeType
             self.shapeStyle = shapeStyle
         }
     }

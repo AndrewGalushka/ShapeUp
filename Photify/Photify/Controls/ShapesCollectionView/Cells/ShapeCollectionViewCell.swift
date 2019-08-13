@@ -19,6 +19,11 @@ class ShapeCollectionViewCell: UICollectionViewCell {
     private var shapeLayer = CAShapeLayer()
     private var viewModel: ViewModel?
     
+    private var underlyingShape: Shape? {
+        guard let viewModel = self.viewModel else { return nil }
+        return ShapesProvider.convertToShape(from: viewModel.shapeType)
+    }
+    
     // MARK: - Lifecycle
     
     override func awakeFromNib() {
@@ -38,10 +43,10 @@ class ShapeCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        if let viewModel = self.viewModel {
+        if let underlyingShape = self.underlyingShape {
             shapeContainerView.setNeedsLayout()
             shapeContainerView.layoutIfNeeded()
-            shapeLayer.path = viewModel.shape.path(in: self.shapeContainerView.bounds)
+            shapeLayer.path = underlyingShape.path(in: self.shapeContainerView.bounds)
         }
     }
     
@@ -75,7 +80,7 @@ class ShapeCollectionViewCell: UICollectionViewCell {
 
 extension ShapeCollectionViewCell: UIDragInteractionDelegate {
     func dragInteraction(_ interaction: UIDragInteraction, itemsForBeginning session: UIDragSession) -> [UIDragItem] {
-        guard let viewModel = self.viewModel else { return [] }
+        guard let viewModel = self.viewModel, let shape = self.underlyingShape else { return [] }
         
         let renderer = UIGraphicsImageRenderer(bounds: shapeLayer.frame)
         let contentViewSnapshotImage = renderer.image { (context) in
@@ -84,7 +89,7 @@ extension ShapeCollectionViewCell: UIDragInteractionDelegate {
         
         let itemProvider = NSItemProvider(object: contentViewSnapshotImage)
         let dragItem = UIDragItem(itemProvider: itemProvider)
-        dragItem.localObject = (viewModel.shape, viewModel.shapeStyle)
+        dragItem.localObject = (shape, viewModel.shapeStyle)
         
         return [dragItem]
     }
@@ -95,7 +100,7 @@ extension ShapeCollectionViewCell: ShapeCollectionViewCellConfigurable {
     
     func configure(_ viewModel: ViewModel) {
         self.viewModel = viewModel
-        self.shapeLayer.path = viewModel.shape.path(in: self.shapeContainerView.bounds)
+        self.shapeLayer.path = underlyingShape!.path(in: self.shapeContainerView.bounds)
         shapeLayer.configure(shapeStyle: viewModel.shapeStyle)
     }
 }

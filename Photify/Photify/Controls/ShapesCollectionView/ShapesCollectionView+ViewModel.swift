@@ -10,7 +10,7 @@ import Foundation
 
 extension ShapesCollectionView {
     struct ViewModel {
-        let shape: Shape
+        let shapeType: ShapeType
         var color: Color 
     }
 }

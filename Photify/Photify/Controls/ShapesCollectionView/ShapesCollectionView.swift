@@ -52,8 +52,8 @@ class ShapesCollectionView: UIView {
     // MARK: - Methods(Private)
     
     private var shapes: [ViewModel] = { () -> [ViewModel] in
-        return ShapesProvider().allExistingShapes().map {
-            ViewModel(shape: $0, color: Color(uiColor: .random()))
+        return ShapesProvider().allExistingShapeTypes().map {
+            ViewModel(shapeType: $0, color: Color(uiColor: .random()))
         }
     }()
     
@@ -83,7 +83,7 @@ extension ShapesCollectionView: UICollectionViewDataSource, UICollectionViewDele
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(ShapeCollectionViewCell.self)", for: indexPath)
         
         if let shapeCell = cell as? ShapeCollectionViewCellConfigurable {
-            shapeCell.configure(.init(shape: viewModel.shape,
+            shapeCell.configure(.init(shapeType: viewModel.shapeType,
                                       shapeStyle: ShapeStyle(strokeColor: viewModel.color, lineWidth: 2.0)))
         }
             
