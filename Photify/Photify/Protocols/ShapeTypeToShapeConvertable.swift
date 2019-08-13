@@ -12,3 +12,9 @@ protocol ShapeTypeToShapeConvertible {
     func convertToShape(from shapeType: ShapeType) -> Shape
     static func convertToShape(from shapeType: ShapeType) -> Shape
 }
+
+extension ShapeTypeToShapeConvertible {
+    func convertToShape(from shapeType: ShapeType) -> Shape {
+        return Self.convertToShape(from: shapeType)
+    }
+}

@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct ShapesProvider {
-    
+struct ShapesProvider: ShapeTypeToShapeConvertible {
+
     func allExistingShapeTypes() -> [ShapeType] {
         return ShapeType.AllCases()
     }
@@ -24,11 +24,9 @@ struct ShapesProvider {
                 Rectangle()]
     }
     
-    func makeShape(from shapeType: ShapeType) -> Shape {
-        return ShapesProvider.makeShape(from: shapeType)
-    }
+    // MARK: - ShapeTypeToShapeConvertible imp
     
-    static func makeShape(from shapeType: ShapeType) -> Shape {
+    static func convertToShape(from shapeType: ShapeType) -> Shape {
         switch shapeType {
         case .rectangle:
             return Rectangle()
