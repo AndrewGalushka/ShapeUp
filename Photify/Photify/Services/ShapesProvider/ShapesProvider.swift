@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DrawingShapesProvider {
+struct ShapesProvider {
     
     func allExistingShapeTypes() -> [ShapeType] {
         return ShapeType.AllCases()
@@ -25,7 +25,7 @@ struct DrawingShapesProvider {
     }
     
     func makeShape(from shapeType: ShapeType) -> Shape {
-        return DrawingShapesProvider.makeShape(from: shapeType)
+        return ShapesProvider.makeShape(from: shapeType)
     }
     
     static func makeShape(from shapeType: ShapeType) -> Shape {
