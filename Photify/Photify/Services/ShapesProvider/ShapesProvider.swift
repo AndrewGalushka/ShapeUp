@@ -11,7 +11,7 @@ import Foundation
 struct ShapesProvider: ShapeTypeToShapeConvertible {
 
     func allExistingShapeTypes() -> [ShapeType] {
-        return ShapeType.AllCases()
+        return ShapeType.allCases
     }
     
     func allExistingShapes() -> [Shape] {

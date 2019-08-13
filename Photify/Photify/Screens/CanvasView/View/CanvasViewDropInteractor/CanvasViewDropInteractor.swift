@@ -78,10 +78,10 @@ class CanvasViewDropInteractor: NSObject, UIDropInteractionDelegate {
     }
     
     func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
-        guard let (shape, shapeStyle) = session.items.first?.localObject as? (Shape, ShapeStyle) else { return }
+        guard let shapeInfo = session.items.first?.localObject as? ShapesDragAndDropDTO else { return }
         let dropLocation = session.location(in: self.scrollView)
         
-        delegate?.canvasDropInteractor(self, dropShape: shape, style: shapeStyle, atLocation: dropLocation)
+        delegate?.canvasDropInteractor(self, dropShapeType: shapeInfo.shapeType, style: shapeInfo.shapeStyle, atLocation: dropLocation)
     }
     
     func dropInteraction(_ interaction: UIDropInteraction, sessionDidEnd session: UIDropSession) {

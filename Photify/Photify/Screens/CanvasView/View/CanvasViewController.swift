@@ -61,17 +61,19 @@ class CanvasViewController: UIViewController {
 
 extension CanvasViewController: CanvasViewDropInteractorDelegate {
     func canvasDropInteractor(_ dropInteractor: CanvasViewDropInteractor,
-                              dropShape shape: Shape,
+                              dropShapeType shapeType: ShapeType,
                               style: ShapeStyle,
                               atLocation dropCenter: CGPoint) {
         let shapeFrame = CGRect(center: dropCenter, size: .init(width: 72, height: 72))
         
+        let shape = ShapesProvider.convertToShape(from: shapeType)
         let shapeView = ShapeView(shape: AnyShape(shape: shape))
+        
         shapeView.shapeLayer.configure(shapeStyle: style)
         shapeView.frame = shapeFrame
         self.scrollView.addSubview(shapeView)
         
-        presenter?.handleShapeDrop(shape: shape, style: style, atLocation: dropCenter, size: shapeFrame.size)
+        presenter?.handleShapeDrop(shapeType: shapeType, style: style, atLocation: dropCenter, size: shapeFrame.size)
     }
 }
 

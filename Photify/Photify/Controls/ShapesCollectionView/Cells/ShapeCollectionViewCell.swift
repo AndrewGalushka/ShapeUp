@@ -80,7 +80,7 @@ class ShapeCollectionViewCell: UICollectionViewCell {
 
 extension ShapeCollectionViewCell: UIDragInteractionDelegate {
     func dragInteraction(_ interaction: UIDragInteraction, itemsForBeginning session: UIDragSession) -> [UIDragItem] {
-        guard let viewModel = self.viewModel, let shape = self.underlyingShape else { return [] }
+        guard let viewModel = self.viewModel else { return [] }
         
         let renderer = UIGraphicsImageRenderer(bounds: shapeLayer.frame)
         let contentViewSnapshotImage = renderer.image { (context) in
@@ -89,7 +89,7 @@ extension ShapeCollectionViewCell: UIDragInteractionDelegate {
         
         let itemProvider = NSItemProvider(object: contentViewSnapshotImage)
         let dragItem = UIDragItem(itemProvider: itemProvider)
-        dragItem.localObject = (shape, viewModel.shapeStyle)
+        dragItem.localObject = ShapesDragAndDropDTO(shapeType: viewModel.shapeType, shapeStyle: viewModel.shapeStyle)
         
         return [dragItem]
     }

@@ -10,6 +10,6 @@ import Foundation
 import struct CoreGraphics.CGPoint
 
 protocol CanvasViewDropInteractorDelegate: AnyObject {
-    func canvasDropInteractor(_ dropInteractor: CanvasViewDropInteractor, dropShape: Shape, style: ShapeStyle, atLocation: CGPoint)
+    func canvasDropInteractor(_ dropInteractor: CanvasViewDropInteractor, dropShapeType shapeType: ShapeType, style: ShapeStyle, atLocation dropCenter: CGPoint)
 }
 
