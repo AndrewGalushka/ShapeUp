@@ -1524,6 +1524,7 @@
 				DEVELOPMENT_TEAM = YDDE2DY87F;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				INFOPLIST_FILE = Photify/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1543,6 +1544,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDDE2DY87F;
 				INFOPLIST_FILE = Photify/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
