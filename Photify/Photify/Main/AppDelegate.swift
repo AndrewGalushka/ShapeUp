@@ -12,26 +12,47 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var appCoordinator: AppCoordinator?
+    private(set) lazy var appAssembler: AppAssembler = {
+        return AppAssembler()
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let appAssembler = AppAssembler()
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        let appCoordinator = AppCoordinator(window: window,
-                                            launchOptions: launchOptions,
-                                            appAssembler: appAssembler)
-        self.window = window
-        self.appCoordinator = appCoordinator
+        /*
+         Note: If your application adopts new Scene Lifecycle,
+            this method should not setup UI things.
+            Good example of using this method is to share Assembler whose internal DataStorage instance is shared
+        */
         
         let startTime = Date()
-        appAssembler.loadInternalData()
+        self.appAssembler.loadInternalData()
         print("AppAssembler load time is: \(Date().timeIntervalSince1970 - startTime.timeIntervalSince1970)")
         
-        self.appCoordinator?.start()
-        self.window?.makeKeyAndVisible()
+//        let window = UIWindow(frame: UIScreen.main.bounds)
+//        let appCoordinator = AppCoordinator(window: window,
+//                                            launchOptions: launchOptions,
+//                                            appAssembler: appAssembler)
+//        self.window = window
+//        self.appCoordinator = appCoordinator
+//
+
+//
+//        self.appCoordinator?.start()
+//        self.window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        let sceneConfigurations = UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+        sceneConfigurations.delegateClass = SceneDelegate.self
+        
+        return sceneConfigurations
+    }
+    
+    override func restoreUserActivityState(_ activity: NSUserActivity) {
+        super.restoreUserActivityState(activity)
+        
     }
 }
 
