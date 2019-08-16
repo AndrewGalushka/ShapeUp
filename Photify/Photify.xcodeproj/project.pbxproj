@@ -750,8 +750,8 @@
 		8DB8B0EA22E1B38100EB71D4 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				8D07E0D2230699D900E2E0D0 /* DebugPrint.swift */,
 				8D0C0FAF22F8885100231D37 /* Design */,
+				8D07E0D2230699D900E2E0D0 /* DebugPrint.swift */,
 				8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */,
 			);
 			name = Utility;
