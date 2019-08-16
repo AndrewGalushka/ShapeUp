@@ -17,6 +17,9 @@ class CanvasViewController: UIViewController {
     @IBOutlet private weak var colorPicker: ColorPicker!
     @IBOutlet private weak var shapesCollectionView: ShapesCollectionView!
     
+    @IBOutlet weak var categorySettingsConainerView: UIView!
+    @IBOutlet weak var categoryContainerView: UIView!
+    
     // MARK: Properties(Private)
     
     private var canvasDropInteractor: CanvasViewDropInteractor!
