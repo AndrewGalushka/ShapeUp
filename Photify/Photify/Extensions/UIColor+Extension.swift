@@ -15,8 +15,16 @@ extension UIColor {
                        blue: CGFloat.random(in: 0.0...1.0),
                        alpha: 1.0)
     }
-    
+}
+
+// MARK: - Extended Colors
+
+extension UIColor {
     static var spaceGray: UIColor {
-        return UIColor(red:0.40, green:0.40, blue:0.40, alpha:1.0)
+        return UIColor(red: 0.40, green: 0.40, blue: 0.40, alpha: 1.0)
+    }
+    
+    static var lightSkyBlue: UIColor {
+        return UIColor(red: 0.53, green: 0.81, blue: 0.98, alpha: 1.0)
     }
 }
