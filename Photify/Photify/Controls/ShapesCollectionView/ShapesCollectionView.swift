@@ -53,7 +53,7 @@ class ShapesCollectionView: UIView {
     
     private var shapes: [ViewModel] = { () -> [ViewModel] in
         return ShapesProvider().allExistingShapeTypes().map {
-            ViewModel(shapeType: $0, color: Color(uiColor: .spaceGray))
+            ViewModel(shapeType: $0, color: Color(uiColor: .royalblue))
         }
     }()
     
