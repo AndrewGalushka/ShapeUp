@@ -25,7 +25,7 @@ extension CoreDataManagerAdapter: CanvasShapeViewsStorable {
             return updatedCanvasDTO
             
         } catch let error as NSError {
-            print("[fetchShapeViews(inside: CanvasDTO)] Error: \(error)")
+            debugPrint("[fetchShapeViews(inside: CanvasDTO)] Error: \(error)")
             return nil
         }
     }
@@ -46,7 +46,7 @@ extension CoreDataManagerAdapter: CanvasShapeViewsStorable {
             return canvasDTO
             
         } catch let error as NSError {
-            print("[fetchShapeViews(inside: UUID] Error: \(error)")
+            debugPrint("[fetchShapeViews(inside: UUID] Error: \(error)")
             return nil
         }
     }
@@ -77,7 +77,7 @@ extension CoreDataManagerAdapter: CanvasShapeViewsStorable {
             return updatedCanvasDTO
             
         } catch let error as NSError {
-            print("[addShapesViews([ShapeViewDTO], CanvasDTO)] Error: \(error)")
+            debugPrint("[addShapesViews([ShapeViewDTO], CanvasDTO)] Error: \(error)")
             return nil
         }
     }

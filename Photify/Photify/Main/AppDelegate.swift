@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let startTime = Date()
         appAssembler.loadInternalData()
-        print("AppAssembler load time is: \(Date().timeIntervalSince1970 - startTime.timeIntervalSince1970)")
+        debugPrint("AppAssembler load time is: \(Date().timeIntervalSince1970 - startTime.timeIntervalSince1970)")
         
         self.appCoordinator?.start()
         self.window?.makeKeyAndVisible()

@@ -23,7 +23,7 @@ final class PersistentContainer: NSPersistentContainer {
         do {
             try context.save()
         } catch let error as NSError {
-            print("SaveContext Error: \(error), \(error.userInfo)")
+            debugPrint("SaveContext Error: \(error), \(error.userInfo)")
         }
     }
 }

@@ -35,7 +35,7 @@ class CanvasListViewController: UIViewController {
         }
         
         let addCanvasAlert = UIAlertController.makeAddCanvasAlert(doneActionHandler: doneClosure,
-                                                                  cancelActionHandler: { print("Cancel Tapped") })
+                                                                  cancelActionHandler: { debugPrint("Cancel Tapped") })
         self.present(addCanvasAlert, animated: true, completion: nil)
     }
     
