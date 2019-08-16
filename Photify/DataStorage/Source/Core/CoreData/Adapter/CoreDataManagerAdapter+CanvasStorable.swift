@@ -25,7 +25,7 @@ extension CoreDataManagerAdapter: CanvasStorable {
             return self.mapper.translate(canvas: fetchedCanvas)
             
         } catch let error as NSError {
-            print("[fetchCanvasBy(ID: UUID)] Error: \(error)")
+            debugPrint("[fetchCanvasBy(ID: UUID)] Error: \(error)")
             return nil
         }
     }
@@ -38,14 +38,14 @@ extension CoreDataManagerAdapter: CanvasStorable {
             let canvasesDTOs = mapper.translate(canvases: canvases)
             return canvasesDTOs
         } catch (let error as NSError) {
-            print("fetchAllCanvases Error: \(error.localizedDescription)")
+            debugPrint("fetchAllCanvases Error: \(error.localizedDescription)")
             return []
         }
     }
     
     func saveCanvases(_ canvases: [CanvasDTO]) {
         let canvases = mapper.translate(canvasesDTOs: canvases, moc: self.coreDataManager.mainContext())
-        print(canvases)
+        debugPrint(canvases)
         coreDataManager.save()
     }
     
@@ -58,11 +58,11 @@ extension CoreDataManagerAdapter: CanvasStorable {
         
         do {
             let deletedObjectIDs = try coreDataManager.delete(by: fetchRequest)
-            print("Deleted object ids \(deletedObjectIDs)")
+            debugPrint("Deleted object ids \(deletedObjectIDs)")
             
             coreDataManager.save()
         } catch let error as NSError {
-            print("Deleting error: \(error)")
+            debugPrint("Deleting error: \(error)")
         }
     }
     
@@ -81,12 +81,12 @@ extension CoreDataManagerAdapter: CanvasStorable {
      let deletedObjectIDs = result?.result as? [NSManagedObjectID]
      
      if let deletedObjectIDs = deletedObjectIDs {
-     print("Deleted object ids \(deletedObjectIDs)")
+     debugPrint("Deleted object ids \(deletedObjectIDs)")
      NSManagedObjectContext.mergeChanges(fromRemoteContextSave: [NSDeletedObjectsKey: deletedObjectIDs], into: [coreDataManager.mainContext()])
      }
      
      } catch (let error as NSError) {
-     print("Deleting error: \(error)")
+     debugPrint("Deleting error: \(error)")
      }
      }
      */

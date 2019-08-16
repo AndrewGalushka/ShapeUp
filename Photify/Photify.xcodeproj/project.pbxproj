@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D07E0D3230699D900E2E0D0 /* DebugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D07E0D2230699D900E2E0D0 /* DebugPrint.swift */; };
 		8D0934F022F488800040F3B2 /* CanvasDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0934EF22F488800040F3B2 /* CanvasDTO.swift */; };
 		8D0934F222F48A410040F3B2 /* ShapeViewDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0934F122F48A410040F3B2 /* ShapeViewDTO.swift */; };
 		8D09350222F4A6F50040F3B2 /* DataStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DD4246122F3018C003122B4 /* DataStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -174,6 +175,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8D07E0D2230699D900E2E0D0 /* DebugPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPrint.swift; sourceTree = "<group>"; };
 		8D0934EF22F488800040F3B2 /* CanvasDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasDTO.swift; sourceTree = "<group>"; };
 		8D0934F122F48A410040F3B2 /* ShapeViewDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViewDTO.swift; sourceTree = "<group>"; };
 		8D0C0F9D22F8100A00231D37 /* StorageModelsTranslatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageModelsTranslatable.swift; sourceTree = "<group>"; };
@@ -751,6 +753,7 @@
 		8DB8B0EA22E1B38100EB71D4 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				8D07E0D2230699D900E2E0D0 /* DebugPrint.swift */,
 				8D0C0FAF22F8885100231D37 /* Design */,
 				8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */,
 			);
@@ -1208,6 +1211,7 @@
 				8D6BAE4922D357BE00FF383C /* Circle.swift in Sources */,
 				8D10D9E522FAC71100A3BD28 /* StorageModelsTranslator.swift in Sources */,
 				8DD4249F22F31AA6003122B4 /* CanvasService.swift in Sources */,
+				8D07E0D3230699D900E2E0D0 /* DebugPrint.swift in Sources */,
 				8DD1A16B22E9FD340016BE5C /* ColorsPickerCollectionView.swift in Sources */,
 				8D8ABB5722EF2A4F0084E4BB /* ShapeStyle+Line.swift in Sources */,
 				8D6BAE5722D35FC400FF383C /* RectangleGeometry.swift in Sources */,

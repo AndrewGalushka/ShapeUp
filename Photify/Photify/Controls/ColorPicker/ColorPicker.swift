@@ -40,7 +40,7 @@ class ColorPicker: UIView {
     
     private var colorsCollectionView: ColorsPickerCollectionView = {
         let collectionView = ColorsPickerCollectionView(autoLayoutEnabled: true)
-        collectionView.colors = ColorPicker.predefinedColors
+        collectionView.colors = ColorPicker.defaultColorsPalette
         
         return collectionView
     }()
@@ -248,7 +248,7 @@ extension ColorPicker {
 }
 
 extension ColorPicker {
-    static var predefinedColors: [UIColor] {
+    static var defaultColorsPalette: [UIColor] {
         return [.black,
                 .darkGray,
                 .lightGray,

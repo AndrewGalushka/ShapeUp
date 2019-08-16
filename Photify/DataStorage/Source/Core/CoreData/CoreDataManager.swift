@@ -33,7 +33,7 @@ final class CoreDataManager {
                 fatalError("Unable to load persistent stores: \(error)")
             }
             
-            print("DB path \(persistentContainer?.persistentStoreCoordinator.persistentStores.first?.url?.path ?? "<<UNKNOWN>>")")
+            debugPrint("DB path \(persistentContainer?.persistentStoreCoordinator.persistentStores.first?.url?.path ?? "<<UNKNOWN>>")")
             
             self.isLoaded.value = true
             completion()
