@@ -25,4 +25,8 @@ extension RGBAColor {
     static var clear: Self {
         return Self(red: 0, green: 0, blue: 0, alpha: 0)
     }
+    
+    static var royalBlue: Self {
+        return Self(red:0.25, green:0.41, blue:0.88, alpha:1.0)
+    }
 }
