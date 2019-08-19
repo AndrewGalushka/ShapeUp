@@ -11,8 +11,8 @@ import CoreGraphics
 struct Circle: Shape {
     func path(in rect: CGRect) -> CGPath {
         let originalSize = rect.size
-        let originalCenter = CGPoint(x: originalSize.width / 2,
-                                     y: originalSize.height / 2)
+        let originalCenter = CGPoint(x: rect.maxX / 2,
+                                     y: rect.maxY / 2)
         
         let minLength = min(originalSize.width, originalSize.height)
         let newSize = CGSize(width: minLength, height: minLength)

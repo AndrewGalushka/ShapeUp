@@ -13,7 +13,9 @@ struct Star: Shape {
         let minLength = min(rect.width, rect.height)
         let initialAngle: Double = -90
         let stepDegrees: Double = 75
-        let circle = Geometry.Circle(center: CGPoint(x: rect.width / 2, y: rect.height / 2),
+        let center = CGPoint(x: rect.maxX - rect.width / 2,
+                             y: rect.maxY - rect.height / 2)
+        let circle = Geometry.Circle(center: center,
                                      radius: minLength / 2)
         
         let p1 = circle.pointOnArc(angle: Geometry.Angle(degrees: initialAngle))
