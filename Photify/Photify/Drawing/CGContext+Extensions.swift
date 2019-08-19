@@ -14,4 +14,18 @@ extension CGContext {
         drawAction()
         restoreGState()
     }
+    
+    func setFillColor(_ color: RGBAColor) {
+        self.setFillColor(red: CGFloat(color.red),
+                          green: CGFloat(color.green),
+                          blue: CGFloat(color.blue),
+                          alpha: CGFloat(color.alpha))
+    }
+    
+    func setStrokeColor(_ color: RGBAColor) {
+        self.setStrokeColor(red: CGFloat(color.red),
+                            green: CGFloat(color.green),
+                            blue: CGFloat(color.blue),
+                            alpha: CGFloat(color.alpha))
+    }
 }
