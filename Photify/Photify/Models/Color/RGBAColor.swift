@@ -18,6 +18,21 @@ protocol RGBAColor {
 }
 
 extension RGBAColor {
+    func inverted() -> Self {
+        let iRed = 1.0 / red
+        let iGreen = 1.0 / green
+        let iBlue = 1.0 / blue
+        
+        return Self(red: iRed, green: iGreen, blue: iBlue, alpha: 1.0)
+    }
+    
+    mutating func invert() {
+        let invertedColor = self.inverted()
+        self = invertedColor
+    }
+}
+
+extension RGBAColor {
     static var white: Self {
         return Self(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
