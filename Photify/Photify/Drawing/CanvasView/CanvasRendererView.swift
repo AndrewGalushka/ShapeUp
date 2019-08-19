@@ -7,24 +7,79 @@
 //
 
 import UIKit
+import CoreGraphics
 
 @IBDesignable
 class CanvasRendererView: UIView {
-    private var canvasRederer: CanvasRenderer = CanvasRenderer()
+    typealias DrawingCommand = Canvas.ShapeView
+    
+    var drawingCommands: [DrawingCommand] = [] {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else { return }
-        
-        canvasRederer.render(on: context, in: rect)
+        let renderer = CanvasRenderer(context: context)
+        renderer.render(in: rect, drawingCommand: self.makeDrawingCommand() )
+    }
+    
+    private func makeDrawingCommand() -> CanvasRenderer.DrawingCommands {
+        return CanvasRenderer.DrawingCommands(background: Color(uiColor: Design.Colors.canvasBackgroundWhite),
+                                              shapes: self.drawingCommands)
     }
 }
 
 class CanvasRenderer {
-    func render(on context: CGContext, in rect: CGRect) {
-        self.renderBackground(context, rect)
+    let context: CGContext
+    
+    init(context: CGContext) {
+        self.context = context
     }
     
-    private func renderBackground(_ context: CGContext, _ rect: CGRect) {
-        UIColor.random().set()
+    func render(in rect: CGRect, drawingCommand: DrawingCommands) {
+        self.renderBackground(rect, color: drawingCommand.background)
+        self.renderShapes(drawingCommand.shapes)
+    }
+    
+    private func renderBackground(_ rect: CGRect, color: Color) {
+        context.drawAction {
+            context.setFillColor(red: CGFloat(color.red),
+                                 green: CGFloat(color.green),
+                                 blue: CGFloat(color.blue),
+                                 alpha: CGFloat(color.alpha))
+            context.fill(rect)
+        }
+    }
+    
+    private func renderShapes(_ shapes: [Canvas.ShapeView]) {
+        
+        for shapeView in shapes {
+            let shapeBkColor = shapeView.color ?? .clear
+            let shapeStrokeColor = shapeBkColor.inverted()
+            let drawingRect = CGRect(origin: shapeView.origin, size: shapeView.size)
+            let shape = ShapesProvider.convertToShape(from: shapeView.shapeType)
+            let path = shape.path(in: drawingRect)
+            
+            context.drawAction {
+                context.setFillColor(shapeBkColor)
+                context.setStrokeColor(shapeStrokeColor)
+                context.setLineWidth(5.0)
+                
+                context.beginPath()
+                context.addPath(path)
+                context.closePath()
+                context.drawPath(using: .fillStroke)
+            }
+        }
+    }
+}
+
+extension CanvasRenderer {
+    
+    struct DrawingCommands {
+        let background: Color
+        let shapes: [Canvas.ShapeView]
     }
 }
