@@ -20,7 +20,7 @@ class CanvasViewController: UIViewController {
     @IBOutlet weak var categorySettingsConainerView: UIView!
     @IBOutlet weak var categoryContainerView: UIView!
     
-    // MARK: Properties(Private)
+    // MARK: - Properties(Private)
     
     private var canvasDropInteractor: CanvasViewDropInteractor!
     
