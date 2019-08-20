@@ -25,6 +25,12 @@ class CanvasRendererView: UIView {
         renderer.render(in: rect, drawingCommand: self.makeDrawingCommand() )
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.setNeedsDisplay()
+    }
+    
     private func makeDrawingCommand() -> CanvasRenderer.DrawingCommands {
         return CanvasRenderer.DrawingCommands(background: Color(uiColor: Design.Colors.canvasBackgroundWhite),
                                               shapes: self.drawingCommands)
