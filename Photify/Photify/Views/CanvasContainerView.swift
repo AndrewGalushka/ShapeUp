@@ -15,6 +15,20 @@ class CanvasContainerView: UIView {
     private(set) var canvasSize: CGSize
     private let underlyingCanvasView: UIView
     
+    var contentView: UIView? {
+        willSet {
+            if let previousView = contentView {
+                previousView.removeFromSuperview()
+            }
+        }
+        didSet {
+            if let newView = contentView {
+                newView.frame = underlyingCanvasView.bounds
+                underlyingCanvasView.addSubview(newView)
+            }
+        }
+    }
+    
     // MARK: - Initializers
     
     required init(canvasSize: CGSize) {
