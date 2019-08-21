@@ -101,7 +101,7 @@ extension CanvasScrollView {
         }
         
         @discardableResult
-        func zoom(minimumZoomScale: CGFloat = 0.3, maximumZoomScale: CGFloat = 3.0) -> Self {
+        func zoom(minimumZoomScale: CGFloat = 0.5, maximumZoomScale: CGFloat = 3.0) -> Self {
             canvasScrollView.underlyingScrollView.minimumZoomScale = minimumZoomScale
             canvasScrollView.underlyingScrollView.maximumZoomScale = maximumZoomScale
             return self
