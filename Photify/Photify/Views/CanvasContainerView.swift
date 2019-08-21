@@ -15,14 +15,14 @@ class CanvasContainerView: UIView {
     private(set) var canvasSize: CGSize
     private let underlyingCanvasView: UIView
     
-    var contentView: UIView? {
+    var documentView: UIView? {
         willSet {
-            if let previousView = contentView {
+            if let previousView = documentView {
                 previousView.removeFromSuperview()
             }
         }
         didSet {
-            if let newView = contentView {
+            if let newView = documentView {
                 newView.frame = underlyingCanvasView.bounds
                 underlyingCanvasView.addSubview(newView)
             }
