@@ -17,25 +17,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrd-3O-xj6">
-                                <rect key="frame" x="0.0" y="836" width="1366" height="160"/>
+                                <rect key="frame" x="0.0" y="896" width="1366" height="100"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2NZ-dC-sFy" customClass="ShapesCollectionView" customModule="Photify" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="40" width="1366" height="80"/>
+                                        <rect key="frame" x="0.0" y="10" width="1366" height="80"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="5Ka-ow-Lyb"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caP-Dd-X5I">
-                                        <rect key="frame" x="0.0" y="0.0" width="1366" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1366" height="10"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQ5-E3-WcM">
-                                        <rect key="frame" x="0.0" y="120" width="1366" height="40"/>
+                                        <rect key="frame" x="0.0" y="90" width="1366" height="10"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="zQ5-E3-WcM" secondAttribute="bottom" id="3ZC-Th-sOp"/>
                                     <constraint firstItem="caP-Dd-X5I" firstAttribute="leading" secondItem="rrd-3O-xj6" secondAttribute="leading" id="5mO-X6-EB7"/>
@@ -48,15 +48,15 @@
                                     <constraint firstAttribute="trailing" secondItem="2NZ-dC-sFy" secondAttribute="trailing" id="cNh-7M-Lbd"/>
                                     <constraint firstItem="2NZ-dC-sFy" firstAttribute="top" secondItem="caP-Dd-X5I" secondAttribute="bottom" id="ion-kj-rGs"/>
                                     <constraint firstItem="2NZ-dC-sFy" firstAttribute="leading" secondItem="rrd-3O-xj6" secondAttribute="leading" id="t9K-u9-Mwt"/>
-                                    <constraint firstAttribute="height" constant="160" id="tOM-Zr-N3j"/>
+                                    <constraint firstAttribute="height" constant="100" id="tOM-Zr-N3j"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyq-jz-Boi" customClass="CanvasScrollView" customModule="Photify" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="1366" height="786"/>
+                                <rect key="frame" x="0.0" y="50" width="1366" height="846"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmK-X6-TZ8" customClass="ColorPicker" customModule="Photify" customModuleProvider="target">
-                                <rect key="frame" x="1306" y="50" width="50" height="776"/>
+                                <rect key="frame" x="1306" y="50" width="50" height="836"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="IDS-oc-99b"/>
                                 </constraints>
