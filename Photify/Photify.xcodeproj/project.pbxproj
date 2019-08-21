@@ -48,6 +48,7 @@
 		8D1B86D722F2CC600094BAB8 /* AtomicProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D01CE22DF5FB000348F7A /* AtomicProperty.swift */; };
 		8D1B86DB22F2D4400094BAB8 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A2822E070F700282747 /* StorageManager.swift */; };
 		8D1BADC1230AEBC000F1EACD /* CGContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BADC0230AEBC000F1EACD /* CGContext+Extensions.swift */; };
+		8D1CCE1E230BF48600FDC03F /* CanvasContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1CCE1D230BF48600FDC03F /* CanvasContainerView.swift */; };
 		8D21CD1122DCC8B000EA3948 /* CanvasListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D21CD1022DCC8B000EA3948 /* CanvasListViewController.swift */; };
 		8D21CD1322DCC8BB00EA3948 /* CanvasListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D21CD1222DCC8BB00EA3948 /* CanvasListViewController.storyboard */; };
 		8D21CD1622DCC99B00EA3948 /* CanvasTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D21CD1522DCC99B00EA3948 /* CanvasTableView.swift */; };
@@ -210,6 +211,7 @@
 		8D1B86CC22F2CC530094BAB8 /* AtomicProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AtomicProperty.h; sourceTree = "<group>"; };
 		8D1B86CD22F2CC530094BAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1BADC0230AEBC000F1EACD /* CGContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGContext+Extensions.swift"; sourceTree = "<group>"; };
+		8D1CCE1D230BF48600FDC03F /* CanvasContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasContainerView.swift; sourceTree = "<group>"; };
 		8D21CD1022DCC8B000EA3948 /* CanvasListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		8D21CD1222DCC8BB00EA3948 /* CanvasListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CanvasListViewController.storyboard; sourceTree = "<group>"; };
 		8D21CD1522DCC99B00EA3948 /* CanvasTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasTableView.swift; sourceTree = "<group>"; };
@@ -538,6 +540,14 @@
 			path = AtomicProperty;
 			sourceTree = "<group>";
 		};
+		8D1CCE1C230BF46E00FDC03F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8D1CCE1D230BF48600FDC03F /* CanvasContainerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		8D21CD0F22DCC88300EA3948 /* CanvasList */ = {
 			isa = PBXGroup;
 			children = (
@@ -632,6 +642,7 @@
 				8D6BAE3C22D340D100FF383C /* Main */,
 				8D6BAE6022D39BCC00FF383C /* Screens */,
 				8DB8B0ED22E1B4EC00EB71D4 /* Drawing */,
+				8D1CCE1C230BF46E00FDC03F /* Views */,
 				8DB8B0E822E1AD3700EB71D4 /* Services */,
 				8DB8B0EC22E1B44D00EB71D4 /* CoreServices */,
 				8DE758DA22E754B70069A6B4 /* Controls */,
@@ -1224,6 +1235,7 @@
 				8D10D9E522FAC71100A3BD28 /* StorageModelsTranslator.swift in Sources */,
 				8DD4249F22F31AA6003122B4 /* CanvasService.swift in Sources */,
 				8D07E0D3230699D900E2E0D0 /* DebugPrint.swift in Sources */,
+				8D1CCE1E230BF48600FDC03F /* CanvasContainerView.swift in Sources */,
 				8DD1A16B22E9FD340016BE5C /* ColorsPickerCollectionView.swift in Sources */,
 				8D8ABB5722EF2A4F0084E4BB /* ShapeStyle+Line.swift in Sources */,
 				8D6BAE5722D35FC400FF383C /* RectangleGeometry.swift in Sources */,
