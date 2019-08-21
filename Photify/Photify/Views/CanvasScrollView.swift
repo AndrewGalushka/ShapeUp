@@ -87,10 +87,16 @@ extension CanvasScrollView {
         init(canvasScrollView: CanvasScrollView) {
             self.canvasScrollView = canvasScrollView
         }
-        
+    
         @discardableResult
         func contentSize(_ contentSize: CGSize) -> Self {
             canvasScrollView.contentSize = contentSize
+            return self
+        }
+        
+        @discardableResult
+        func contentView(_ contentView: UIView?) -> Self {
+            canvasScrollView.contentView = contentView
             return self
         }
         

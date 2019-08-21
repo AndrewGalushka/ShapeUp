@@ -13,7 +13,7 @@ class CanvasViewController: UIViewController {
     // MARK: - IBOutlets
     
     @IBOutlet private weak var bottomControlsContainerView: UIView!
-    @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var canvasScrollView: CanvasScrollView!
     @IBOutlet private weak var colorPicker: ColorPicker!
     @IBOutlet private weak var shapesCollectionView: ShapesCollectionView!
     
@@ -22,6 +22,8 @@ class CanvasViewController: UIViewController {
     
     // MARK: - Properties(Private)
     
+    private var canvasContainerView: CanvasContainerView!
+    private var canvasRendererView: CanvasRendererView!
     private var canvasDropInteractor: CanvasViewDropInteractor!
     
     // MARK: - Properties(Public)
@@ -40,15 +42,29 @@ class CanvasViewController: UIViewController {
     // MARK: - Methods(Private)
     
     private func setup() {
+        configureCanvas()
         configureScrollView()
         configureColorPicker()
         configureDropInteraction()
     }
     
+    private func configureCanvas() {
+        let screenSize = UIScreen.main.bounds.size
+        let minDimension = min(screenSize.width, screenSize.height)
+        let maxDimension = max(screenSize.width, screenSize.height)
+        let canvasSize = CGSize(width: maxDimension, height: minDimension)
+        
+        self.canvasRendererView = CanvasRendererView()
+        self.canvasContainerView = CanvasContainerView(canvasSize: canvasSize)
+        self.canvasContainerView.documentView = canvasRendererView
+    }
+    
     private func configureScrollView() {
-        scrollView.panGestureRecognizer.minimumNumberOfTouches = 2
-        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
-        scrollView.backgroundColor = Design.Colors.canvasBackgroundWhite
+        CanvasScrollView.Configurator(canvasScrollView: self.canvasScrollView)
+            .contentView(canvasContainerView)
+            .contentSize(canvasContainerView.bounds.size)
+            .zoom()
+            .scrollViewBackgroundColor(.darkGray)
     }
     
     private func configureColorPicker() {
@@ -56,9 +72,9 @@ class CanvasViewController: UIViewController {
     }
     
     private func configureDropInteraction() {
-        canvasDropInteractor = CanvasViewDropInteractor(parentView: self.view, scrollView: scrollView)
-        canvasDropInteractor.delegate = self
-        canvasDropInteractor.configure()
+//        canvasDropInteractor = CanvasViewDropInteractor(parentView: self.view, scrollView: scrollView)
+//        canvasDropInteractor.delegate = self
+//        canvasDropInteractor.configure()
     }
 }
 
@@ -74,7 +90,7 @@ extension CanvasViewController: CanvasViewDropInteractorDelegate {
         
         shapeView.shapeLayer.configure(shapeStyle: style)
         shapeView.frame = shapeFrame
-        self.scrollView.addSubview(shapeView)
+//        self.scrollView.addSubview(shapeView)
         
         presenter?.handleShapeDrop(shapeType: shapeType, style: style, atLocation: dropCenter, size: shapeFrame.size)
     }
@@ -82,15 +98,7 @@ extension CanvasViewController: CanvasViewDropInteractorDelegate {
 
 extension CanvasViewController: CanvasView {
     func displayShapes(_ shapeViewModels: [Canvas.ShapeView]) {
-        
-        for shapeViewModel in shapeViewModels {
-            let shape = ShapeViewRepresentation.shapeFromShapeType(shapeViewModel.shapeType)
-            let shapeView = ShapeView(shape: AnyShape(shape: shape),
-                                      frame: CGRect(origin: shapeViewModel.origin, size: shapeViewModel.size))
-            
-            shapeView.fillColor = shapeViewModel.color?.uiColor.cgColor
-            self.scrollView.addSubview(shapeView)
-        }
+        self.canvasRendererView.drawingCommands = shapeViewModels
     }
     
     func setTitleText(to text: String) {
