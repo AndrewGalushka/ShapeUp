@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D05706A230D62A60040366D /* CenteredContentScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D057069230D62A60040366D /* CenteredContentScrollView.swift */; };
+		8D05706C230D65420040366D /* CanvasScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D05706B230D65420040366D /* CanvasScrollView.swift */; };
 		8D07E0D3230699D900E2E0D0 /* DebugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D07E0D2230699D900E2E0D0 /* DebugPrint.swift */; };
 		8D07E0ED2306F6D600E2E0D0 /* CanvasRendererView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D07E0EC2306F6D600E2E0D0 /* CanvasRendererView.swift */; };
 		8D0934F022F488800040F3B2 /* CanvasDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0934EF22F488800040F3B2 /* CanvasDTO.swift */; };
@@ -177,6 +179,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8D057069230D62A60040366D /* CenteredContentScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredContentScrollView.swift; sourceTree = "<group>"; };
+		8D05706B230D65420040366D /* CanvasScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasScrollView.swift; sourceTree = "<group>"; };
 		8D07E0D2230699D900E2E0D0 /* DebugPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPrint.swift; sourceTree = "<group>"; };
 		8D07E0EC2306F6D600E2E0D0 /* CanvasRendererView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasRendererView.swift; sourceTree = "<group>"; };
 		8D0934EF22F488800040F3B2 /* CanvasDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasDTO.swift; sourceTree = "<group>"; };
@@ -544,6 +548,8 @@
 			isa = PBXGroup;
 			children = (
 				8D1CCE1D230BF48600FDC03F /* CanvasContainerView.swift */,
+				8D057069230D62A60040366D /* CenteredContentScrollView.swift */,
+				8D05706B230D65420040366D /* CanvasScrollView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1233,6 +1239,7 @@
 				8DBB258A22E842E500546D23 /* ShapesCollectionViewLayout.swift in Sources */,
 				8D6BAE4922D357BE00FF383C /* Circle.swift in Sources */,
 				8D10D9E522FAC71100A3BD28 /* StorageModelsTranslator.swift in Sources */,
+				8D05706C230D65420040366D /* CanvasScrollView.swift in Sources */,
 				8DD4249F22F31AA6003122B4 /* CanvasService.swift in Sources */,
 				8D07E0D3230699D900E2E0D0 /* DebugPrint.swift in Sources */,
 				8D1CCE1E230BF48600FDC03F /* CanvasContainerView.swift in Sources */,
@@ -1307,6 +1314,7 @@
 				8DD1A17822EA03470016BE5C /* ColorsPickerCollectionViewColorCellDelegate.swift in Sources */,
 				8DBB259822E8585A00546D23 /* SingleViewContainer.swift in Sources */,
 				8D4CB03922F9CE4100E60B1F /* Canvas+ShapeViewModel.swift in Sources */,
+				8D05706A230D62A60040366D /* CenteredContentScrollView.swift in Sources */,
 				8DB8B10122E1E47B00EB71D4 /* ModulesBuilder.swift in Sources */,
 				8DD103BE22D4C8F30052B13B /* AppCoordinator.swift in Sources */,
 				8DE758D222E703BF0069A6B4 /* CanvasPresenterProtocol.swift in Sources */,
