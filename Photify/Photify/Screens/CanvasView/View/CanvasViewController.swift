@@ -72,9 +72,9 @@ class CanvasViewController: UIViewController {
     }
     
     private func configureDropInteraction() {
-//        canvasDropInteractor = CanvasViewDropInteractor(parentView: self.view, scrollView: scrollView)
-//        canvasDropInteractor.delegate = self
-//        canvasDropInteractor.configure()
+        canvasDropInteractor = CanvasViewDropInteractor(targetView: self.canvasRendererView)
+        canvasDropInteractor.delegate = self
+        canvasDropInteractor.configure()
     }
 }
 
@@ -83,22 +83,17 @@ extension CanvasViewController: CanvasViewDropInteractorDelegate {
                               dropShapeType shapeType: ShapeType,
                               style: ShapeStyle,
                               atLocation dropCenter: CGPoint) {
-        let shapeFrame = CGRect(center: dropCenter, size: .init(width: 72, height: 72))
-        
-        let shape = ShapesProvider.convertToShape(from: shapeType)
-        let shapeView = ShapeView(shape: AnyShape(shape: shape))
-        
-        shapeView.shapeLayer.configure(shapeStyle: style)
-        shapeView.frame = shapeFrame
-//        self.scrollView.addSubview(shapeView)
-        
-        presenter?.handleShapeDrop(shapeType: shapeType, style: style, atLocation: dropCenter, size: shapeFrame.size)
+        presenter?.handleShapeDrop(shapeType: shapeType, style: style, atLocation: dropCenter, size: Self.predefinedShapeViewSize)
     }
 }
 
 extension CanvasViewController: CanvasView {
+    func addShapeToDisplay(_ shapeViewModel: Canvas.ShapeView) {
+        self.canvasRendererView.addDrawingCommand(shapeViewModel)
+    }
+    
     func displayShapes(_ shapeViewModels: [Canvas.ShapeView]) {
-        self.canvasRendererView.drawingCommands = shapeViewModels
+        self.canvasRendererView.setDrawingCommands(shapeViewModels)
     }
     
     func setTitleText(to text: String) {
@@ -111,4 +106,8 @@ extension CanvasViewController: ColorPickerDelegate {
     func colorPicker(_ colorPicker: ColorPicker, didPickColor pickedColor: Color?) {
         self.shapesCollectionView.changeShapesColors(to: pickedColor!)
     }
+}
+
+extension CanvasViewController {
+    static var predefinedShapeViewSize = CGSize(width: 72, height: 72)
 }

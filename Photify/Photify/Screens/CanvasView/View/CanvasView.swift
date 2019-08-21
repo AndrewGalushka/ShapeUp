@@ -11,4 +11,5 @@ import Foundation
 protocol CanvasView: AnyObject {
     func setTitleText(to text: String)
     func displayShapes(_ shapeViewModels: [Canvas.ShapeView])
+    func addShapeToDisplay(_ shapeViewModel: Canvas.ShapeView)
 }

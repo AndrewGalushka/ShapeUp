@@ -44,5 +44,6 @@ class CanvasPresenter: CanvasPresenterProtocol {
                                               color: color)
         
         self.canvasService.saveShapeView(shapeViewModel)
+        self.view?.addShapeToDisplay(shapeViewModel)
     }
 }

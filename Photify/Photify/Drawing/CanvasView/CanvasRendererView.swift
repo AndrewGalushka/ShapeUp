@@ -13,11 +13,11 @@ import CoreGraphics
 class CanvasRendererView: UIView {
     typealias DrawingCommand = Canvas.ShapeView
     
-    var drawingCommands: [DrawingCommand] = [] {
-        didSet {
-            setNeedsDisplay()
-        }
-    }
+    // MARK: - Properties(Private)
+    
+    private var drawingCommands: [DrawingCommand] = []
+    
+    // MARK: - Lifecycle
     
     override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else { return }
@@ -30,6 +30,24 @@ class CanvasRendererView: UIView {
         
         self.setNeedsDisplay()
     }
+    
+    // MARK: - Methods(Public)
+    
+    func setDrawingCommands(_ drawingCommands: [DrawingCommand]) {
+        self.drawingCommands = drawingCommands
+        setNeedsDisplay()
+    }
+    
+    func addDrawingCommand(_ drawingCommand: DrawingCommand) {
+        self.addDrawingCommands([drawingCommand])
+    }
+    
+    func addDrawingCommands(_ drawingCommands: [DrawingCommand]) {
+        self.drawingCommands.append(contentsOf: drawingCommands)
+        setNeedsDisplay()
+    }
+    
+    // MARK: - Methods(Private)
     
     private func makeDrawingCommand() -> CanvasRenderer.DrawingCommands {
         return CanvasRenderer.DrawingCommands(background: Color(uiColor: Design.Colors.canvasBackgroundWhite),
