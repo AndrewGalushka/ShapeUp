@@ -11,14 +11,12 @@ import CoreGraphics
 struct Circle: Shape {
     func path(in rect: CGRect) -> CGPath {
         let originalSize = rect.size
-        let originalCenter = CGPoint(x: rect.maxX / 2,
-                                     y: rect.maxY / 2)
+        let originalCenter = CGPoint(x: rect.midX,
+                                     y: rect.midY)
         
         let minLength = min(originalSize.width, originalSize.height)
-        let newSize = CGSize(width: minLength, height: minLength)
-        let newOrigin = CGPoint(x: originalCenter.x - newSize.width / 2,
-                                y: originalCenter.y - newSize.height / 2)
+        let squareRect = CGRect(center: originalCenter, size: CGSize(width: minLength, height: minLength))
         
-        return CGPath(ellipseIn: CGRect(origin: newOrigin, size: newSize), transform: nil)
+        return CGPath(ellipseIn: squareRect, transform: nil)
     }
 }
