@@ -13,8 +13,7 @@ class CanvasViewDropInteractor: NSObject, UIDropInteractionDelegate {
     
     // MARK: - Properties(Public)
     
-    unowned let parentView: UIView
-    unowned let scrollView: UIView
+    unowned let targetView: UIView
     
     weak var delegate: CanvasViewDropInteractorDelegate?
     
@@ -24,9 +23,8 @@ class CanvasViewDropInteractor: NSObject, UIDropInteractionDelegate {
     
     // MARK: - Initializers
     
-    init(parentView: UIView, scrollView: UIView) {
-        self.parentView = parentView
-        self.scrollView = scrollView
+    init(targetView: UIView) {
+        self.targetView = targetView
     }
     
     // MARK: - Methods(Public)
@@ -37,7 +35,7 @@ class CanvasViewDropInteractor: NSObject, UIDropInteractionDelegate {
             dropInteraction = UIDropInteraction(delegate: self)
         }
         
-        parentView.addInteraction(dropInteraction!)
+        targetView.addInteraction(dropInteraction!)
     }
     
     // MARK: - UIDropInteractionDelegate Imp
@@ -47,27 +45,27 @@ class CanvasViewDropInteractor: NSObject, UIDropInteractionDelegate {
     }
     
     func dropInteraction(_ interaction: UIDropInteraction, sessionDidEnter session: UIDropSession) {
-        let location = session.location(in: parentView)
+        let location = session.location(in: targetView)
         
-        if self.scrollView.frame.contains(location) {
-            self.scrollView.layer.borderWidth = 3
-            self.scrollView.layer.borderColor = UIColor.darkGray.withAlphaComponent(0.5).cgColor
+        if targetView.frame.contains(location) {
+            targetView.layer.borderWidth = 3
+            targetView.layer.borderColor = UIColor.darkGray.withAlphaComponent(0.5).cgColor
         }
     }
     
     func dropInteraction(_ interaction: UIDropInteraction, sessionDidUpdate session: UIDropSession) -> UIDropProposal {
-        let location = session.location(in: self.scrollView)
+        let location = session.location(in: targetView)
         
         let dropOperation: UIDropOperation
         
-        if self.scrollView.point(inside: location, with: nil) {
-            self.scrollView.layer.borderWidth = 3
-            self.scrollView.layer.borderColor = UIColor.darkGray.withAlphaComponent(0.5).cgColor
+        if targetView.point(inside: location, with: nil) {
+            targetView.layer.borderWidth = 3
+            targetView.layer.borderColor = UIColor.darkGray.withAlphaComponent(0.5).cgColor
             
             dropOperation = .copy
         } else {
-            self.scrollView.layer.borderWidth = 0.0
-            self.scrollView.layer.borderColor = nil
+            targetView.layer.borderWidth = 0.0
+            targetView.layer.borderColor = nil
             
             dropOperation = .cancel
         }
@@ -79,13 +77,13 @@ class CanvasViewDropInteractor: NSObject, UIDropInteractionDelegate {
     
     func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
         guard let shapeInfo = session.items.first?.localObject as? ShapesDragAndDropDTO else { return }
-        let dropLocation = session.location(in: self.scrollView)
+        let dropLocation = session.location(in: targetView)
         
         delegate?.canvasDropInteractor(self, dropShapeType: shapeInfo.shapeType, style: shapeInfo.shapeStyle, atLocation: dropLocation)
     }
     
-    func dropInteraction(_ interaction: UIDropInteraction, sessionDidEnd session: UIDropSession) {
-        self.scrollView.layer.borderWidth = 0.0
-        self.scrollView.layer.borderColor = nil
+    func dropInteraction(_ interaction: UIDropInteraction, concludeDrop session: UIDropSession) {
+        targetView.layer.borderWidth = 0.0
+        targetView.layer.borderColor = nil
     }
 }

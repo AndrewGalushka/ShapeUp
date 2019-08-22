@@ -16,24 +16,23 @@ struct Triangle: Shape {
     }
     
     func path(in rect: CGRect) -> CGPath {
-        let size = rect.size
         let p1: CGPoint
         let p2: CGPoint
         let p3: CGPoint
         
         switch alignment {
         case .left:
-            p1 = .init(x: 0, y: 0)
-            p2 = .init(x: 0, y: size.height)
-            p3 = .init(x: size.width, y: size.height)
+            p1 = .init(x: rect.minX, y: rect.minY)
+            p2 = .init(x: rect.minX, y: rect.maxY)
+            p3 = .init(x: rect.maxX, y: rect.maxY)
         case .right:
-            p1 = .init(x: size.width, y: 0)
-            p2 = .init(x: size.width, y: size.height)
-            p3 = .init(x: 0, y: size.height)
+            p1 = .init(x: rect.maxX, y: rect.minY)
+            p2 = .init(x: rect.maxX, y: rect.maxY)
+            p3 = .init(x: rect.minX, y:rect.maxY)
         case .center:
-            p1 = .init(x: size.width / 2.0, y: 0)
-            p2 = .init(x: size.width, y: size.height)
-            p3 = .init(x: 0, y: size.height)
+            p1 = .init(x: rect.midX, y: rect.minY)
+            p2 = .init(x: rect.maxX, y: rect.maxY)
+            p3 = .init(x: rect.minX, y: rect.maxY)
         }
         
         let path = CGMutablePath()

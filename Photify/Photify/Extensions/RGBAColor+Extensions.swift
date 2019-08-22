@@ -1,5 +1,5 @@
 //
-//  UIColor+RGBAColor.swift
+//  RGBAColor+Extensions.swift
 //  Photify
 //
 //  Created by Galushka on 7/26/19.

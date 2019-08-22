@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ga7-Su-8we">
-    <device id="ipad12_9rounded" orientation="landscape">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ga7-Su-8we">
+    <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,25 +17,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrd-3O-xj6">
-                                <rect key="frame" x="0.0" y="836" width="1366" height="160"/>
+                                <rect key="frame" x="0.0" y="896" width="1366" height="100"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2NZ-dC-sFy" customClass="ShapesCollectionView" customModule="Photify" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="40" width="1366" height="80"/>
+                                        <rect key="frame" x="0.0" y="10" width="1366" height="80"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="5Ka-ow-Lyb"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caP-Dd-X5I">
-                                        <rect key="frame" x="0.0" y="0.0" width="1366" height="40"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1366" height="10"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQ5-E3-WcM">
-                                        <rect key="frame" x="0.0" y="120" width="1366" height="40"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="90" width="1366" height="10"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="zQ5-E3-WcM" secondAttribute="bottom" id="3ZC-Th-sOp"/>
                                     <constraint firstItem="caP-Dd-X5I" firstAttribute="leading" secondItem="rrd-3O-xj6" secondAttribute="leading" id="5mO-X6-EB7"/>
@@ -50,14 +48,15 @@
                                     <constraint firstAttribute="trailing" secondItem="2NZ-dC-sFy" secondAttribute="trailing" id="cNh-7M-Lbd"/>
                                     <constraint firstItem="2NZ-dC-sFy" firstAttribute="top" secondItem="caP-Dd-X5I" secondAttribute="bottom" id="ion-kj-rGs"/>
                                     <constraint firstItem="2NZ-dC-sFy" firstAttribute="leading" secondItem="rrd-3O-xj6" secondAttribute="leading" id="t9K-u9-Mwt"/>
-                                    <constraint firstAttribute="height" constant="160" id="tOM-Zr-N3j"/>
+                                    <constraint firstAttribute="height" constant="100" id="tOM-Zr-N3j"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDH-zg-Diw">
-                                <rect key="frame" x="0.0" y="74" width="1366" height="762"/>
-                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyq-jz-Boi" customClass="CanvasScrollView" customModule="Photify" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="1366" height="846"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmK-X6-TZ8" customClass="ColorPicker" customModule="Photify" customModuleProvider="target">
-                                <rect key="frame" x="1306" y="74" width="50" height="752"/>
+                                <rect key="frame" x="1306" y="50" width="50" height="836"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="IDS-oc-99b"/>
                                 </constraints>
@@ -65,16 +64,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mDH-zg-Diw" firstAttribute="leading" secondItem="5iw-PO-Aex" secondAttribute="leading" id="4er-LW-7an"/>
+                            <constraint firstItem="lyq-jz-Boi" firstAttribute="top" secondItem="5iw-PO-Aex" secondAttribute="top" id="69C-En-4KK"/>
                             <constraint firstItem="5iw-PO-Aex" firstAttribute="bottom" secondItem="rrd-3O-xj6" secondAttribute="bottom" constant="8" id="6Qi-zO-4W7"/>
                             <constraint firstItem="fmK-X6-TZ8" firstAttribute="top" secondItem="5iw-PO-Aex" secondAttribute="top" id="OZ9-nc-1ZG"/>
                             <constraint firstItem="rrd-3O-xj6" firstAttribute="top" secondItem="fmK-X6-TZ8" secondAttribute="bottom" constant="10" id="Ozl-zY-Elx"/>
-                            <constraint firstItem="rrd-3O-xj6" firstAttribute="top" secondItem="mDH-zg-Diw" secondAttribute="bottom" id="TJh-Xh-TPB"/>
+                            <constraint firstItem="rrd-3O-xj6" firstAttribute="top" secondItem="lyq-jz-Boi" secondAttribute="bottom" id="T3e-iS-MCX"/>
                             <constraint firstItem="5iw-PO-Aex" firstAttribute="trailing" secondItem="fmK-X6-TZ8" secondAttribute="trailing" constant="10" id="Xhb-U3-vTD"/>
-                            <constraint firstItem="mDH-zg-Diw" firstAttribute="top" secondItem="5iw-PO-Aex" secondAttribute="top" id="ZiN-Ic-k0k"/>
+                            <constraint firstItem="5iw-PO-Aex" firstAttribute="trailing" secondItem="lyq-jz-Boi" secondAttribute="trailing" id="g2h-92-ZHm"/>
                             <constraint firstItem="rrd-3O-xj6" firstAttribute="leading" secondItem="5iw-PO-Aex" secondAttribute="leading" id="keu-Y7-5el"/>
-                            <constraint firstItem="5iw-PO-Aex" firstAttribute="trailing" secondItem="mDH-zg-Diw" secondAttribute="trailing" id="tHp-yD-qJG"/>
                             <constraint firstItem="5iw-PO-Aex" firstAttribute="trailing" secondItem="rrd-3O-xj6" secondAttribute="trailing" id="ucw-LF-069"/>
+                            <constraint firstItem="lyq-jz-Boi" firstAttribute="leading" secondItem="5iw-PO-Aex" secondAttribute="leading" id="x3Q-Ug-5je"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5iw-PO-Aex"/>
                     </view>
@@ -82,8 +81,10 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="bottomControlsContainerView" destination="rrd-3O-xj6" id="TEC-7d-rvs"/>
+                        <outlet property="canvasScrollView" destination="lyq-jz-Boi" id="rdF-Mj-ssZ"/>
+                        <outlet property="categoryContainerView" destination="zQ5-E3-WcM" id="XiQ-IA-fO6"/>
+                        <outlet property="categorySettingsConainerView" destination="caP-Dd-X5I" id="Vd5-W1-9iy"/>
                         <outlet property="colorPicker" destination="fmK-X6-TZ8" id="Gfe-UJ-gcz"/>
-                        <outlet property="scrollView" destination="mDH-zg-Diw" id="41j-qQ-Yeo"/>
                         <outlet property="shapesCollectionView" destination="2NZ-dC-sFy" id="ZyE-PF-Ofz"/>
                     </connections>
                 </viewController>

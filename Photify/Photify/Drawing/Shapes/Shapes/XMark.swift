@@ -10,7 +10,7 @@ import CoreGraphics
 
 struct XMark: Shape {
     func path(in rect: CGRect) -> CGPath {
-        let center = CGPoint(x: rect.width / 2, y: rect.height / 2)
+        let center = CGPoint(x: rect.midX, y: rect.midY)
         let minLength = min(rect.size.width, rect.size.height)
         let canvasSize = CGSize(width: minLength, height: minLength)
         let canvasRect = CGRect(origin: CGPoint(x: center.x - canvasSize.width / 2,
@@ -35,7 +35,7 @@ struct XMark: Shape {
         let topLeftPoint2 = CGPoint(x: canvasOrigin.x,
                                     y: canvasOrigin.y + pointOffsetFromCorner)
         
-        let bottomLeftPoint1 = CGPoint(x: canvasOrigin.x + 0,
+        let bottomLeftPoint1 = CGPoint(x: canvasOrigin.x,
                                        y: canvasOrigin.y + canvasSize.height - pointOffsetFromCorner)
         let bottomLeftPoint2 = CGPoint(x: canvasOrigin.x + pointOffsetFromCorner,
                                        y: canvasOrigin.y + canvasSize.height)

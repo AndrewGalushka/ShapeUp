@@ -13,8 +13,8 @@ struct Hexagon: Shape {
         let size = rect.size
         let minLength = min(size.width, size.height)
         
-        let center = CGPoint(x: size.width / 2.0,
-                             y: size.height / 2.0)
+        let center = CGPoint(x: rect.midX,
+                             y: rect.midY)
         let radius = minLength / 2.0
         let stepAngle = Geometry.Angle.degrees(360 / 6)
         

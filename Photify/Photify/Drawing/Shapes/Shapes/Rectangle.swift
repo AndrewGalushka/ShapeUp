@@ -10,13 +10,15 @@ import CoreGraphics
 
 struct Rectangle: Shape {
     func path(in rect: CGRect) -> CGPath {
-        let path = CGMutablePath()
-        let size = rect.size
+        let xOrigin = rect.origin.x
+        let yOrigin = rect.origin.y
         
-        let p1 = CGPoint(x: 0, y: 0)
-        let p2 = CGPoint(x: size.width, y: 0)
-        let p3 = CGPoint(x: size.width, y: size.height)
-        let p4 = CGPoint(x: 0, y: size.height)
+        let path = CGMutablePath()
+        
+        let p1 = CGPoint(x: xOrigin, y: yOrigin)
+        let p2 = CGPoint(x: rect.maxX, y: yOrigin)
+        let p3 = CGPoint(x: rect.maxX, y: rect.maxY)
+        let p4 = CGPoint(x: xOrigin, y: rect.maxY)
         
         path.move(to: p1)
         path.addLine(to: p2)
