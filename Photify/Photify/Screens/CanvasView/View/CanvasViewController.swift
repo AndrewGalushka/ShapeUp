@@ -39,6 +39,11 @@ class CanvasViewController: UIViewController {
         self.presenter?.viewLoaded()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        canvasScrollView.zoomToFit()
+    }
+    
     // MARK: - Methods(Private)
     
     private func setup() {
@@ -61,12 +66,12 @@ class CanvasViewController: UIViewController {
     
     private func configureScrollView() {
         CanvasScrollView.Configurator(canvasScrollView: self.canvasScrollView)
-            .contentView(canvasContainerView)
             .contentSize(canvasContainerView.bounds.size)
-            .zoom()
+            .contentView(canvasContainerView)
+            .zoomMinMaxScale()
             .scrollViewBackgroundColor(.darkGray)
     }
-    
+        
     private func configureColorPicker() {
         colorPicker.delegate = self
     }

@@ -59,7 +59,28 @@ class CanvasScrollView: UIView {
         self.setup()
     }
     
-    // MARK: - Methods(private)
+    // MARK: - Methods(Public)
+    
+    func zoomToFit(animated: Bool = true) {
+        
+        guard let contentView = self.contentView else { return }
+        let scrollViewSize = underlyingScrollView.visibleSize
+        let contentViewSize = contentView.bounds
+        
+        var scaleNeededToFit = min(scrollViewSize.width / contentViewSize.width, scrollViewSize.height / contentViewSize.height)
+        
+        if scaleNeededToFit > 1 {
+            scaleNeededToFit = 1
+        }
+        
+        self.setZoomScale(scaleNeededToFit, animated: animated)
+    }
+    
+    func setZoomScale(_ scale: CGFloat, animated: Bool = false) {
+        self.underlyingScrollView.setZoomScale(scale, animated: animated)
+    }
+    
+    // MARK: - Methods(Private)
     
     private func setup() {
         underlyingScrollView.delegate = self
@@ -101,7 +122,7 @@ extension CanvasScrollView {
         }
         
         @discardableResult
-        func zoom(minimumZoomScale: CGFloat = 0.5, maximumZoomScale: CGFloat = 3.0) -> Self {
+        func zoomMinMaxScale(minimumZoomScale: CGFloat = 0.5, maximumZoomScale: CGFloat = 3.0) -> Self {
             canvasScrollView.underlyingScrollView.minimumZoomScale = minimumZoomScale
             canvasScrollView.underlyingScrollView.maximumZoomScale = maximumZoomScale
             return self
