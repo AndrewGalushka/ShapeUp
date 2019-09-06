@@ -70,6 +70,10 @@ class CanvasContainerView: UIView {
             .border()
             .retrieveCanvasView()
     }
+    
+    private func isAutoLayoutEnabled() -> Bool {
+        return !self.translatesAutoresizingMaskIntoConstraints
+    }
 }
 
 private extension CanvasContainerView {
