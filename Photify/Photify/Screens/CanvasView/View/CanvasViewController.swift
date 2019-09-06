@@ -38,9 +38,9 @@ class CanvasViewController: UIViewController {
         self.setup()
         self.presenter?.viewLoaded()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         canvasScrollView.zoomToFit(animated: false)
     }
     
