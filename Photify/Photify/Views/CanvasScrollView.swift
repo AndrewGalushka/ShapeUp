@@ -61,13 +61,16 @@ class CanvasScrollView: UIView {
     
     // MARK: - Methods(Public)
     
-    func zoomToFit(animated: Bool = true) {
+    func zoomToFit(animated: Bool = true, edgeInset: CGFloat = 0) {
         
         guard let contentView = self.contentView else { return }
         let scrollViewSize = underlyingScrollView.visibleSize
         let contentViewSize = contentView.bounds
+        let newContentSizeBasedEdgeInsets = CGSize(width: (contentViewSize.width + edgeInset * 2),
+                                                   height: (contentViewSize.height + edgeInset * 2))
         
-        var scaleNeededToFit = min(scrollViewSize.width / contentViewSize.width, scrollViewSize.height / contentViewSize.height)
+        var scaleNeededToFit = min(scrollViewSize.width / newContentSizeBasedEdgeInsets.width,
+                                   scrollViewSize.height / newContentSizeBasedEdgeInsets.height)
         
         if scaleNeededToFit > 1 {
             scaleNeededToFit = 1

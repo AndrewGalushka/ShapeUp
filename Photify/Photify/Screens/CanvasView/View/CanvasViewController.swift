@@ -41,7 +41,7 @@ class CanvasViewController: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        canvasScrollView.zoomToFit(animated: false)
+        canvasScrollView.zoomToFit(animated: false, edgeInset: 5)
     }
     
     // MARK: - Methods(Private)
