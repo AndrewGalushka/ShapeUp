@@ -116,7 +116,7 @@ extension CanvasScrollView {
         }
         
         @discardableResult
-        func contentView(_ contentView: UIView?) -> Self {
+        func contentView(_ contentView: CanvasContainerView?) -> Self {
             canvasScrollView.contentView = contentView
             return self
         }
