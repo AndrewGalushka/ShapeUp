@@ -15,7 +15,7 @@ class AppCoordinator: Coordinator {
     private let window: UIWindow
     private let launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     private let appAssembler: AppAssemblerType
-    private let modulesAssembler: ModulesBuilder
+    private let modulesAssembler: ModulesFactory
     private let navigationController: UINavigationController
     private let router: PushRouter
     

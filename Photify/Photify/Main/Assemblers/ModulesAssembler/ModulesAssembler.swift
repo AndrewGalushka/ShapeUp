@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ModulesAssembler: ModulesBuilder {
+class ModulesAssembler: ModulesFactory {
     
     // MARK: Properties(Private)
     

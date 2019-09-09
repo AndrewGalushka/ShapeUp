@@ -1,5 +1,5 @@
 //
-//  ModulesBuilder.swift
+//  ModulesFactory.swift
 //  Photify
 //
 //  Created by Galushka on 7/19/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ModulesBuilder {
+protocol ModulesFactory {
     func assembleCanvasListModule() -> CanvasListModule
     func assembleCanvasModule(canvas: Canvas) -> CanvasModule
 }

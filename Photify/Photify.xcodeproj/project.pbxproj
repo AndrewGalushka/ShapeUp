@@ -99,7 +99,7 @@
 		8DB8B0F922E1BEDF00EB71D4 /* CanvasesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B0F822E1BEDF00EB71D4 /* CanvasesListPresenter.swift */; };
 		8DB8B0FB22E1C36E00EB71D4 /* CanvasListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B0FA22E1C36E00EB71D4 /* CanvasListView.swift */; };
 		8DB8B0FD22E1DFCC00EB71D4 /* CanvasesListPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B0FC22E1DFCC00EB71D4 /* CanvasesListPresenterOutput.swift */; };
-		8DB8B10122E1E47B00EB71D4 /* ModulesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B10022E1E47B00EB71D4 /* ModulesBuilder.swift */; };
+		8DB8B10122E1E47B00EB71D4 /* ModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B10022E1E47B00EB71D4 /* ModulesFactory.swift */; };
 		8DB8B10322E1E91500EB71D4 /* ModulesAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B10222E1E91500EB71D4 /* ModulesAssembler.swift */; };
 		8DB8B10922E2044C00EB71D4 /* PushRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B10822E2044C00EB71D4 /* PushRouter.swift */; };
 		8DB8B10B22E205B800EB71D4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8B10A22E205B800EB71D4 /* Router.swift */; };
@@ -269,7 +269,7 @@
 		8DB8B0F822E1BEDF00EB71D4 /* CanvasesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasesListPresenter.swift; sourceTree = "<group>"; };
 		8DB8B0FA22E1C36E00EB71D4 /* CanvasListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListView.swift; sourceTree = "<group>"; };
 		8DB8B0FC22E1DFCC00EB71D4 /* CanvasesListPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasesListPresenterOutput.swift; sourceTree = "<group>"; };
-		8DB8B10022E1E47B00EB71D4 /* ModulesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesBuilder.swift; sourceTree = "<group>"; };
+		8DB8B10022E1E47B00EB71D4 /* ModulesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesFactory.swift; sourceTree = "<group>"; };
 		8DB8B10222E1E91500EB71D4 /* ModulesAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesAssembler.swift; sourceTree = "<group>"; };
 		8DB8B10822E2044C00EB71D4 /* PushRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushRouter.swift; sourceTree = "<group>"; };
 		8DB8B10A22E205B800EB71D4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -842,7 +842,7 @@
 		8DB8B0FF22E1E3BB00EB71D4 /* ModulesAssembler */ = {
 			isa = PBXGroup;
 			children = (
-				8DB8B10022E1E47B00EB71D4 /* ModulesBuilder.swift */,
+				8DB8B10022E1E47B00EB71D4 /* ModulesFactory.swift */,
 				8DB8B10222E1E91500EB71D4 /* ModulesAssembler.swift */,
 			);
 			path = ModulesAssembler;
@@ -1319,7 +1319,7 @@
 				8DBB259822E8585A00546D23 /* SingleViewContainer.swift in Sources */,
 				8D4CB03922F9CE4100E60B1F /* Canvas+ShapeViewModel.swift in Sources */,
 				8D05706A230D62A60040366D /* CenteredContentScrollView.swift in Sources */,
-				8DB8B10122E1E47B00EB71D4 /* ModulesBuilder.swift in Sources */,
+				8DB8B10122E1E47B00EB71D4 /* ModulesFactory.swift in Sources */,
 				8DD103BE22D4C8F30052B13B /* AppCoordinator.swift in Sources */,
 				8DE758D222E703BF0069A6B4 /* CanvasPresenterProtocol.swift in Sources */,
 				8D1BADC1230AEBC000F1EACD /* CGContext+Extensions.swift in Sources */,
