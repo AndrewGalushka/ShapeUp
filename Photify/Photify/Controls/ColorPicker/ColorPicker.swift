@@ -149,9 +149,9 @@ class ColorPicker: UIView {
         parentCircle.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate(
             [parentCircle.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-             parentCircle.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+             parentCircle.widthAnchor.constraint(equalToConstant: configs.circleDiameter),
              parentCircle.heightAnchor.constraint(equalToConstant: configs.circleDiameter),
-             parentCircle.heightAnchor.constraint(equalToConstant: configs.circleDiameter)]
+             parentCircle.bottomAnchor.constraint(equalTo: self.bottomAnchor)]
         )
     }
     
