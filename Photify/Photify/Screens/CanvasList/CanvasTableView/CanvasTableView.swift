@@ -22,10 +22,12 @@ class CanvasTableView: UIView {
             tb.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         } else {
             tb.translatesAutoresizingMaskIntoConstraints = false
-            tb.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-            tb.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-            tb.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-            tb.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+            NSLayoutConstraint.activate(
+                [tb.topAnchor.constraint(equalTo: self.topAnchor),
+                 tb.topAnchor.constraint(equalTo: self.topAnchor),
+                 tb.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+                 tb.leadingAnchor.constraint(equalTo: self.leadingAnchor)]
+            )
         }
         
         return tb

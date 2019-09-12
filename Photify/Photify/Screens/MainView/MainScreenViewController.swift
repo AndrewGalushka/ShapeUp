@@ -27,10 +27,13 @@ class MainScreenViewController: UIViewController {
         goToButton.alpha = 0.0
         self.view.addSubview(goToButton)
         goToButton.translatesAutoresizingMaskIntoConstraints = false
-        goToButton.widthAnchor.constraint(equalToConstant: 400).isActive = true
-        goToButton.heightAnchor.constraint(equalToConstant: 400).isActive = true
-        goToButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        goToButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        NSLayoutConstraint.activate(
+            [goToButton.widthAnchor.constraint(equalToConstant: 400),
+             goToButton.heightAnchor.constraint(equalToConstant: 400),
+             goToButton.heightAnchor.constraint(equalToConstant: 400),
+             goToButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+            ]
+        )
         
         goToButton.addTarget(self, action: #selector(goToButtonTouchUpInside(_:)), for: .touchUpInside)
         
