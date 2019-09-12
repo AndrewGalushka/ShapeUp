@@ -79,7 +79,6 @@ class CanvasViewController: UIViewController {
     private func configureDropInteraction() {
         canvasDropInteractor = CanvasViewDropInteractor(targetView: self.canvasRendererView)
         canvasDropInteractor.delegate = self
-        canvasDropInteractor.configure()
     }
 }
 
