@@ -39,9 +39,7 @@ class CanvasScrollView: UIView {
     
     private lazy var underlyingScrollView: CenteredContentScrollView = {
         let scrollView = CenteredContentScrollView()
-        
-        UIView.embed(view: scrollView, inside: self, usingAutoLayout: isUsesAutolayout)
-        
+        UIView.embed(view: scrollView, inside: self, usingAutoLayout: !self.translatesAutoresizingMaskIntoConstraints)
         return scrollView
     }()
     
@@ -87,10 +85,6 @@ class CanvasScrollView: UIView {
     
     private func setup() {
         underlyingScrollView.delegate = self
-    }
-    
-    private var isUsesAutolayout: Bool {
-        return !self.translatesAutoresizingMaskIntoConstraints
     }
 }
 
