@@ -26,7 +26,7 @@ struct ShapesProvider: ShapeTypeToShapeConvertible {
     
     // MARK: - ShapeTypeToShapeConvertible imp
     
-    static func convertToShape(from shapeType: ShapeType) -> Shape {
+    static func createShape(basedOn shapeType: ShapeType) -> Shape {
         switch shapeType {
         case .rectangle:
             return Rectangle()

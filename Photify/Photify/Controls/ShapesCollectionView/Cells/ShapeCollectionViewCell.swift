@@ -21,7 +21,7 @@ class ShapeCollectionViewCell: UICollectionViewCell {
     
     private var underlyingShape: Shape? {
         guard let viewModel = self.viewModel else { return nil }
-        return ShapesProvider.convertToShape(from: viewModel.shapeType)
+        return ShapesProvider.createShape(basedOn: viewModel.shapeType)
     }
     
     // MARK: - Lifecycle

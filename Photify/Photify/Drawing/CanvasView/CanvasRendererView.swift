@@ -83,7 +83,7 @@ class CanvasRenderer {
             let shapeBkColor = shapeView.color ?? .clear
             let shapeStrokeColor = shapeBkColor.inverted()
             let drawingRect = CGRect(origin: shapeView.origin, size: shapeView.size)
-            let shape = ShapesProvider.convertToShape(from: shapeView.shapeType)
+            let shape = ShapesProvider.createShape(basedOn: shapeView.shapeType)
             let path = shape.path(in: drawingRect)
             
             context.drawAction {
