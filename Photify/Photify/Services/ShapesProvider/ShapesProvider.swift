@@ -10,7 +10,7 @@ import Foundation
 
 struct ShapesProvider: ShapeTypeToShapeConvertible {
 
-    func allExistingShapeTypes() -> [ShapeType] {
+    func allShapeTypes() -> [ShapeType] {
         return ShapeType.allCases
     }
     
