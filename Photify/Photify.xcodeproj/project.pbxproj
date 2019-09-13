@@ -57,6 +57,7 @@
 		8D26770E232BD387003AAC03 /* CompositeAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D26770D232BD387003AAC03 /* CompositeAppDelegate.swift */; };
 		8D267710232BD4D4003AAC03 /* AppDelegatesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D26770F232BD4D4003AAC03 /* AppDelegatesFactory.swift */; };
 		8D267712232BD51E003AAC03 /* StartupConfiguratorAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D267711232BD51E003AAC03 /* StartupConfiguratorAppDelegate.swift */; };
+		8D267715232BD6CC003AAC03 /* AppAssemblerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D267714232BD6CC003AAC03 /* AppAssemblerFactory.swift */; };
 		8D4C8A2522E0590A00282747 /* UIAlertController+AddCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A2422E0590A00282747 /* UIAlertController+AddCanvas.swift */; };
 		8D4C8A3C22E0CC3400282747 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A3B22E0CC3400282747 /* UIColor+Extension.swift */; };
 		8D4CB03922F9CE4100E60B1F /* Canvas+ShapeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4CB03822F9CE4100E60B1F /* Canvas+ShapeViewModel.swift */; };
@@ -227,6 +228,7 @@
 		8D26770D232BD387003AAC03 /* CompositeAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeAppDelegate.swift; sourceTree = "<group>"; };
 		8D26770F232BD4D4003AAC03 /* AppDelegatesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegatesFactory.swift; sourceTree = "<group>"; };
 		8D267711232BD51E003AAC03 /* StartupConfiguratorAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupConfiguratorAppDelegate.swift; sourceTree = "<group>"; };
+		8D267714232BD6CC003AAC03 /* AppAssemblerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssemblerFactory.swift; sourceTree = "<group>"; };
 		8D4C8A2422E0590A00282747 /* UIAlertController+AddCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AddCanvas.swift"; sourceTree = "<group>"; };
 		8D4C8A2822E070F700282747 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		8D4C8A3B22E0CC3400282747 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -854,6 +856,7 @@
 		8DB8B0FE22E1E3B100EB71D4 /* AppAssemblers */ = {
 			isa = PBXGroup;
 			children = (
+				8D267714232BD6CC003AAC03 /* AppAssemblerFactory.swift */,
 				8DD103C022D4C9A80052B13B /* AppAssemblerType.swift */,
 				8D18F17622D5D0C900E7B1E0 /* AppAssembler.swift */,
 			);
@@ -959,8 +962,8 @@
 		8DD103BF22D4C9660052B13B /* Assemblers */ = {
 			isa = PBXGroup;
 			children = (
-				8DB8B0FF22E1E3BB00EB71D4 /* ModulesAssembler */,
 				8DB8B0FE22E1E3B100EB71D4 /* AppAssemblers */,
+				8DB8B0FF22E1E3BB00EB71D4 /* ModulesAssembler */,
 			);
 			path = Assemblers;
 			sourceTree = "<group>";
@@ -1335,6 +1338,7 @@
 				8D6BAE5B22D37FC000FF383C /* Triangle.swift in Sources */,
 				8D8ABB5322EF25010084E4BB /* ShapeStyle+CAShapeLayer.swift in Sources */,
 				8DB8B0FD22E1DFCC00EB71D4 /* CanvasesListPresenterOutput.swift in Sources */,
+				8D267715232BD6CC003AAC03 /* AppAssemblerFactory.swift in Sources */,
 				8D18F17C22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift in Sources */,
 				8DC010A022E5B1CF00010BCA /* CanvasListManagementService.swift in Sources */,
 				8DD424A222F31AF8003122B4 /* CanvasServiceProtocol.swift in Sources */,

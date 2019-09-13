@@ -14,7 +14,7 @@ class StartupConfiguratorAppDelegate: AppDelegateType {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let appAssembler = AppAssembler()
+        let appAssembler = AppAssemblerFactory.makeDefault()
         let window = UIWindow(frame: UIScreen.main.bounds)
         let appCoordinator = AppCoordinator(window: window,
                                             launchOptions: launchOptions,
