@@ -121,7 +121,7 @@
 		8DD1A16D22E9FDD20016BE5C /* ColorsPickerCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1A16C22E9FDD20016BE5C /* ColorsPickerCollectionViewLayout.swift */; };
 		8DD1A17322EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1A17122EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.swift */; };
 		8DD1A17422EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DD1A17222EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.xib */; };
-		8DD1A17822EA03470016BE5C /* ColorsPickerCollectionViewColorCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1A17722EA03470016BE5C /* ColorsPickerCollectionViewColorCellDelegate.swift */; };
+		8DD1A17822EA03470016BE5C /* ColorPickerCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD1A17722EA03470016BE5C /* ColorPickerCellDelegate.swift */; };
 		8DD4249222F3022D003122B4 /* CanvasEntityMapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4248322F3022D003122B4 /* CanvasEntityMapable.swift */; };
 		8DD4249322F3022D003122B4 /* CoreDataEntityMapper+Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4248422F3022D003122B4 /* CoreDataEntityMapper+Canvas.swift */; };
 		8DD4249422F3022D003122B4 /* ManagedObjectMapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4248522F3022D003122B4 /* ManagedObjectMapable.swift */; };
@@ -291,7 +291,7 @@
 		8DD1A16C22E9FDD20016BE5C /* ColorsPickerCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPickerCollectionViewLayout.swift; sourceTree = "<group>"; };
 		8DD1A17122EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPickerCollectionViewColorCell.swift; sourceTree = "<group>"; };
 		8DD1A17222EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorsPickerCollectionViewColorCell.xib; sourceTree = "<group>"; };
-		8DD1A17722EA03470016BE5C /* ColorsPickerCollectionViewColorCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPickerCollectionViewColorCellDelegate.swift; sourceTree = "<group>"; };
+		8DD1A17722EA03470016BE5C /* ColorPickerCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerCellDelegate.swift; sourceTree = "<group>"; };
 		8DD4245F22F3018C003122B4 /* DataStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD4246122F3018C003122B4 /* DataStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataStorage.h; sourceTree = "<group>"; };
 		8DD4246222F3018C003122B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -550,8 +550,8 @@
 			isa = PBXGroup;
 			children = (
 				8D1CCE1D230BF48600FDC03F /* CanvasContainerView.swift */,
-				8D057069230D62A60040366D /* CenteredContentScrollView.swift */,
 				8D05706B230D65420040366D /* CanvasScrollView.swift */,
+				8D057069230D62A60040366D /* CenteredContentScrollView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -959,7 +959,7 @@
 			children = (
 				8DD1A17122EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.swift */,
 				8DD1A17222EA00DB0016BE5C /* ColorsPickerCollectionViewColorCell.xib */,
-				8DD1A17722EA03470016BE5C /* ColorsPickerCollectionViewColorCellDelegate.swift */,
+				8DD1A17722EA03470016BE5C /* ColorPickerCellDelegate.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1315,7 +1315,7 @@
 				8DC010A022E5B1CF00010BCA /* CanvasListManagementService.swift in Sources */,
 				8DD424A222F31AF8003122B4 /* CanvasServiceProtocol.swift in Sources */,
 				8DB8B0F922E1BEDF00EB71D4 /* CanvasesListPresenter.swift in Sources */,
-				8DD1A17822EA03470016BE5C /* ColorsPickerCollectionViewColorCellDelegate.swift in Sources */,
+				8DD1A17822EA03470016BE5C /* ColorPickerCellDelegate.swift in Sources */,
 				8DBB259822E8585A00546D23 /* SingleViewContainer.swift in Sources */,
 				8D4CB03922F9CE4100E60B1F /* Canvas+ShapeViewModel.swift in Sources */,
 				8D05706A230D62A60040366D /* CenteredContentScrollView.swift in Sources */,
@@ -1564,6 +1564,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDDE2DY87F;
 				GCC_OPTIMIZATION_LEVEL = fast;
@@ -1574,6 +1575,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Galushka.Photify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -1584,6 +1586,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDDE2DY87F;
 				INFOPLIST_FILE = Photify/Resources/Info.plist;
@@ -1593,6 +1596,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Galushka.Photify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};

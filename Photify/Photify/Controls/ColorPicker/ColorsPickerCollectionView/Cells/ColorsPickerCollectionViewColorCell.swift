@@ -16,7 +16,7 @@ class ColorsPickerCollectionViewColorCell: UICollectionViewCell {
     
     // MARK: - Properties(Public)
     
-    weak var delegate: ColorsPickerCollectionViewColorCellDelegate?
+    weak var delegate: ColorPickerCellDelegate?
     
     // MARK: - Lifecycle
     

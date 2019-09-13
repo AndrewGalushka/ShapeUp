@@ -1,5 +1,5 @@
 //
-//  ColorsPickerCollectionViewColorCellDelegate.swift
+//  ColorPickerCellDelegate.swift
 //  Photify
 //
 //  Created by Galushka on 7/25/19.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol ColorsPickerCollectionViewColorCellDelegate: AnyObject {
+protocol ColorPickerCellDelegate: AnyObject {
     func colorCell(_ colorCell: ColorsPickerCollectionViewColorCell, pressedWithColor color: UIColor?)
 }
