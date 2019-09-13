@@ -109,6 +109,7 @@
 		8DBB259822E8585A00546D23 /* SingleViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB259722E8585A00546D23 /* SingleViewContainer.swift */; };
 		8DBB259A22E8596500546D23 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB259922E8596500546D23 /* UIView+Extensions.swift */; };
 		8DBB259D22E886B700546D23 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB259C22E886B700546D23 /* ColorPicker.swift */; };
+		8DBE67A7232B7F9B00E3834B /* CanvasRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE67A6232B7F9B00E3834B /* CanvasRenderer.swift */; };
 		8DC0109B22E59E7500010BCA /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0109A22E59E7500010BCA /* Array+Extension.swift */; };
 		8DC0109D22E59F0E00010BCA /* CanvasTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0109C22E59F0E00010BCA /* CanvasTableViewDelegate.swift */; };
 		8DC010A022E5B1CF00010BCA /* CanvasListManagementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0109F22E5B1CF00010BCA /* CanvasListManagementService.swift */; };
@@ -279,6 +280,7 @@
 		8DBB259722E8585A00546D23 /* SingleViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewContainer.swift; sourceTree = "<group>"; };
 		8DBB259922E8596500546D23 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; wrapsLines = 0; };
 		8DBB259C22E886B700546D23 /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		8DBE67A6232B7F9B00E3834B /* CanvasRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasRenderer.swift; sourceTree = "<group>"; };
 		8DC0109A22E59E7500010BCA /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		8DC0109C22E59F0E00010BCA /* CanvasTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasTableViewDelegate.swift; sourceTree = "<group>"; };
 		8DC0109F22E5B1CF00010BCA /* CanvasListManagementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasListManagementService.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				8D07E0EC2306F6D600E2E0D0 /* CanvasRendererView.swift */,
+				8DBE67A6232B7F9B00E3834B /* CanvasRenderer.swift */,
 			);
 			path = CanvasView;
 			sourceTree = "<group>";
@@ -1238,6 +1241,7 @@
 				8D07E0ED2306F6D600E2E0D0 /* CanvasRendererView.swift in Sources */,
 				8D62FCE32302A8B6001DF102 /* ShapeTypeToShapeConvertable.swift in Sources */,
 				8DB8B0F522E1BBF300EB71D4 /* CanvasListModuleOutput.swift in Sources */,
+				8DBE67A7232B7F9B00E3834B /* CanvasRenderer.swift in Sources */,
 				8D6BAE5522D35F1F00FF383C /* CircleGeometry.swift in Sources */,
 				8DBB258A22E842E500546D23 /* ShapesCollectionViewLayout.swift in Sources */,
 				8D6BAE4922D357BE00FF383C /* Circle.swift in Sources */,
