@@ -102,10 +102,6 @@ private extension CanvasContainerView {
             return self
         }
         
-        /*
-         Method name was got from Builder design pattern article, link - https://refactoring.guru/design-patterns/builder/swift/example#example-0
-         */
-        
         func build() -> UIView {
             return canvasView
         }
