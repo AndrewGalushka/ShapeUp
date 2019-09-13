@@ -68,7 +68,7 @@ class CanvasContainerView: UIView {
         return CanvasViewBuilder(frame: frame)
             .shadow()
             .border()
-            .retrieveCanvasView()
+            .build()
     }
 }
 
@@ -106,7 +106,7 @@ private extension CanvasContainerView {
          Method name was got from Builder design pattern article, link - https://refactoring.guru/design-patterns/builder/swift/example#example-0
          */
         
-        func retrieveCanvasView() -> UIView {
+        func build() -> UIView {
             return canvasView
         }
     }
