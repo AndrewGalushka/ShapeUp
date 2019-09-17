@@ -19,7 +19,7 @@ class CanvasRendererView: UIView {
     // MARK: - Lifecycle
     
     override func draw(_ rect: CGRect) {
-        guard let commandsBuilder = makeCommandsBuilder() else { return }
+        guard let commandsBuilder = CanvasDrawingCommandsBuilderFactory.makeDefault() else { return }
         
         let drawingCommands = commandsBuilder
             .background(Color(uiColor: Design.Colors.canvasBackgroundWhite))
@@ -45,10 +45,10 @@ class CanvasRendererView: UIView {
         self.shapes = shapes
         setNeedsDisplay()
     }
-    
-    // MARK: - Methods(Private)
-    
-    private func makeCommandsBuilder() -> DrawingCommandsBuilder? {
+}
+
+enum CanvasDrawingCommandsBuilderFactory {
+    static func makeDefault() -> DrawingCommandsBuilder? {
         guard let context = UIGraphicsGetCurrentContext() else { return nil }
         return CGDrawingCommandsBuilder(cgContext: context)
     }
