@@ -93,11 +93,11 @@ extension CanvasViewController: CanvasViewDropInteractorDelegate {
 
 extension CanvasViewController: CanvasView {
     func addShapeToDisplay(_ shapeViewModel: Canvas.ShapeView) {
-        self.canvasRendererView.addDrawingCommand(shapeViewModel)
+        self.canvasRendererView.addShape(shapeViewModel)
     }
     
     func displayShapes(_ shapeViewModels: [Canvas.ShapeView]) {
-        self.canvasRendererView.setDrawingCommands(shapeViewModels)
+        self.canvasRendererView.setShapes(shapeViewModels)
     }
     
     func setTitleText(to text: String) {
