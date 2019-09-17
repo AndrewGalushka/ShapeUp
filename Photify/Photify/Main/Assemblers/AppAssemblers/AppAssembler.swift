@@ -13,7 +13,7 @@ class AppAssembler: AppAssemblerType {
     private lazy var storageManager: StorageManageable = StorageManager.loadStorage()
 
     func loadInternalData() {
-        _ = storageManager
+        loadStorageManager()
         self.isLoaded = true
     }
     
@@ -27,5 +27,9 @@ class AppAssembler: AppAssemblerType {
     
     func assembleCanvasService(canvas: Canvas) -> CanvasServiceProtocol {
         return CanvasService(canvas: canvas, shapeStorage: storageManager)
+    }
+    
+    private func loadStorageManager() {
+        _ = storageManager
     }
 }
