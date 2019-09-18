@@ -13,8 +13,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     var appCoordinator: AppCoordinator?
     
+    @available(iOS 13.0, *)
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = scene as? UIWindowScene else { return }
+        
+        if let activity = connectionOptions.userActivities.first ?? session.stateRestorationActivity {
+            
+        }
         
 //        let appAssembler = (UIApplication.shared.delegate as! AppDelegate).appAssembler
         let window = UIWindow(windowScene: windowScene)

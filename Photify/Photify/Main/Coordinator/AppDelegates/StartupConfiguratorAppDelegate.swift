@@ -11,25 +11,39 @@ import UIKit
 class StartupConfiguratorAppDelegate: AppDelegateType {
     var window: UIWindow?
     var appCoordinator: AppCoordinator?
-
+    lazy var appAssembler: AppAssemblerType = Self.loadAppAssembler()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let appAssembler = self.appAssembler
+        initializeUIStack(launchOptions: launchOptions, appAssembler: appAssembler)
         
-        let appAssembler = AppAssemblerFactory.makeDefault()
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        let appCoordinator = AppCoordinator(window: window,
-                                            launchOptions: launchOptions,
-                                            appAssembler: appAssembler)
-        self.window = window
-        self.appCoordinator = appCoordinator
-        
+        return true
+    }
+    
+    static func loadAppAssembler() -> AppAssemblerType {
         let startTime = Date()
+        let appAssembler = AppAssemblerFactory.makeDefault()
         appAssembler.loadInternalData()
         debugPrint("AppAssembler load time is: \(Date().timeIntervalSince1970 - startTime.timeIntervalSince1970)")
         
-        self.appCoordinator?.start()
-        self.window?.makeKeyAndVisible()
+        return appAssembler
+    }
+
+    func initializeUIStack(launchOptions: [UIApplication.LaunchOptionsKey: Any]?, appAssembler: AppAssemblerType) {
         
-        return true
+        guard #available(iOS 13, *) else {
+            let window = UIWindow(frame: UIScreen.main.bounds)
+            let appCoordinator = AppCoordinator(window: window,
+                                                launchOptions: launchOptions,
+                                                appAssembler: appAssembler)
+            self.window = window
+            self.appCoordinator = appCoordinator
+            
+            self.appCoordinator?.start()
+            self.window?.makeKeyAndVisible()
+            
+            return
+        }
     }
 }
 
