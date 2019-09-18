@@ -145,12 +145,14 @@ class ColorPicker: UIView {
     private func embedParentCircle() {
         self.parentCircle.removeFromSuperview()
         self.addSubview(parentCircle)
-        parentCircle.translatesAutoresizingMaskIntoConstraints = false
         
-        parentCircle.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        parentCircle.widthAnchor.constraint(equalToConstant: configs.circleDiameter).isActive = true
-        parentCircle.heightAnchor.constraint(equalToConstant: configs.circleDiameter).isActive = true
-        parentCircle.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        parentCircle.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate(
+            [parentCircle.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+             parentCircle.widthAnchor.constraint(equalToConstant: configs.circleDiameter),
+             parentCircle.heightAnchor.constraint(equalToConstant: configs.circleDiameter),
+             parentCircle.bottomAnchor.constraint(equalTo: self.bottomAnchor)]
+        )
     }
     
     private func embedExpandingContainer() {

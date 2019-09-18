@@ -9,12 +9,12 @@
 import Foundation
 
 protocol ShapeTypeToShapeConvertible {
-    func convertToShape(from shapeType: ShapeType) -> Shape
-    static func convertToShape(from shapeType: ShapeType) -> Shape
+    func createShape(basedOn shapeType: ShapeType) -> Shape
+    static func createShape(basedOn shapeType: ShapeType) -> Shape
 }
 
 extension ShapeTypeToShapeConvertible {
-    func convertToShape(from shapeType: ShapeType) -> Shape {
-        return Self.convertToShape(from: shapeType)
+    func createShape(basedOn shapeType: ShapeType) -> Shape {
+        return Self.createShape(basedOn: shapeType)
     }
 }

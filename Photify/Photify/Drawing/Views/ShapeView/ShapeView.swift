@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ShapeView<S>: UIView where S: Shape {
-    var shape: S
+class ShapeView: UIView {
+    var shape: Shape
     
     var fillColor: CGColor? {
         get {
@@ -44,11 +44,11 @@ class ShapeView<S>: UIView where S: Shape {
         super.draw(layer, in: ctx)
     }
     
-    convenience init(shape: S) {
+    convenience init(shape: Shape) {
         self.init(shape: shape, frame: CGRect.zero)
     }
     
-    init(shape: S, frame: CGRect) {
+    init(shape: Shape, frame: CGRect) {
         self.shape = shape
         super.init(frame: frame)
     }

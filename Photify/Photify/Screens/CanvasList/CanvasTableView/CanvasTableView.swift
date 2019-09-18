@@ -17,15 +17,17 @@ class CanvasTableView: UIView {
         let tb = UITableView(frame: .zero)
         
         self.addSubview(tb)
-        
+
         if self.translatesAutoresizingMaskIntoConstraints {
             tb.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         } else {
             tb.translatesAutoresizingMaskIntoConstraints = false
-            tb.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-            tb.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-            tb.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-            tb.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+            NSLayoutConstraint.activate(
+                [tb.topAnchor.constraint(equalTo: self.topAnchor),
+                 tb.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+                 tb.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+                 tb.trailingAnchor.constraint(equalTo: self.trailingAnchor)]
+            )
         }
         
         return tb

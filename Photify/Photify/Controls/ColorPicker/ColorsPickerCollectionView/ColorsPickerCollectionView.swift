@@ -83,7 +83,7 @@ extension ColorsPickerCollectionView: UICollectionViewDataSource, UICollectionVi
     }
 }
 
-extension ColorsPickerCollectionView: ColorsPickerCollectionViewColorCellDelegate {
+extension ColorsPickerCollectionView: ColorPickerCellDelegate {
     func colorCell(_ colorCell: ColorsPickerCollectionViewColorCell, pressedWithColor color: UIColor?) {
         self.didSelectColorHandler?(color)
     }

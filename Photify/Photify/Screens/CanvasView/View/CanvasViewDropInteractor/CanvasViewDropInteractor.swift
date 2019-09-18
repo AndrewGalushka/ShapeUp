@@ -19,23 +19,17 @@ class CanvasViewDropInteractor: NSObject, UIDropInteractionDelegate {
     
     // MARK: - Properties(Private)
     
-    private var dropInteraction: UIDropInteraction?
+    private lazy var dropInteraction: UIDropInteraction = {
+        let dropInteraction = UIDropInteraction(delegate: self)
+        return dropInteraction
+    }()
     
     // MARK: - Initializers
     
     init(targetView: UIView) {
         self.targetView = targetView
-    }
-    
-    // MARK: - Methods(Public)
-    
-    func configure() {
-        
-        if dropInteraction == nil {
-            dropInteraction = UIDropInteraction(delegate: self)
-        }
-        
-        targetView.addInteraction(dropInteraction!)
+        super.init()
+        self.targetView.addInteraction(self.dropInteraction)
     }
     
     // MARK: - UIDropInteractionDelegate Imp

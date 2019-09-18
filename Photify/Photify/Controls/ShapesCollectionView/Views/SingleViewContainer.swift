@@ -12,14 +12,10 @@ class SingleViewContainer: UIView {
     private(set) var embededView: UIView?
     private(set) var embededLayer: CALayer?
     
-    private var isUsesAutolayout: Bool {
-        return !self.translatesAutoresizingMaskIntoConstraints
-    }
-    
     func embedView(_ view: UIView) {
         self.clean()
         
-        UIView.embed(view: view, inside: self, usingAutoLayout: isUsesAutolayout)
+        UIView.embed(view: view, inside: self, usingAutoLayout: true)
         self.embededView = view
     }
     

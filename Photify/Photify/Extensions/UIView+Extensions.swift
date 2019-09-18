@@ -16,10 +16,12 @@ extension UIView {
         
         if usingAutoLayout {
             embedingView.translatesAutoresizingMaskIntoConstraints = false
-            embedingView.topAnchor.constraint(equalTo: container.topAnchor).isActive = true
-            embedingView.bottomAnchor.constraint(equalTo: container.bottomAnchor).isActive = true
-            embedingView.leadingAnchor.constraint(equalTo: container.leadingAnchor).isActive = true
-            embedingView.trailingAnchor.constraint(equalTo: container.trailingAnchor).isActive = true
+            NSLayoutConstraint.activate(
+                [embedingView.topAnchor.constraint(equalTo: container.topAnchor),
+                 embedingView.bottomAnchor.constraint(equalTo: container.bottomAnchor),
+                 embedingView.leadingAnchor.constraint(equalTo: container.leadingAnchor),
+                 embedingView.trailingAnchor.constraint(equalTo: container.trailingAnchor)]
+            )
         } else {
             embedingView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         }

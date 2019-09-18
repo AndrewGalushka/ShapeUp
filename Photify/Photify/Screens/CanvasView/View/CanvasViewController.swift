@@ -38,10 +38,10 @@ class CanvasViewController: UIViewController {
         self.setup()
         self.presenter?.viewLoaded()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        canvasScrollView.zoomToFit()
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        canvasScrollView.zoomToFit(animated: false, edgeInset: 5)
     }
     
     // MARK: - Methods(Private)
@@ -79,7 +79,6 @@ class CanvasViewController: UIViewController {
     private func configureDropInteraction() {
         canvasDropInteractor = CanvasViewDropInteractor(targetView: self.canvasRendererView)
         canvasDropInteractor.delegate = self
-        canvasDropInteractor.configure()
     }
 }
 
@@ -94,11 +93,11 @@ extension CanvasViewController: CanvasViewDropInteractorDelegate {
 
 extension CanvasViewController: CanvasView {
     func addShapeToDisplay(_ shapeViewModel: Canvas.ShapeView) {
-        self.canvasRendererView.addDrawingCommand(shapeViewModel)
+        self.canvasRendererView.addShape(shapeViewModel)
     }
     
     func displayShapes(_ shapeViewModels: [Canvas.ShapeView]) {
-        self.canvasRendererView.setDrawingCommands(shapeViewModels)
+        self.canvasRendererView.setShapes(shapeViewModels)
     }
     
     func setTitleText(to text: String) {

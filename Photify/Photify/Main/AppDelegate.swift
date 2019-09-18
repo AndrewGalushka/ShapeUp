@@ -10,36 +10,10 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
-    private(set) lazy var appAssembler: AppAssembler = {
-        return AppAssembler()
-    }()
-
+    let appDelegate = AppDelegatesFactory.makeDefault()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        /*
-         Note: If your application adopts new Scene Lifecycle,
-            this method should not setup UI things.
-            Good example of using this method is to share Assembler whose internal DataStorage instance is shared
-        */
-        
-        let startTime = Date()
-        self.appAssembler.loadInternalData()
-        print("AppAssembler load time is: \(Date().timeIntervalSince1970 - startTime.timeIntervalSince1970)")
-        
-//        let window = UIWindow(frame: UIScreen.main.bounds)
-//        let appCoordinator = AppCoordinator(window: window,
-//                                            launchOptions: launchOptions,
-//                                            appAssembler: appAssembler)
-//        self.window = window
-//        self.appCoordinator = appCoordinator
-//
-
-//
-//        self.appCoordinator?.start()
-//        self.window?.makeKeyAndVisible()
-        
+        _ = appDelegate.application?(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
     

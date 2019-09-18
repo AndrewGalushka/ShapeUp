@@ -39,9 +39,7 @@ class CanvasScrollView: UIView {
     
     private lazy var underlyingScrollView: CenteredContentScrollView = {
         let scrollView = CenteredContentScrollView()
-        
-        UIView.embed(view: scrollView, inside: self, usingAutoLayout: isUsesAutolayout)
-        
+        UIView.embed(view: scrollView, inside: self, usingAutoLayout: !self.translatesAutoresizingMaskIntoConstraints)
         return scrollView
     }()
     
@@ -61,13 +59,16 @@ class CanvasScrollView: UIView {
     
     // MARK: - Methods(Public)
     
-    func zoomToFit(animated: Bool = true) {
+    func zoomToFit(animated: Bool = true, edgeInset: CGFloat = 0) {
         
         guard let contentView = self.contentView else { return }
         let scrollViewSize = underlyingScrollView.visibleSize
         let contentViewSize = contentView.bounds
+        let newContentSizeBasedEdgeInsets = CGSize(width: (contentViewSize.width + edgeInset * 2),
+                                                   height: (contentViewSize.height + edgeInset * 2))
         
-        var scaleNeededToFit = min(scrollViewSize.width / contentViewSize.width, scrollViewSize.height / contentViewSize.height)
+        var scaleNeededToFit = min(scrollViewSize.width / newContentSizeBasedEdgeInsets.width,
+                                   scrollViewSize.height / newContentSizeBasedEdgeInsets.height)
         
         if scaleNeededToFit > 1 {
             scaleNeededToFit = 1
@@ -84,10 +85,6 @@ class CanvasScrollView: UIView {
     
     private func setup() {
         underlyingScrollView.delegate = self
-    }
-    
-    private var isUsesAutolayout: Bool {
-        return !self.translatesAutoresizingMaskIntoConstraints
     }
 }
 
@@ -116,7 +113,7 @@ extension CanvasScrollView {
         }
         
         @discardableResult
-        func contentView(_ contentView: UIView?) -> Self {
+        func contentView(_ contentView: CanvasContainerView?) -> Self {
             canvasScrollView.contentView = contentView
             return self
         }
