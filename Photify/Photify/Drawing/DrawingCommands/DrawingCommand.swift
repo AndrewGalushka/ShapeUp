@@ -11,3 +11,15 @@ import CoreGraphics
 protocol DrawingCommand {
     func draw(in rect: CGRect)
 }
+
+class CompositeDrawingCommand: DrawingCommand {
+    var commands: [DrawingCommand]
+    
+    init(commands: [DrawingCommand]) {
+        self.commands = commands
+    }
+    
+    func draw(in rect: CGRect) {
+        commands.forEach { $0.draw(in: rect) }
+    }
+}

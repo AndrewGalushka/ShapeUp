@@ -21,12 +21,11 @@ class CanvasRendererView: UIView {
     override func draw(_ rect: CGRect) {
         guard let commandsBuilder = CanvasDrawingCommandsBuilderFactory.makeDefault() else { return }
         
-        let drawingCommands = commandsBuilder
+        commandsBuilder
             .background(Color(uiColor: Design.Colors.canvasBackgroundWhite))
             .shapes(shapes)
             .build()
-        
-        drawingCommands.forEach { $0.draw(in: rect) }
+            .draw(in: rect)
     }
     
     override func layoutSubviews() {

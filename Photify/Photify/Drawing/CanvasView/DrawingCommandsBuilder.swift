@@ -11,7 +11,7 @@ import CoreGraphics
 protocol DrawingCommandsBuilder {
     @discardableResult func background(_ backgroundColor: RGBAColor) -> Self
     @discardableResult func shapes(_ shapes: [Canvas.ShapeView]) -> Self
-    @discardableResult func build() -> [DrawingCommand]
+    @discardableResult func build() -> DrawingCommand
 }
 
 class CGDrawingCommandsBuilder: DrawingCommandsBuilder {
@@ -32,7 +32,7 @@ class CGDrawingCommandsBuilder: DrawingCommandsBuilder {
         return self
     }
     
-    func build() -> [DrawingCommand] {
-        return commands
+    func build() -> DrawingCommand {
+        return CompositeDrawingCommand(commands: self.commands)
     }
 }
