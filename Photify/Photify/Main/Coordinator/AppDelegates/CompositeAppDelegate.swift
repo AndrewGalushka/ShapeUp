@@ -22,4 +22,17 @@ class CompositeAppDelegate: AppDelegateType {
             return $0 && ($1.application?(application, didFinishLaunchingWithOptions: launchOptions) ?? true)
         }
     }
+    
+    @available(iOS 13, *)
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        
+        for appDelegate in appDelegates {
+            if let sceneConfiguration = appDelegate.application?(application, configurationForConnecting: connectingSceneSession, options: options) {
+                return sceneConfiguration
+            }
+        }
+        
+        assert(false, "Unexpected behavior: None of leaf appDelegates implement method \(#selector(application(_:configurationForConnecting:options:)))")
+        return UISceneConfiguration()
+    }
 }

@@ -10,6 +10,9 @@ import Foundation
 
 enum AppDelegatesFactory {
     static func makeDefault() -> AppDelegateType {
-        return CompositeAppDelegate(appDelegates: [StartupConfiguratorAppDelegate()])
+        return CompositeAppDelegate(appDelegates:
+            [StartupConfiguratorAppDelegate(),
+             ScenesSessionAppDelegate()]
+        )
     }
 }

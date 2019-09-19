@@ -19,15 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     @available(iOS 13.0, *)
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        let sceneConfigurations = UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-        sceneConfigurations.delegateClass = SceneDelegate.self
-        
-        return sceneConfigurations
+        guard let sceneConfiguration = appDelegate.application?(application, configurationForConnecting: connectingSceneSession, options: options) else {
+            fatalError("Implement \(#selector(application(_:configurationForConnecting:options:))) in leaf AppDelegate or if you don't support Scenes remove this method from AppDelegate")
+        }
+        return sceneConfiguration
     }
     
-    override func restoreUserActivityState(_ activity: NSUserActivity) {
-        super.restoreUserActivityState(activity)
-        
+    @available(iOS 13.0, *)
+    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+        appDelegate.application?(application, didDiscardSceneSessions: sceneSessions)
     }
 }
 

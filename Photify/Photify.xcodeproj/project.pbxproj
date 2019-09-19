@@ -56,6 +56,7 @@
 		8D267710232BD4D4003AAC03 /* AppDelegatesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D26770F232BD4D4003AAC03 /* AppDelegatesFactory.swift */; };
 		8D267712232BD51E003AAC03 /* StartupConfiguratorAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D267711232BD51E003AAC03 /* StartupConfiguratorAppDelegate.swift */; };
 		8D267715232BD6CC003AAC03 /* AppAssemblerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D267714232BD6CC003AAC03 /* AppAssemblerFactory.swift */; };
+		8D2C0BC62333C358000BF818 /* ScenesSessionAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C0BC52333C357000BF818 /* ScenesSessionAppDelegate.swift */; };
 		8D3B988D23055512004E26A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3B988C23055512004E26A0 /* SceneDelegate.swift */; };
 		8D4C8A2522E0590A00282747 /* UIAlertController+AddCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A2422E0590A00282747 /* UIAlertController+AddCanvas.swift */; };
 		8D4C8A3C22E0CC3400282747 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C8A3B22E0CC3400282747 /* UIColor+Extension.swift */; };
@@ -231,6 +232,7 @@
 		8D26770F232BD4D4003AAC03 /* AppDelegatesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegatesFactory.swift; sourceTree = "<group>"; };
 		8D267711232BD51E003AAC03 /* StartupConfiguratorAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupConfiguratorAppDelegate.swift; sourceTree = "<group>"; };
 		8D267714232BD6CC003AAC03 /* AppAssemblerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssemblerFactory.swift; sourceTree = "<group>"; };
+		8D2C0BC52333C357000BF818 /* ScenesSessionAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesSessionAppDelegate.swift; sourceTree = "<group>"; };
 		8D3B988C23055512004E26A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8D4C8A2422E0590A00282747 /* UIAlertController+AddCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AddCanvas.swift"; sourceTree = "<group>"; };
 		8D4C8A2822E070F700282747 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; wrapsLines = 0; };
@@ -593,6 +595,7 @@
 				8D26770F232BD4D4003AAC03 /* AppDelegatesFactory.swift */,
 				8D26770D232BD387003AAC03 /* CompositeAppDelegate.swift */,
 				8D267711232BD51E003AAC03 /* StartupConfiguratorAppDelegate.swift */,
+				8D2C0BC52333C357000BF818 /* ScenesSessionAppDelegate.swift */,
 			);
 			name = AppDelegates;
 			path = Coordinator/AppDelegates;
@@ -1329,6 +1332,7 @@
 				8DE758DF22E756A60069A6B4 /* ShapeCollectionViewCell.swift in Sources */,
 				8DE758CC22E703090069A6B4 /* CanvasModule.swift in Sources */,
 				8D10D9E722FAC7D200A3BD28 /* CanvasMapable.swift in Sources */,
+				8D2C0BC62333C358000BF818 /* ScenesSessionAppDelegate.swift in Sources */,
 				8D4D01D422DF70AF00348F7A /* Canvas.swift in Sources */,
 				8D6BAE4522D3476500FF383C /* Rectangle.swift in Sources */,
 				8D8ABB5522EF2A160084E4BB /* ShapeStyle+Fill.swift in Sources */,
@@ -1641,7 +1645,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1662,7 +1666,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Galushka.Photify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
