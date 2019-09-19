@@ -9,7 +9,9 @@
 import Foundation
 
 enum AppAssemblerFactory {
+    private static var appAssembler: AppAssemblerType = AppAssembler()
+    
     static func makeDefault() -> AppAssemblerType {
-        return AppAssembler()
+        return Self.appAssembler
     }
 }
