@@ -151,7 +151,6 @@
 		8DE758DC22E7561B0069A6B4 /* ShapesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758DB22E7561B0069A6B4 /* ShapesCollectionView.swift */; };
 		8DE758DF22E756A60069A6B4 /* ShapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758DD22E756A60069A6B4 /* ShapeCollectionViewCell.swift */; };
 		8DE758E022E756A60069A6B4 /* ShapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DE758DE22E756A60069A6B4 /* ShapeCollectionViewCell.xib */; };
-		8DE7B5942334CA0800CF9C52 /* CanvasModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE7B5932334CA0800CF9C52 /* CanvasModuleFactory.swift */; };
 		8DF18A2B22D79CFD0090A2FE /* SingleReceiverBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */; };
 		8DFA6FE22330EA4B0094A2D2 /* ShapeDrawingCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA6FE12330EA4B0094A2D2 /* ShapeDrawingCommand.swift */; };
 		8DFA6FE42330F2260094A2D2 /* CGShapeDrawingCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA6FE32330F2260094A2D2 /* CGShapeDrawingCommand.swift */; };
@@ -335,7 +334,6 @@
 		8DE758DB22E7561B0069A6B4 /* ShapesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesCollectionView.swift; sourceTree = "<group>"; };
 		8DE758DD22E756A60069A6B4 /* ShapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeCollectionViewCell.swift; sourceTree = "<group>"; };
 		8DE758DE22E756A60069A6B4 /* ShapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShapeCollectionViewCell.xib; sourceTree = "<group>"; };
-		8DE7B5932334CA0800CF9C52 /* CanvasModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CanvasModuleFactory.swift; path = ../../../../../../../../Users/Galushka/Documents/CanvasModuleFactory.swift; sourceTree = "<group>"; };
 		8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleReceiverBinding.swift; sourceTree = "<group>"; };
 		8DFA6FE12330EA4B0094A2D2 /* ShapeDrawingCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeDrawingCommand.swift; sourceTree = "<group>"; };
 		8DFA6FE32330F2260094A2D2 /* CGShapeDrawingCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGShapeDrawingCommand.swift; sourceTree = "<group>"; };
@@ -599,14 +597,6 @@
 			);
 			name = AppDelegates;
 			path = Coordinator/AppDelegates;
-			sourceTree = "<group>";
-		};
-		8D2C0BC72333D86F000BF818 /* CanvasModuleFactory */ = {
-			isa = PBXGroup;
-			children = (
-				8DE7B5932334CA0800CF9C52 /* CanvasModuleFactory.swift */,
-			);
-			path = CanvasModuleFactory;
 			sourceTree = "<group>";
 		};
 		8D4C8A2722E070F100282747 /* StorageManager */ = {
@@ -896,7 +886,6 @@
 		8DB8B0FF22E1E3BB00EB71D4 /* ModulesAssembler */ = {
 			isa = PBXGroup;
 			children = (
-				8D2C0BC72333D86F000BF818 /* CanvasModuleFactory */,
 				8DB8B10022E1E47B00EB71D4 /* ModulesFactory.swift */,
 				8DB8B10222E1E91500EB71D4 /* ModulesAssembler.swift */,
 			);
@@ -1293,7 +1282,6 @@
 				8DC0109D22E59F0E00010BCA /* CanvasTableViewDelegate.swift in Sources */,
 				8DE758D422E703F90069A6B4 /* CanvasView.swift in Sources */,
 				8D10D9F322FB069100A3BD28 /* StorageManager+CanvasStorable.swift in Sources */,
-				8DE7B5942334CA0800CF9C52 /* CanvasModuleFactory.swift in Sources */,
 				8DF18A2B22D79CFD0090A2FE /* SingleReceiverBinding.swift in Sources */,
 				8D6BAE4222D345BC00FF383C /* ShapeView.swift in Sources */,
 				8D6BAE5922D3703400FF383C /* AngleGeometry.swift in Sources */,
