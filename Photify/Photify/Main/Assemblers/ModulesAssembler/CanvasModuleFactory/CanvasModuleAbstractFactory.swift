@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol CanvasModuleAbstractFactory {
+protocol CanvasModuleAbstractFactory: AnyObject {
     func makeCanvasModule(canvas: Canvas) -> CanvasModuleType
 }

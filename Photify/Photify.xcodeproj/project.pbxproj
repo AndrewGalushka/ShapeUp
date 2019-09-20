@@ -652,8 +652,8 @@
 		8D63D3A323350D30009CFDAE /* CanvasModuleFactory */ = {
 			isa = PBXGroup;
 			children = (
-				8D63D3A423350D4A009CFDAE /* CanvasModuleFactory.swift */,
 				8D63D3A623350E70009CFDAE /* CanvasModuleAbstractFactory.swift */,
+				8D63D3A423350D4A009CFDAE /* CanvasModuleFactory.swift */,
 			);
 			path = CanvasModuleFactory;
 			sourceTree = "<group>";
