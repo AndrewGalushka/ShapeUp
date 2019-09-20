@@ -16,8 +16,7 @@ class AppCoordinator: Coordinator {
     private let launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     private let appAssembler: AppAssemblerType
     private let modulesAssembler: ModulesFactory
-    private let navigationController: UINavigationController
-    private let router: PushRouter
+    private let moduleNavigationController: ModuleNavigationController
     
     private var modules = [ViewControllerBasedModule]()
     
@@ -28,8 +27,7 @@ class AppCoordinator: Coordinator {
          launchOptions: [UIApplication.LaunchOptionsKey: Any]?,
          appAssembler: AppAssemblerType) {
         self.window = window
-        self.navigationController = navigationController
-        self.router = Router(navigationController: navigationController)
+        self.moduleNavigationController = ModuleNavigationController(navigationController: navigationController)
         self.launchOptions = launchOptions
         self.appAssembler = appAssembler
         self.modulesAssembler = ModulesAssembler(appAssembler: appAssembler)
@@ -42,13 +40,13 @@ class AppCoordinator: Coordinator {
         
         self.addModule(initialModule)
         
-        let settings = Router.Settings(animated: false,
+        let settings = ModuleNavigationController.Settings(animated: false,
                                        willPopHandler: nil) { [weak self] in
                                         self?.removeModule(initialModule)
         }
         
-        self.router.setRootModule(initialModule, settings: settings)
-        window.rootViewController = self.navigationController
+        self.moduleNavigationController.setRootModule(initialModule, settings: settings)
+        window.rootViewController = self.moduleNavigationController.uiNavigationController
     }
     
     // MARK: - Modules Management
@@ -82,10 +80,10 @@ extension AppCoordinator: CanvasListModuleOutput {
         
         self.addModule(canvasModule)
         
-        let settings = Router.Settings(animated: true, willPopHandler: nil) { [weak self] in
+        let settings = ModuleNavigationController.Settings(animated: true, willPopHandler: nil) { [weak self] in
             self?.removeModule(canvasModule)
         }
         
-        self.router.push(module: canvasModule, settings: settings)
+        self.moduleNavigationController.push(module: canvasModule, settings: settings)
     }
 }

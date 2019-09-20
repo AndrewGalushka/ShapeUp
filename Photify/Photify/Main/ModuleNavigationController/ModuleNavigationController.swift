@@ -1,5 +1,5 @@
 //
-//  Router.swift
+//  ModuleNavigationController.swift
 //  Photify
 //
 //  Created by Galushka on 7/19/19.
@@ -8,21 +8,20 @@
 
 import UIKit
 
-
-class Router: NSObject, PushRouter {
+class ModuleNavigationController: NSObject {
     
     // MARK: Properties(Public)
     
-    let navigationController: UINavigationController
+    let uiNavigationController: UINavigationController
     
     // MARK: Properties(Private)
     
-    private var modulesSettings = [UIViewController: PushSettings]()
+    private var modulesSettings = [UIViewController: Settings]()
     
     // MARK: - Initializers
     
     init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+        self.uiNavigationController = navigationController
         
         super.init()
         
@@ -31,16 +30,16 @@ class Router: NSObject, PushRouter {
     
     // MARK: - PushRouter imp
     
-    func push(module: ViewControllerBasedModule, settings: PushSettings?) {
+    func push(module: ViewControllerBasedModule, settings: Settings?) {
         self.register(setting: settings, for: module.asViewController)
         
-        self.navigationController.pushViewController(module.asViewController,
-                                                     animated: settings?.animated ?? true)
+        self.uiNavigationController.pushViewController(module.asViewController,
+                                                       animated: settings?.animated ?? true)
     }
     
-    func setRootModule(_ module: ViewControllerBasedModule, settings: PushSettings?) {
+    func setRootModule(_ module: ViewControllerBasedModule, settings: Settings?) {
         self.willChangeRootModule()
-        self.navigationController.setViewControllers([module.asViewController], animated: settings?.animated ?? true)
+        self.uiNavigationController.setViewControllers([module.asViewController], animated: settings?.animated ?? true)
         self.didChangeRootModule()
         
         self.register(setting: settings, for: module.asViewController)
@@ -48,7 +47,7 @@ class Router: NSObject, PushRouter {
     
     // MARK: - Methods(Private)
     
-    private func register(setting: PushSettings?, for viewController: UIViewController) {
+    private func register(setting: Settings?, for viewController: UIViewController) {
         guard let setting = setting else { return }
 
         modulesSettings[viewController] = setting
@@ -74,7 +73,7 @@ class Router: NSObject, PushRouter {
     }
 }
 
-extension Router: UINavigationControllerDelegate {
+extension ModuleNavigationController: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         guard
             let poppedVC = navigationController.transitionCoordinator?.viewController(forKey: .from),
@@ -103,8 +102,12 @@ extension Router: UINavigationControllerDelegate {
     }
 }
 
-extension Router {
-    struct Settings: PushSettings {
+extension ModuleNavigationController {
+    
+    struct Settings {
+        typealias DidPopHandler = () -> Void
+        typealias WillPopHandler = () -> Void
+        
         let animated: Bool
         let didPopHandler: DidPopHandler?
         let willPopHandler: WillPopHandler?
