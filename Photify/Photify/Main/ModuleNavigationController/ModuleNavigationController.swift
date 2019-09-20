@@ -16,7 +16,7 @@ class ModuleNavigationController: NSObject {
     
     // MARK: Properties(Private)
     
-    private var modulesSettings = [UIViewController: Settings]()
+    private let settingsController = SettingsController()
     
     // MARK: - Initializers
     
@@ -31,7 +31,7 @@ class ModuleNavigationController: NSObject {
     // MARK: - PushRouter imp
     
     func push(module: ViewControllerBasedModule, settings: Settings?) {
-        self.register(setting: settings, for: module.asViewController)
+        if let settings = settings { settingsController.register(settings, for: module.asViewController) }
         
         self.uiNavigationController.pushViewController(module.asViewController,
                                                        animated: settings?.animated ?? true)
@@ -42,34 +42,20 @@ class ModuleNavigationController: NSObject {
         self.uiNavigationController.setViewControllers([module.asViewController], animated: settings?.animated ?? true)
         self.didChangeRootModule()
         
-        self.register(setting: settings, for: module.asViewController)
+        if let settings = settings {
+            settingsController.register(settings, for: module.asViewController)
+        }
     }
     
-    // MARK: - Methods(Private)
-    
-    private func register(setting: Settings?, for viewController: UIViewController) {
-        guard let setting = setting else { return }
-
-        modulesSettings[viewController] = setting
-    }
-    
-    private func unregisterSettings(for viewController: UIViewController) {
-        modulesSettings[viewController] = nil
-    }
+    // MARK: - Methods(Private
     
     private func willChangeRootModule() {
-        
-        for vc in Array(modulesSettings.keys) { //where navigationController.contains(vc) {
-            self.modulesSettings[vc]?.willPopHandler?()
-        }
+        self.settingsController.fireAllWillPopHandlers()
     }
     
     private func didChangeRootModule() {
-        for vc in Array(modulesSettings.keys) {
-            self.modulesSettings[vc]?.didPopHandler?()
-        }
-        
-        modulesSettings.removeAll()
+        self.settingsController.fireAllDidPopHandlers()
+        settingsController.removeAllSettings()
     }
 }
 
@@ -82,9 +68,7 @@ extension ModuleNavigationController: UINavigationControllerDelegate {
             return
         }
         
-        if let settings = modulesSettings[poppedVC] {
-            settings.willPopHandler?()
-        }
+        self.settingsController.fireWillPopHandler(for: poppedVC)
     }
     
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
@@ -95,14 +79,44 @@ extension ModuleNavigationController: UINavigationControllerDelegate {
             return
         }
         
-        if let settings = modulesSettings[poppedVC] {
-            settings.didPopHandler?()
-            unregisterSettings(for: poppedVC)
-        }
+        settingsController.fireDidPopHandler(for: poppedVC)
+        settingsController.removeSettings(for: poppedVC)
     }
 }
 
 extension ModuleNavigationController {
+    
+    private class SettingsController {
+        private var modulesSettings = [UIViewController: Settings]()
+        
+        func register(_ settings: Settings, for viewController: UIViewController) {
+            modulesSettings[viewController] = settings
+        }
+        
+        func removeSettings(for viewController: UIViewController) {
+            modulesSettings[viewController] = nil
+        }
+        
+        func fireWillPopHandler(for viewController: UIViewController) {
+            modulesSettings[viewController]?.willPopHandler?()
+        }
+        
+        func fireDidPopHandler(for viewController: UIViewController) {
+            modulesSettings[viewController]?.didPopHandler?()
+        }
+        
+        func fireAllDidPopHandlers() {
+            modulesSettings.values.forEach { $0.didPopHandler?() }
+        }
+        
+        func fireAllWillPopHandlers() {
+            modulesSettings.values.forEach { $0.willPopHandler?() }
+        }
+        
+        func removeAllSettings() {
+            modulesSettings.removeAll()
+        }
+    }
     
     struct Settings {
         typealias DidPopHandler = () -> Void
