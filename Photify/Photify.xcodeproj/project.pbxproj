@@ -152,7 +152,6 @@
 		8DE758DF22E756A60069A6B4 /* ShapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE758DD22E756A60069A6B4 /* ShapeCollectionViewCell.swift */; };
 		8DE758E022E756A60069A6B4 /* ShapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DE758DE22E756A60069A6B4 /* ShapeCollectionViewCell.xib */; };
 		8DE7B5942334CA0800CF9C52 /* CanvasModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE7B5932334CA0800CF9C52 /* CanvasModuleFactory.swift */; };
-		8DE7B5962334CA2E00CF9C52 /* CachedCanvasModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE7B5952334CA2E00CF9C52 /* CachedCanvasModuleFactory.swift */; };
 		8DF18A2B22D79CFD0090A2FE /* SingleReceiverBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */; };
 		8DFA6FE22330EA4B0094A2D2 /* ShapeDrawingCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA6FE12330EA4B0094A2D2 /* ShapeDrawingCommand.swift */; };
 		8DFA6FE42330F2260094A2D2 /* CGShapeDrawingCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA6FE32330F2260094A2D2 /* CGShapeDrawingCommand.swift */; };
@@ -337,7 +336,6 @@
 		8DE758DD22E756A60069A6B4 /* ShapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeCollectionViewCell.swift; sourceTree = "<group>"; };
 		8DE758DE22E756A60069A6B4 /* ShapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShapeCollectionViewCell.xib; sourceTree = "<group>"; };
 		8DE7B5932334CA0800CF9C52 /* CanvasModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CanvasModuleFactory.swift; path = ../../../../../../../../Users/Galushka/Documents/CanvasModuleFactory.swift; sourceTree = "<group>"; };
-		8DE7B5952334CA2E00CF9C52 /* CachedCanvasModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CachedCanvasModuleFactory.swift; path = ../../../../../../../../Users/Galushka/Documents/CachedCanvasModuleFactory.swift; sourceTree = "<group>"; };
 		8DF18A2A22D79CFD0090A2FE /* SingleReceiverBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleReceiverBinding.swift; sourceTree = "<group>"; };
 		8DFA6FE12330EA4B0094A2D2 /* ShapeDrawingCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeDrawingCommand.swift; sourceTree = "<group>"; };
 		8DFA6FE32330F2260094A2D2 /* CGShapeDrawingCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGShapeDrawingCommand.swift; sourceTree = "<group>"; };
@@ -607,7 +605,6 @@
 			isa = PBXGroup;
 			children = (
 				8DE7B5932334CA0800CF9C52 /* CanvasModuleFactory.swift */,
-				8DE7B5952334CA2E00CF9C52 /* CachedCanvasModuleFactory.swift */,
 			);
 			path = CanvasModuleFactory;
 			sourceTree = "<group>";
@@ -1352,7 +1349,6 @@
 				8D10D9E922FAC7F900A3BD28 /* ColorMapable.swift in Sources */,
 				8DB8B0F022E1B7B200EB71D4 /* CanvasListModule.swift in Sources */,
 				8D8ABB5B22EF45CD0084E4BB /* ShapeCollectionViewCell+Configurable.swift in Sources */,
-				8DE7B5962334CA2E00CF9C52 /* CachedCanvasModuleFactory.swift in Sources */,
 				8D7F235222F043BA00BA7245 /* CanvasViewDropInteractor.swift in Sources */,
 				8DE758CE22E703300069A6B4 /* CanvasModuleOutput.swift in Sources */,
 				8D6BAE4D22D35B5400FF383C /* Ellipse.swift in Sources */,
