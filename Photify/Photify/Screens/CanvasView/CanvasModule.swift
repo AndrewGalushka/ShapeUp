@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CanvasModule: ViewControllerBasedModule {
+class CanvasModule: CanvasModuleType {
     let view: CanvasViewController
     let presenter: CanvasPresenter
     
@@ -31,3 +31,9 @@ class CanvasModule: ViewControllerBasedModule {
 extension CanvasModule: CanvasPresenterOutput {
     
 }
+
+protocol CanvasModuleType: ViewControllerBasedModule {
+    var output: CanvasModuleOutput? { get set }
+}
+
+

@@ -10,5 +10,5 @@ import Foundation
 
 protocol ModulesFactory {
     func assembleCanvasListModule() -> CanvasListModule
-    func assembleCanvasModule(canvas: Canvas) -> CanvasModule
+    func assembleCanvasModule(canvas: Canvas) -> CanvasModuleType
 }

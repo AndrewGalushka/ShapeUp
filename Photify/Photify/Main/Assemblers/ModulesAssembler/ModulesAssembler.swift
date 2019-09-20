@@ -34,7 +34,7 @@ class ModulesAssembler: ModulesFactory {
         return module
     }
     
-    func assembleCanvasModule(canvas: Canvas) -> CanvasModule {
+    func assembleCanvasModule(canvas: Canvas) -> CanvasModuleType {
         let canvasService = appAssembler.assembleCanvasService(canvas: canvas)
         let canvasView = CanvasViewController.loadFromStoryboard()
         let canvasPresenter = CanvasPresenter(canvasService: canvasService)
