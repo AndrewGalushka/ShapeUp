@@ -27,9 +27,7 @@ class ModuleNavigationController: NSObject {
         
         navigationController.delegate = self
     }
-    
-    // MARK: - PushRouter imp
-    
+        
     func push(module: ViewControllerBasedModule, settings: Settings?) {
         if let settings = settings { settingsController.register(settings, for: module.asViewController) }
         
@@ -47,7 +45,7 @@ class ModuleNavigationController: NSObject {
         }
     }
     
-    // MARK: - Methods(Private
+    // MARK: - Methods(Private)
     
     private func willChangeRootModule() {
         self.settingsController.fireAllWillPopHandlers()
