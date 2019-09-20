@@ -704,7 +704,7 @@
 				8D6BAE2722D332E900FF383C /* AppDelegate.swift */,
 				8D3B988C23055512004E26A0 /* SceneDelegate.swift */,
 				8DB8B10722E2043500EB71D4 /* ModuleNavigationController */,
-				8DD103BF22D4C9660052B13B /* Assemblers */,
+				8DD103BF22D4C9660052B13B /* Factories */,
 				8DD103BA22D4C8B90052B13B /* Coordinator */,
 				8D26770C232BD351003AAC03 /* AppDelegates */,
 			);
@@ -886,14 +886,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		8DB8B0FE22E1E3B100EB71D4 /* AppAssemblers */ = {
+		8DB8B0FE22E1E3B100EB71D4 /* AppFactories */ = {
 			isa = PBXGroup;
 			children = (
 				8D267714232BD6CC003AAC03 /* AppAssemblerFactory.swift */,
 				8DD103C022D4C9A80052B13B /* AppAssemblerType.swift */,
 				8D18F17622D5D0C900E7B1E0 /* AppAssembler.swift */,
 			);
-			path = AppAssemblers;
+			path = AppFactories;
 			sourceTree = "<group>";
 		};
 		8DB8B0FF22E1E3BB00EB71D4 /* ModulesAssembler */ = {
@@ -992,13 +992,13 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		8DD103BF22D4C9660052B13B /* Assemblers */ = {
+		8DD103BF22D4C9660052B13B /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				8DB8B0FE22E1E3B100EB71D4 /* AppAssemblers */,
+				8DB8B0FE22E1E3B100EB71D4 /* AppFactories */,
 				8DB8B0FF22E1E3BB00EB71D4 /* ModulesAssembler */,
 			);
-			path = Assemblers;
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		8DD1A16922E9FCEA0016BE5C /* ColorsPickerCollectionView */ = {
