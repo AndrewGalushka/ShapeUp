@@ -13,6 +13,7 @@ class ModulesAssembler: ModulesFactory {
     // MARK: Properties(Private)
     
     private let appAssembler: AppAssemblerType
+    private static var sharedCanvasFactory: CanvasModuleAbstractFactory!
     
     // MARK: Initializers
     
@@ -34,14 +35,12 @@ class ModulesAssembler: ModulesFactory {
         return module
     }
     
-    func assembleCanvasModule(canvas: Canvas) -> CanvasModuleType {
-        let canvasService = appAssembler.assembleCanvasService(canvas: canvas)
-        let canvasView = CanvasViewController.loadFromStoryboard()
-        let canvasPresenter = CanvasPresenter(canvasService: canvasService)
+    func makeCanvasModuleFactory() -> CanvasModuleAbstractFactory {
         
-        let canvasModule = CanvasModule(view: canvasView,
-                                        presenter: canvasPresenter)
+        if Self.sharedCanvasFactory == nil {
+            Self.sharedCanvasFactory = CanvasModuleFactory(appAssembler: appAssembler)
+        }
         
-        return canvasModule
+        return Self.sharedCanvasFactory
     }
 }
