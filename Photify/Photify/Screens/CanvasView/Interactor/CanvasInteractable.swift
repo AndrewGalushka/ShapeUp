@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol CanvasInteractorable {
+protocol CanvasInteractable: AnyObject {
     func refreshShapes()
     func placeShape(ofType shapeType: ShapeType, style: ShapeStyle, at frame: CGRect)
 }

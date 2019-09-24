@@ -86,7 +86,7 @@
 		8D6BAE5922D3703400FF383C /* AngleGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5822D3703400FF383C /* AngleGeometry.swift */; };
 		8D6BAE5B22D37FC000FF383C /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BAE5A22D37FC000FF383C /* Triangle.swift */; };
 		8D7E425B233A44BE0027DC6A /* CanvasInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E425A233A44BE0027DC6A /* CanvasInteractor.swift */; };
-		8D7E425D233A45430027DC6A /* CanvasInteractorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E425C233A45430027DC6A /* CanvasInteractorable.swift */; };
+		8D7E425D233A45430027DC6A /* CanvasInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E425C233A45430027DC6A /* CanvasInteractable.swift */; };
 		8D7E425F233A47D40027DC6A /* CanvasInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E425E233A47D40027DC6A /* CanvasInteractorOutput.swift */; };
 		8D7F235022F031E700BA7245 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7F234F22F031E700BA7245 /* CGRect+Extensions.swift */; };
 		8D7F235222F043BA00BA7245 /* CanvasViewDropInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7F235122F043BA00BA7245 /* CanvasViewDropInteractor.swift */; };
@@ -270,7 +270,7 @@
 		8D6BAE5822D3703400FF383C /* AngleGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleGeometry.swift; sourceTree = "<group>"; };
 		8D6BAE5A22D37FC000FF383C /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		8D7E425A233A44BE0027DC6A /* CanvasInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasInteractor.swift; sourceTree = "<group>"; };
-		8D7E425C233A45430027DC6A /* CanvasInteractorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasInteractorable.swift; sourceTree = "<group>"; };
+		8D7E425C233A45430027DC6A /* CanvasInteractable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasInteractable.swift; sourceTree = "<group>"; };
 		8D7E425E233A47D40027DC6A /* CanvasInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasInteractorOutput.swift; sourceTree = "<group>"; };
 		8D7F234F22F031E700BA7245 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
 		8D7F235122F043BA00BA7245 /* CanvasViewDropInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewDropInteractor.swift; sourceTree = "<group>"; };
@@ -778,7 +778,7 @@
 			isa = PBXGroup;
 			children = (
 				8D7E425A233A44BE0027DC6A /* CanvasInteractor.swift */,
-				8D7E425C233A45430027DC6A /* CanvasInteractorable.swift */,
+				8D7E425C233A45430027DC6A /* CanvasInteractable.swift */,
 				8D7E425E233A47D40027DC6A /* CanvasInteractorOutput.swift */,
 			);
 			path = Interactor;
@@ -1365,7 +1365,7 @@
 				8D2C0BC62333C358000BF818 /* ScenesSessionAppDelegate.swift in Sources */,
 				8D4D01D422DF70AF00348F7A /* Canvas.swift in Sources */,
 				8D6BAE4522D3476500FF383C /* Rectangle.swift in Sources */,
-				8D7E425D233A45430027DC6A /* CanvasInteractorable.swift in Sources */,
+				8D7E425D233A45430027DC6A /* CanvasInteractable.swift in Sources */,
 				8D8ABB5522EF2A160084E4BB /* ShapeStyle+Fill.swift in Sources */,
 				8DBB259222E8523D00546D23 /* ShapesProvider.swift in Sources */,
 				8D10D9E922FAC7F900A3BD28 /* ColorMapable.swift in Sources */,

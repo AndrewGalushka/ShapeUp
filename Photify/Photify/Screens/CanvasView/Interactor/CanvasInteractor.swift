@@ -26,7 +26,7 @@ class CanvasInteractor {
     }
 }
 
-extension CanvasInteractor: CanvasInteractorable {
+extension CanvasInteractor: CanvasInteractable {
     
     func refreshShapes() {
         self.canvasService.refresh()

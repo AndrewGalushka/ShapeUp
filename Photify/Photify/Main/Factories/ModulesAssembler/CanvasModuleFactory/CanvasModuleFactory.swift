@@ -21,13 +21,28 @@ class CanvasModuleFactory: CanvasModuleAbstractFactory {
     }
     
     func makeCanvasModule(canvas: Canvas) -> CanvasModuleType {
-        let canvasService = appAssembler.assembleCanvasService(canvas: canvas)
-        let canvasView = CanvasViewController.loadFromStoryboard()
-        let canvasPresenter = CanvasPresenter(canvasService: canvasService)
+        let interactor = makeInteractor(canvas: canvas)
+        let presenter = CanvasPresenter(interactor: interactor)
+        let view = CanvasViewController.loadFromStoryboard()
         
-        let canvasModule = CanvasModule(view: canvasView,
-                                        presenter: canvasPresenter)
+        configureCommunication(betweenInteractor: interactor, presenter: presenter, view: view)
+        
+        let canvasModule = CanvasModule(interactor: interactor,
+                                        presenter: presenter,
+                                        view: view)
+        presenter.output = canvasModule
         
         return canvasModule
+    }
+    
+    private func makeInteractor(canvas: Canvas) -> CanvasInteractor {
+        let service = appAssembler.assembleCanvasService(canvas: canvas)
+        return CanvasInteractor(canvasService: service)
+    }
+    
+    private func configureCommunication(betweenInteractor interactor: CanvasInteractor, presenter: CanvasPresenter, view: CanvasViewController) {
+        interactor.output = presenter
+        presenter.view = view
+        view.presenter = presenter
     }
 }

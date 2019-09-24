@@ -9,18 +9,16 @@
 import UIKit
 
 class CanvasModule: CanvasModuleType {
+    let interactor: CanvasInteractable
+    let presenter: CanvasPresenterProtocol
     let view: CanvasViewController
-    let presenter: CanvasPresenter
     
     weak var output: CanvasModuleOutput?
     
-    init(view: CanvasViewController, presenter: CanvasPresenter) {
-        self.view = view
+    init(interactor: CanvasInteractable, presenter: CanvasPresenterProtocol, view: CanvasViewController) {
+        self.interactor = interactor
         self.presenter = presenter
-        
-        self.view.presenter = self.presenter
-        self.presenter.view = self.view
-        self.presenter.output = self
+        self.view = view
     }
     
     var asViewController: UIViewController {

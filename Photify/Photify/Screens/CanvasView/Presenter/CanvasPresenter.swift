@@ -12,7 +12,7 @@ class CanvasPresenter: CanvasPresenterProtocol {
     
     // MARK: Properties(Private)
     
-    private let canvasService: CanvasServiceProtocol
+    private weak var interactor: CanvasInteractable?
     
     // MARK: Properties(Public)
     
@@ -21,29 +21,33 @@ class CanvasPresenter: CanvasPresenterProtocol {
     
     // MARK: Initializers
     
-    init(canvasService: CanvasServiceProtocol) {
-        self.canvasService = canvasService
+    init(interactor: CanvasInteractable) {
+        self.interactor = interactor
     }
     
     // MARK: - CanvasPresenterProtocol Imp
     
     func viewLoaded() {
-        self.view?.setTitleText(to: canvasService.canvas.name)
-        self.canvasService.refresh()
-        self.view?.displayShapes(canvasService.canvas.shapes)
+//        self.view?.setTitleText(to: canvasService.canvas.name)
+        self.interactor?.refreshShapes()
+//        self.canvasService.refresh()
+//        self.view?.displayShapes(canvasService.canvas.shapes)
     }
     
     func handleShapeDrop(shapeType: ShapeType, style: ShapeStyle, atLocation center: CGPoint, size: CGSize) {
         let shapeFrame = CGRect(center: center, size: size)
         let shapeType = shapeType
-        let color = style.fillStyle.color
         
-        let shapeViewModel = Canvas.ShapeView(origin: shapeFrame.origin,
-                                              size: shapeFrame.size,
-                                              shapeType: shapeType,
-                                              color: color)
-        
-        self.canvasService.saveShapeView(shapeViewModel)
-        self.view?.addShapeToDisplay(shapeViewModel)
+        self.interactor?.placeShape(ofType: shapeType, style: style, at: shapeFrame)
+    }
+}
+
+extension CanvasPresenter: CanvasInteractorOutput {
+    func didRefreshShapes(_ shapes: [Canvas.ShapeView]) {
+        self.view?.displayShapes(shapes)
+    }
+    
+    func didPlaceShape(_ shape: Canvas.ShapeView) {
+        self.view?.addShapeToDisplay(shape)
     }
 }
