@@ -78,7 +78,7 @@ extension AppCoordinator: CanvasListModuleOutput {
     func didTapOnCanvas(_ canvas: Canvas) {
         
         // FIXME: - Add Chield Coordinator and inject CanvasModuleFactory
-        #warning("Start to use chield Coordinators and inject CanvasModuleFactory instead of this")
+        #warning("Instead of this, Start to use chield Coordinators and inject CanvasModuleFactory in the coordinator")
         let canvasModule = modulesAssembler.makeCanvasModuleFactory().makeCanvasModule(canvas: canvas)
         
         self.addModule(canvasModule)
