@@ -28,10 +28,8 @@ class CanvasPresenter: CanvasPresenterProtocol {
     // MARK: - CanvasPresenterProtocol Imp
     
     func viewLoaded() {
-//        self.view?.setTitleText(to: canvasService.canvas.name)
+        self.view?.setTitleText(to: interactor?.canvasName() ?? "")
         self.interactor?.refreshShapes()
-//        self.canvasService.refresh()
-//        self.view?.displayShapes(canvasService.canvas.shapes)
     }
     
     func handleShapeDrop(shapeType: ShapeType, style: ShapeStyle, atLocation center: CGPoint, size: CGSize) {

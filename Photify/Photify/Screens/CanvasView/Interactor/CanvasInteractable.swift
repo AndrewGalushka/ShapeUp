@@ -9,6 +9,7 @@
 import UIKit
 
 protocol CanvasInteractable: AnyObject {
+    func canvasName() -> String
     func refreshShapes()
     func placeShape(ofType shapeType: ShapeType, style: ShapeStyle, at frame: CGRect)
 }

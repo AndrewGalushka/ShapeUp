@@ -27,6 +27,9 @@ class CanvasInteractor {
 }
 
 extension CanvasInteractor: CanvasInteractable {
+    func canvasName() -> String {
+        return self.canvasService.canvas.name
+    }
     
     func refreshShapes() {
         self.canvasService.refresh()
