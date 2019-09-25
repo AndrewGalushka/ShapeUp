@@ -37,6 +37,7 @@
 		8D10D9F322FB069100A3BD28 /* StorageManager+CanvasStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10D9F222FB069100A3BD28 /* StorageManager+CanvasStorable.swift */; };
 		8D10D9F522FB088700A3BD28 /* StorageManager+ShapeViewStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10D9F422FB088700A3BD28 /* StorageManager+ShapeViewStorable.swift */; };
 		8D11BFCB22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D11BFCA22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift */; };
+		8D140DA5233B661B0080D2CA /* CanvasInteractionMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D140DA4233B661B0080D2CA /* CanvasInteractionMediator.swift */; };
 		8D18F17722D5D0C900E7B1E0 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F17622D5D0C900E7B1E0 /* AppAssembler.swift */; };
 		8D18F17922D5D29200E7B1E0 /* CanvasViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */; };
 		8D18F17C22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18F17B22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift */; };
@@ -219,6 +220,7 @@
 		8D10D9F222FB069100A3BD28 /* StorageManager+CanvasStorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageManager+CanvasStorable.swift"; sourceTree = "<group>"; };
 		8D10D9F422FB088700A3BD28 /* StorageManager+ShapeViewStorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageManager+ShapeViewStorable.swift"; sourceTree = "<group>"; };
 		8D11BFCA22EB508200B3F68F /* ShapesCollectionView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapesCollectionView+ViewModel.swift"; sourceTree = "<group>"; };
+		8D140DA4233B661B0080D2CA /* CanvasInteractionMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasInteractionMediator.swift; sourceTree = "<group>"; };
 		8D18F17622D5D0C900E7B1E0 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
 		8D18F17822D5D29200E7B1E0 /* CanvasViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CanvasViewController.storyboard; sourceTree = "<group>"; };
 		8D18F17B22D5D30900E7B1E0 /* UIViewController+StoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardLoadable.swift"; sourceTree = "<group>"; };
@@ -661,6 +663,7 @@
 			children = (
 				8D63D3A623350E70009CFDAE /* CanvasModuleAbstractFactory.swift */,
 				8D63D3A423350D4A009CFDAE /* CanvasModuleFactory.swift */,
+				8D140DA4233B661B0080D2CA /* CanvasInteractionMediator.swift */,
 			);
 			path = CanvasModuleFactory;
 			sourceTree = "<group>";
@@ -1412,6 +1415,7 @@
 				8D3B988D23055512004E26A0 /* SceneDelegate.swift in Sources */,
 				8D4CB03922F9CE4100E60B1F /* Canvas+ShapeViewModel.swift in Sources */,
 				8D267710232BD4D4003AAC03 /* AppDelegatesFactory.swift in Sources */,
+				8D140DA5233B661B0080D2CA /* CanvasInteractionMediator.swift in Sources */,
 				8D05706A230D62A60040366D /* CenteredContentScrollView.swift in Sources */,
 				8DB8B10122E1E47B00EB71D4 /* ModulesFactory.swift in Sources */,
 				8DD103BE22D4C8F30052B13B /* AppCoordinator.swift in Sources */,

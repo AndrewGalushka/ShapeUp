@@ -13,6 +13,7 @@ class CanvasModuleFactory: CanvasModuleAbstractFactory {
     // MARK: Properties(Private)
     
     private let appAssembler: AppAssemblerType
+    private var canvasInteractorRouters = NSMapTable<AnyObject, CanvasInteractionMediator>.strongToWeakObjects()
     
     // MARK: Initializers
     
@@ -35,13 +36,24 @@ class CanvasModuleFactory: CanvasModuleAbstractFactory {
         return canvasModule
     }
     
-    private func makeInteractor(canvas: Canvas) -> CanvasInteractor {
-        let service = appAssembler.assembleCanvasService(canvas: canvas)
-        return CanvasInteractor(canvasService: service)
+    private func makeInteractor(canvas: Canvas) -> CanvasInteractionMediator {
+        let interactorRouter: CanvasInteractionMediator
+        
+        if let sharedInteractorRouter = canvasInteractorRouters.object(forKey: canvas.identifier as AnyObject) {
+            interactorRouter = sharedInteractorRouter
+        } else {
+            let service = appAssembler.assembleCanvasService(canvas: canvas)
+            let interactor = CanvasInteractor(canvasService: service)
+            interactorRouter = CanvasInteractionMediator(canvasID: canvas.identifier, interactor: interactor)
+            
+            self.canvasInteractorRouters.setObject(interactorRouter, forKey: canvas.identifier as AnyObject)
+        }
+        
+        return interactorRouter
     }
     
-    private func configureCommunication(betweenInteractor interactor: CanvasInteractor, presenter: CanvasPresenter, view: CanvasViewController) {
-        interactor.output = presenter
+    private func configureCommunication(betweenInteractor interactor: CanvasInteractionMediator, presenter: CanvasPresenter, view: CanvasViewController) {
+        interactor.addPresenter(presenter)
         presenter.view = view
         view.presenter = presenter
     }
