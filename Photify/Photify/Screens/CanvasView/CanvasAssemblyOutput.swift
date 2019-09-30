@@ -8,5 +8,5 @@
 
 import Foundation
 
-protocol CanvasModuleOutput: AnyObject {
+protocol CanvasAssemblyOutput: AnyObject {
 }

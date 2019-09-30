@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CanvasModuleAbstractFactory: AnyObject {
-    func makeCanvasModule(canvas: Canvas) -> CanvasModuleType
+    func makeCanvasModule(canvas: Canvas) -> AssemblyType
 }
