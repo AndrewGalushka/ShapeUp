@@ -12,7 +12,7 @@ class CanvasPresenter: CanvasPresenterProtocol {
     
     // MARK: Properties(Private)
     
-    private weak var interactor: CanvasInteractable?
+    private weak var interactor: CanvasInteractorInput?
     
     // MARK: Properties(Public)
     
@@ -21,7 +21,7 @@ class CanvasPresenter: CanvasPresenterProtocol {
     
     // MARK: Initializers
     
-    init(interactor: CanvasInteractable) {
+    init(interactor: CanvasInteractorInput) {
         self.interactor = interactor
     }
     

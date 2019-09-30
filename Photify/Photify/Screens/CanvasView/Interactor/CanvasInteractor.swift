@@ -26,7 +26,7 @@ class CanvasInteractor {
     }
 }
 
-extension CanvasInteractor: CanvasInteractable {
+extension CanvasInteractor: CanvasInteractorInput {
     func canvasName() -> String {
         return self.canvasService.canvas.name
     }
