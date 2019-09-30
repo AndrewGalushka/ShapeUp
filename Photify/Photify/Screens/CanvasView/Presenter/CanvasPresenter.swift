@@ -16,7 +16,7 @@ class CanvasPresenter: CanvasPresenterInput {
     
     // MARK: Properties(Public)
     
-    weak var view: CanvasView?
+    weak var view: CanvasViewInput?
     weak var output: CanvasPresenterOutput?
     
     // MARK: Initializers

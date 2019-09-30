@@ -1,5 +1,5 @@
 //
-//  CanvasView.swift
+//  CanvasViewInput.swift
 //  Photify
 //
 //  Created by Galushka on 7/23/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol CanvasView: AnyObject {
+protocol CanvasViewInput: AnyObject {
     func setTitleText(to text: String)
     func displayShapes(_ shapeViewModels: [Canvas.ShapeView])
     func addShapeToDisplay(_ shapeViewModel: Canvas.ShapeView)

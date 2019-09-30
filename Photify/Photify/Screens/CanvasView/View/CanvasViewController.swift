@@ -91,7 +91,7 @@ extension CanvasViewController: CanvasViewDropInteractorDelegate {
     }
 }
 
-extension CanvasViewController: CanvasView {
+extension CanvasViewController: CanvasViewInput {
     func addShapeToDisplay(_ shapeViewModel: Canvas.ShapeView) {
         self.canvasRendererView.addShape(shapeViewModel)
     }
