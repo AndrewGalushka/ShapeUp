@@ -35,7 +35,7 @@ extension CanvasInteractionMediator: CanvasInteractorOutput {
     }
 }
 
-extension CanvasInteractionMediator: CanvasInteractable {
+extension CanvasInteractionMediator: CanvasInteractorInput {
     func canvasName() -> String {
         return self.interactor.canvasName()
     }

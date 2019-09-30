@@ -9,13 +9,13 @@
 import UIKit
 
 class CanvasAssembly: AssemblyType {
-    let interactor: CanvasInteractable
+    let interactor: CanvasInteractorInput
     let presenter: CanvasPresenterProtocol
     let view: CanvasViewController
     
     weak var output: CanvasModuleOutput?
     
-    init(interactor: CanvasInteractable, presenter: CanvasPresenterProtocol, view: CanvasViewController) {
+    init(interactor: CanvasInteractorInput, presenter: CanvasPresenterProtocol, view: CanvasViewController) {
         self.interactor = interactor
         self.presenter = presenter
         self.view = view
