@@ -28,7 +28,7 @@ class CanvasViewController: UIViewController {
     
     // MARK: - Properties(Public)
     
-    weak var presenter: CanvasPresenterProtocol?
+    weak var presenter: CanvasPresenterInput?
     
     // MARK: - Lifecycle
     

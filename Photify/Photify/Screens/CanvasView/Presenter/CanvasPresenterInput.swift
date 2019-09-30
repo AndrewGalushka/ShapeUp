@@ -9,7 +9,7 @@
 import Foundation
 import CoreGraphics.CGGeometry
 
-protocol CanvasPresenterProtocol: AnyObject {
+protocol CanvasPresenterInput: AnyObject {
     func viewLoaded()
     func handleShapeDrop(shapeType: ShapeType, style: ShapeStyle, atLocation center: CGPoint, size: CGSize)
 }

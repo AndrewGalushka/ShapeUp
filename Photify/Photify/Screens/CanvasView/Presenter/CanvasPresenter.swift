@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CanvasPresenter: CanvasPresenterProtocol {
+class CanvasPresenter: CanvasPresenterInput {
     
     // MARK: Properties(Private)
     

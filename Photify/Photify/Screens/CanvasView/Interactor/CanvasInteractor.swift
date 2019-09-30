@@ -16,7 +16,7 @@ class CanvasInteractor {
     
     // MARK: Properties(Public)
     
-    weak var presenter: CanvasPresenterProtocol?
+    weak var presenter: CanvasPresenterInput?
     weak var output: CanvasInteractorOutput?
     
     // MARK: Initializers
