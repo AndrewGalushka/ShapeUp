@@ -23,13 +23,13 @@ class ModulesAssembler: ModulesFactory {
     
     // MARK: - ModulesBuilder imp
     
-    func assembleCanvasListModule() -> CanvasListModule {
+    func assembleCanvasListModule() -> CanvasListAssembly {
         let storageManager = appAssembler.assembleStorageManager()
         
         let canvasListView = CanvasListViewController.loadFromStoryboard()
         let canvasesListPresenter = CanvasesListPresenter(storageManager: storageManager)
         
-        let module = CanvasListModule(view: canvasListView,
+        let module = CanvasListAssembly(view: canvasListView,
                                       presenter: canvasesListPresenter)
         
         return module

@@ -1,5 +1,5 @@
 //
-//  CanvasListModule.swift
+//  CanvasListAssembly.swift
 //  Photify
 //
 //  Created by Galushka on 7/19/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CanvasListModule: ViewControllerBasedModule {
+class CanvasListAssembly: ViewControllerBasedModule {
     let view: CanvasListViewController
     let presenter: CanvasesListPresenter
     
@@ -28,7 +28,7 @@ class CanvasListModule: ViewControllerBasedModule {
     }
 }
 
-extension CanvasListModule: CanvasesListPresenterOutput {
+extension CanvasListAssembly: CanvasesListPresenterOutput {
     func didTapOnCanvas(_ canvas: Canvas) {
         output?.didTapOnCanvas(canvas)
     }
