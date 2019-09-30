@@ -8,12 +8,12 @@
 
 import UIKit
 
-class CanvasModule: CanvasModuleType {
+class CanvasAssembly: AssemblyType {
     let interactor: CanvasInteractable
     let presenter: CanvasPresenterProtocol
     let view: CanvasViewController
     
-    weak var output: CanvasModuleOutput?
+    weak var output: CanvasAssemblyOutput?
     
     init(interactor: CanvasInteractable, presenter: CanvasPresenterProtocol, view: CanvasViewController) {
         self.interactor = interactor
@@ -26,12 +26,11 @@ class CanvasModule: CanvasModuleType {
     }
 }
 
-extension CanvasModule: CanvasPresenterOutput {
-    
+extension CanvasAssembly: CanvasPresenterOutput {
 }
 
-protocol CanvasModuleType: ViewControllerBasedModule {
-    var output: CanvasModuleOutput? { get set }
+protocol AssemblyType: ViewControllerBasedModule {
+    var output: CanvasAssemblyOutput? { get set }
 }
 
 

@@ -21,14 +21,14 @@ class CanvasModuleFactory: CanvasModuleAbstractFactory {
         self.appAssembler = appAssembler
     }
     
-    func makeCanvasModule(canvas: Canvas) -> CanvasModuleType {
+    func makeCanvasModule(canvas: Canvas) -> AssemblyType {
         let interactor = makeInteractor(canvas: canvas)
         let presenter = CanvasPresenter(interactor: interactor)
         let view = CanvasViewController.loadFromStoryboard()
         
         configureCommunication(betweenInteractor: interactor, presenter: presenter, view: view)
         
-        let canvasModule = CanvasModule(interactor: interactor,
+        let canvasModule = CanvasAssembly(interactor: interactor,
                                         presenter: presenter,
                                         view: view)
         presenter.output = canvasModule
