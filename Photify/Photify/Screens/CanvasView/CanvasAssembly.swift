@@ -1,5 +1,5 @@
 //
-//  CanvasModule.swift
+//  CanvasAssembly.swift
 //  Photify
 //
 //  Created by Galushka on 7/23/19.
@@ -13,7 +13,7 @@ class CanvasAssembly: AssemblyType {
     let presenter: CanvasPresenterProtocol
     let view: CanvasViewController
     
-    weak var output: CanvasAssemblyOutput?
+    weak var output: CanvasModuleOutput?
     
     init(interactor: CanvasInteractable, presenter: CanvasPresenterProtocol, view: CanvasViewController) {
         self.interactor = interactor
@@ -30,7 +30,7 @@ extension CanvasAssembly: CanvasPresenterOutput {
 }
 
 protocol AssemblyType: ViewControllerBasedModule {
-    var output: CanvasAssemblyOutput? { get set }
+    var output: CanvasModuleOutput? { get set }
 }
 
 
