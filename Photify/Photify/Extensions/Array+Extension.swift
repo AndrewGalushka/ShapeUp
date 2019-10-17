@@ -16,16 +16,16 @@ extension Array {
 }
 
 extension Array {
-    func arrayByRemovingDuplicates<T: Hashable>(identifiedBy keypath: KeyPath<Element, T>) -> [Element] {
+    func arrayByRemovingDuplicates<T: Hashable>(identifiedBy keyPath: KeyPath<Element, T>) -> [Element] {
         var resultingArray = self
         
         for index in 0..<count {
             var isFirstOccurrence = true
-            let identifier = self[index][keyPath: keypath]
+            let identifier = self[index][keyPath: keyPath]
             
             resultingArray.removeAll { (element) -> Bool in
                 
-                if element[keyPath: keypath] == identifier {
+                if element[keyPath: keyPath] == identifier {
                     
                     if isFirstOccurrence {
                         isFirstOccurrence = false
