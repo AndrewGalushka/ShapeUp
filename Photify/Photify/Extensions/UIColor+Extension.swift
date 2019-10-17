@@ -34,7 +34,7 @@ extension UIColor {
         return UIColor(red:0.53, green:0.81, blue:0.92, alpha:1.0)
     }
     
-    static var inidigo: UIColor {
+    static var indigo: UIColor {
         return UIColor(red:0.29, green:0.00, blue:0.51, alpha:1.0)
     }
     

@@ -43,7 +43,7 @@ class ColorsPickerCollectionViewColorCell: UICollectionViewCell {
     
     // MARKL - IBActions
     
-    @IBAction private func corcleButtonTouchUpInsideActionHandler(_ sender: Any) {
+    @IBAction private func circleButtonTouchUpInsideActionHandler(_ sender: Any) {
         self.delegate?.colorCell(self, pressedWithColor: coloredCircleView.color)
     }
 }
