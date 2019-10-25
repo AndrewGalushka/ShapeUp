@@ -11,7 +11,9 @@ import UIKit
 class ScenesSessionAppDelegate: AppDelegateType {
     
     @available(iOS 13, *)
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+    func application(_ application: UIApplication,
+                     configurationForConnecting connectingSceneSession: UISceneSession,
+                     options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         let configName = configurationName(for: connectingSceneSession, options: options)
         let sceneConfiguration = UISceneConfiguration(name: configName,
                                                       sessionRole: connectingSceneSession.role)

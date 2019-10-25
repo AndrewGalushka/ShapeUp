@@ -1044,7 +1044,7 @@
 		8DD4246022F3018C003122B4 /* DataStorage */ = {
 			isa = PBXGroup;
 			children = (
-				8DD4249022F3022D003122B4 /* EntitiyTypes */,
+				8DD4249022F3022D003122B4 /* Entities */,
 				8DD4248222F3022D003122B4 /* Mappers */,
 				8DD4248822F3022D003122B4 /* Source */,
 				8DD4246122F3018C003122B4 /* DataStorage.h */,
@@ -1083,14 +1083,14 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		8DD4249022F3022D003122B4 /* EntitiyTypes */ = {
+		8DD4249022F3022D003122B4 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				8D0934EE22F488600040F3B2 /* Canvas */,
 				8D0934ED22F488590040F3B2 /* ShapeView */,
 				8D4CB03B22F9DCC100E60B1F /* Color */,
 			);
-			path = EntitiyTypes;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		8DD424A022F31AAB003122B4 /* CanvasService */ = {
