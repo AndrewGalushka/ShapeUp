@@ -36,7 +36,7 @@ class AppCoordinator: Coordinator {
     // MARK: - Coordinator Imp
     
     func start() {
-        let initialModule = self.makeIntialModule()
+        let initialModule = self.makeInitialModule()
         
         self.addModule(initialModule)
         
@@ -65,7 +65,7 @@ class AppCoordinator: Coordinator {
     
     // MARK: - Methods(Private)
     
-    private func makeIntialModule() -> ViewControllerBasedModule {
+    private func makeInitialModule() -> ViewControllerBasedModule {
         let module = modulesAssembler.assembleCanvasListModule()
         module.output = self
         
@@ -77,7 +77,7 @@ extension AppCoordinator: CanvasListModuleOutput {
     
     func didTapOnCanvas(_ canvas: Canvas) {
         
-        // FIXME: - Add Chield Coordinator and inject CanvasModuleFactory
+        // FIXME: - Add child Coordinator and inject CanvasModuleFactory
         #warning("Instead of this, Start to use chield Coordinators and inject CanvasModuleFactory in the coordinator")
         let canvasModule = modulesAssembler.makeCanvasModuleFactory().makeCanvasModule(canvas: canvas)
         
